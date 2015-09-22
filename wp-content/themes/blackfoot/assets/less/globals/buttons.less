@@ -1,0 +1,19 @@
+// buttons.less
+// -----------------------------------------------------------------
+
+.btn-strip {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+@btn-secondary-color:              #fff;
+@btn-secondary-bg:                 @brand-secondary;
+@btn-secondary-border:             darken(@btn-secondary-bg, 5%);
+
+.btn-secondary {
+  .button-variant(@btn-secondary-color; @btn-secondary-bg; @btn-secondary-border);
+  &:hover {
+    background: #FF9D00;
+  }
+}

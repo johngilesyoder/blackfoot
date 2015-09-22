@@ -1,0 +1,894 @@
+// home.less
+// -----------------------------------------------------------------
+
+// Custom Fonts
+@import "../globals/fonts.less";
+
+// Bootstrap UI Framework
+@import "../bootstrap/bootstrap.less";
+
+// Wordpress Core Styles
+@import "../globals/wordpress-core.less";
+
+// Custom Variables
+@import "../globals/variables.less";
+
+// Z-index scale
+@import "../globals/z-index.less";
+
+// Colors
+@import "../globals/colors.less";
+
+// Buttons
+@import "../globals/buttons.less";
+
+// Site Header
+@import "../globals/site-header.less";
+
+// Site Footer
+@import "../globals/site-footer.less";
+
+// Patterns
+@import "../globals/patterns.less";
+
+body {
+  position: relative;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+.photos {
+  img {
+    width: 100%;
+  }
+}
+
+.primary-section {
+  .primary-title {
+    font-size: 24px;
+    color: @brand-secondary;
+    font-family: @font-family-sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  p:last-child {
+    margin: 0;
+  }
+}
+
+.subsection {
+  background: #FAFAFA;
+  padding: 60px 0;
+  margin-top: 60px;
+  margin-bottom: -60px;
+  .subsection-title {
+    font-size: 24px;
+    color: @brand-secondary;
+    font-family: @font-family-sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  p:last-child {
+    margin: 0;
+  }
+}
+
+.parallaxParent {
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 60px;
+}
+.parallaxParent .hero-bg {
+  height: 120%;
+  position: relative;
+  top: -20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.hero-content {
+  .vertical-center();
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  .hero-icon {
+    transition: all 0.25s ease-out;
+    transform: scale(2.5, 0);
+    -webkit-filter: blur(8px);
+    margin-bottom: 50px;
+    opacity: 0;
+    &.zap {
+      transform: scale(1, 1);
+      opacity: 1;
+      -webkit-filter: blur(0);
+    }
+  }
+  .hero-title {
+    font-size: 60px;
+    font-weight: 300;
+    font-family: @font-family-sans-serif;
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    -webkit-filter: blur(8px);
+    -webkit-transform: scale(1.4, 1.4);
+    opacity: 0.25;
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    &.blur-out {
+      -webkit-filter: blur(0);
+      -webkit-transform: scale(1, 1);
+      opacity: 1;
+    }
+  }
+}
+
+.section-main {
+  .hero-main {
+    height: 100vh;
+    .hero-bg {
+      background-image: url('../../img/hero-bg-main.jpg');
+    }
+    .hero-content {
+      margin-left: auto;
+      margin-right: auto;
+      .hero-logo {
+        height: 100px;
+        margin-bottom: 50px;
+      }
+    }
+    .main-hero-title {
+      font-size: 60px;
+      font-weight: 300;
+      color: #fff;
+      text-transform: none;
+      letter-spacing: 0;
+      animation: hero-logo 1s;
+      font-family: @font-family-sans-serif;
+    }
+  }
+  .marketing-statement {
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+    font-family: @font-family-sans-serif;
+    margin: 0 0 60px;
+    strong {
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
+  .main-feature {
+    h3 {
+      font-size: 16px;
+      font-family: @font-family-sans-serif;
+      color: @brand-secondary;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      border-bottom: 1px solid #e6e6e6;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.section-location {
+  .hero-location {
+    .hero-icon {
+      margin-bottom: 70px;
+    }
+    .hero-bg {
+      background-image: url('../../img/hero-bg-location.jpg');
+    }
+  }
+  aside {
+    font-family: @font-family-sans-serif;
+    font-size: 13px;
+    line-height: 1.75em;
+    color: @brand-primary;
+    text-transform: uppercase;
+    background: #FFF6EF;
+    padding: 25px 30px;
+    border-radius: 10px;
+    width: 250px;
+    position: absolute;
+    right: 0;
+    z-index: 4;
+    p {
+      margin: 0;
+    }
+    &.aside-mobile {
+      display: none;
+    }
+  }
+  .bubbles {
+    position: relative;
+    height: 314px;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .bubble {
+    opacity: 0;
+    position: absolute;
+    transition: opacity 500ms;
+    img {
+      border-radius: 50%;
+      border: 7px solid rgba(0,0,0,.14);
+    }
+    &.roll {
+      img {
+        animation: roll 1s;
+      }
+      opacity: 1;
+    }
+  }
+  .bubble-small {
+    left: 30px;
+    top: 50px;
+    z-index: 3;
+    img {
+      width: 223px;
+      height: 223px;
+    }
+    &.roll {
+      animation: move-small 1s;
+    }
+  }
+  .bubble-large {
+    top: 0;
+    left: 223px;
+    z-index: 2;
+    img {
+      width: 310px;
+      height: 310px;
+    }
+    &.roll {
+      animation: move-large 1s;
+    }
+  }
+  .facilities {
+    .subsection-copy {
+      margin-bottom: 50px;
+    }
+    img {
+      .img-responsive();
+    }
+  }
+}
+
+.section-adventures {
+  .hero-adventures {
+    .hero-bg {
+      background-image: url('../../img/hero-bg-adventures.jpg');
+    }
+  }
+  .primary-section {
+    margin-bottom: 50px;
+  }
+}
+
+.section-business {
+  .hero-business {
+    .hero-bg {
+      background-image: url('../../img/hero-bg-business.jpg');
+    }
+  }
+  .business-metric {
+    margin: 30px 0 30px;
+    padding: 60px 0;
+    text-align: center;
+    background: lighten(#8F65A3, 43%);
+    .metric-large {
+      color: #8F65A3;
+      font-size: 100px;
+      line-height: 1em;
+      font-weight: 300;
+      font-family: @font-family-sans-serif;
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      &:before {
+        content: "Grosses";
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 300;
+        display: inline-block;
+        color: #000;
+        font-family: @font-family-serif;
+        text-align: left;
+        position: absolute;
+        left: 0;
+        top: -65px;
+      }
+      &:after {
+        content: "Per year";
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 300;
+        display: inline-block;
+        color: #000;
+        font-family: @font-family-serif;
+        text-align: left;
+        position: absolute;
+        right: 0;
+        bottom: -65px;
+      }
+    }
+
+  }
+  .belize-tourism {
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+.section-ecology {
+  .hero-ecology {
+    .hero-bg {
+      background-image: url('../../img/hero-bg-ecology.jpg');
+    }
+  }
+  .photos {
+    margin-top: 50px;
+  }
+}
+
+.section-contact {
+  background: #444;
+  border-top: 8px solid @brand-primary;
+  color: #fff;
+  padding: 50px 0;
+  margin: 0;
+  .section-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    color: #858585;
+    font-family: @font-family-sans-serif;
+    margin: 0;
+  }
+  h3 {
+    font-size: 48px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  input[type="text"] {
+    .form-control();
+    border: 5px solid #343434;
+    height: 60px;
+  }
+  textarea {
+    .form-control();
+    border: 5px solid #343434;
+    height: 60px;
+  }
+  .text-wrap.label-above {
+    label {
+      display: none;
+    }
+  }
+  .textarea-wrap.label-above {
+    label {
+      display: none;
+    }
+    textarea {
+      margin-bottom: 50px;
+    }
+  }
+  .list-dropdown-wrap.label-above {
+    label {
+      font-size: 14px;
+    }
+  }
+  .ninja-forms-required-items {
+    display: none;
+  }
+  .btn-primary {
+    width: 100%;
+    height: 60px;
+    font-family: @font-family-sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1440px) and (max-width: 1740px) {
+
+  .section-location {
+    aside {
+      font-size: 14px;
+      width: 100%;
+      position: relative;
+      top: 0;
+      right: 0;
+      margin-top: 30px;
+      &.aside-desktop {
+        display: none;
+      }
+      &.aside-mobile {
+        display: block;
+      }
+    } 
+    .bubble-small {
+      left: 18.5%;
+      top: 50px;
+      img {
+        width: 210px;
+        height: 210px;
+      }
+    }
+    .bubble-large {
+      top: 0;
+      left: auto;
+      right: 18.5%;
+      z-index: 2;
+      img {
+        width: 290px;
+        height: 290px;
+      }
+    }
+  }
+
+}
+
+// Large desktop and up
+@media (min-width: 1200px) and (max-width: 1439px) {
+
+  .section-location {
+    aside {
+      font-size: 14px;
+      width: 100%;
+      position: relative;
+      top: 0;
+      right: 0;
+      margin-top: 30px;
+      &.aside-desktop {
+        display: none;
+      }
+      &.aside-mobile {
+        display: block;
+      }
+    } 
+    .bubble-small {
+      left: 13%;
+      top: 50px;
+      img {
+        width: 210px;
+        height: 210px;
+      }
+    }
+    .bubble-large {
+      top: 0;
+      left: auto;
+      right: 13%;
+      z-index: 2;
+      img {
+        width: 290px;
+        height: 290px;
+      }
+    }
+  }
+
+}
+
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .section-location {
+    aside {
+      font-size: 14px;
+      padding: 10px 15px;
+      width: 100%;
+      position: relative;
+      top: 0;
+      right: 0;
+      &.aside-desktop {
+        display: none;
+      }
+      &.aside-mobile {
+        display: block;
+      }
+    }
+    .bubbles {
+      position: relative;
+      height: 314px;
+      width: 100%;
+    }
+    .bubble-small {
+      left: 0;
+      top: 50px;
+      img {
+        width: 210px;
+        height: 210px;
+      }
+    }
+    .bubble-large {
+      top: 0;
+      left: auto;
+      right: 0;
+      z-index: 2;
+      img {
+        width: 290px;
+        height: 290px;
+      }
+    }
+  }
+
+  .section-business {
+    .business-metric {
+      .metric-large {
+        font-size: 60px;
+        min-width: 100px;
+      }
+
+    }
+  }
+
+}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .photos {
+    img {
+      margin-bottom: 15px;
+    }
+  }
+
+  .primary-section {
+    .primary-title {
+      font-size: 21px;
+      line-height: 1.5em;
+      margin-bottom: 30px;
+      letter-spacing: 7px;
+    }
+  }
+
+  .subsection {
+    padding: 30px 0;
+    margin-top: 30px;
+    margin-bottom: -30px;
+    .subsection-title {
+      font-size: 21px;
+      line-height: 1.5em;
+      margin-bottom: 30px;
+      letter-spacing: 7px;
+    }
+  }
+
+  .parallaxParent {
+    height: 450px;
+    margin-bottom: 30px;
+  }
+
+  .hero-content {
+    .hero-title {
+      font-size: 45px;
+      letter-spacing: 15px;
+    }
+  }
+
+  .section-main {
+    margin-bottom: 15px;
+    .hero-main {
+      .hero-content {
+        .hero-logo {
+          height: 75px;
+          margin-bottom: 40px;
+        }
+      }
+      .main-hero-title {
+        font-size: 45px;
+        letter-spacing: 0;
+      }
+    }
+    .marketing-statement {
+      font-size: 36px;
+      margin: 0 0 30px;
+    }
+    .main-feature {
+      margin-bottom: 45px;
+    }
+  }
+
+  .section-location {
+    aside {
+      font-size: 14px;
+      padding: 10px 15px;
+      width: 100%;
+      position: relative;
+      top: 0;
+      right: 0;
+      &.aside-desktop {
+        display: none;
+      }
+      &.aside-mobile {
+        display: block;
+      }
+    }
+    .bubbles {
+      position: relative;
+      height: 314px;
+      width: 100%;
+      margin: 30px auto 0;
+    }
+    .bubble-small {
+      left: 0;
+      top: 50px;
+      img {
+        width: 210px;
+        height: 210px;
+      }
+    }
+    .bubble-large {
+      top: 0;
+      left: auto;
+      right: 0;
+      z-index: 2;
+      img {
+        width: 290px;
+        height: 290px;
+      }
+    }
+    .facilities {
+      .subsection-copy {
+        margin-bottom: 50px;
+      }
+      img {
+        width: 100%
+      }
+    }
+  }
+
+  .section-adventures {
+    .hero-adventures {
+      .hero-title {
+        font-size: 32px;
+        span {
+          display: none;
+        }
+      }
+    }
+    .primary-section {
+      margin-bottom: 50px;
+    }
+  }
+
+  .section-business {
+    .business-metric {
+      .metric-large {
+        font-size: 60px;
+        min-width: 100px;
+      }
+
+    }
+    .belize-tourism {
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .photos {
+    img {
+      margin-bottom: 15px;
+    }
+  }
+
+  .primary-section {
+    .primary-title {
+      font-size: 21px;
+      line-height: 1.5em;
+      margin-bottom: 30px;
+      letter-spacing: 7px;
+    }
+  }
+
+  .subsection {
+    padding: 30px 0;
+    margin-top: 30px;
+    margin-bottom: -30px;
+    .subsection-title {
+      font-size: 21px;
+      line-height: 1.5em;
+      margin-bottom: 30px;
+      letter-spacing: 7px;
+    }
+  }
+
+  .parallaxParent {
+    height: 450px;
+    margin-bottom: 30px;
+  }
+
+  .hero-content {
+    .hero-title {
+      font-size: 45px;
+      letter-spacing: 15px;
+    }
+  }
+
+  .section-main {
+    margin-bottom: 15px;
+    .hero-main {
+      .hero-content {
+        .hero-logo {
+          height: 75px;
+          margin-bottom: 40px;
+        }
+      }
+      .main-hero-title {
+        font-size: 45px;
+        letter-spacing: 0;
+      }
+    }
+    .marketing-statement {
+      font-size: 36px;
+      margin: 0 0 30px;
+    }
+    .main-feature {
+      margin-bottom: 45px;
+    }
+  }
+
+  .section-location {
+    aside {
+      font-size: 14px;
+      padding: 10px 15px;
+      width: 100%;
+      position: relative;
+      top: 0;
+      right: 0;
+      &.aside-desktop {
+        display: none;
+      }
+      &.aside-mobile {
+        display: block;
+      }
+    }
+    .bubbles {
+      position: relative;
+      height: 314px;
+      width: 100%;
+      margin: 30px auto 0;
+    }
+    .bubble-small {
+      left: 0;
+      top: 50px;
+      img {
+        width: 210px;
+        height: 210px;
+      }
+    }
+    .bubble-large {
+      top: 0;
+      left: auto;
+      right: 0;
+      z-index: 2;
+      img {
+        width: 290px;
+        height: 290px;
+      }
+    }
+    .facilities {
+      .subsection-copy {
+        margin-bottom: 50px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .section-adventures {
+    .hero-adventures {
+      .hero-title {
+        font-size: 32px;
+        span {
+          display: none;
+        }
+      }
+    }
+    .primary-section {
+      margin-bottom: 50px;
+    }
+  }
+
+  .section-business {
+    .business-metric {
+      .metric-large {
+        font-size: 60px;
+        min-width: 100px;
+      }
+
+    }
+    .belize-tourism {
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .section-main {
+    .hero-main {
+      .hero-content {
+        .hero-logo {
+          width: 80%;
+          margin-bottom: 30px;
+        }
+      }
+      .main-hero-title {
+        font-size: 36px;
+      }
+    }
+  }
+
+  .hero-content {
+    .hero-title {
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+
+  .section-location {
+    .bubble-small {
+      display: none;
+    }
+  }
+
+  .section-adventures {
+    .hero-content {
+      .hero-title {
+        font-size: 21px;
+      }
+    }
+  }
+
+  .section-business {
+    .business-metric {
+      .metric-large {
+        font-size: 48px;
+      }
+
+    }
+    .belize-tourism {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+}
