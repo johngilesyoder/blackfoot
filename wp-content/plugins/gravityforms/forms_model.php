@@ -6,7 +6,8 @@ if ( ! class_exists( 'GFForms' ) ) {
 
 require_once( ABSPATH . WPINC . '/post.php' );
 
-define( 'GFORMS_MAX_FIELD_LENGTH', 200 );
+// Upgraded value columns can hold 4GB
+define( 'GFORMS_MAX_FIELD_LENGTH', get_option( 'gform_longtext_ready' ) ? 4294967295 : 200 );
 
 class GFFormsModel {
 
@@ -1387,8 +1388,16 @@ class GFFormsModel {
 			$lead_table = RGFormsModel::get_lead_table_name();
 			$user_agent = self::truncate( rgar( $_SERVER, 'HTTP_USER_AGENT' ), 250 );
 			$user_agent = sanitize_text_field( $user_agent );
-			$currency   = GFCommon::get_currency();
 			$source_url = self::truncate( self::get_current_page_url(), 200 );
+
+			/**
+			 * Allow the currency code to be overridden.
+			 *
+			 * @param string $currency The three character ISO currency code to be stored in the entry. Default is value returned by GFCommon::get_currency()
+			 * @param array $form The form currently being processed.
+			 *
+			 */
+			$currency = gf_apply_filters( 'gform_currency_pre_save_entry', $form['id'], GFCommon::get_currency(), $form );
 
 			$wpdb->query( $wpdb->prepare( "INSERT INTO $lead_table(form_id, ip, source_url, date_created, user_agent, currency, created_by) VALUES(%d, %s, %s, utc_timestamp(), %s, %s, {$user_id})", $form['id'], self::get_ip(), $source_url, $user_agent, $currency ) );
 
@@ -1500,12 +1509,20 @@ class GFFormsModel {
 		$lead['date_created'] = null;
 		$lead['form_id']      = $form['id'];
 		$lead['ip']           = self::get_ip();
-		$source_url   = self::truncate( self::get_current_page_url(), 200 );
-		$lead['source_url'] = esc_url_raw( $source_url );
-		$user_agent   = strlen( $_SERVER['HTTP_USER_AGENT'] ) > 250 ? substr( $_SERVER['HTTP_USER_AGENT'], 0, 250 ) : $_SERVER['HTTP_USER_AGENT'];
-		$lead['user_agent'] = sanitize_text_field( $user_agent );
-		$lead['currency']     = GFCommon::get_currency();
+		$source_url           = self::truncate( self::get_current_page_url(), 200 );
+		$lead['source_url']   = esc_url_raw( $source_url );
+		$user_agent           = strlen( $_SERVER['HTTP_USER_AGENT'] ) > 250 ? substr( $_SERVER['HTTP_USER_AGENT'], 0, 250 ) : $_SERVER['HTTP_USER_AGENT'];
+		$lead['user_agent']   = sanitize_text_field( $user_agent );
 		$lead['created_by']   = $current_user && $current_user->ID ? $current_user->ID : 'NULL';
+
+		/**
+		 * Allow the currency code to be overridden.
+		 *
+		 * @param string $currency The three character ISO currency code to be stored in the entry. Default is value returned by GFCommon::get_currency()
+		 * @param array $form The form currently being processed.
+		 *
+		 */
+		$lead['currency'] = gf_apply_filters( 'gform_currency_pre_save_entry', $form['id'], GFCommon::get_currency(), $form );
 
 		foreach ( $form['fields'] as $field ) {
 			/* @var $field GF_Field */
@@ -2980,7 +2997,8 @@ class GFFormsModel {
 		if ( ! rgblank( $value ) ) {
 
 			$value           = gf_apply_filters( 'gform_save_field_value', array( $form['id'], $field->id ), $value, $lead, $field, $form, $input_id );
-			$truncated_value = GFCommon::safe_substr( $value, 0, GFORMS_MAX_FIELD_LENGTH );
+
+			$truncated_value = get_option( 'gform_longtext_ready' ) ? $value : GFCommon::safe_substr( $value, 0, GFORMS_MAX_FIELD_LENGTH );
 
 			if ( $lead_detail_id > 0 ) {
 

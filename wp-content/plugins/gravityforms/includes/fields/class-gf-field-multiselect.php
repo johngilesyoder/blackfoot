@@ -93,7 +93,7 @@ class GF_Field_MultiSelect extends GF_Field {
 			$size = 7;
 		}
 
-		return sprintf( "<div class='ginput_container'><select multiple='multiple' {$placeholder} size='{$size}' name='input_%d[]' id='%s' {$logic_event} class='%s' $tabindex %s>%s</select></div>", $id, esc_attr( $field_id ), $css_class, $disabled_text, $this->get_choices( $value ) );
+		return sprintf( "<div class='ginput_container ginput_container_multiselect'><select multiple='multiple' {$placeholder} size='{$size}' name='input_%d[]' id='%s' {$logic_event} class='%s' $tabindex %s>%s</select></div>", $id, esc_attr( $field_id ), $css_class, $disabled_text, $this->get_choices( $value ) );
 	}
 
 	/**
@@ -104,7 +104,7 @@ class GF_Field_MultiSelect extends GF_Field {
 	 * @return string
 	 */
 	public function get_choices( $value ) {
-		return GFCommon::get_select_choices( $this, $value );
+		return GFCommon::get_select_choices( $this, $value, false );
 	}
 
 	/**

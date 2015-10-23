@@ -148,6 +148,12 @@ abstract class GFAddOn {
 
 	}
 
+	/**
+	 * Gets all active, registered Add-Ons.
+	 * 
+	 * @static
+	 * @return array - Active, registered Add-Ons
+	 */
 	public static function get_registered_addons() {
 		return self::$_registered_addons['active'];
 	}
@@ -1027,6 +1033,9 @@ abstract class GFAddOn {
 	<?php
 	}
 
+	/**
+	 * Displays the label for a field, including the tooltip and requirement indicator.
+	 */
 	protected function single_setting_label( $field ) {
 
 		echo $field['label'];
@@ -1666,7 +1675,14 @@ abstract class GFAddOn {
 		
 	}
 
-
+	/**
+	 * Prepares an HTML string of options for a drop down field.
+	 * 
+	 * @param array  $choices - Array containing all the options for the drop down field
+	 * @param string $selected_value - The value currently selected for the field
+	 * 
+	 * @return string The HTML for the select options
+	 */
 	public function get_select_options( $choices, $selected_value ) {
 
 		$options = '';
@@ -1691,6 +1707,15 @@ abstract class GFAddOn {
 		return $options;
 	}
 
+	/**
+	 * Prepares an HTML string for a single drop down field option.
+	 * 
+	 * @access protected
+	 * @param array  $choice - Array containing the settings for the drop down option
+	 * @param string $selected_value - The value currently selected for the field
+	 * 
+	 * @return string The HTML for the select choice
+	 */
 	protected function get_select_option( $choice, $selected_value ) {
 		if ( is_array( $selected_value ) ) {
 			$selected = in_array( $choice['value'], $selected_value ) ? "selected='selected'" : '';
@@ -2065,6 +2090,14 @@ abstract class GFAddOn {
 
 	}
 
+	/**
+	 * Renders and initializes a drop down field based on the $field array whose choices are populated by the form's fields.
+	 * 
+	 * @param array $field - Field array containing the configuration options of this field
+	 * @param bool  $echo  = true - true to echo the output to the screen, false to simply return the contents as a string
+	 *
+	 * @return string The HTML for the field
+	 */
 	public function settings_field_select( $field, $echo = true ) {
 
 		$args = is_array( rgar( $field, 'args' ) ) ? rgar( $field, 'args' ) : array( rgar( $field, 'args' ) );
@@ -2113,6 +2146,15 @@ abstract class GFAddOn {
 		return $html;
 	}
 
+	/**
+	 * Retrieve an array of form fields formatted for select, radio and checkbox settings fields.
+	 * 
+	 * @access public
+	 * @param array $form - The form object
+	 * @param array $args - Additional settings to check for (field and input types to include, callback for applicable input type)
+	 *
+	 * @return array The array of formatted form fields
+	 */
 	public function get_form_fields_as_choices( $form, $args = array() ) {
 
 		$fields = array();
@@ -2202,6 +2244,15 @@ abstract class GFAddOn {
 		return $fields;
 	}
 
+	/**
+	 * Renders and initializes a checkbox field that displays a select field when checked based on the $field array.
+	 * 
+	 * @access public
+	 * @param array $field - Field array containing the configuration options of this field
+	 * @param bool  $echo  = true - true to echo the output to the screen, false to simply return the contents as a string
+	 *
+	 * @return string The HTML for the field
+	 */
 	public function settings_checkbox_and_select( $field, $echo = true ) {
 
 		// prepare checkbox
@@ -2272,7 +2323,6 @@ abstract class GFAddOn {
 
 		return $html;
 	}
-
 
 	/***
 	 * Renders the save button for settings pages
@@ -2730,7 +2780,6 @@ abstract class GFAddOn {
 
 		return ! empty( $field_error ) ? $field_error : false;
 	}
-
 
 	/**
 	 * Filter settings fields.
@@ -3241,7 +3290,6 @@ abstract class GFAddOn {
 		return array();
 	}
 
-
 	/**
 	 * Override this function to specify a custom icon for the top level app menu.
 	 * Accepts a dashicon class or a URL.
@@ -3270,7 +3318,6 @@ abstract class GFAddOn {
 	 */
 	protected function load_screen_options() {
 	}
-
 
 	/**
 	 * Handles the rendering of app menu items that implement the tabs UI.
@@ -3341,7 +3388,6 @@ abstract class GFAddOn {
 		$this->app_tab_page_footer();
 
 	}
-
 
 	/**
 	 * Returns the form settings for the Add-On
@@ -4671,7 +4717,7 @@ abstract class GFAddOn {
 	}
 
 	protected function is_entry_list() {
-		if ( rgget( 'page' ) == 'gf_entries' && rgempty( 'view', $_GET ) ) {
+		if ( rgget( 'page' ) == 'gf_entries' && ( rgget( 'view' ) == 'entries' || rgempty( 'view', $_GET ) ) ) {
 			return true;
 		}
 
