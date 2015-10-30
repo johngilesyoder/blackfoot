@@ -1,0 +1,122 @@
+// site-footer.less
+// -----------------------------------------------------------------
+
+.site-footer {
+  .footer-top {
+    background: #F6F5F4;
+    padding: 50px 0;
+    color: #999090;
+    font-size: 16px;
+    a {
+      color: #999090;
+    }
+    .footer-links {
+      background-image: url('assets/img/dotted-line-footer.svg');
+      background-repeat: repeat-y;
+      background-position: 100% 0;
+      .make-md-column(8);
+      .links-column {
+        .make-md-column(4);
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          margin-bottom: 50px;
+        }
+        h3 {
+          font-size: 18px;
+          font-family: @font-family-sans-serif;
+          font-weight: 700;
+          margin: 0 0 8px;
+        }
+        ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          line-height: 1.5;
+        }
+      }
+    }
+    .footer-connect {
+      padding-bottom: 15px;
+      .make-md-column(4);
+      text-align: center;
+      .logo-footer {
+        margin-bottom: 30px;
+      }
+      address {
+
+      }
+      .footer-contact {
+        .footer-phone {
+          img {
+            margin-right: 8px;
+          }
+        }
+        .bullet {
+          margin: 0 10px;
+          opacity: .25;
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    background: #ECE9E8;
+    color: #8C8884;
+    a {
+      color: #8C8884;
+    }
+    .footer-trust {
+      padding: 50px 0;
+      .footer-trust-badges {
+        .badge-trout-unlimited {
+          height: 122px;
+          margin-right: 70px;
+        }
+        .badge-orvis {
+          height: 95px;
+        }
+      }
+      .footer-trust-copy {
+        font-size: 16px;
+        line-height: 1.25em;
+        margin-top: 15px;
+        h3 {
+          font-family: @font-family-sans-serif;
+          font-size: 16px;
+          font-weight: 700;
+          margin: 0 0 5px;
+        }
+        p {
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .footer-copyright {
+      border-top: 1px solid #D9D2CC;
+      padding: 30px 0;
+      font-family: @font-family-sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+    }
+  }
+}
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {}
+
+// Up to landscape phone
+@media (max-width: 480px) {}

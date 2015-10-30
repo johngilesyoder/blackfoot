@@ -20,6 +20,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
+    <script src="https://use.typekit.net/las1vox.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
 		<?php wp_head(); ?>
 		<script>
       // conditionizr.com
@@ -28,12 +31,6 @@
           assets: '<?php echo get_template_directory_uri(); ?>',
           tests: {}
       });
-    </script>
-
-    <script type="text/javascript">
-        jQuery(document).ready(function($){
-            $('#ninja_forms_field_3').attr("placeholder","Your message (optional)");
-        });
     </script>
 
     <div id="fb-root"></div>
@@ -49,31 +46,39 @@
 
 	<body data-spy="scroll" data-target="#site-header" <?php body_class(); ?>>
 
-    <!-- Topbar -->
-    <?php //get_template_part( 'includes/topbar' ); ?>
+      <?php if ( is_front_page() ) : ?>
 
-      <nav id="site-header" class="site-header navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#main">
-              <span class="site-logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-logo.svg" alt="Glover's Reef Belize"></span>
-            </a>
-          </div>
+        <?php get_template_part( 'includes/header-home' ); ?>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="navbar-collapse">
-            <?php primary_nav(); ?>
-            <div class="header-contact">
-              <span class="header-phone">+1 (650) 416-8063</span>
-              <a href="#contact" class="btn btn-primary btn-inquire">Inquire Now</a>
+      <?php else: ?>
+
+        <?php if ( is_page('waters') ) : ?>
+        <nav id="site-header" class="site-header navbar navbar-inverse">
+        <?php else: ?>
+        <nav id="site-header" class="site-header navbar navbar-default">
+        <?php endif; ?>
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#main">
+                <span class="site-logo">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-mark-white.svg">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-text-white.svg">
+                </span>
+              </a>
             </div>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+              <?php primary_nav(); ?>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+      <?php endif; ?>

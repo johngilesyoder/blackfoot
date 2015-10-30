@@ -5,7 +5,7 @@ Tags: CMS, custom field, custom fields, custom post type, custom post types, fie
 License: GPLv2
 Requires at least: 3.4
 Tested up to: 4.3.1
-Stable tag: 1.8.7.1
+Stable tag: 1.8.7.2
 
 The complete and reliable plugin for managing custom post types, custom taxonomies and custom fields.
 
@@ -154,6 +154,12 @@ Additionally, Types is the only plugin that lets you define parent/child relatio
 9. Children post list
 
 == Changelog ==
+
+= 1.8.7.2 =
+
+* Release date: 2015-10-28
+* Fixed the problem with select post parent if WPML is active.
+* Replaced sum of array by array merge to avoid losing values.
 
 = 1.8.7.1 =
 

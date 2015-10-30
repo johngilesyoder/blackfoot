@@ -6,61 +6,6 @@
  */
 
 /*------------------------------------*\
-  External Modules/Files
-\*------------------------------------*/
-
-// Load any external files you have here
-
-/*------------------------------------*\
-  Home AJAX Support
-\*------------------------------------*/
-function hatch_get_tiles()
-{
-    //start output buffering
-    ob_start();
-
-    get_template_part( 'includes/tile-hero' );
-
-    //get the contents in a string that JavaScript can use
-    $tiles = ob_get_contents();
-
-    //clean everything up to preserve memory.
-    ob_end_clean();
-
-    return $tiles;
-}
-
-function hatch_get_carousel()
-{
-    //start output buffering
-    ob_start();
-
-    get_template_part( 'includes/carousel-hero' );
-
-    //get the contents in a string that JavaScript can use
-    $carousel = ob_get_contents();
-
-    //clean everything up to preserve memory.
-    ob_end_clean();
-
-    return $carousel;
-}
-
-/*------------------------------------*\
-  Homepage Posts
-\*------------------------------------*/
-
-function hatch_home_pagesize( $query ) {
-    if ( is_home() )
-    {
-        $query->set( 'showposts', 14 );
-        return;
-    }
-}
-
-// add_action( 'pre_get_posts', 'hatch_home_pagesize', 1 );
-
-/*------------------------------------*\
   Theme Support
 \*------------------------------------*/
 
@@ -139,6 +84,54 @@ function primary_nav()
     );
 }
 
+function home_navigation_left()
+{
+    wp_nav_menu(
+    array(
+        'theme_location'  => 'home-navigation-left',
+        'menu'            => '',
+        'container'       => false,
+        'container_class' => 'menu-{menu slug}-container',
+        'container_id'    => '',
+        'menu_class'      => 'menu',
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '<span>',
+        'link_after'      => '</span>',
+        'items_wrap'      => '<ul class="nav navbar-nav navbar-left">%3$s</ul>',
+        'depth'           => 2,
+        'walker'          => new wp_bootstrap_navwalker()
+        )
+    );
+}
+
+function home_navigation_right()
+{
+    wp_nav_menu(
+    array(
+        'theme_location'  => 'home-navigation-right',
+        'menu'            => '',
+        'container'       => false,
+        'container_class' => 'menu-{menu slug}-container',
+        'container_id'    => '',
+        'menu_class'      => 'menu',
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '<span>',
+        'link_after'      => '</span>',
+        'items_wrap'      => '<ul class="nav navbar-nav navbar-right">%3$s</ul>',
+        'depth'           => 2,
+        'walker'          => new wp_bootstrap_navwalker()
+        )
+    );
+}
+
 
 function get_menu_by_location( $location ) 
 {
@@ -165,6 +158,27 @@ function footer_links_2() {
 
 function footer_links_3() {
     $location = 'footer-links-3';
+    get_menu_by_location( $location );
+    $menu_obj = get_menu_by_location( $location );
+    wp_nav_menu( array('theme_location' => $location, 'items_wrap'=> '<h3 class="links-header">'.esc_html($menu_obj->name).'</h3><ul id=\"%1$s\" class=\"%2$s\">%3$s</ul>') ); 
+}
+
+function footer_links_4() {
+    $location = 'footer-links-4';
+    get_menu_by_location( $location );
+    $menu_obj = get_menu_by_location( $location );
+    wp_nav_menu( array('theme_location' => $location, 'items_wrap'=> '<h3 class="links-header">'.esc_html($menu_obj->name).'</h3><ul id=\"%1$s\" class=\"%2$s\">%3$s</ul>') ); 
+}
+
+function footer_links_5() {
+    $location = 'footer-links-5';
+    get_menu_by_location( $location );
+    $menu_obj = get_menu_by_location( $location );
+    wp_nav_menu( array('theme_location' => $location, 'items_wrap'=> '<h3 class="links-header">'.esc_html($menu_obj->name).'</h3><ul id=\"%1$s\" class=\"%2$s\">%3$s</ul>') ); 
+}
+
+function footer_links_6() {
+    $location = 'footer-links-6';
     get_menu_by_location( $location );
     $menu_obj = get_menu_by_location( $location );
     wp_nav_menu( array('theme_location' => $location, 'items_wrap'=> '<h3 class="links-header">'.esc_html($menu_obj->name).'</h3><ul id=\"%1$s\" class=\"%2$s\">%3$s</ul>') ); 
@@ -201,9 +215,6 @@ function html5blank_header_scripts()
         wp_register_script('gsap-plugin', get_template_directory_uri() . '/assets/js/lib/animation.gsap.js', array(), null, false );
         wp_enqueue_script('gsap-plugin'); // Enqueue it!
 
-        wp_register_script('counter', get_template_directory_uri() . '/assets/js/lib/countUp.min.js', array(), null, false );
-        wp_enqueue_script('counter'); // Enqueue it!
-
     }
 }
 
@@ -215,7 +226,7 @@ function html5blank_conditional_scripts()
         wp_register_script('flickity', get_template_directory_uri() . '/assets/js/lib/flickity.pkgd.min.js', array(), '1.0.0' ); // Flickity
         wp_enqueue_script('flickity'); // Enqueue it!
 
-        wp_register_script('home', get_template_directory_uri() . '/assets/js/sections/home.js', array(), null, true ); // Home scripts
+        wp_register_script('home', get_template_directory_uri() . '/assets/js/sections/min/home-min.js', array(), null, true ); // Home scripts
         wp_enqueue_script('home'); // Enqueue it!
     
     }
@@ -224,26 +235,14 @@ function html5blank_conditional_scripts()
 // Load HTML5 Blank styles
 function html5blank_styles()
 {
-    wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=Merriweather:400,700,700italic,400italic|Lato:400,700,900,400italic,700italic,300', array(), null, false);
-    wp_enqueue_style('google-fonts'); // Enqueue it!
+    wp_register_style('styles', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+    wp_enqueue_style('styles'); // Enqueue it!
 }
 
 // Load HTML5 Blank conditional styles
 function html5blank_conditional_styles()
 {
-    if ( is_front_page() ) {
-        wp_register_style('home', get_template_directory_uri() . '/assets/css/sections/home.css', array(), '1.0', 'all');
-        wp_enqueue_style('home'); // Enqueue it!
-    } elseif ( is_page() ) {
-        wp_register_style('page', get_template_directory_uri() . '/assets/css/sections/page.css', array(), '1.0', 'all');
-        wp_enqueue_style('page'); // Enqueue it!
-    } elseif ( is_404() ) {
-       wp_register_style('404', get_template_directory_uri() . '/assets/css/sections/404.css', array(), '1.0', 'all');
-       wp_enqueue_style('404'); // Enqueue it!
-    } else {
-       wp_register_style('page', get_template_directory_uri() . '/assets/css/sections/page.css', array(), '1.0', 'all');
-       wp_enqueue_style('page'); // Enqueue it!
-    }
+
 }
 
 // Register HTML5 Blank Navigation
@@ -251,9 +250,14 @@ function register_html5_menu()
 {
     register_nav_menus(array( // Using array to specify more menus if needed
         'header-menu' => __('Header Menu', 'primary'),
+        'home-navigation-left' => __('Home Navigation Left', 'home-navigation-left'),
+        'home-navigation-right' => __('Home Navigation Right', 'home-navigation-right'),
         'footer-links-1' => __('Footer Links 1', 'footer-links-one'),
         'footer-links-2' => __('Footer Links 2', 'footer-links-two'),
-        'footer-links-3' => __('Footer Links 3', 'footer-links-three')
+        'footer-links-3' => __('Footer Links 3', 'footer-links-three'),
+        'footer-links-4' => __('Footer Links 4', 'footer-links-four'),
+        'footer-links-5' => __('Footer Links 5', 'footer-links-five'),
+        'footer-links-6' => __('Footer Links 6', 'footer-links-six')
     ));
 }
 
