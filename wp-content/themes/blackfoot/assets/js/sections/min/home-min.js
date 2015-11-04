@@ -1,1 +1,1 @@
-!function($,t,i){$(function(){"use strict"})}(jQuery,this);
+!function($,t,e){$(function(){"use strict";$("#hero-carousel").flickity({autoPlay:5e3,pageDots:!1})})}(jQuery,this);

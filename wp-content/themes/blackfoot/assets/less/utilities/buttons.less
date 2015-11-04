@@ -7,13 +7,28 @@
   background: transparent;
 }
 
-@btn-secondary-color:              #fff;
-@btn-secondary-bg:                 @brand-secondary;
-@btn-secondary-border:             darken(@btn-secondary-bg, 5%);
+.btn-primary {
+  background-color: #6E9C5C;
+  #gradient > .vertical(#80B068,#659457);
+  border-color: transparent;
+  font-size: 24px;
+  font-weight: 700;
+  &:hover {
+    background: #659457;
+    border-color: transparent;
+  }
+}
 
 .btn-secondary {
-  .button-variant(@btn-secondary-color; @btn-secondary-bg; @btn-secondary-border);
+  background-color: #459FCD;
+  color: #fff;
+  #gradient > .vertical(#4CBBE0,#4089BD);
+  border-color: transparent;
+  font-size: 24px;
+  font-weight: 700;
   &:hover {
-    background: #FF9D00;
+    background: #4089BD;
+    color: #fff;
+    border-color: transparent;
   }
 }
