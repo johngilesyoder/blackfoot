@@ -24,7 +24,7 @@ class WC_Booking_Form_Handler {
 
 			$booking_id         = absint( $_GET['booking_id'] );
 			$booking            = get_wc_booking( $booking_id );
-			$booking_can_cancel = $booking->has_status( apply_filters( 'woocommerce_valid_booking_statuses_for_cancel', array( 'unpaid', 'pending-confirmation', 'confirmed', 'paid' ) ) );
+			$booking_can_cancel = $booking->has_status( get_wc_booking_statuses( 'cancel' ) );
 			$redirect           = $_GET['redirect'];
 
 			if ( $booking->has_status( 'cancelled' ) ) {

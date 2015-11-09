@@ -1,5 +1,8 @@
 *** Stripe Changelog ***
 
+2015.11.06 - version 2.6.2
+* Fix bug that would cause multiple subscriptions to not be supported under certain circumstances
+
 2015.09.15 - version 2.6.1
 * Unset source if not set during pre-order release payments.
 * Store customer ID if not logged in for pre-order payments.

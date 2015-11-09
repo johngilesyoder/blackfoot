@@ -252,7 +252,7 @@ class WC_Bookings_CPT {
 				printf( '<a href="%s">' . __( 'Booking #%d', 'woocommerce-bookings' ) . '</a>', admin_url( 'post.php?post=' . $post->ID . '&action=edit' ), $post->ID );
 				break;
 			case 'num_of_persons' :
-				if ( ! $product->has_persons() ) {
+				if ( ! is_object( $product ) || ! $product->has_persons() ) {
 					esc_html_e( 'N/A', 'woocommerce-bookings' );
 					break;
 				}

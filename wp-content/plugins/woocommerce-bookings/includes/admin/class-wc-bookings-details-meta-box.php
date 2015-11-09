@@ -179,22 +179,24 @@ class WC_Bookings_Details_Meta_Box {
 
 					$saved_persons = get_post_meta( $post->ID, '_booking_persons', true );
 					$product = wc_get_product( $product_id );
+
+					if ( ! empty ( $product ) ) {
 					$person_types = $product->get_person_types();
+						if ( ! empty( $person_types ) && is_array( $person_types ) ) {
+							echo '<br class="clear" />';
+							echo '<h4>' . __( 'Person(s)', 'woocommerce-bookings' ) . '</h4>';
 
-					if ( ! empty( $person_types ) && is_array( $person_types ) ) {
-						echo '<br class="clear" />';
-						echo '<h4>' . __( 'Person(s)', 'woocommerce-bookings' ) . '</h4>';
+							foreach ( $person_types as $person_type ) {
+								$person_count = ( isset( $saved_persons[ $person_type->ID ] ) ? $saved_persons[ $person_type->ID ] : 0 );
+								woocommerce_wp_text_input( array( 'id' => '_booking_person_' . $person_type->ID, 'label' => $person_type->post_title, 'type' => 'number', 'placeholder' => '0', 'value' => $person_count, 'wrapper_class' => 'booking-person' ) );
+							}
+						} else if ( empty( $person_types ) && ! empty( $saved_persons ) && is_array( $saved_persons ) ) {
+							echo '<br class="clear" />';
+							echo '<h4>' . __( 'Person(s)', 'woocommerce-bookings' ) . '</h4>';
 
-						foreach ( $person_types as $person_type ) {
-							$person_count = ( isset( $saved_persons[ $person_type->ID ] ) ? $saved_persons[ $person_type->ID ] : 0 );
-							woocommerce_wp_text_input( array( 'id' => '_booking_person_' . $person_type->ID, 'label' => $person_type->post_title, 'type' => 'number', 'placeholder' => '0', 'value' => $person_count, 'wrapper_class' => 'booking-person' ) );
-						}
-					} else if ( empty( $person_types ) && ! empty( $saved_persons ) && is_array( $saved_persons ) ) {
-						echo '<br class="clear" />';
-						echo '<h4>' . __( 'Person(s)', 'woocommerce-bookings' ) . '</h4>';
-
-						foreach ( $saved_persons as $person_id => $person_count ) {
-							woocommerce_wp_text_input( array( 'id' => '_booking_person_' . $person_id, 'label' => get_the_title( $person_id ), 'type' => 'number', 'placeholder' => '0', 'value' => $person_count, 'wrapper_class' => 'booking-person' ) );
+							foreach ( $saved_persons as $person_id => $person_count ) {
+								woocommerce_wp_text_input( array( 'id' => '_booking_person_' . $person_id, 'label' => get_the_title( $person_id ), 'type' => 'number', 'placeholder' => '0', 'value' => $person_count, 'wrapper_class' => 'booking-person' ) );
+							}
 						}
 					}
 					?>
@@ -384,22 +386,24 @@ class WC_Bookings_Details_Meta_Box {
 		// Persons
 		$saved_persons = get_post_meta( $post_id, '_booking_persons', true );
 		$product = wc_get_product( $product_id );
-		$person_types = $product->get_person_types();
 
-		if ( ! empty( $person_types ) && is_array( $person_types ) ) {
-			$booking_persons = array();
-			foreach ( $person_types as $person_type ) {
-				if ( ! empty( $_POST['_booking_person_' . $person_type->ID ] ) ) {
-					$booking_persons[ $person_type->ID ] = absint( $_POST[ '_booking_person_' . $person_type->ID ] );
+		if ( ! empty ( $product ) ) {
+		$person_types = $product->get_person_types();
+			if ( ! empty( $person_types ) && is_array( $person_types ) ) {
+				$booking_persons = array();
+				foreach ( $person_types as $person_type ) {
+					if ( ! empty( $_POST['_booking_person_' . $person_type->ID ] ) ) {
+						$booking_persons[ $person_type->ID ] = absint( $_POST[ '_booking_person_' . $person_type->ID ] );
+					}
 				}
+				update_post_meta( $post_id, '_booking_persons', $booking_persons );
+			} else if ( empty( $person_types ) && ! empty( $saved_persons ) && is_array( $saved_persons ) ) {
+				$booking_persons = array();
+				foreach ( array_keys( $saved_persons ) as $person_id ) {
+					$booking_persons[ $person_id ] = absint( $_POST[ '_booking_person_' . $person_id ] );
+				}
+				update_post_meta( $post_id, '_booking_persons', $booking_persons );
 			}
-			update_post_meta( $post_id, '_booking_persons', $booking_persons );
-		} else if ( empty( $person_types ) && ! empty( $saved_persons ) && is_array( $saved_persons ) ) {
-			$booking_persons = array();
-			foreach ( array_keys( $saved_persons ) as $person_id ) {
-				$booking_persons[ $person_id ] = absint( $_POST[ '_booking_person_' . $person_id ] );
-			}
-			update_post_meta( $post_id, '_booking_persons', $booking_persons );
 		}
 
 		// Update date
@@ -435,24 +439,36 @@ class WC_Bookings_Details_Meta_Box {
 				$product    = wc_get_product( $product_id );
 				$is_all_day = isset( $_POST['_booking_all_day'] ) && $_POST['_booking_all_day'] == 'yes';
 
+				if ( ! metadata_exists( 'order_item', $item_id, __( 'Booking ID', 'woocommerce-bookings' ) ) ) {
+					wc_add_order_item_meta( $item_id, __( 'Booking ID', 'woocommerce-bookings' ), intval( $booking_order_id ) );
+				}
+
 				// Update date
+				$date = mktime( 0, 0, 0, $start_date[1], $start_date[2], $start_date[0] );
 				if ( metadata_exists( 'order_item', $item_id, __( 'Booking Date', 'woocommerce-bookings' ) ) ) {
-					$date = mktime( 0, 0, 0, $start_date[1], $start_date[2], $start_date[0] );
 					wc_update_order_item_meta( $item_id, __( 'Booking Date', 'woocommerce-bookings' ), date_i18n( wc_date_format(), $date ) );
+				} else {
+					wc_add_order_item_meta( $item_id, __( 'Booking Date', 'woocommerce-bookings' ), date_i18n( wc_date_format(), $date ) );
 				}
 
 				// Update time
 				if ( ! $is_all_day ) {
+					$time = mktime( $start_time[0], $start_time[1], 0, $start_date[1], $start_date[2], $start_date[0] );
 					if ( metadata_exists( 'order_item', $item_id, __( 'Booking Time', 'woocommerce-bookings' ) ) ) {
-						$time = mktime( $start_time[0], $start_time[1], 0, $start_date[1], $start_date[2], $start_date[0] );
 						wc_update_order_item_meta( $item_id, __( 'Booking Time', 'woocommerce-bookings' ), date_i18n( wc_time_format(), $time ) );
+					} else {
+						wc_add_order_item_meta( $item_id, __( 'Booking Time', 'woocommerce-bookings' ), date_i18n( wc_time_format(), $time ) );
 					}
 				}
 
 				// Update resource
+				$resource = wc_booking_get_product_resource( $product_id, $resource_id );
 				if ( metadata_exists( 'order_item', $item_id, __( 'Booking Type', 'woocommerce-bookings' ) ) ) {
-					$resource = wc_booking_get_product_resource( $product_id, $resource_id );
 					wc_update_order_item_meta( $item_id, __( 'Booking Type', 'woocommerce-bookings' ), $resource->get_title() );
+				} else {
+					if ( ! empty ( $resource ) && method_exists( $resource, 'get_title' ) ) {
+						wc_add_order_item_meta( $item_id, __( 'Booking Type', 'woocommerce-bookings' ), $resource->get_title() );
+					}
 				}
 
 				// Update persons
@@ -468,51 +484,54 @@ class WC_Bookings_Details_Meta_Box {
 						}
 					} else {
 						// The product does not use person types, the ID will be always 0 and the title "Persons"
-						if ( metadata_exists( 'order_item', $item_id, __( 'Persons', 'woocommerce-bookings' ) ) ) {
-							$persons = $_POST['_booking_person_0'];
-							wc_update_order_item_meta( $item_id, __( 'Persons', 'woocommerce-bookings' ), $persons );
-						}
+						$persons = $_POST['_booking_person_0'];
+						wc_update_order_item_meta( $item_id, __( 'Persons', 'woocommerce-bookings' ), $persons );
 					}
 				}
 
 				// Update duration
-				if ( metadata_exists( 'order_item', $item_id, __( 'Duration', 'woocommerce-bookings' ) ) ) {
-					$start_diff = wc_clean( $_POST['booking_start_date'] );
-					$end_diff   = wc_clean( $_POST['booking_end_date'] );
+				$start_diff = wc_clean( $_POST['booking_start_date'] );
+				$end_diff   = wc_clean( $_POST['booking_end_date'] );
 
-					if ( ! $is_all_day ) {
-						$start_diff .= ' ' . wc_clean( $_POST['booking_start_time'] );
-						$end_diff   .= ' ' . wc_clean( $_POST['booking_end_time'] );
-					}
+				if ( ! $is_all_day ) {
+					$start_diff .= ' ' . wc_clean( $_POST['booking_start_time'] );
+					$end_diff   .= ' ' . wc_clean( $_POST['booking_end_time'] );
+				}
 
-					$start = new DateTime( $start_diff );
-					$end   = new DateTime( $end_diff );
+				$start = new DateTime( $start_diff );
+				$end   = new DateTime( $end_diff );
 
-					// Add one day because DateTime::diff does not include the last day
-					if ( $is_all_day ) {
-						$end->modify( '+1 day' );
-					}
+				// Add one day because DateTime::diff does not include the last day
+				if ( $is_all_day ) {
+					$end->modify( '+1 day' );
+				}
 
-					$diffs = $end->diff( $start );
+				$diffs = $end->diff( $start );
 
-					$duration = array();
-					foreach ( $diffs as $type => $diff ) {
-						if ( $diff != 0 ) {
-							switch( $type ) {
-								case 'y': $duration[] = _n( '%y year', '%y years', $diff, 'woocommerce-bookings' );     break;
-								case 'm': $duration[] = _n( '%m month', '%m months', $diff, 'woocommerce-bookings' );   break;
-								case 'd': $duration[] = _n( '%d day', '%d days', $diff, 'woocommerce-bookings' );       break;
-								case 'h': $duration[] = _n( '%h hour', '%h hours', $diff, 'woocommerce-bookings' );     break;
-								case 'i': $duration[] = _n( '%i minute', '%i minutes', $diff, 'woocommerce-bookings' ); break;
-							}
+				$duration = array();
+				foreach ( $diffs as $type => $diff ) {
+					if ( $diff != 0 ) {
+						switch( $type ) {
+							case 'y': $duration[] = _n( '%y year', '%y years', $diff, 'woocommerce-bookings' );     break;
+							case 'm': $duration[] = _n( '%m month', '%m months', $diff, 'woocommerce-bookings' );   break;
+							case 'd': $duration[] = _n( '%d day', '%d days', $diff, 'woocommerce-bookings' );       break;
+							case 'h': $duration[] = _n( '%h hour', '%h hours', $diff, 'woocommerce-bookings' );     break;
+							case 'i': $duration[] = _n( '%i minute', '%i minutes', $diff, 'woocommerce-bookings' ); break;
 						}
 					}
-
-					$duration = implode( ', ', $duration );
-					$duration = $diffs->format( $duration );
-
-					wc_update_order_item_meta( $item_id, __( 'Duration', 'woocommerce-bookings' ), $duration );
 				}
+
+				$duration = implode( ', ', $duration );
+				$duration = $diffs->format( $duration );
+
+				if ( metadata_exists( 'order_item', $item_id, __( 'Duration', 'woocommerce-bookings' ) ) ) {
+					wc_update_order_item_meta( $item_id, __( 'Duration', 'woocommerce-bookings' ), $duration );
+				} else {
+					if ( ! empty( $duration ) ) {
+						wc_add_order_item_meta( $item_id, __( 'Duration', 'woocommerce-bookings' ), $duration );
+					}
+				}
+
 			}
 		}
 

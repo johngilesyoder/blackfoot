@@ -35,6 +35,8 @@ class WC_Booking_Form {
 		$wc_bookings_booking_form_args = array(
 			'closeText'                  => __( 'Close', 'woocommerce-bookings' ),
 			'currentText'                => __( 'Today', 'woocommerce-bookings' ),
+			'prevText'                   => __( 'Previous', 'woocommerce-bookings' ),
+			'nextText'                   => __( 'Next', 'woocommerce-bookings' ),
 			'monthNames'                 => array_values( $wp_locale->month ),
 			'monthNamesShort'            => array_values( $wp_locale->month_abbrev ),
 			'dayNames'                   => array_values( $wp_locale->weekday ),
@@ -69,12 +71,15 @@ class WC_Booking_Form {
 
 		// Variables for JS scripts
 		$booking_form_params = array(
-			'ajax_url'              => WC()->ajax_url(),
-			'i18n_date_unavailable' => __( 'This date is unavailable', 'woocommerce-bookings' ),
-			'i18n_start_date'       => __( 'Choose a Start Date', 'woocommerce-bookings' ),
-			'i18n_end_date'         => __( 'Choose an End Date', 'woocommerce-bookings' ),
-			'i18n_dates'            => __( 'Dates', 'woocommerce-bookings' ),
-			'i18n_choose_options'   => __( 'Please select the options for your booking above first', 'woocommerce-bookings' ),
+			'ajax_url'                   => WC()->ajax_url(),
+			'i18n_date_unavailable'      => __( 'This date is unavailable', 'woocommerce-bookings' ),
+			'i18n_date_fully_booked'     => __( 'This date is fully booked and unavailable', 'woocommerce-bookings' ),
+			'i18n_date_partially_booked' => __( 'This date is partially booked - but bookings still remain', 'woocommerce-bookings' ),
+			'i18n_date_available'        => __( 'This date is available', 'woocommerce-bookings' ),
+			'i18n_start_date'            => __( 'Choose a Start Date', 'woocommerce-bookings' ),
+			'i18n_end_date'              => __( 'Choose an End Date', 'woocommerce-bookings' ),
+			'i18n_dates'                 => __( 'Dates', 'woocommerce-bookings' ),
+			'i18n_choose_options'        => __( 'Please select the options for your booking above first', 'woocommerce-bookings' ),
 		);
 
 		wp_localize_script( 'wc-bookings-booking-form', 'booking_form_params', apply_filters( 'booking_form_params', $booking_form_params ) );
@@ -667,6 +672,38 @@ class WC_Booking_Form {
 
 		if ( $this->product->is_duration_type( 'fixed' ) ) {
 			$blocks_booked = ceil( $blocks_booked / $block_duration );
+		}
+
+		$buffer_period = get_post_meta( $this->product->id, '_wc_booking_buffer_period', true );
+		if ( ! empty( $buffer_period ) ) {
+			// handle day buffers
+			if ( ! in_array( $this->product->get_duration_unit(), array( 'minute', 'hour' ) ) ) {
+				$buffer_days = WC_Bookings_Controller::find_buffer_day_blocks( $this->product->id );
+				$contains_buffer_days = false;
+				// Evaluate costs for each booked block
+				for ( $block = 0; $block < $blocks_booked; $block ++ ) {
+					$block_start_time_offset = $block * $block_duration;
+					$block_end_time_offset   = ( ( $block + 1 ) * $block_duration ) - 1;
+					$block_start_time        = date( 'Y-n-j', strtotime( "+{$block_start_time_offset} {$block_unit}", $block_timestamp ) );
+					$block_end_time          = date( 'Y-n-j', strtotime( "+{$block_end_time_offset} {$block_unit}", $block_timestamp ) );
+
+					if ( in_array( $block_end_time, $buffer_days ) ) {
+						$contains_buffer_days = true;
+					}
+
+					if ( in_array( $block_start_time, $buffer_days ) ) {
+						$contains_buffer_days = true;
+					}
+				}
+
+				if ( $contains_buffer_days ) {
+					$block_duration_string = $block_duration;
+					if ( 'week' === $block_unit ) {
+						$block_duration_string = $block_duration * 7;
+					}
+					return new WP_Error( 'Error', sprintf( __( 'The duration of this booking must be at least %s days.', 'woocommerce-bookings' ), $block_duration_string ) );
+				}
+			}
 		}
 
 		// Evaluate costs for each booked block

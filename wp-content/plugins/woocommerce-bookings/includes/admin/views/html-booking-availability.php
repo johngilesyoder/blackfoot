@@ -35,6 +35,18 @@
 				<option value="hour" <?php selected( $max_date_unit, 'hour' ); ?>><?php _e( 'Hour(s)', 'woocommerce-bookings' ); ?></option>
 			</select> <?php _e( 'into the future', 'woocommerce-bookings' ); ?>
 		</p>
+
+		<?php
+		$buffer_period = get_post_meta( $post_id, '_wc_booking_buffer_period', true );
+		?>
+
+		<p class="form-field _wc_booking_buffer_period">
+			<label for="_wc_booking_buffer_period"><?php _e( 'Require a buffer period of', 'woocommerce-bookings' ); ?></label>
+			<input type="number" name="_wc_booking_buffer_period" id="_wc_booking_buffer_period" value="<?php echo esc_attr( $buffer_period ); ?>" step="1" min="1" style="margin-right: 7px; width: 4em;">
+			<span class='_wc_booking_buffer_period_unit'></span>
+			<?php _e( 'between bookings', 'woocommerce-bookings' ); ?>
+		</p>
+
 		<?php
 			woocommerce_wp_select(
 				array(
@@ -79,6 +91,7 @@
 						<th><?php _e( 'From', 'woocommerce-bookings' ); ?></th>
 						<th><?php _e( 'To', 'woocommerce-bookings' ); ?></th>
 						<th><?php _e( 'Bookable', 'woocommerce-bookings' ); ?>&nbsp;<a class="tips" data-tip="<?php _e( 'If not bookable, users won\'t be able to choose this block for their booking.', 'woocommerce-bookings' ); ?>">[?]</a></th>
+						<th><?php _e( 'Priority', 'woocommerce-bookings' ); ?>&nbsp;<a class="tips" data-tip="<?php esc_html_e( 'The lower the priority number, the earlier this rule gets applied. By default, global rules take priority over product rules which take priority over resource rules. By using priority numbers you can execute rules in different orders.', 'woocommerce-bookings' ); ?>">[?]</a></th>
 						<th class="remove" width="1%">&nbsp;</th>
 					</tr>
 				</thead>
@@ -91,7 +104,7 @@
 								$html = ob_get_clean();
 								echo esc_attr( $html );
 							?>"><?php _e( 'Add Range', 'woocommerce-bookings' ); ?></a>
-							<span class="description"><?php _e( 'Rules further down the table will override those at the top.', 'woocommerce-bookings' ); ?></span>
+							<span class="description"><?php _e( 'Rules with lower numbers will execute first. Rules further down this table with the same priority will also execute first.', 'woocommerce-bookings' ); ?></span>
 						</th>
 					</tr>
 				</tfoot>

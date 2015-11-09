@@ -42,6 +42,40 @@ function get_wc_booking_data_label( $key, $product ) {
 }
 
 /**
+ * Returns a list of booking statuses.
+ * @param  string $context An optional context (filters) for user or cancel statuses
+ * @return array           Statuses
+ */
+function get_wc_booking_statuses( $context = 'fully_booked' ) {
+	if ( 'user' === $context ) {
+		return apply_filters( 'woocommerce_bookings_for_user_statuses', array(
+			'unpaid',
+			'pending-confirmation',
+			'confirmed',
+			'paid',
+			'cancelled',
+			'complete',
+		) );
+	} else if ( 'cancel' === $context ) {
+		return apply_filters( 'woocommerce_valid_booking_statuses_for_cancel', array(
+			'unpaid',
+			'pending-confirmation',
+			'confirmed',
+			'paid',
+		) );
+	} else {
+		return apply_filters( 'woocommerce_bookings_fully_booked_statuses', array(
+			'unpaid',
+			'pending-confirmation',
+			'confirmed',
+			'paid',
+			'complete',
+			'in-cart',
+		) );
+	}
+}
+
+/**
  * Validate and create a new booking manually.
  *
  * @see WC_Booking::new_booking() for available $new_booking_data args
@@ -68,7 +102,12 @@ function create_wc_booking( $product_id, $new_booking_data = array(), $status = 
 	$qty = 1;
 
 	if ( 'yes' === $product->wc_booking_person_qty_multiplier && ! empty ( $new_booking_data['persons'] ) ) {
-		$qty = $new_booking_data['persons'];
+		if ( is_array( $new_booking_data['persons'] ) ) {
+			$qty = array_sum( $new_booking_data['persons'] );
+		} else {
+			$qty = $new_booking_data['persons'];
+			$new_booking_data['persons'] = array( $qty );
+		}
 	}
 
 	// If not set, use next available

@@ -507,10 +507,10 @@ class WC_Booking {
 	public function get_start_date( $date_format = null, $time_format = null ) {
 		if ( $this->populated && ! empty( $this->start ) ) {
 			if ( is_null( $date_format ) ) {
-				$date_format = apply_filters( 'woocommerce_bookings_date_format', 'M jS Y' );
+				$date_format = apply_filters( 'woocommerce_bookings_date_format', wc_date_format() );
 			}
 			if ( is_null( $time_format ) ) {
-				$time_format = apply_filters( 'woocommerce_bookings_time_format', ', g:ia' );
+				$time_format = apply_filters( 'woocommerce_bookings_time_format', ', ' . wc_time_format() );
 			}
 			if ( $this->is_all_day() ) {
 				return date_i18n( $date_format, $this->start );
@@ -529,10 +529,10 @@ class WC_Booking {
 	public function get_end_date( $date_format = null, $time_format = null ) {
 		if ( $this->populated && ! empty( $this->end ) ) {
 			if ( is_null( $date_format ) ) {
-				$date_format = apply_filters( 'woocommerce_bookings_date_format', 'M jS Y' );
+				$date_format = apply_filters( 'woocommerce_bookings_date_format', wc_date_format() );
 			}
 			if ( is_null( $time_format ) ) {
-				$time_format = apply_filters( 'woocommerce_bookings_time_format', ', g:ia' );
+				$time_format = apply_filters( 'woocommerce_bookings_time_format', ', ' . wc_time_format() );
 			}
 			if ( $this->is_all_day() ) {
 				return date_i18n( $date_format, $this->end );

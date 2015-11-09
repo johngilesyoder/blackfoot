@@ -134,9 +134,16 @@ class WC_Bookings_Ajax {
 			$base_interval = $base_interval * 60;
 		}
 
+		$buffer_period = get_post_meta( $product->id, '_wc_booking_buffer_period', true );
+		if ( ! empty ( $buffer_period ) ) {
+			$interval = $interval + $buffer_period;
+			$base_interval = $base_interval + $buffer_period;
+		}
+
 		$first_block_time     = $product->wc_booking_first_block_time;
 		$from                 = $time_from = strtotime( $first_block_time ? $first_block_time : 'midnight', $timestamp );
-		$to                   = strtotime( "tomorrow midnight", $timestamp );
+		$to                   = strtotime( "tomorrow midnight", $timestamp ) + $interval;
+
 		$resource_id_to_check = ( ! empty( $posted['wc_bookings_field_resource'] ) ? $posted['wc_bookings_field_resource'] : 0 );
 
 		if ( $resource_id_to_check && $resource = $product->get_resource( absint( $resource_id_to_check ) ) ) {

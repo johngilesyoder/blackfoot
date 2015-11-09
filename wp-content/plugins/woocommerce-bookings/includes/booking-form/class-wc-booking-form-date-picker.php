@@ -43,6 +43,7 @@ class WC_Booking_Form_Date_Picker extends WC_Booking_Form_Picker {
 		}
 
 		$this->find_fully_booked_blocks();
+		$this->find_buffer_blocks();
 	}
 
 	/**
@@ -71,113 +72,19 @@ class WC_Booking_Form_Date_Picker extends WC_Booking_Form_Picker {
 	}
 
 	/**
+	 * Find days which are buffer days so they can be grayed out on the date picker
+	 */
+	protected function find_buffer_blocks() {
+		$buffer_days = WC_Bookings_Controller::find_buffer_day_blocks( $this->booking_form->product->id );
+		$this->args['buffer_days'] = $buffer_days;
+	}
+
+	/**
 	 * Finds days which are fully booked already so they can be blocked on the date picker
-	 * @return array()
 	 */
 	protected function find_fully_booked_blocks() {
-		// Bare existing bookings into consideration for datepicker
-		$fully_booked_days     = array();
-		$partially_booked_days = array();
-		$find_bookings_for     = array( $this->booking_form->product->id );
-		$resource_count        = 0;
-
-		if ( $this->booking_form->product->has_resources() ) {
-			foreach (  $this->booking_form->product->get_resources() as $resource ) {
-				$find_bookings_for[] = $resource->ID;
-				$resource_count ++;
-			}
-		}
-
-		$booking_statuses = apply_filters( 'woocommerce_bookings_fully_booked_statuses', array(
-			'unpaid',
-			'pending-confirmation',
-			'confirmed',
-			'paid',
-			'complete',
-			'in-cart'
-			) );
-
-		$existing_bookings  = WC_Bookings_Controller::get_bookings_for_objects( $find_bookings_for, $booking_statuses );
-
-		// Is today fully booked/no longer available?
-		$blocks_in_range  = $this->booking_form->product->get_blocks_in_range( strtotime( 'midnight' ), strtotime( 'tomorrow midnight' ) );
-		$available_blocks = $this->booking_form->product->get_available_blocks( $blocks_in_range );
-
-		if ( sizeof( $available_blocks ) < sizeof( $blocks_in_range ) ) {
-			$partially_booked_days[ date( 'Y-n-j' ) ][0] = true;
-		}
-
-		if ( ! $available_blocks ) {
-			$fully_booked_days[ date( 'Y-n-j' ) ][0] = true;
-		}
-
-		// Use the existing bookings to find days which are fully booked
-		foreach ( $existing_bookings as $existing_booking ) {
-			$start_date  = $existing_booking->start;
-			$end_date    = $existing_booking->is_all_day() ? strtotime( 'tomorrow midnight', $existing_booking->end ) : $existing_booking->end;
-			$resource_id = $existing_booking->get_resource_id();
-			$check_date  = $start_date; // Take it from the top
-
-			// Loop over all booked days in this booking
-			while ( $check_date < $end_date ) {
-				$js_date = date( 'Y-n-j', $check_date );
-
-				if ( $check_date < current_time( 'timestamp' ) ) {
-					$check_date = strtotime( "+1 day", $check_date );
-					continue;
-				}
-
-				if ( $this->booking_form->product->has_resources() ) {
-
-					// Skip if we've already found this resource is unavailable
-					if ( ! empty( $fully_booked_days[ $js_date ][ $resource_id ] ) ) {
-						$check_date = strtotime( "+1 day", $check_date );
-						continue;
-					}
-
-					$blocks_in_range  = $this->booking_form->product->get_blocks_in_range( strtotime( 'midnight', $check_date ), strtotime( 'tomorrow midnight', $check_date ), array(), $resource_id );
-					$available_blocks = $this->booking_form->product->get_available_blocks( $blocks_in_range, array(), $resource_id );
-
-					if ( sizeof( $available_blocks ) < sizeof( $blocks_in_range ) ) {
-						$partially_booked_days[ $js_date ][ $resource_id ] = true;
-
-						if ( 1 === $resource_count || sizeof( $partially_booked_days[ $js_date ] ) === $resource_count ) {
-							$partially_booked_days[ $js_date ][0] = true;
-						}
-					}
-
-					if ( ! $available_blocks ) {
-						$fully_booked_days[ $js_date ][ $resource_id ] = true;
-
-						if ( 1 === $resource_count || sizeof( $fully_booked_days[ $js_date ] ) === $resource_count ) {
-							$fully_booked_days[ $js_date ][0] = true;
-						}
-					}
-
-				} else {
-
-					// Skip if we've already found this product is unavailable
-					if ( ! empty( $fully_booked_days[ $js_date ] ) ) {
-						$check_date = strtotime( "+1 day", $check_date );
-						continue;
-					}
-
-					$blocks_in_range  = $this->booking_form->product->get_blocks_in_range( strtotime( 'midnight', $check_date ), strtotime( 'tomorrow midnight -1 min', $check_date ) );
-					$available_blocks = $this->booking_form->product->get_available_blocks( $blocks_in_range );
-
-					if ( sizeof( $available_blocks ) < sizeof( $blocks_in_range ) ) {
-						$partially_booked_days[ $js_date ][0] = true;
-					}
-
-					if ( ! $available_blocks ) {
-						$fully_booked_days[ $js_date ][0] = true;
-					}
-				}
-				$check_date = strtotime( "+1 day", $check_date );
-			}
-		}
-
-		$this->args['partially_booked_days'] = $partially_booked_days;
-		$this->args['fully_booked_days']     = $fully_booked_days;
+		$booked = WC_Bookings_Controller::find_booked_day_blocks( $this->booking_form->product->id );
+		$this->args['partially_booked_days'] = $booked['partially_booked_days'];
+		$this->args['fully_booked_days']     = $booked['fully_booked_days'];
 	}
 }

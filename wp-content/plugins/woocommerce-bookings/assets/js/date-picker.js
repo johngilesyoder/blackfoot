@@ -183,6 +183,8 @@ jQuery( function( $ ) {
 				selectOtherMonths: true,
 				closeText: wc_bookings_booking_form.closeText,
 				currentText: wc_bookings_booking_form.currentText,
+				prevText: wc_bookings_booking_form.prevText,
+				nextText: wc_bookings_booking_form.nextText,
 				monthNames: wc_bookings_booking_form.monthNames,
 				monthNamesShort: wc_bookings_booking_form.monthNamesShort,
 				dayNames: wc_bookings_booking_form.dayNames,
@@ -221,9 +223,11 @@ jQuery( function( $ ) {
 			var availability               = $( this ).data( 'availability' );
 			var default_availability       = $( this ).data( 'default-availability' );
 			var fully_booked_days          = $( this ).data( 'fully-booked-days' );
+			var buffer_days                = $( this ).data( 'buffer-days' );
 			var partially_booked_days      = $( this ).data( 'partially-booked-days' );
 			var check_availability_against = wc_bookings_booking_form.check_availability_against;
 			var css_classes                = '';
+			var title                      = '';
 
 			// Get selected resource
 			if ( $form.find('select#wc_bookings_field_resource').val() > 0 ) {
@@ -242,12 +246,17 @@ jQuery( function( $ ) {
 			// Fully booked?
 			if ( fully_booked_days[ year + '-' + month + '-' + day ] ) {
 				if ( fully_booked_days[ year + '-' + month + '-' + day ][0] || fully_booked_days[ year + '-' + month + '-' + day ][ resource_id ] ) {
-					return [ false, 'fully_booked', booking_form_params.i18n_date_unavailable ];
+					return [ false, 'fully_booked', booking_form_params.i18n_date_fully_booked ];
 				}
 			}
 
+			// Buffer days?
+			if ( 'undefined' !== typeof buffer_days && buffer_days[ year + '-' + month + '-' + day ] ) {
+				return [ false, 'not_bookable', booking_form_params.i18n_date_unavailable ];
+			}
+
 			if ( '' + year + month + day < wc_bookings_booking_form.current_time ) {
-				return [ false, 'not_bookable', '' ];
+				return [ false, 'not_bookable', booking_form_params.i18n_date_unavailable ];
 			}
 
 			// Partially booked?
@@ -323,6 +332,7 @@ jQuery( function( $ ) {
 								}
 							break;
 						}
+
 					} catch( err ) {}
 
 					return true;
@@ -341,16 +351,23 @@ jQuery( function( $ ) {
 			}
 
 			if ( ! bookable ) {
-				return [ bookable, 'not_bookable', '' ];
+				return [ bookable, 'not_bookable', booking_form_params.i18n_date_unavailable ];
 			} else {
+
+				if ( css_classes.indexOf( 'partial_booked' ) > -1 ) {
+					title = booking_form_params.i18n_date_partially_booked;
+				} else {
+					title = booking_form_params.i18n_date_available;
+				}
+
 				if ( $picker.data( 'is_range_picker_enabled' ) ) {
 					var fieldset     = $(this).closest( 'fieldset' ),
 						start_date   = $.datepicker.parseDate( $.datepicker.ISO_8601, wc_bookings_date_picker.get_input_date( fieldset, '' ) ),
 						end_date     = $.datepicker.parseDate( $.datepicker.ISO_8601, wc_bookings_date_picker.get_input_date( fieldset, 'to_' ) );
 
-					return [ bookable, start_date && ( ( date.getTime() === start_date.getTime() ) || ( end_date && date >= start_date && date <= end_date ) ) ? css_classes + 'bookable-range' : css_classes + 'bookable', '' ];
+					return [ bookable, start_date && ( ( date.getTime() === start_date.getTime() ) || ( end_date && date >= start_date && date <= end_date ) ) ? css_classes + 'bookable-range' : css_classes + 'bookable', title ];
 				} else {
-					return [ bookable, css_classes + 'bookable', '' ];
+					return [ bookable, css_classes + 'bookable', title ];
 				}
 			}
 		}

@@ -428,6 +428,7 @@ class WC_Product_Booking extends WC_Product {
 	 */
 	public function get_available_bookings( $start_date, $end_date, $resource_id = '', $qty = 1 ) {
 		// Check the date is not in the past
+
 		if ( date( 'Ymd', $start_date ) < date( 'Ymd', current_time( 'timestamp' ) ) ) {
 			return false;
 		}
@@ -627,10 +628,51 @@ class WC_Product_Booking extends WC_Product {
 				$resource_rules = (array) get_post_meta( $for_resource, '_wc_booking_availability', true );
 			}
 
-			// Merge and reverse order so lower rules are evaluated first
-			$this->availability_rules[ $for_resource ] = array_filter( array_reverse( array_merge( WC_Product_Booking_Rule_Manager::process_availability_rules( $resource_rules ), WC_Product_Booking_Rule_Manager::process_availability_rules( $product_rules ), WC_Product_Booking_Rule_Manager::process_availability_rules( $global_rules ) ) ) );
+			$availability_rules = array_filter( array_reverse( array_merge( WC_Product_Booking_Rule_Manager::process_availability_rules( $resource_rules, 'resource' ), WC_Product_Booking_Rule_Manager::process_availability_rules( $product_rules, 'product' ), WC_Product_Booking_Rule_Manager::process_availability_rules( $global_rules, 'global' ) ) ) );
+			usort( $availability_rules, array( $this, 'priority_sort' ) );
+
+			$this->availability_rules[ $for_resource ] = $availability_rules;
 		}
+
 		return apply_filters( 'woocommerce_booking_get_availability_rules', $this->availability_rules[ $for_resource ], $for_resource, $this );
+	}
+
+	/**
+	 * Sort rules based on their priority
+	 * which is array index '2' of each rule. Lower number should be more important/parsed first
+	 * If priority is the same, it goes resource < product < global. Global take priority
+	 */
+	public function priority_sort( $rule_1, $rule_2 ) {
+		if ( $rule_1[2] === $rule_2[2] ) {
+			if ( $rule_1[3] === $rule_2[3] ) {
+				return 0;
+			}
+
+			if ( 'global' === $rule_2[3] && 'product' === $rule_1[3] ) {
+				return 1;
+			}
+
+			if ( 'global' === $rule_2[3] &&  'resource' === $rule_1[3] ) {
+				return 1;
+			}
+
+			if ( 'resource' === $rule_2[3] && 'product' === $rule_1[3] ) {
+				return -1;
+			}
+
+			if ( 'resource' === $rule_2[3] && 'global' === $rule_1[3] ) {
+				return -1;
+			}
+
+			if ( 'product' === $rule_2[3] && 'resource' === $rule_1[3] ) {
+				return 1;
+			}
+
+			if ( 'product' === $rule_2[3] && 'global' === $rule_1[3] ) {
+				return -1;
+			}
+		}
+		return ( $rule_1[2] < $rule_2[2] ) ? -1 : 1;
 	}
 
 	/**
@@ -770,7 +812,7 @@ class WC_Product_Booking extends WC_Product {
 					$min_date                = $this->get_min_timestamp_for_date( $start_date );
 
 					// Work out what minutes are actually bookable on this day
-					$bookable_minutes = $this->get_default_availability() ? range( $first_block_time_minute, 1440 ) : array();
+					$bookable_minutes = $this->get_default_availability() ? range( $first_block_time_minute, ( 1440 + $interval ) ) : array();
 					$rules            = $this->get_availability_rules( $resource_id );
 
 					// Since we evaluate all time rules and don't break out when one matches, reverse the array
@@ -781,16 +823,18 @@ class WC_Product_Booking extends WC_Product {
 						$rules = $rule[1];
 
 						if ( strrpos( $type, 'time' ) === 0 ) {
+							$day_mod = 0;
 							if ( ! empty( $rules['day'] ) ) {
 								if ( $rules['day'] != date( 'N', $check_date ) ) {
-									continue;
+									$day_mod = 1440 * ( $rules['day'] - date( 'N', $check_date ) );
 								}
 							}
+
 							$from_hour    = absint( date( 'H', strtotime( $rules['from'] ) ) );
 							$from_min     = absint( date( 'i', strtotime( $rules['from'] ) ) );
 							$to_hour      = absint( date( 'H', strtotime( $rules['to'] ) ) );
 							$to_min       = absint( date( 'i', strtotime( $rules['to'] ) ) );
-							$minute_range = array( ( $from_hour * 60 ) + $from_min, ( $to_hour * 60 ) + $to_min );
+							$minute_range = array( ( ( $from_hour * 60 ) + $from_min ) + $day_mod, ( ( $to_hour * 60 ) + $to_min ) + $day_mod );
 							$merge_ranges = array();
 
 							if ( $minute_range[0] > $minute_range[1] ) {
@@ -855,8 +899,8 @@ class WC_Product_Booking extends WC_Product {
 							$from_interval = $i * $base_interval;
 							$start_time    = strtotime( "+{$from_interval} minutes", $time_block_start );
 
-							// Break if start time is after the end date being calced, or if the start time is on the next day
-							if ( $start_time > $end_date || date( 'ymd', $start_time ) !== date( 'ymd', $start_date )  ) {
+							// Break if start time is after the end date being calced
+							if ( $start_time > $end_date ) {
 								break 2;
 							}
 
@@ -881,7 +925,6 @@ class WC_Product_Booking extends WC_Product {
 
 							/**
 							 * Ensure block can fit the entire user set interval
-							 * @note Known issue - hour blocks cannot span multi-days
 							 */
 							$to_interval         = $from_interval + $interval;
 							$end_time            = strtotime( "+{$to_interval} minutes", $time_block_start );
@@ -900,7 +943,9 @@ class WC_Product_Booking extends WC_Product {
 								continue;
 							}
 
-							$blocks[] = $start_time;
+							if ( ! in_array( $start_time, $blocks ) ) {
+								$blocks[] = $start_time;
+							}
 						}
 					}
 
@@ -1036,6 +1081,14 @@ class WC_Product_Booking extends WC_Product {
 		$existing_bookings = $this->get_bookings_in_date_range( current( $blocks ), ( end( $blocks ) + ( $base_interval * 60 ) ), $resource_id );
 		$booking_resource  = $resource_id ? $this->get_resource( $resource_id ) : null;
 		$block_html        = '';
+
+		if ( in_array( $this->get_duration_unit(), array( 'hour', 'minute' ) ) ) {
+			$end_block = $blocks;
+			$end_block = end( $end_block );
+			if ( date( 'h', $end_block ) == '12' ) {
+				array_pop( $blocks );
+			}
+		}
 
 		foreach ( $blocks as $block ) {
 			$available_qty       = $this->has_resources() && $booking_resource && $booking_resource->has_qty() ? $booking_resource->get_qty() : $this->get_qty();

@@ -46,7 +46,13 @@ class WC_Email_Booking_Cancelled extends WC_Email {
 	 */
 	function trigger( $booking_id ) {
 		if ( $booking_id ) {
-			$this->object    = get_wc_booking( $booking_id );
+
+			// Only send the booking email for booking post types, not orders, etc
+			if ( 'wc_booking' !== get_post_type( $booking_id ) ) {
+				return;
+			}
+
+			$this->object = get_wc_booking( $booking_id );
 
 			if ( $this->object->get_product() ) {
 				$key = array_search( '{product_title}', $this->find );

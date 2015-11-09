@@ -6,6 +6,7 @@ if ( ! empty( $_POST['bookings_availability_submitted'] ) ) {
 	for ( $i = 0; $i < $row_size; $i ++ ) {
 		$availability[ $i ]['type']     = wc_clean( $_POST[ 'wc_booking_availability_type' ][ $i ] );
 		$availability[ $i ]['bookable'] = wc_clean( $_POST[ 'wc_booking_availability_bookable' ][ $i ] );
+		$availability[ $i ]['priority'] = intval( $_POST['wc_booking_availability_priority'][ $i ] );
 
 		switch ( $availability[ $i ]['type'] ) {
 			case 'custom' :
@@ -58,6 +59,7 @@ if ( ! empty( $_POST['bookings_availability_submitted'] ) ) {
 								<th><?php _e( 'From', 'woocommerce-bookings' ); ?></th>
 								<th><?php _e( 'To', 'woocommerce-bookings' ); ?></th>
 								<th><?php _e( 'Bookable', 'woocommerce-bookings' ); ?>&nbsp;<a class="tips" data-tip="<?php _e( 'If not bookable, users won\'t be able to choose this block for their booking.', 'woocommerce-bookings' ); ?>">[?]</a></th>
+								<th><?php _e( 'Priority', 'woocommerce-bookings' ); ?>&nbsp;<a class="tips" data-tip="<?php esc_html_e( 'The lower the priority number, the earlier this rule gets applied. By default, global rules take priority over product rules which take priority over resource rules. By using priority numbers you can execute rules in different orders.', 'woocommerce-bookings' ); ?>">[?]</a></th>
 								<th class="remove" width="1%">&nbsp;</th>
 							</tr>
 						</thead>
@@ -70,7 +72,7 @@ if ( ! empty( $_POST['bookings_availability_submitted'] ) ) {
 										$html = ob_get_clean();
 										echo esc_attr( $html );
 									?>"><?php _e( 'Add Range', 'woocommerce-bookings' ); ?></a>
-									<span class="description"><?php _e( 'Rules further down the table will override those at the top.', 'woocommerce-bookings' ); ?></span>
+									<span class="description"><?php _e( 'Rules with lower numbers will execute first. Rules further down this table with the same priority will also execute first.', 'woocommerce-bookings' ); ?></span>
 								</th>
 							</tr>
 						</tfoot>

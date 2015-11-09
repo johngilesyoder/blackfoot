@@ -225,7 +225,7 @@ class WC_Product_Booking_Rule_Manager {
 	 * @param  $rules array
 	 * @return array
 	 */
-	public static function process_availability_rules( $rules ) {
+	public static function process_availability_rules( $rules, $which ) {
 		$processed_rules = array();
 
 		if ( empty( $rules ) ) {
@@ -250,6 +250,7 @@ class WC_Product_Booking_Rule_Manager {
 			}
 			$type_function     = strrpos( $fields['type'], 'time:' ) === 0 ? 'get_time_range' : 'get_' . $fields['type'] . '_range';
 			$type_availability = self::$type_function( $fields['from'], $fields['to'], $fields['bookable'] === 'yes' ? true : false );
+			$priority = ( isset( $fields['priority'] ) ? $fields['priority'] : 10 );
 
 			// Ensure day gets specified for time: rules
 			if ( strrpos( $fields['type'], 'time:' ) === 0 ) {
@@ -262,16 +263,16 @@ class WC_Product_Booking_Rule_Manager {
 				if ( strrpos( $fields['type'], 'time:' ) === 0 ) {
 					list( , $day ) = explode( ':', $fields['type'] );
 					if ( $fields['bookable'] === 'yes' ) {
-						$processed_rules[] = array( 'days', self::get_days_range( $day, $day, true ) );
+						$processed_rules[] = array( 'days', self::get_days_range( $day, $day, true ), $priority, $which );
 					}
 				} elseif ( strrpos( $fields['type'], 'time' ) === 0 ) {
 					if ( $fields['bookable'] === 'yes' ) {
-						$processed_rules[] = array( 'days', self::get_days_range( 0, 7, true ) );
+						$processed_rules[] = array( 'days', self::get_days_range( 0, 7, true ), $priority, $which );
 					}
 				}
 			}
 			if ( $type_availability ) {
-				$processed_rules[] = array( $fields['type'], $type_availability );
+				$processed_rules[] = array( $fields['type'], $type_availability, $priority, $which );
 			}
 		}
 

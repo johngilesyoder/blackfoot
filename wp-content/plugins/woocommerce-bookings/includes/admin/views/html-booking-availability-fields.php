@@ -33,6 +33,10 @@
 	if ( ! isset( $availability['type'] ) ) {
 		$availability['type'] = 'custom';
 	}
+
+	if ( ! isset( $availability['priority'] ) ) {
+		$availability['priority'] = 10;
+	}
 ?>
 <tr>
 	<td class="sort">&nbsp;</td>
@@ -118,6 +122,11 @@
 				<option value="yes" <?php selected( isset( $availability['bookable'] ) && $availability['bookable'] == 'yes', true ) ?>><?php _e( 'Yes', 'woocommerce-bookings' ) ;?></option>
 			</select>
 		</div>
+	</td>
+	<td>
+	<div class="priority">
+		<input type="number" name="wc_booking_availability_priority[]" value="<?php echo esc_attr( $availability['priority'] ); ?>" placeholder="10" />
+	</div>
 	</td>
 	<td class="remove">&nbsp;</td>
 </tr>

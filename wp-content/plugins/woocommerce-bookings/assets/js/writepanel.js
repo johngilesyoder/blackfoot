@@ -75,8 +75,15 @@ jQuery(document).ready(function($) {
 	$( '#_wc_booking_duration_unit' ).change(function() {
 		$('.availability_time, ._wc_booking_first_block_time_field').show();
 
-		if ( $(this).val() != 'hour' && $(this).val() != 'minute' ) {
+		if ( 'month' === $(this).val() ) {
+			$( '._wc_booking_buffer_period' ).hide();
+		} else if ( $(this).val() != 'hour' && $(this).val() != 'minute' ) {
+			$( '._wc_booking_buffer_period' ).show();
 			$('.availability_time, ._wc_booking_first_block_time_field').hide();
+			$( '._wc_booking_buffer_period_unit' ).text( wc_bookings_writepanel_js_params.i18n_days );
+		} else {
+			$( '._wc_booking_buffer_period' ).show();
+			$( '._wc_booking_buffer_period_unit' ).text( wc_bookings_writepanel_js_params.i18n_minutes );
 		}
 	});
 

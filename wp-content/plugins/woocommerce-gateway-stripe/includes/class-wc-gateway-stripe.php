@@ -169,7 +169,7 @@ class WC_Gateway_Stripe extends WC_Payment_Gateway {
 	 */
 	public function is_available() {
 		if ( $this->enabled == "yes" ) {
-			if ( ! is_ssl() && ! $this->testmode ) {
+			if ( ! $this->testmode && ( ( is_checkout() && ! is_ssl() ) || ( 'no' == get_option( 'woocommerce_force_ssl_checkout' ) && ! class_exists( 'WordPressHTTPS' ) ) ) ) {
 				return false;
 			}
 			// Required fields check

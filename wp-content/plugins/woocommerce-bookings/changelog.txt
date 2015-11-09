@@ -1,5 +1,21 @@
 *** WooCommerce Bookings Changelog ***
 
+2015.11.9 - version 1.8.0
+* Feature - Time based bookings can now extend into the next day.
+* Feature - Rules can now have priorities set to create custom availability schedules.
+* Feature - New coupon type to offer discounts per person on bookings with multiple people.
+* Feature - A buffer period for time and day blocks can now be set.
+* Tweak - Our "partially booked" indicator now works for day blocks with multiple spots.
+* Tweak - Tooltips have been added on the booking calendar to explain what each color means.
+* Tweak - New get_wc_booking_statuses() to return an array of booking statuses.
+* Tweak - Use wc_date_format/wc_time_format instead of hard-coded format strings for default date & time formats.
+* Fix - create_wc_booking now supports person types and correctly passes person info.
+* Fix - Show days as available if time based rules say so.
+* Fix - Fatal error that occurs when setting a booking's booked product to N/A.
+* Fix - Associate booking details with an order, even if the booking and order are created separately.
+* Fix - Only send booking cancelation emails for bookings and not orders.
+* Fix - Next/Previous tooltip text can now be translated.
+
 2015.8.19 - version 1.7.13
 * Feature - Show # of persons on the "All Bookings" screen
 * Fix - Clear transients after an order is canceled by a user

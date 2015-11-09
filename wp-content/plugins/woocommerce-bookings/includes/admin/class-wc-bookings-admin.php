@@ -393,6 +393,9 @@ class WC_Bookings_Admin {
 			'nonce_delete_resource'  => wp_create_nonce( 'delete-bookable-resource' ),
 			'nonce_add_resource'     => wp_create_nonce( 'add-bookable-resource' ),
 
+			'i18n_minutes'           => esc_js( __( 'minutes', 'woocommerce-bookings' ) ),
+			'i18n_days'              => esc_js( __( 'days', 'woocommerce-bookings' ) ),
+
 			'i18n_new_resource_name' => esc_js( __( 'Enter a name for the new resource', 'woocommerce-bookings' ) ),
 			'post'                   => isset( $post->ID ) ? $post->ID : '',
 			'plugin_url'             => WC()->plugin_url(),
@@ -449,6 +452,7 @@ class WC_Bookings_Admin {
 			'_wc_booking_max_date_unit'              => 'max_date_unit',
 			'_wc_booking_min_date'                   => 'int',
 			'_wc_booking_min_date_unit'              => '',
+			'_wc_booking_buffer_period'              => 'int',
 			'_wc_booking_first_block_time'           => '',
 			'_wc_booking_requires_confirmation'      => 'yesno',
 			'_wc_booking_default_date_availability'  => '',
@@ -489,6 +493,7 @@ class WC_Bookings_Admin {
 		for ( $i = 0; $i < $row_size; $i ++ ) {
 			$availability[ $i ]['type']     = wc_clean( $_POST[ "wc_booking_availability_type" ][ $i ] );
 			$availability[ $i ]['bookable'] = wc_clean( $_POST[ "wc_booking_availability_bookable" ][ $i ] );
+			$availability[ $i ]['priority'] = intval( $_POST['wc_booking_availability_priority'][ $i ] );
 
 			switch ( $availability[ $i ]['type'] ) {
 				case 'custom' :
