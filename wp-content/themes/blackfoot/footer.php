@@ -31,7 +31,7 @@
                 Missoula, Montana 59808
               </address>
               <div class="footer-contact">
-                <a class="footer-phone" href="tel:+14065427411"><img class="icon-phone" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-phone-dark.svg">(406) 542-7411</a>
+                <a class="footer-phone" href="tel:+14065427411"><img class="icon-phone-footer" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-phone-footer.svg">(406) 542-7411</a>
                 <span class="bullet">&bull;</span>
                 <a href="/contact-us">Contact us</a>
                 <span class="bullet">&bull;</span>

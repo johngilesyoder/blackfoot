@@ -44,19 +44,19 @@
 
 	</head>
 
-	<body data-spy="scroll" data-target="#site-header" <?php body_class(); ?>>
+	<body <?php body_class(); ?>>
 
       <?php if ( is_front_page() ) : ?>
 
         <?php get_template_part( 'includes/header-home' ); ?>
 
-      <?php else: ?>
+      <?php endif; ?>
 
-        <?php if ( is_page('waters') ) : ?>
-        <nav id="site-header" class="site-header navbar navbar-inverse">
-        <?php else: ?>
-        <nav id="site-header" class="site-header navbar navbar-default">
-        <?php endif; ?>
+      <?php if ( is_page('waters') || is_front_page() ) : ?>
+        <nav id="site-header" class="site-header navbar navbar-inverse navbar-fixed-top">
+      <?php else: ?>
+        <nav id="site-header" class="site-header navbar navbar-default navbar-fixed-top">
+      <?php endif; ?>
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -66,10 +66,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#main">
+              <a class="navbar-brand" href="/">
                 <span class="site-logo">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-mark-white.svg">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-text-white.svg">
+                  <img class="logo-left" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-mark-white.svg">
+                  <img class="logo-right" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-text-white.svg">
                 </span>
               </a>
             </div>
@@ -78,7 +78,9 @@
             <div class="collapse navbar-collapse" id="navbar-collapse">
               <?php primary_nav(); ?>
             </div><!-- /.navbar-collapse -->
+            <div class="header-secondary-nav">
+              <a class="header-phone" href="tel:+14065427411"><span class="icon-phone">Call us</span>(406) 542-7411</a>
+              <a class="header-cart" href="<?php echo WC()->cart->get_cart_url(); ?>"><span class="icon-cart">View your cart</span></a>
+            </div>
           </div><!-- /.container-fluid -->
         </nav>
-
-      <?php endif; ?>

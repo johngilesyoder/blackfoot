@@ -1,21 +1,109 @@
 // site-header.less
 // -----------------------------------------------------------------
+
+body {
+  padding-top: 60px;
+}
+
 .site-header {
   font-family: @font-family-sans-serif;
   border-bottom: 0;
-  .site-logo img {
-    height: 30px;
+  .navbar-brand {
+    padding: 0;
   }
-  .navbar .navbar-collapse {
+  .site-logo {
+    background-image: url('assets/img/logo-bg-dark.svg');
+    height: 80px;
+    width: 229px;
+    display: inline-block;
+    padding: 12px 15px 15px 25px;
+    .logo-left {
+      height: 45px;
+      margin-right: 3px;
+    }
+    .logo-right {
+      height: 33px;
+    }
+  }
+  .header-secondary-nav {
+    float: right;
+    font-weight: 500;
+    height: @navbar-height;
+    line-height: @line-height-computed;
+    a {
+      font-size: 16px;
+      display: inline-block;
+      height: @navbar-height;
+      line-height: @line-height-computed;
+      padding: @navbar-padding-vertical @navbar-padding-horizontal;
+      color: @brand-brown;
+    }
+    .header-phone {
+      margin-right: 17px;
+      text-decoration: underline;
+      position: relative;
+      top: -2px;
+      .icon-phone {
+        display: inline-block;
+        width: 9px;
+        height: 21px;
+        background: url('assets/img/icon-phone-dark.svg');
+        background-repeat: no-repeat;
+        text-indent: -9999px;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    }
+    .header-cart {
+      margin-left: 0;
+      background: rgba(0,0,0,.04);
+      &:hover {
+        background: rgba(0,0,0,.08);
+      }
+      .icon-cart {
+        display: inline-block;
+        width: 24px;
+        height: 21px;
+        background: url('assets/img/icon-cart.svg');
+        background-repeat: no-repeat;
+        text-indent: -9999px;
+        vertical-align: middle;
+      }
+    }
+  }
+  .navbar-collapse {
     border-bottom: 0;
+    float: left;
   }
   .navbar-nav {
     & > li {
       & > a {
-        font-weight: 600;
+        font-weight: 700;
         text-transform: uppercase;
         font-size: 16px;
       } 
+    }
+  }
+}
+
+.site-header.navbar-inverse {
+  .header-secondary-nav {
+    a {
+      color: #fff;
+    }
+    .header-phone {
+      .icon-phone {
+        background: url('assets/img/icon-phone-white.svg');
+      }
+    }
+    .header-cart {
+      background: rgba(0,0,0,1);
+      &:hover {
+        background: rgba(0,0,0,1);
+      }
+      .icon-cart {
+        background: url('assets/img/icon-cart-white.svg');
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
-<nav id="site-header" class="site-header navbar navbar-inverse navbar-fixed-top site-header-home">
+<nav id="site-header-lg" class="site-header navbar navbar-inverse navbar-fixed-top site-header-lg">
   <div class="container">
     <a class="navbar-brand" href="/">
       <span class="site-logo">
@@ -13,7 +13,7 @@
         <a class="header-home-phone" href="tel:+14065427411"><img class="icon-phone" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-phone-white.svg">(406) 542-7411</a>
         <a href="/contact-us">Contact us</a>
       </div>
-      <a class="home-header-cart" href="<?php echo WC()->cart->get_cart_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-cart.svg" alt="View your cart"></a>
+      <a class="home-header-cart" href="<?php echo WC()->cart->get_cart_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-cart-white.svg" alt="View your cart"></a>
     </div>
   </div><!-- /.container -->
 </nav>
