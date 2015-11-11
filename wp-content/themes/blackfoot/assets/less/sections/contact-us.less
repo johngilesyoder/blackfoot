@@ -1,0 +1,163 @@
+// contact-us.less
+// -----------------------------------------------------------------
+
+.contact-us {
+  .gform_wrapper {
+    margin-right: 0;
+    margin-top: 0;
+    max-width: 100%;
+  }
+  // Contact Us Form
+  .contact-form {
+    background: @brand-off-white;
+    color: @brand-brown;
+    padding: 25px 30px 30px;
+    .gform_title {
+      margin-top: 0;
+      border-bottom: 1px solid #E0DFDE;
+      padding-bottom: 20px;
+      font-size: 24px;
+      font-family: @font-family-sans-serif;
+      font-weight: 700;
+    }
+    .gform_fields {
+      .gfield_label {
+        font-family: @font-family-sans-serif;
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+      .gfield_required {
+        color: @brand-danger;
+      }
+      input[type="text"] {
+        .form-control();
+        width: 100%;
+      }
+      .gfield_checkbox {
+        font-size: 16px;
+        font-family: @font-family-sans-serif;
+        label {
+          font-weight: 400;
+        }
+        input:checked+label {
+          font-weight: 400;
+        }
+      }
+      textarea {
+        .form-control();
+        height: 150px;
+      }
+      // Opt in
+      .gchoice_1_3_1 {
+        margin-top: -30px;
+      }
+      .gfield_error {
+        background-color: @state-danger-bg;
+        .gfield_label {
+          color: @state-danger-text;
+        }
+        .validation_message {
+          color: @state-danger-text;
+          font-family: @font-family-sans-serif;
+          margin-bottom: 0;
+          font-weight: 400;
+          font-size: 14px;
+        }
+      }
+    }
+    .gform_footer {
+      // Submit
+      .gform_button {
+        .btn();
+        .btn-primary();
+        width: 100%;
+        font-size: 24px;
+      }
+    }
+    .validation_error {
+      .alert();
+      .alert-danger();
+      font-family: @font-family-sans-serif;
+      font-size: 16px;
+    }
+  }
+  .gform_confirmation_wrapper {
+    border-radius: 5px;
+    font-family: @font-family-sans-serif;
+    .glyphicon {
+      margin-right: 5px;
+    }
+  }
+  // Sidebar
+  .contact-sidebar {
+    .contact-sidebar-title {
+      font-family: @font-family-sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    .location {
+      margin-bottom: 25px;
+      h3 {
+        background: @brand-brown;
+        border-radius: 5px 5px 0 0;
+        text-align: center;
+        padding: 13px 15px 17px;
+        margin: 0;
+        line-height: 1em;
+        img {
+          height: 28px;
+        }
+      }
+      .address-wrapper {
+        border-left: 1px solid #d7d5d4;
+        border-right: 1px solid #d7d5d4;
+        padding: 20px 30px;
+        address {
+          margin-bottom: 12px;
+        }
+      }
+      .location-phone,
+      .location-email {
+        display: block;
+        strong {
+          font-family: @font-family-sans-serif;
+          font-size: 13px;
+          letter-spacing: 2px;
+          margin-right: 6px;
+          text-transform: uppercase;
+        }
+      }
+      iframe {
+        border: 1px solid #B8B2A9 !important;
+      }
+      &.location-flint-creek {
+        h3 {
+          img {
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {}
+
+// Up to landscape phone
+@media (max-width: 480px) {}

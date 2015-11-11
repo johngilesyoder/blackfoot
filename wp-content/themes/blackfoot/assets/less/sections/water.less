@@ -85,6 +85,20 @@
     .leading-words {
       font-size: 21px;
     }
+    .water-gallery {
+      &:before {
+        content: 'Gallery';
+        font-family: @font-family-sans-serif;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #B0ADAA;
+        font-weight: 700;
+        letter-spacing: 3.5px;
+        margin-top: 60px;
+        margin-bottom: 25px;
+        display: block;
+      }
+    }
   }
   .water-stats {
     ul {
@@ -130,21 +144,15 @@
     li {
       .make-md-column(6);
       margin-bottom: 30px;
+      font-size: 16px;
+      font-family: @font-family-sans-serif;
+      font-weight: 500;
       img {
         border-radius: 50%;
         border: 3px solid @brand-brown;
         float: left;
         width: 20%;
-      }
-      span {
-        min-height: 1;
-        float: left;
-        display: inline-block;
-        width: 80%;
-        padding: 10px 30px 0 15px;
-        font-size: 16px;
-        font-family: @font-family-sans-serif;
-        font-weight: 500;
+        margin-right: 15px;
       }
     }
   }

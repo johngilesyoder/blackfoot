@@ -115,9 +115,7 @@
 							<section class="water-patterns">
 								<h2 class="section-title">BRO’s Top Five Patterns for <em><?php the_title(); ?></em></h2>	
 								<div class="row">	
-									<ul>
-										<?php echo types_render_field("top-five-patterns", array( )) ?>
-									</ul>	
+									<?php echo types_render_field("top-five-patterns", array( )) ?>
 								</div>					
 							</section>
 						</div>
