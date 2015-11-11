@@ -34,7 +34,7 @@
 								3055 North Reserve Street, Suite A-1<br>
 								Missoula, Montana 59808
 							</address>
-							<span class="location-email"><strong>Email:</strong> info@blackfootriver.com</span>
+							<span class="location-email"><strong>Email:</strong> <a href="mailto:info@blackfootriver.com">info@blackfootriver.com</a></span>
 							<span class="location-phone"><strong>Phone:</strong> (406) 542-7411</span>
 						</div>
 						<div class="map-wrapper">
@@ -49,11 +49,11 @@
 								116 West Broadway<br>
 								Philipsburg, Montana 59858
 							</address>
-							<span class="location-email"><strong>Email:</strong> info@flintcreekoutdoors.com</span>
+							<span class="location-email"><strong>Email:</strong> <a href="info@flintcreekoutdoors.com">info@flintcreekoutdoors.com</a></span>
 							<span class="location-phone"><strong>Phone:</strong> (406) 859-9500</span>
 						</div>
 						<div class="map-wrapper">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10906.029392899114!2d-114.0393564623613!3d46.89273972490584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa373c026818ad3d8!2sBlackfoot+River+Outfitters!5e0!3m2!1sen!2sus!4v1447273121564" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2754.8741524891075!2d-113.29732918439636!3d46.33219268312634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x535c751dbb11b1b9%3A0x8912078a3a3da183!2sFlint+Creek+Outdoors!5e0!3m2!1sen!2sus!4v1447274220331" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
 						</div>
 					</div>
 				</aside>
