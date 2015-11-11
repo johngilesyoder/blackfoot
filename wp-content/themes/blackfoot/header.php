@@ -18,7 +18,6 @@
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="<?php bloginfo('description'); ?>">
 
     <script src="https://use.typekit.net/las1vox.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -52,7 +51,7 @@
 
       <?php endif; ?>
 
-      <?php if ( is_page('waters') || is_front_page() ) : ?>
+      <?php if ( is_singular( 'water' )  || is_front_page() ) : ?>
         <nav id="site-header" class="site-header navbar navbar-inverse navbar-fixed-top">
       <?php else: ?>
         <nav id="site-header" class="site-header navbar navbar-default navbar-fixed-top">

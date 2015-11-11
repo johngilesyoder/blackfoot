@@ -230,6 +230,13 @@ function html5blank_conditional_scripts()
         wp_enqueue_script('home'); // Enqueue it!
     
     }
+
+    if ( is_singular( 'water') ) {
+
+        wp_register_script('water', get_template_directory_uri() . '/assets/js/sections/min/water-min.js', array(), null, true ); // Water scripts
+        wp_enqueue_script('water'); // Enqueue it!
+        
+    }
 }
 
 // Load HTML5 Blank styles

@@ -1,0 +1,48 @@
+// book-now-block.less
+// -----------------------------------------------------------------
+
+.book-now-block {
+  background: @brand-off-white;
+  color: @brand-brown;
+  padding: 20px 30px 30px;
+  margin-bottom: 30px;
+  h2 {
+    font-family: @font-family-sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    background-image: url('assets/img/dotted-line-horiz.svg');
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    padding-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+  p {
+    font-size: 21px;
+    line-height: 30px;
+    margin-bottom: 40px;
+    strong {
+      font-family: @font-family-sans-serif;
+    }
+  }
+  .btn-book {
+    .btn-primary();
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 24px;
+      background-image: url('assets/img/icon-chevron-r-white.svg');
+      background-size: cover;
+      margin-left: 15px;
+      vertical-align: middle;
+      top: -4px;
+      position: relative;
+    }
+  }
+}

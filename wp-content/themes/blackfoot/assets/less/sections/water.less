@@ -1,0 +1,215 @@
+// water.less
+// -----------------------------------------------------------------
+
+.single-water {
+  padding-top: 0;
+  main {
+    margin-top: 0;
+  }
+  .breadcrumbs {
+    margin-bottom: 190px;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,1);
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .breadcrumb_last {
+      font-weight: 600;
+    }
+  }
+  .water-hero {
+    height: 660px;
+    border-bottom: 7px solid #999490;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-bottom: 40px;
+    .water-hero-gradient {
+      height: 100%;
+      padding-top: 110px;
+      #gradient > .horizontal(rgba(0,0,0,.43),rgba(0,0,0,0), 0%, 50%);
+    }
+    .water-hero-content {
+      color: #fff;
+      a {
+        color: #fff;
+      }
+      .water-title {
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 1em;
+        margin: 0 0 30px;
+        text-shadow: 0 1px 10px rgba(0,0,0,.4);
+      }
+      .water-meta {
+        font-size: 21px;
+        font-weight: 500;
+        a {
+          text-decoration: underline;
+        }
+        .water-location,
+        .water-video,
+        .water-report {
+          margin-right: 28px;
+          img {
+            margin-right: 10px;
+          }
+        }
+        .water-video,
+        .water-report {
+
+        }
+      }
+    }
+  }
+  section {
+    margin-bottom: 60px;
+    .section-title {
+      font-family: @font-family-sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #B0ADAA;
+      font-weight: 700;
+      letter-spacing: 3.5px;
+      margin-top: 0;
+      margin-bottom: 25px;
+      em {
+        font-family: @font-family-serif;
+        text-transform: none;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+  .water-description {
+    .leading-words {
+      font-size: 21px;
+    }
+  }
+  .water-stats {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      border-left: 4px solid #999490;
+      li {
+        color: @brand-brown;
+        padding: 25px 25px 25px 45px;
+        position: relative;
+        img {
+          position: absolute;
+          left: -18px;
+          top: 18px;
+        }
+        h4 {
+          font-family: @font-family-sans-serif;
+          font-size: 16px;
+          font-weight: 700;
+          margin: 0 0 12px;
+        }
+        p {
+          font-size: 16px;
+          margin: 0;
+        }
+        &:nth-child(odd) {
+          background: @brand-off-white;
+        }
+      }
+    }
+  }
+  .water-patterns {
+    margin-bottom: 30px;
+    .section-title {
+      margin-bottom: 40px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      .make-md-column(6);
+      margin-bottom: 30px;
+      img {
+        border-radius: 50%;
+        border: 3px solid @brand-brown;
+        float: left;
+        width: 20%;
+      }
+      span {
+        min-height: 1;
+        float: left;
+        display: inline-block;
+        width: 80%;
+        padding: 10px 30px 0 15px;
+        font-size: 16px;
+        font-family: @font-family-sans-serif;
+        font-weight: 500;
+      }
+    }
+  }
+  .water-sidebar {
+    .sidebar-title {
+      font-size: 21px;
+      font-family: @font-family-sans-serif;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .other-waters {
+      .clearfix();
+      .other-water {
+        height: 172px;
+        width: 48%;
+        float: left;
+        margin-right: 4%;
+        background-size: cover;
+        background-position: 50% 50%;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 4%;
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+        &:hover {
+          .other-water-title {
+            background-position: 0 0;
+          }
+        }
+        .other-water-title {
+          font-family: @font-family-sans-serif;
+          font-weight: 700;
+          font-size: 18px;
+          height: 44px;
+          line-height: 44px;
+          padding: 0 15px;
+          background-size: 200% auto;
+          transition: background-position 150ms;
+          background-position: 100% 0;
+          margin: 0;
+          display: block;
+          #gradient > .horizontal(rgba(70,160,206,1),rgba(70,160,206,.58));
+        }
+      }
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {}
+
+// Up to landscape phone
+@media (max-width: 480px) {}

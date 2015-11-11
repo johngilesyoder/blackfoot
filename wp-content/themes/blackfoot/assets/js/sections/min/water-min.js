@@ -1,0 +1,1 @@
+!function($,n,t){$(function(){"use strict";$("#description-content").html(function(n,t){return t.replace(/(\w+\s\w+\s\w+)/,'<strong class="leading-words">$1</strong>')})})}(jQuery,this);
