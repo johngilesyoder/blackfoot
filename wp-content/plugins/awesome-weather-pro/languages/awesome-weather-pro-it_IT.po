@@ -1,0 +1,523 @@
+# Copyright (C) 2014 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/awesome-weather-pro\n"
+"POT-Creation-Date: 2014-04-20 06:17:15+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-06-26 15:44+0100\n"
+"Last-Translator: josé emilio <jepalomino@serglobin.es>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.6.5\n"
+"Language: es_ES\n"
+
+#: awesome-weather-pro/awesome-weather.php:89
+msgid "C"
+msgstr "C"
+
+#: awesome-weather-pro/awesome-weather.php:89
+msgid "F"
+msgstr "F"
+
+#: awesome-weather-pro/awesome-weather.php:111
+msgid "Location not set"
+msgstr "Ubicazione non impostata"
+
+#: awesome-weather-pro/awesome-weather.php:115
+msgid "Sun"
+msgstr "Dom"
+
+#: awesome-weather-pro/awesome-weather.php:115
+msgid "Mon"
+msgstr "Lun"
+
+#: awesome-weather-pro/awesome-weather.php:115
+msgid "Tue"
+msgstr "Mar"
+
+#: awesome-weather-pro/awesome-weather.php:115
+msgid "Wed"
+msgstr "Mer"
+
+#: awesome-weather-pro/awesome-weather.php:115
+msgid "Thu"
+msgstr "Gio"
+
+#: awesome-weather-pro/awesome-weather.php:115
+msgid "Fri"
+msgstr "Ven"
+
+#: awesome-weather-pro/awesome-weather.php:115
+msgid "Sat"
+msgstr "Sab"
+
+#: awesome-weather-pro/awesome-weather.php:126
+msgid "N"
+msgstr "N"
+
+#: awesome-weather-pro/awesome-weather.php:127
+msgid "NNE"
+msgstr "NNE"
+
+#: awesome-weather-pro/awesome-weather.php:128
+msgid "NE"
+msgstr "NE"
+
+#: awesome-weather-pro/awesome-weather.php:129
+msgid "ENE"
+msgstr "ENE"
+
+#: awesome-weather-pro/awesome-weather.php:130
+msgid "E"
+msgstr "E"
+
+#: awesome-weather-pro/awesome-weather.php:131
+msgid "ESE"
+msgstr "ESE"
+
+#: awesome-weather-pro/awesome-weather.php:132
+msgid "SE"
+msgstr "SE"
+
+#: awesome-weather-pro/awesome-weather.php:133
+msgid "SSE"
+msgstr "SSE"
+
+#: awesome-weather-pro/awesome-weather.php:134
+msgid "S"
+msgstr "S"
+
+#: awesome-weather-pro/awesome-weather.php:135
+msgid "SSW"
+msgstr "SSO"
+
+#: awesome-weather-pro/awesome-weather.php:136
+msgid "SW"
+msgstr "SO"
+
+#: awesome-weather-pro/awesome-weather.php:137
+msgid "WSW"
+msgstr "OSO"
+
+#: awesome-weather-pro/awesome-weather.php:138
+msgid "W"
+msgstr "O"
+
+#: awesome-weather-pro/awesome-weather.php:139
+msgid "WNW"
+msgstr "ONO"
+
+#: awesome-weather-pro/awesome-weather.php:140
+msgid "NW"
+msgstr "NO"
+
+#: awesome-weather-pro/awesome-weather.php:141
+msgid "NNW"
+msgstr "NNO"
+
+#: awesome-weather-pro/awesome-weather.php:183
+msgid "extended forecast"
+msgstr "Previsione estesa"
+
+#: awesome-weather-pro/awesome-weather.php:260
+msgid "Weather template not found:"
+msgstr "Template non rilevato:"
+
+#: awesome-weather-pro/awesome-weather.php:275
+msgid ""
+"Custom template file not found. Please add a file to your theme folder with "
+"this name:"
+msgstr ""
+"Template personalizzato non rilevato. Aggiungi un file al tuo tema con "
+"questo nome:"
+
+#: awesome-weather-pro/awesome-weather.php:290
+msgid "No weather information available"
+msgstr "Nessuna informazione meteo disponibile"
+
+#: awesome-weather-pro/awesome-weather.php:319
+msgid "No city found in OpenWeatherMap."
+msgstr "Nessuna città rilevata su OpenWeatherMap"
+
+#: awesome-weather-pro/awesome-weather.php:320
+msgid "Only one location found. The ID has been set automatically above."
+msgstr ""
+"Trovata una sola località. L'ID è stato impostato automaticamente qui sopra."
+
+#: awesome-weather-pro/awesome-weather.php:321
+msgid "Please confirm your city: &nbsp;"
+msgstr "Per favore conferma la tua città: &nbsp;"
+
+#: awesome-weather-pro/awesome-weather.php:322
+msgid "No city found in Yahoo Weather."
+msgstr "Nessuna corrispondenza per la città in. Yahoo Weather"
+
+#: awesome-weather-pro/awesome-weather.php:438
+msgid "Template:"
+msgstr "Template:"
+
+#: awesome-weather-pro/awesome-weather.php:447
+msgid "Custom Template Filename:"
+msgstr "Nome file del template personalizzato:"
+
+#: awesome-weather-pro/awesome-weather.php:447
+msgid "found in theme folder"
+msgstr "trovato nella cartella tema"
+
+#: awesome-weather-pro/awesome-weather.php:454
+msgid "Search for Your Location:"
+msgstr "Cerca la tua ubicazione:"
+
+#: awesome-weather-pro/awesome-weather.php:462
+msgid "OpenWeatherMap City ID:"
+msgstr "ID città OpenWeatherMap"
+
+#: awesome-weather-pro/awesome-weather.php:463
+#: awesome-weather-pro/awesome-weather.php:485
+msgid "(use the field above to find the ID for your city)"
+msgstr "(usa il campo qui sopra per trovare l'ID della tua città)"
+
+#: awesome-weather-pro/awesome-weather.php:484
+msgid "WOEID:"
+msgstr "WOEID:"
+
+#: awesome-weather-pro/awesome-weather.php:505
+msgid "Banner Title:"
+msgstr "Titolo del banner:"
+
+#: awesome-weather-pro/awesome-weather.php:510
+msgid "Widget Title: (optional)"
+msgstr "Titolo del widget (opzionale):"
+
+#: awesome-weather-pro/awesome-weather.php:517
+msgid "Forecast:"
+msgstr "PrevisiónPrevisioni:"
+
+#: awesome-weather-pro/awesome-weather.php:529
+msgid "Background Image:"
+msgstr "Immagine di sfondo:"
+
+#: awesome-weather-pro/awesome-weather.php:534
+msgid "Custom Background Color:"
+msgstr "Colore di sfondo:"
+
+#: awesome-weather-pro/awesome-weather.php:535
+msgid "overrides color changing"
+msgstr "Sovrascrivi i cambiamenti di colore"
+
+#: awesome-weather-pro/awesome-weather.php:541
+msgid "Units:"
+msgstr "Unità:"
+
+#: awesome-weather-pro/awesome-weather.php:548
+msgid "Use User Location"
+msgstr "Usa località utente"
+
+#: awesome-weather-pro/awesome-weather.php:553
+msgid "Show Weather Icons"
+msgstr "Mostra icone meteo"
+
+#: awesome-weather-pro/awesome-weather.php:558
+msgid "Hide Stats"
+msgstr "Nascondi le statistiche"
+
+#: awesome-weather-pro/awesome-weather.php:566
+msgid "Link to OpenWeatherMap Extended Forecast"
+msgstr "Link alle previsioni complete di OpenWeatherMap"
+
+#: awesome-weather-pro/awesome-weather.php:571
+msgid "Custom Extended Forecast URL:"
+msgstr "URL previsioni complete:"
+
+#: awesome-weather-pro/awesome-weather.php:576
+msgid "Custom Extended Forecast Text:"
+msgstr "Testo previsioni complete:"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:7
+msgid "tornado"
+msgstr "tornado"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:8
+msgid "tropical storm"
+msgstr "tempesta tropicale"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:9
+msgid "hurricane"
+msgstr "uragano"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:10
+msgid "severe thunderstorms"
+msgstr "forti temporali"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:11
+msgid "thunderstorms"
+msgstr "temporali"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:12
+msgid "thundershowers"
+msgstr "rovesci temporaleschi"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:13
+msgid "mixed rain and snow"
+msgstr "pioggia mista e neve"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:14
+msgid "mixed rain and sleet"
+msgstr "pioggia mista e nevischio"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:15
+msgid "mixed snow and sleet"
+msgstr "neve mista e nevischio"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:16
+msgid "mixed rain and hail"
+msgstr "pioggia mista e grandine"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:17
+msgid "freezing drizzle"
+msgstr "pioggerella gelata"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:18
+msgid "drizzle"
+msgstr "pioggerella"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:19
+msgid "freezing rain"
+msgstr "pioggia gelata"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:20
+msgid "showers"
+msgstr "rovesci"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:21
+msgid "scattered showers"
+msgstr "rovesci sparsi"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:22
+msgid "snow flurries"
+msgstr "raffiche di neve"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:23
+msgid "light snow showers"
+msgstr "leggere nevicate"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:24
+msgid "blowing snow"
+msgstr "raffiche di neve"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:25
+msgid "snow"
+msgstr "neve"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:26
+#: awesome-weather-pro/pro/awesome-weather-codes.php:28
+msgid "heavy snow"
+msgstr "forti nevicate"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:27
+msgid "scattered snow showers"
+msgstr "nevicate sparse"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:29
+msgid "snow showers"
+msgstr "nevicate"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:30
+msgid "hail"
+msgstr "grandine"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:31
+msgid "sleet"
+msgstr "nevischio"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:32
+msgid "dust"
+msgstr "polvere"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:33
+msgid "foggy"
+msgstr "nebbia"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:34
+msgid "haze"
+msgstr "foschia"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:35
+msgid "windy"
+msgstr "vento"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:36
+msgid "cold"
+msgstr "freddo"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:37
+msgid "hot"
+msgstr "caldo"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:38
+msgid "cloudy"
+msgstr "nuvoloso"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:39
+msgid "smoky"
+msgstr "fosco"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:40
+msgid "mostly cloudy"
+msgstr "molto nuvoloso"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:41
+msgid "partly cloudy"
+msgstr "parzialmente nuvoloso"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:42
+msgid "clear"
+msgstr "sereno"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:43
+msgid "sunny"
+msgstr "soleggiato"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:44
+msgid "fair"
+msgstr "bello"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:45
+msgid "isolated thunderstorms"
+msgstr "isolati temporali"
+
+#: awesome-weather-pro/pro/awesome-weather-codes.php:46
+msgid "scattered thunderstorms"
+msgstr "temporali sparsi"
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:13
+msgid "Awesome Weather Widget"
+msgstr "Awesome Weather Widget"
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:17
+msgid "Weather Widget Cache Cleared"
+msgstr "Cache Weather Widget pulita"
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:38
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:47
+msgid "Register"
+msgstr "Registrazione"
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:71
+msgid "Register for Updates"
+msgstr "Registrati per gli aggiornamenti"
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:72
+msgid "OpenWeatherMaps APPID"
+msgstr "OpenWeatherMaps APPID"
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:73
+msgid "Location Lookup URL"
+msgstr "Location Lookup URL"
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:74
+msgid "Weather Provider"
+msgstr "Servizio meteo"
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:75
+msgid "Error Handling"
+msgstr "Gestione errori"
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:114
+msgid ""
+"According to the OpenWeatherMaps website this key 'guarantees availability "
+"and accuracy of weather data.' "
+msgstr ""
+"Secondo il sito di OpenWeatherMaps questa chiave 'garantisce la "
+"disponibilità e la precisione dei dati meteo.'"
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:116
+msgid "Get your APPID"
+msgstr "Crea la tua APPID"
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:127
+msgid ""
+"This is the URL to ping for location lookup services. Include [[IP]] where "
+"you want the IP to be swapped."
+msgstr ""
+"URL per ping servizio ricerca località Includi [[IP]] dove vuoi l'IP da "
+"scambiare."
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:128
+msgid ""
+"The return value needs to be a string of 'City, State' or an JSON object "
+"with variables like 'city' and/or 'state'."
+msgstr ""
+"Il valore di ritorno deve essere una stringa di 'Città, Stato' o ​​un oggetto "
+"JSON con variabili come 'città' e / o 'stato'."
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:140
+msgid "Where do you want your weather data to be provided from."
+msgstr "Da chi vuoi che siano forniti i dati meteo."
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:149
+msgid "Hidden in Source"
+msgstr "Nascosti in origine"
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:150
+msgid "Display if Admin"
+msgstr "Mostrati se Admin"
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:151
+msgid "Display for Anyone"
+msgstr "Mostrati  a tutti"
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:154
+msgid "What should the plugin do when there is an error?"
+msgstr "Comportamento del plugin in caso di errore."
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:162
+msgid "This is used to update your plugin when new versions become available."
+msgstr ""
+"Questo è usato per aggiornare i plugin quando sono disponibili nuove "
+"versioni."
+
+#: awesome-weather-pro/pro/awesome-weather-settings.php:164
+msgid "Insert the email address you used to purchase this plugin."
+msgstr "Inserire l'indirizzo email utilizzato per acquistare questo plugin."
+
+#: awesome-weather-pro/pro/openweathermaps/data.php:159
+#: awesome-weather-pro/pro/yahoo/data.php:161
+msgid "km/h"
+msgstr "km/h"
+
+#: awesome-weather-pro/pro/openweathermaps/data.php:159
+#: awesome-weather-pro/pro/yahoo/data.php:161
+msgid "mph"
+msgstr "mph"
+
+#: awesome-weather-pro/templates/long.php:32
+#: awesome-weather-pro/templates/showcase.php:37
+msgid "Now"
+msgstr "Adesso"
+
+#: awesome-weather-pro/templates/tall.php:26
+#: awesome-weather-pro/templates/wide.php:23
+msgid "humidity"
+msgstr "umidità"
+
+#: awesome-weather-pro/templates/tall.php:27
+#: awesome-weather-pro/templates/wide.php:24
+msgid "wind:"
+msgstr "vento:"
+
+#: awesome-weather-pro/templates/tall.php:28
+#: awesome-weather-pro/templates/wide.php:25
+msgid "H"
+msgstr "Max"
+
+#: awesome-weather-pro/templates/tall.php:28
+#: awesome-weather-pro/templates/wide.php:25
+msgid "L"
+msgstr "Min"

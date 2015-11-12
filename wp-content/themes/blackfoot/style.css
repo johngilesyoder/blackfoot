@@ -6965,13 +6965,12 @@ a img.aligncenter {
   font-size: 16px;
   margin-bottom: 30px;
   margin-top: -15px;
+  position: relative;
+  left: -7px;
 }
 .breadcrumbs a {
   font-weight: 700;
-  margin: 0 7px 0 10px;
-}
-.breadcrumbs a:first-child {
-  margin-left: 0;
+  margin: 0 7px;
 }
 .breadcrumbs .breadcrumb_last {
   font-weight: 500;
@@ -8457,6 +8456,155 @@ fieldset[disabled] .home section .btn-book.active {
   background-image: linear-gradient(to right, #46a0ce 0%, rgba(70, 160, 206, 0.58) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff46a0ce', endColorstr='#9446a0ce', GradientType=1);
+}
+.single-fishing-report .report-header {
+  margin-bottom: 30px;
+}
+.single-fishing-report hgroup .page-title {
+  margin-bottom: 5px;
+}
+.single-fishing-report hgroup .report-updated {
+  font-size: 16px;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+}
+.single-fishing-report .report-body {
+  border: 4px solid #999490;
+}
+.single-fishing-report .report-body section {
+  padding: 25px 30px;
+  border-bottom: 4px solid #999490;
+}
+.single-fishing-report .report-body section:before,
+.single-fishing-report .report-body section:after {
+  content: " ";
+  display: table;
+}
+.single-fishing-report .report-body section:after {
+  clear: both;
+}
+.single-fishing-report .report-body section:before,
+.single-fishing-report .report-body section:after {
+  content: " ";
+  display: table;
+}
+.single-fishing-report .report-body section:after {
+  clear: both;
+}
+.single-fishing-report .report-body section .section-title {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 3.5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #B2AFAC;
+}
+.single-fishing-report .report-body section.off-white {
+  color: #665F5A;
+  background: #F7F5F4;
+}
+.single-fishing-report .report-body section.off-white .section-title {
+  color: #A5A19F;
+}
+.single-fishing-report .report-body .report-forecast,
+.single-fishing-report .report-body .report-conditions,
+.single-fishing-report .report-body .report-hatch,
+.single-fishing-report .report-body .report-specifics {
+  border-bottom: 0;
+}
+.single-fishing-report .report-body .report-conditions,
+.single-fishing-report .report-body .report-hatch {
+  padding-bottom: 15px;
+}
+.single-fishing-report .report-body .report-forecast {
+  padding-bottom: 0;
+}
+.single-fishing-report .report-body .report-specifics .report-specification {
+  margin-bottom: 30px;
+}
+.single-fishing-report .report-body .report-specifics .report-specification h4 {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+.single-fishing-report .report-body .report-specifics .report-specification:last-child {
+  margin-bottom: 0;
+}
+.single-fishing-report .condition-rating {
+  width: 447px;
+  height: 31px;
+  background-image: url('assets/img/condition-rating-inactive.svg');
+  background-repeat: no-repeat;
+  float: left;
+}
+.single-fishing-report .condition-rating .rating-active {
+  height: 100%;
+  display: block;
+  background-image: url('assets/img/condition-rating-active.svg');
+  background-repeat: no-repeat;
+}
+.single-fishing-report .condition-rating .rating-active.excellent {
+  width: 100%;
+}
+.single-fishing-report .condition-rating .rating-active.good {
+  width: 361px;
+}
+.single-fishing-report .condition-rating .rating-active.ok {
+  width: 270px;
+}
+.single-fishing-report .condition-rating .rating-active.poor {
+  width: 179px;
+}
+.single-fishing-report .condition-rating .rating-active.bad {
+  width: 88px;
+}
+.single-fishing-report .condition-rating-text {
+  float: right;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: capitalize;
+  width: 190px;
+  text-align: center;
+  line-height: 1em;
+}
+.single-fishing-report .awesome-weather-wrap {
+  background: transparent;
+  color: #665F5A;
+  text-shadow: none;
+}
+.single-fishing-report .awesome-weather-wrap .awesome-weather-forecast {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.single-fishing-report .awesome-weather-wrap .awesome-weather-forecast .awesome-weather-forecast-day {
+  width: 18%;
+}
+.single-fishing-report .awesome-weather-wrap .awesome-weather-forecast .awesome-weather-forecast-day .awesome-weather-forecast-day-abbr {
+  font-size: 16px;
+  line-height: 1em;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+}
+.single-fishing-report .awesome-weather-wrap .awesome-weather-forecast .awesome-weather-forecast-day .wi {
+  font-size: 45px;
+  line-height: 45px;
+  padding-bottom: 0;
+  margin-bottom: 15px;
+}
+.single-fishing-report .awesome-weather-wrap .awesome-weather-forecast .awesome-weather-forecast-day .awe_highlow {
+  font-size: 16px;
+  line-height: 1em;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
 }
 .contact-us .gform_wrapper {
   margin-right: 0;

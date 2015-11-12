@@ -1,0 +1,2 @@
+<div class="awe-weather-bubble<?php if(!$weather->show_bubble) echo " hide"; ?>"><?php _e('Set Your Weather', 'awesome-weather-pro'); ?></div>
+<div class="awe-weather-trigger"><a href="#" data-slug="<?php echo esc_attr($weather->city_slug); ?>" data-js-slug="<?php echo esc_attr($weather->widget_js_var); ?>" title="<?php _e('Change the Location', 'awesome-weather-pro'); ?>" alt="<?php _e('Change the Location', 'awesome-weather-pro'); ?>"><img src="<?php echo apply_filters( 'awesome_weather_trigger_image', AWESOME_WEATHER_PLUGIN_BASE . "img/locate.png"); ?>"></a></div>
