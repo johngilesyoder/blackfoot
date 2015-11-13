@@ -1,0 +1,44 @@
+// book-now-block.less
+// -----------------------------------------------------------------
+
+.book-now-banner {
+  background-color: @brand-brown;
+  background-image: url('assets/img/bg-booking-banner.png');
+  background-size: cover;
+  background-position: 50% 50%;
+  color: #fff;
+  padding: 100px 0;
+  h2 {
+    font-family: @font-family-sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 8px 0 0;
+  }
+  p {
+    font-size: 18px;
+    margin: 0;
+    strong {
+      font-family: @font-family-sans-serif;
+    }
+  }
+  .btn-book {
+    .btn-primary();
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 24px;
+      background-image: url('assets/img/icon-chevron-r-white.svg');
+      background-size: cover;
+      margin-left: 15px;
+      vertical-align: middle;
+      top: -4px;
+      position: relative;
+    }
+  }
+}

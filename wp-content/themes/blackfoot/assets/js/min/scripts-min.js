@@ -1,0 +1,1 @@
+!function($,t,n){$(function(){"use strict";$("#back-to-top").on("click",function(t){t.preventDefault(),$("body,html").animate({scrollTop:0},400)})})}(jQuery,this);

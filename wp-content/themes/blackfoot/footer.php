@@ -1,6 +1,7 @@
 		<footer class="site-footer">
       <div class="footer-top">
       	<div class="container">
+          <a href="#top" id="back-to-top" class="back-to-top">Back to top</a>
           <div class="row">
             <div class="footer-links">
               <div class="row">

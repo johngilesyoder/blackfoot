@@ -2,43 +2,74 @@
 
 	<main role="main">
 		<div class="container">
-			<!-- Breadcrumbs -->
-			<?php if ( function_exists('yoast_breadcrumb') ) 
-			{yoast_breadcrumb('<nav id="breadcrumbs" class="breadcrumbs">','</nav>');} ?>
+			<div class="row">
+				<div class="col-md-6">
+					<!-- Breadcrumbs -->
+					<?php if ( function_exists('yoast_breadcrumb') ) 
+					{yoast_breadcrumb('<nav id="breadcrumbs" class="breadcrumbs">','</nav>');} ?>
+				</div>
+				<div class="col-md-6">
+					<div class="select-report">	
+						<form action="<?php bloginfo('url'); ?>" method="get">
+							Select a river to view it’s report <?php wp_dropdown_pages(array('post_type'=>'fishing-report','selected'=>'0','show_option_none'=>'Select a river')); ?>
+							<button type="submit" name="submit" class="btn btn-default btn-xs">View</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<?php if (have_posts()): while (have_posts()) : the_post(); 
+				$report_rating = types_render_field("conditions-at-a-glance", array("raw"=>"true"));
+				$report_conditions = types_render_field("conditions", array("raw"=>"true"));
+				$report_hatch = types_render_field("the-hatch", array("raw"=>"true"));
+				$report_patterns = types_render_field("fly-patterns", array("raw"=>"true"));
+		    $report_forecast_id = types_render_field("location-id", array("raw"=>"true"));
+		    $report_flow = types_render_field("water-flow", array("raw"=>"true"));
+		    $report_visibility = types_render_field("visibility", array("raw"=>"true"));
+		    $report_temperature = types_render_field("water-temperature-at-mid-day", array("raw"=>"true"));
+		    $report_water_condition = types_render_field("water-condition", array("raw"=>"true"));
+		    $report_time = types_render_field("best-time-of-day-to-fish", array("raw"=>"true"));
+		    $report_stretch = types_render_field("best-stretch", array("raw"=>"true"));
+		    $report_access = types_render_field("best-access-point", array("raw"=>"true"));
+		    $report_species = types_render_field("fish-species", array("raw"=>"true"));
+		    $report_season = types_render_field("fishing-season", array("raw"=>"true"));
+		    $report_airport = types_render_field("nearest-airport", array("raw"=>"true"));
+		    $report_leader = types_render_field("recommended-fly-fishing-leader", array("raw"=>"true"));
+		    $report_tippet = types_render_field("recommended-fly-fishing-tippet", array("raw"=>"true"));
+		    $report_rod = types_render_field("best-fly-fishing-rod", array("raw"=>"true"));
+		    $report_floating_line = types_render_field("best-floating-fly-line", array("raw"=>"true"));
+		    $report_sinking_line = types_render_field("best-sinking-fly-line", array("raw"=>"true"));
+		    $report_illustration = types_render_field("location-illustration", array("raw"=>"true"));
+			?>
 			<div class="row">
 				<div class="col-md-8">
 					<div class="report-header">
-						<hgroup>
-							<!-- Page Title -->
-							<h1 class="page-title"><?php the_title(); ?></h1>
-							<span class="report-updated">Updated <strong><?php the_modified_time('m/d/Y'); ?> at <?php the_modified_time('g:ia'); ?></strong></span>
-						</hgroup>
+						<div class="row">
+							<div class="col-md-9">
+								<hgroup>
+									<img class="report-illustration" src="<?php echo $report_illustration; ?>">
+									<!-- Page Title -->
+									<h1 class="page-title"><?php the_title(); ?></h1>
+									<span class="report-updated">Updated <strong><?php the_modified_time('m/d/Y'); ?> at <?php the_modified_time('g:ia'); ?></strong></span>
+								</hgroup>
+							</div>
+							<div class="col-md-3">
+								<div class="report-share">
+									<!-- FB -->
+									<div class="share-fb">
+										<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
+									</div>
+									<!-- Tweet -->
+									<div class="share-tweet">
+										<a href="https://twitter.com/share" class="twitter-share-button" data-via="johngilesyoder" data-count="none">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-8">
-					<?php if (have_posts()): while (have_posts()) : the_post(); 
-						$report_rating = types_render_field("conditions-at-a-glance", array("raw"=>"true"));
-						$report_hatch = types_render_field("the-hatch", array("raw"=>"true"));
-						$report_patterns = types_render_field("fly-patterns", array("raw"=>"true"));
-				    $report_forecast_id = types_render_field("location-id", array("raw"=>"true"));
-				    $report_flow = types_render_field("water-flow", array("raw"=>"true"));
-				    $report_visibility = types_render_field("visibility", array("raw"=>"true"));
-				    $report_temperature = types_render_field("water-temperature-at-mid-day", array("raw"=>"true"));
-				    $report_water_condition = types_render_field("water-condition", array("raw"=>"true"));
-				    $report_time = types_render_field("best-time-of-day-to-fish", array("raw"=>"true"));
-				    $report_stretch = types_render_field("best-stretch", array("raw"=>"true"));
-				    $report_access = types_render_field("access-point", array("raw"=>"true"));
-				    $report_species = types_render_field("fish-species", array("raw"=>"true"));
-				    $report_season = types_render_field("fishing-season", array("raw"=>"true"));
-				    $report_airport = types_render_field("nearest-airport", array("raw"=>"true"));
-				    $report_leader = types_render_field("recommended-fly-fishing-leader", array("raw"=>"true"));
-				    $report_tippet = types_render_field("recommended-fly-fishing-tippet", array("raw"=>"true"));
-				    $report_rod = types_render_field("best-fly-fishing-rod", array("raw"=>"true"));
-				    $report_floating_line = types_render_field("best-floating-fly-line", array("raw"=>"true"));
-				    $report_sinking_line = types_render_field("best-sinking-fly-line", array("raw"=>"true"));
-					?>
 					<!-- Article -->
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<div class="report-body">
@@ -150,5 +181,7 @@
 			</div>
 		</div>
 	</main>
+
+	<?php get_template_part( 'includes/book-now-banner' ); ?>
 
 <?php get_footer(); ?>

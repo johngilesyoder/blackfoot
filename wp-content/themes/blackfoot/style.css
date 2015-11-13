@@ -7103,6 +7103,129 @@ fieldset[disabled] .book-now-block .btn-book.active {
   top: -4px;
   position: relative;
 }
+.book-now-banner {
+  background-color: #665F5A;
+  background-image: url('assets/img/bg-booking-banner.png');
+  background-size: cover;
+  background-position: 50% 50%;
+  color: #fff;
+  padding: 100px 0;
+}
+.book-now-banner h2 {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 8px 0 0;
+}
+.book-now-banner p {
+  font-size: 18px;
+  margin: 0;
+}
+.book-now-banner p strong {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+}
+.book-now-banner .btn-book {
+  color: #fff;
+  background-color: #347799;
+  border-color: #2e6886;
+  background-color: #6E9C5C;
+  background-image: -webkit-linear-gradient(top, #80B068 0%, #659457 100%);
+  background-image: linear-gradient(to bottom, #80B068 0%, #659457 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff80b068', endColorstr='#ff659457', GradientType=0);
+  border-color: transparent;
+  font-weight: 700;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: block;
+  width: 100%;
+  font-size: 24px;
+}
+.book-now-banner .btn-book:focus,
+.book-now-banner .btn-book.focus {
+  color: #fff;
+  background-color: #275973;
+  border-color: #0d1e27;
+}
+.book-now-banner .btn-book:hover {
+  color: #fff;
+  background-color: #275973;
+  border-color: #1e4558;
+}
+.book-now-banner .btn-book:active,
+.book-now-banner .btn-book.active,
+.open > .dropdown-toggle.book-now-banner .btn-book {
+  color: #fff;
+  background-color: #275973;
+  border-color: #1e4558;
+}
+.book-now-banner .btn-book:active:hover,
+.book-now-banner .btn-book.active:hover,
+.open > .dropdown-toggle.book-now-banner .btn-book:hover,
+.book-now-banner .btn-book:active:focus,
+.book-now-banner .btn-book.active:focus,
+.open > .dropdown-toggle.book-now-banner .btn-book:focus,
+.book-now-banner .btn-book:active.focus,
+.book-now-banner .btn-book.active.focus,
+.open > .dropdown-toggle.book-now-banner .btn-book.focus {
+  color: #fff;
+  background-color: #1e4558;
+  border-color: #0d1e27;
+}
+.book-now-banner .btn-book:active,
+.book-now-banner .btn-book.active,
+.open > .dropdown-toggle.book-now-banner .btn-book {
+  background-image: none;
+}
+.book-now-banner .btn-book.disabled,
+.book-now-banner .btn-book[disabled],
+fieldset[disabled] .book-now-banner .btn-book,
+.book-now-banner .btn-book.disabled:hover,
+.book-now-banner .btn-book[disabled]:hover,
+fieldset[disabled] .book-now-banner .btn-book:hover,
+.book-now-banner .btn-book.disabled:focus,
+.book-now-banner .btn-book[disabled]:focus,
+fieldset[disabled] .book-now-banner .btn-book:focus,
+.book-now-banner .btn-book.disabled.focus,
+.book-now-banner .btn-book[disabled].focus,
+fieldset[disabled] .book-now-banner .btn-book.focus,
+.book-now-banner .btn-book.disabled:active,
+.book-now-banner .btn-book[disabled]:active,
+fieldset[disabled] .book-now-banner .btn-book:active,
+.book-now-banner .btn-book.disabled.active,
+.book-now-banner .btn-book[disabled].active,
+fieldset[disabled] .book-now-banner .btn-book.active {
+  background-color: #347799;
+  border-color: #2e6886;
+}
+.book-now-banner .btn-book .badge {
+  color: #347799;
+  background-color: #fff;
+}
+.book-now-banner .btn-book:hover {
+  background: #659457;
+  border-color: transparent;
+}
+.book-now-banner .btn-book:active {
+  background: #659457;
+  border-color: transparent;
+}
+.book-now-banner .btn-book:active:hover {
+  background: #659457;
+  border-color: transparent;
+}
+.book-now-banner .btn-book:after {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 24px;
+  background-image: url('assets/img/icon-chevron-r-white.svg');
+  background-size: cover;
+  margin-left: 15px;
+  vertical-align: middle;
+  top: -4px;
+  position: relative;
+}
 .container-fluid {
   padding: 0 30px;
 }
@@ -7141,6 +7264,35 @@ fieldset[disabled] .book-now-block .btn-book.active {
   padding: 50px 0;
   color: #999090;
   font-size: 16px;
+}
+.site-footer .footer-top .container {
+  position: relative;
+}
+.site-footer .footer-top .back-to-top {
+  position: absolute;
+  right: 0;
+  top: -80px;
+  height: 25px;
+  line-height: 25px;
+  display: inline-block;
+  background: #999490;
+  border-radius: 4px 4px 0 0;
+  color: #fff;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0 10px;
+  z-index: 250;
+}
+.site-footer .footer-top .back-to-top:before {
+  content: '';
+  background-image: url('assets/img/icon-chevron-up-white.svg');
+  height: 8px;
+  width: 13px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-right: 7px;
 }
 .site-footer .footer-top a {
   color: #999090;
@@ -7819,6 +7971,7 @@ fieldset[disabled] .home section .btn-book.active {
 .home .home-hero {
   padding: 0;
   border-bottom: 7px solid #999490;
+  background: #665F5A;
 }
 .home .home-hero .hero-panel {
   height: 100vh;
@@ -8166,7 +8319,7 @@ fieldset[disabled] .home section .btn-book.active {
   position: relative;
 }
 .home .home-testimonials .testimonial-block:hover {
-  z-index: 1000;
+  z-index: 2;
 }
 .home .home-testimonials .testimonial-block:hover .flipper {
   -webkit-transform: rotateY(180deg);
@@ -8457,8 +8610,83 @@ fieldset[disabled] .home section .btn-book.active {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff46a0ce', endColorstr='#9446a0ce', GradientType=1);
 }
+.single-fishing-report .breadcrumbs {
+  margin-bottom: 40px;
+}
+.single-fishing-report .select-report {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: right;
+  margin-bottom: 40px;
+  margin-top: -15px;
+}
+.single-fishing-report .select-report select {
+  display: block;
+  width: 100%;
+  height: 41px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  font-size: 16px;
+  height: 30px;
+  width: auto;
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.single-fishing-report .select-report select:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.single-fishing-report .select-report select::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.single-fishing-report .select-report select:-ms-input-placeholder {
+  color: #999;
+}
+.single-fishing-report .select-report select::-webkit-input-placeholder {
+  color: #999;
+}
+.single-fishing-report .select-report select[disabled],
+.single-fishing-report .select-report select[readonly],
+fieldset[disabled] .single-fishing-report .select-report select {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.single-fishing-report .select-report select[disabled],
+fieldset[disabled] .single-fishing-report .select-report select {
+  cursor: not-allowed;
+}
+textarea.single-fishing-report .select-report select {
+  height: auto;
+}
+.single-fishing-report .select-report .btn {
+  height: 30px;
+  font-weight: 500;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
 .single-fishing-report .report-header {
   margin-bottom: 30px;
+}
+.single-fishing-report hgroup .report-illustration {
+  float: left;
+  margin-right: 25px;
+  position: relative;
+  top: 10px;
+  height: 65px;
 }
 .single-fishing-report hgroup .page-title {
   margin-bottom: 5px;
@@ -8467,6 +8695,20 @@ fieldset[disabled] .home section .btn-book.active {
   font-size: 16px;
   font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
   font-weight: 500;
+}
+.single-fishing-report .report-share {
+  text-align: right;
+  margin-top: 40px;
+}
+.single-fishing-report .report-share .share-fb,
+.single-fishing-report .report-share .share-tweet {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.single-fishing-report .report-share .share-fb {
+  position: relative;
+  top: -8px;
 }
 .single-fishing-report .report-body {
   border: 4px solid #999490;
