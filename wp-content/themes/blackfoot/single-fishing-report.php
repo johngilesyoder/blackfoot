@@ -176,6 +176,16 @@
 				<div class="col-md-4">
 					<aside class="report-sidebar">
 						<?php get_template_part( 'includes/book-now-block' ); ?>
+						<div class="mailing-list-signup">
+							<h2 class="sidebar-title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-updates.svg"> Stay tuned</h2>
+							<p>Get alerts when we post a new report.</p>
+							<div class="input-group">
+					      <input type="text" class="form-control" placeholder="email address">
+					      <span class="input-group-btn">
+					        <button class="btn btn-default btn-subscribe" type="button">Subscribe</button>
+					      </span>
+					    </div>
+						</div>
 					</aside>
 				</div>
 			</div>

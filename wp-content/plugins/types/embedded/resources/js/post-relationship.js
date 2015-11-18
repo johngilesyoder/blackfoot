@@ -410,6 +410,12 @@ jQuery(document).ready(function($) {
                  * select2
                  */
                 wpcfBindSelect2($);
+				
+				var data_for_events = {
+					table: $table
+				}
+				
+				$( document ).trigger( 'js_event_wpcf_types_relationship_child_added', [ data_for_events ] );
             }
         });
         return false;
@@ -611,7 +617,7 @@ jQuery(document).ready(function($) {
         return false;
     });
     $('#wpcf-post-relationship').on('click', '.wpcf-pr-save-ajax', function() {
-        var $button = $(this), $row = $button.parents('tr'), rowId = $row.attr('id'), valid = true;
+        var $button = $(this), $row = $button.parents('tr'), rowId = $row.attr('id'), valid = true, $table = $row.closest( '.js-types-child-table' );
         if (typeof wptValidation == 'undefined') {
             $('.js-types-validate', $row).each(function() {
                 if ($('#post').validate().element($(this)) == false) {
@@ -681,6 +687,12 @@ jQuery(document).ready(function($) {
                      * select2
                      */
                     wpcfBindSelect2($);
+					
+					var data_for_events = {
+						table: $table
+					}
+					
+					$( document ).trigger( 'js_event_wpcf_types_relationship_child_saved', [ data_for_events ] );
                 }
             }
         });

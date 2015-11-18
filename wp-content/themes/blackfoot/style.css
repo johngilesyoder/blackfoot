@@ -4532,8 +4532,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #555;
-  background-color: #e1dddb;
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.06);
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -4558,8 +4558,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #e1dddb;
-  color: #555;
+  background-color: rgba(0, 0, 0, 0.06);
+  color: #000;
 }
 @media (max-width: 991px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -4573,8 +4573,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #555;
-    background-color: #e1dddb;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.06);
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -7632,9 +7632,6 @@ body {
 .site-header-lg .container .home-header-secondary-nav .home-header-contact a img {
   margin-right: 8px;
 }
-.site-header-lg .container .home-header-secondary-nav .home-header-contact .header-home-phone {
-  margin-right: 20px;
-}
 .site-header-lg .container .home-header-secondary-nav .home-header-cart {
   background: #46A1CF;
   margin-left: 12px;
@@ -8847,6 +8844,39 @@ textarea.single-fishing-report .select-report select {
   margin-bottom: 30px;
   font-weight: 500;
   font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+}
+.single-fishing-report .report-sidebar .sidebar-title {
+  font-size: 21px;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.single-fishing-report .report-sidebar .sidebar-title img {
+  margin-right: 8px;
+}
+.single-fishing-report .report-sidebar .mailing-list-signup .sidebar-title {
+  margin-bottom: 5px;
+}
+.single-fishing-report .report-sidebar .mailing-list-signup p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.single-fishing-report .report-sidebar .mailing-list-signup .input-group .form-control {
+  font-size: 16px;
+}
+.single-fishing-report .report-sidebar .mailing-list-signup .input-group .btn-subscribe {
+  color: #fff;
+  background: #46A0CE;
+  border-color: #46A0CE;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 9px 12px;
+}
+.single-fishing-report .report-sidebar .mailing-list-signup .input-group .btn-subscribe:hover {
+  background-color: #24678a;
 }
 .contact-us .gform_wrapper {
   margin-right: 0;

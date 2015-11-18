@@ -1,6 +1,8 @@
 <?php /* Template Name: Home Page Template */ get_header(); ?>
 
-
+<!-- HERO -->
+<!-- =================================== -->
+<!-- =================================== -->
 <section id="home-hero" class="home-hero">
   <div id="hero-carousel" class="gallery">
     <div class="hero-panel" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/home-hero-1.jpg');">
@@ -42,6 +44,9 @@
   </div>
 </section>
 
+<!-- TRUST -->
+<!-- =================================== -->
+<!-- =================================== -->
 <section id="home-trust" class="home-trust">
   <div class="container">
     <div class="home-family">
@@ -105,6 +110,9 @@
   </div>
 </section>
 
+<!-- TRIPS -->
+<!-- =================================== -->
+<!-- =================================== -->
 <section id="home-trips" class="home-trips">
   <div class="container">
     <h2 class="section-title">We have a fly fishing adventure for anyone.</h2>
@@ -189,6 +197,9 @@
   </div>
 </section>
 
+<!-- WATERS -->
+<!-- =================================== -->
+<!-- =================================== -->
 <section id="home-waters" class="home-waters">
   <div class="container">
     <h2 class="section-title">Our Montana waters are <u>Legendary</u>.</h2>
@@ -319,6 +330,9 @@
   </div>
 </section>
 
+<!-- SHOP -->
+<!-- =================================== -->
+<!-- =================================== -->
 <section id="home-shop" class="home-shop">
   <div class="container">
     <div class="row">
@@ -335,114 +349,41 @@
   </div>
 </section>
 
-
-
+<!-- TESTIMONIALS -->
+<!-- =================================== -->
+<!-- =================================== -->
 <section id="home-testimonials" class="home-testimonials">
   <h2 class="section-title">Meet some of our delighted guests. You’re next.</h2>
-  
-  <article class="testimonial-block">
-    <div class="flipper">
-      <div class="front">
-        <!-- front content -->
-        <div class="testimonial-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/testimonial-1.jpg');"></div>
-      </div>
-      <div class="back">
-        <!-- back content -->
-        <div class="testimonial-content">
-          <span class="testimonial-name">MATTHEW WILLIS</span>
-          <span class="testimonial-location">Portland, Maine</span>
-          <hr>
-          <span class="testimonial-fished">Fished The Clark Fork River</span>
-        </div>
-      </div>
-    </div>
-  </article>
 
-  <article class="testimonial-block">
-    <div class="flipper">
-      <div class="front">
-        <!-- front content -->
-        <div class="testimonial-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/testimonial-2.jpg');"></div>
-      </div>
-      <div class="back">
-        <!-- back content -->
-        <div class="testimonial-content">
-          <span class="testimonial-name">MATTHEW WILLIS</span>
-          <span class="testimonial-location">Portland, Maine</span>
-          <hr>
-          <span class="testimonial-fished">Fished The Clark Fork River</span>
+  <?php $loop = new WP_Query( array( 'post_type' => 'testimonial', 'posts_per_page' => 6 ) ); ?>
+  <?php while ( $loop->have_posts() ) : $loop->the_post(); 
+    $thumb_id           = get_post_thumbnail_id();
+    $thumb_url_array    = wp_get_attachment_image_src($thumb_id, 'full', true);
+    $thumb_url          = $thumb_url_array[0];
+    $testimonial_home   = types_render_field("guest-home-location", array());
+    $testimonial_water  = types_render_field("water-that-was-fished", array());
+  ?>
+    <article class="testimonial-block">
+      <div class="flipper">
+        <div class="front">
+          <!-- front content -->
+          <div class="testimonial-img" style="background-image: url('<?php echo $thumb_url; ?>');"></div>
+        </div>
+        <div class="back">
+          <!-- back content -->
+          <div class="testimonial-content">
+            <span class="testimonial-name"><?php the_title(); ?></span>
+            <span class="testimonial-location"><?php echo $testimonial_home; ?></span>
+            <hr>
+            <span class="testimonial-fished">Fished <?php echo $testimonial_water; ?></span>
+          </div>
         </div>
       </div>
-    </div>
-  </article>
-  <article class="testimonial-block">
-    <div class="flipper">
-      <div class="front">
-        <!-- front content -->
-        <div class="testimonial-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/testimonial-3.jpg');"></div>
-      </div>
-      <div class="back">
-        <!-- back content -->
-        <div class="testimonial-content">
-          <span class="testimonial-name">MATTHEW WILLIS</span>
-          <span class="testimonial-location">Portland, Maine</span>
-          <hr>
-          <span class="testimonial-fished">Fished The Clark Fork River</span>
-        </div>
-      </div>
-    </div>
-  </article>
-  <article class="testimonial-block">
-    <div class="flipper">
-      <div class="front">
-        <!-- front content -->
-        <div class="testimonial-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/testimonial-4.jpg');"></div>
-      </div>
-      <div class="back">
-        <!-- back content -->
-        <div class="testimonial-content">
-          <span class="testimonial-name">MATTHEW WILLIS</span>
-          <span class="testimonial-location">Portland, Maine</span>
-          <hr>
-          <span class="testimonial-fished">Fished The Clark Fork River</span>
-        </div>
-      </div>
-    </div>
-  </article>
-  <article class="testimonial-block">
-    <div class="flipper">
-      <div class="front">
-        <!-- front content -->
-        <div class="testimonial-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/testimonial-6.jpg');"></div>
-      </div>
-      <div class="back">
-        <!-- back content -->
-        <div class="testimonial-content">
-          <span class="testimonial-name">MATTHEW WILLIS</span>
-          <span class="testimonial-location">Portland, Maine</span>
-          <hr>
-          <span class="testimonial-fished">Fished The Clark Fork River</span>
-        </div>
-      </div>
-    </div>
-  </article>
-  <article class="testimonial-block">
-    <div class="flipper">
-      <div class="front">
-        <!-- front content -->
-        <div class="testimonial-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/testimonial-1.jpg');"></div>
-      </div>
-      <div class="back">
-        <!-- back content -->
-        <div class="testimonial-content">
-          <span class="testimonial-name">MATTHEW WILLIS</span>
-          <span class="testimonial-location">Portland, Maine</span>
-          <hr>
-          <span class="testimonial-fished">Fished The Clark Fork River</span>
-        </div>
-      </div>
-    </div>
-  </article>
+    </article>
+  <?php endwhile; wp_reset_query(); ?>
 </section>
 
+<!-- FOOTER -->
+<!-- =================================== -->
+<!-- =================================== -->
 <?php get_footer(); ?>
