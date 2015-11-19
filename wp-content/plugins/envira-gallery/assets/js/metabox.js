@@ -40,6 +40,8 @@
 
         // Handle switching between different gallery types.
         $(document).on('change', 'input[name="_envira_gallery[type]"]:radio', function(e){
+            console.log('fired');
+            
             var $this = $(this);
             $('.envira-gallery-type-spinner .envira-gallery-spinner').css({'display' : 'inline-block', 'margin-top' : '-1px'});
 
@@ -56,6 +58,8 @@
                 envira_gallery_metabox.ajax,
                 change,
                 function(response) {
+                    console.log(response);
+
                     // Append the response data.
                     if ( 'default' == response.type ) {
                         $('#envira-gallery-main').html(response.html);

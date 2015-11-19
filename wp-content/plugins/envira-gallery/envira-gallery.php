@@ -5,7 +5,7 @@
  * Description: Envira Gallery is best responsive WordPress gallery plugin.
  * Author:      Thomas Griffin
  * Author URI:  http://thomasgriffinmedia.com
- * Version:     1.3.8.0
+ * Version:     1.3.8.1
  * Text Domain: envira-gallery
  * Domain Path: languages
  *
@@ -54,7 +54,7 @@ class Envira_Gallery {
      *
      * @var string
      */
-    public $version = '1.3.8.0';
+    public $version = '1.3.8.1';
 
     /**
      * The name of the plugin.

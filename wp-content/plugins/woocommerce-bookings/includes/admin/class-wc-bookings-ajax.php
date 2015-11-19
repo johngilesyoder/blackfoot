@@ -134,12 +134,6 @@ class WC_Bookings_Ajax {
 			$base_interval = $base_interval * 60;
 		}
 
-		$buffer_period = get_post_meta( $product->id, '_wc_booking_buffer_period', true );
-		if ( ! empty ( $buffer_period ) ) {
-			$interval = $interval + $buffer_period;
-			$base_interval = $base_interval + $buffer_period;
-		}
-
 		$first_block_time     = $product->wc_booking_first_block_time;
 		$from                 = $time_from = strtotime( $first_block_time ? $first_block_time : 'midnight', $timestamp );
 		$to                   = strtotime( "tomorrow midnight", $timestamp ) + $interval;
@@ -155,7 +149,7 @@ class WC_Bookings_Ajax {
 		}
 
 		$blocks     = $product->get_blocks_in_range( $from, $to, array( $interval, $base_interval ), $resource_id_to_check );
-		$block_html = $product->get_available_blocks_html( $blocks, array( $interval, $base_interval ), $resource_id_to_check );
+		$block_html = $product->get_available_blocks_html( $blocks, array( $interval, $base_interval ), $resource_id_to_check, $from );
 
 		if ( empty( $block_html ) ) {
 			$block_html .= '<li>' . __( 'No blocks available.', 'woocommerce-bookings' ) . '</li>';

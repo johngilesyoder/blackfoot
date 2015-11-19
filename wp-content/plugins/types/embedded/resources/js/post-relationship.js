@@ -936,12 +936,12 @@ function wpcfBindSelect2($) {
         },
         allowClear: true,
         placeholder: $(this).data('placeholder'),
-        minimumInputLength: 1,
+        minimumInputLength: 0,
         formatInputTooShort: $(this).data('input-too-short'),
         ajax: {
             url: ajaxurl,
             dataType: 'json',
-            quietMillis: 100,
+            quietMillis: 250,
             data: function (term, page) {
                 return {
                     nounce: $(this).data('nounce'),
@@ -953,7 +953,8 @@ function wpcfBindSelect2($) {
                 };
             },
             results: function (data, page) {
-                return { results: data.items };
+                var more = (page * data.posts_per_page) < data.total_count;
+                return { results: data.items, more: more };
             },
             cache: true
         },

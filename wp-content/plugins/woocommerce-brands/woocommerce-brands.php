@@ -8,8 +8,8 @@
  * Developer: WooThemes
  * Developer URI: http://woothemes.com/
  * Requires at least: 3.3.0
- * Tested up to: 4.3.0
- * Version: 1.4.0
+ * Tested up to: 4.3.1
+ * Version: 1.4.1
  * Text Domain: wc_brands
  * Domain Path: /languages/
  *

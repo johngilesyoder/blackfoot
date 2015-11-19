@@ -1,5 +1,9 @@
 *** Brands Changelog ***
 
+2015.11.16 - version 1.4.1
+* Fix - Coupons can be applied but no discount shows if the coupon is brand restricted
+* Fix - Only update/save settings when the brands settings page is currently active
+
 2015.09.01 - version 1.4.0
 * Adjusts the coupon validation logic to filter for both cart-based and product-based discounts.
 * Adds logic to conditionally modify product-specific discounts if there are brands involved.

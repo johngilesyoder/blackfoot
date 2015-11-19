@@ -361,7 +361,10 @@ class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 			'description' => sprintf( __( '%s - Order %s', 'woocommerce-gateway-stripe' ), wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES ), $order->get_order_number() ),
 			'customer'    => $stripe_customer,
 			'expand[]'    => 'balance_transaction',
-			'capture'     => ( $this->capture || ! $initial_payment ) ? 'true' : 'false'
+			'capture'     => ( $this->capture || ! $initial_payment ) ? 'true' : 'false',
+			'metadata'    => array(
+				'payment_type' => ( $initial_payment ) ? 'initial' : 'recurring',
+			),
 		);
 
 		// See if we're using a particular card

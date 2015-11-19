@@ -6976,6 +6976,22 @@ a img.aligncenter {
   font-weight: 500;
   margin-left: 7px;
 }
+.woocommerce .breadcrumbs {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #444;
+}
+.woocommerce .breadcrumbs a {
+  margin: 0;
+  color: #347799;
+}
+.woocommerce .breadcrumbs a:hover {
+  color: #214b60;
+}
+.woocommerce .breadcrumbs span {
+  margin: 0 7px;
+  color: #444;
+}
 .book-now-block {
   background: #F7F5F4;
   color: #665F5A;
@@ -7225,6 +7241,124 @@ fieldset[disabled] .book-now-banner .btn-book.active {
   vertical-align: middle;
   top: -4px;
   position: relative;
+}
+.shop-banner {
+  background-color: #665F5A;
+  background-image: url('assets/img/bg-booking-banner.png');
+  background-size: cover;
+  background-position: 50% 20%;
+  color: #fff;
+  height: 100px;
+  line-height: 100px;
+  margin-bottom: 15px;
+}
+.shop-banner h2 {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 100px;
+}
+.shop-banner h2 img {
+  margin-right: 15px;
+}
+.shop-sidebar {
+  margin-bottom: 30px;
+}
+.widget_product_search {
+  margin-bottom: 30px;
+}
+.widget_product_search .woocommerce-product-search {
+  position: relative;
+}
+.widget_product_search .woocommerce-product-search .search-field {
+  display: block;
+  width: 100%;
+  height: 41px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  border-radius: 20px;
+  padding-left: 45px;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+}
+.widget_product_search .woocommerce-product-search .search-field:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.widget_product_search .woocommerce-product-search .search-field::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.widget_product_search .woocommerce-product-search .search-field:-ms-input-placeholder {
+  color: #999;
+}
+.widget_product_search .woocommerce-product-search .search-field::-webkit-input-placeholder {
+  color: #999;
+}
+.widget_product_search .woocommerce-product-search .search-field[disabled],
+.widget_product_search .woocommerce-product-search .search-field[readonly],
+fieldset[disabled] .widget_product_search .woocommerce-product-search .search-field {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.widget_product_search .woocommerce-product-search .search-field[disabled],
+fieldset[disabled] .widget_product_search .woocommerce-product-search .search-field {
+  cursor: not-allowed;
+}
+textarea.widget_product_search .woocommerce-product-search .search-field {
+  height: auto;
+}
+.widget_product_search .woocommerce-product-search .search-submit {
+  background-image: url('assets/img/icon-search-submit.svg');
+  background-color: transparent;
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 21px;
+  text-indent: -9999px;
+  border: 0;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  margin-top: -10.5px;
+}
+.widget_product_categories {
+  background: #F7F5F4;
+  color: #665F5A;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  padding: 15px;
+}
+.widget_product_categories h3 {
+  font-size: 21px;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+.widget_product_categories > ul > li > a {
+  line-height: 1.65em;
+}
+.widget_product_categories ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.widget_product_categories ul li a {
+  color: #665F5A;
+}
+.widget_product_categories ul li ul {
+  font-size: 16px;
+  margin: 5px 0 5px 10px;
+}
+.widget_product_categories ul .current-cat > a {
+  font-weight: 700;
 }
 .container-fluid {
   padding: 0 30px;
@@ -9249,4 +9383,17 @@ fieldset[disabled] .contact-us .contact-form .gform_footer .gform_button.active 
 }
 .contact-us .contact-sidebar .location.location-flint-creek h3 img {
   height: 50px;
+}
+.shop-home .shop-banner {
+  margin-bottom: 40px;
+}
+.tax-product_cat .category-title {
+  margin-bottom: 32px;
+}
+.tax-product_cat .category-title .page-title {
+  margin-bottom: 10px;
+}
+.tax-product_cat .category-title .term-description {
+  font-size: 16px;
+  line-height: 1.5em;
 }

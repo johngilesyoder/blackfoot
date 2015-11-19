@@ -1,5 +1,13 @@
 *** WooCommerce Bookings Changelog ***
 
+2015.11.11 - version 1.8.2
+* Fix - If there are 0 time slots left, make sure not to show the block at all.
+* Fix - Resolved an issue with avaibility times and buffer times.
+* Fix - Prevented a validation error when updating buffer times in the admin to 0 (blank would still work).
+
+2015.11.10 - version 1.8.1
+* Fix - Fix a bug with hours spanning days that can potentially show (still unbookable) slots on other days
+
 2015.11.9 - version 1.8.0
 * Feature - Time based bookings can now extend into the next day.
 * Feature - Rules can now have priorities set to create custom availability schedules.

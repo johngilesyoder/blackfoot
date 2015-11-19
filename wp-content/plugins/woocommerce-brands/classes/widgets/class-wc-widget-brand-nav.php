@@ -21,10 +21,10 @@ class WC_Widget_Brand_Nav extends WP_Widget {
 	function WC_Widget_Brand_Nav() {
 
 		/* Widget variable settings. */
-		$this->woo_widget_cssclass 		= 'widget_brand_nav widget_layered_nav';
-		$this->woo_widget_description 	= __( 'Shows brands in a widget which lets you narrow down the list of products when viewing products.', 'wc_brands' );
-		$this->woo_widget_idbase 		= 'woocommerce_brand_nav';
-		$this->woo_widget_name 			= __('WooCommerce Brand Layered Nav', 'wc_brands' );
+		$this->woo_widget_cssclass    = 'widget_brand_nav widget_layered_nav';
+		$this->woo_widget_description = __( 'Shows brands in a widget which lets you narrow down the list of products when viewing products.', 'wc_brands' );
+		$this->woo_widget_idbase      = 'woocommerce_brand_nav';
+		$this->woo_widget_name        = __('WooCommerce Brand Layered Nav', 'wc_brands' );
 
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => $this->woo_widget_cssclass, 'description' => $this->woo_widget_description );
@@ -50,12 +50,12 @@ class WC_Widget_Brand_Nav extends WP_Widget {
 		if ( ! is_post_type_archive( 'product' ) && ! is_tax( array_merge( is_array( $_attributes_array ) ? $_attributes_array : array(), array( 'product_cat', 'product_tag' ) ) ) )
 			return;
 
-		$current_term 	= $_attributes_array && is_tax( $_attributes_array ) ? get_queried_object()->term_id : '';
-		$current_tax 	= $_attributes_array && is_tax( $_attributes_array ) ? get_queried_object()->taxonomy : '';
+		$current_term = $_attributes_array && is_tax( $_attributes_array ) ? get_queried_object()->term_id : '';
+		$current_tax  = $_attributes_array && is_tax( $_attributes_array ) ? get_queried_object()->taxonomy : '';
 
-		$title 			= apply_filters('widget_title', $instance['title'], $instance, $this->id_base);
-		$taxonomy 		= 'product_brand';
-		$display_type 	= isset( $instance['display_type'] ) ? $instance['display_type'] : 'list';
+		$title        = apply_filters('widget_title', $instance['title'], $instance, $this->id_base);
+		$taxonomy     = 'product_brand';
+		$display_type = isset( $instance['display_type'] ) ? $instance['display_type'] : 'list';
 
 		if ( ! taxonomy_exists( $taxonomy ) )
 			return;
@@ -278,8 +278,8 @@ class WC_Widget_Brand_Nav extends WP_Widget {
 		if ( empty( $new_instance['title'] ) )
 			$new_instance['title'] = __( 'Brands', 'wc_brands' );
 
-		$instance['title'] 			= strip_tags( stripslashes( $new_instance['title'] ) );
-		$instance['display_type'] 	= stripslashes( $new_instance['display_type'] );
+		$instance['title']        = strip_tags( stripslashes( $new_instance['title'] ) );
+		$instance['display_type'] = stripslashes( $new_instance['display_type'] );
 
 		return $instance;
 	}
@@ -333,17 +333,18 @@ function woocommerce_brands_layered_nav_init( $filtered_posts ) {
 
 				$matched_products = get_posts(
 					array(
-						'post_type' 	=> 'product',
-						'numberposts' 	=> -1,
-						'post_status' 	=> 'publish',
-						'fields' 		=> 'ids',
+						'post_type'     => 'product',
+						'numberposts'   => -1,
+						'post_status'   => 'publish',
+						'fields'        => 'ids',
 						'no_found_rows' => true,
-						'tax_query' => array(
+						'tax_query'     => array(
+
 							'relation' => 'AND',
 							array(
-								'taxonomy' 	=> 'product_brand',
-								'terms' 	=> $terms,
-								'field' 	=> 'id'
+								'taxonomy' => 'product_brand',
+								'terms'    => $terms,
+								'field'    => 'id'
 							)
 						)
 					)
@@ -364,9 +365,9 @@ function woocommerce_brands_layered_nav_init( $filtered_posts ) {
 
 		}
 
-    }
+	}
 
-    return (array) $filtered_posts;
+	return (array) $filtered_posts;
 }
 
 add_action( 'loop_shop_post_in', 'woocommerce_brands_layered_nav_init', 11 );

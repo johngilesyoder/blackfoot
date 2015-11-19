@@ -21,10 +21,10 @@ class WC_Widget_Brand_Thumbnails extends WP_Widget {
 	function __construct() {
 
 		/* Widget variable settings. */
-		$this->woo_widget_name 			= __('WooCommerce Brand Thumbnails', 'wc_brands' );
-		$this->woo_widget_description 	= __( 'Show a grid of brand thumbnails.', 'wc_brands' );
-		$this->woo_widget_idbase 		= 'wc_brands_brand_thumbnails';
-		$this->woo_widget_cssclass 		= 'widget_brand_thumbnails';
+		$this->woo_widget_name        = __('WooCommerce Brand Thumbnails', 'wc_brands' );
+		$this->woo_widget_description = __( 'Show a grid of brand thumbnails.', 'wc_brands' );
+		$this->woo_widget_idbase      = 'wc_brands_brand_thumbnails';
+		$this->woo_widget_cssclass    = 'widget_brand_thumbnails';
 
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => $this->woo_widget_cssclass, 'description' => $this->woo_widget_description );
@@ -42,19 +42,20 @@ class WC_Widget_Brand_Thumbnails extends WP_Widget {
 
 		$brands = get_terms( 'product_brand', array( 'hide_empty' => $instance['hide_empty'], 'orderby' => $instance['orderby'], 'exclude' => $exclude, 'number' => $instance['number'], 'order' => $order ) );
 
-		if ( ! $brands )
+		if ( ! $brands ) {
 			return;
+		}
 
-	        $title = apply_filters( 'widget_title', $instance['title'], $instance, $this->woo_widget_idbase );
+		$title = apply_filters( 'widget_title', $instance['title'], $instance, $this->woo_widget_idbase );
 
-	        echo $args['before_widget'];
-	        if ( $title !== '' ) {
-	        	echo $args['before_title'] . $title . $args['after_title'];
-	        }
+		echo $args['before_widget'];
+		if ( $title !== '' ) {
+			echo $args['before_title'] . $title . $args['after_title'];
+		}
 
 		woocommerce_get_template( 'widgets/brand-thumbnails.php', array(
-			'brands'	=> $brands,
-			'columns'	=> $instance['columns']
+			'brands'  => $brands,
+			'columns' => $instance['columns']
 		), 'woocommerce-brands', untrailingslashit( plugin_dir_path( dirname( dirname( __FILE__ ) ) ) ) . '/templates/' );
 
 		echo $after_widget;

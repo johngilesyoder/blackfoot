@@ -277,7 +277,7 @@ class Envira_Gallery_Shortcode {
     public function maybe_sort_gallery( $data, $gallery_id ) {
 
         // Get sorting method
-        $sorting_method     = $this->get_config( 'random', $data );
+        $sorting_method     = (string) $this->get_config( 'random', $data );
         $sorting_direction  = $this->get_config( 'sorting_direction', $data );
 
         // Sort images based on method
@@ -337,7 +337,7 @@ class Envira_Gallery_Shortcode {
             * None
             * - Do nothing
             */
-            case 0:
+            case '0':
             case '':
                 break;
 

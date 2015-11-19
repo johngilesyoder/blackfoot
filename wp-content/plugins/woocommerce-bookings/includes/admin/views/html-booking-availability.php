@@ -42,7 +42,7 @@
 
 		<p class="form-field _wc_booking_buffer_period">
 			<label for="_wc_booking_buffer_period"><?php _e( 'Require a buffer period of', 'woocommerce-bookings' ); ?></label>
-			<input type="number" name="_wc_booking_buffer_period" id="_wc_booking_buffer_period" value="<?php echo esc_attr( $buffer_period ); ?>" step="1" min="1" style="margin-right: 7px; width: 4em;">
+			<input type="number" name="_wc_booking_buffer_period" id="_wc_booking_buffer_period" value="<?php echo esc_attr( $buffer_period ); ?>" step="1" min="0" style="margin-right: 7px; width: 4em;">
 			<span class='_wc_booking_buffer_period_unit'></span>
 			<?php _e( 'between bookings', 'woocommerce-bookings' ); ?>
 		</p>

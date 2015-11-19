@@ -48,41 +48,41 @@ class WC_Brands_Admin {
 		// Add brands filtering to the coupon creation screens.
 		add_action( 'woocommerce_coupon_options_usage_restriction', array( $this, 'add_coupon_brands_fields' ) );
 		add_action( 'woocommerce_coupon_options_save', array( $this, 'save_coupon_brands' ) );
-    }
+	}
 
-    /**
-     * Add the settings for the new "Brands" subtab.
-     * @access public
-     * @since  1.3.0
-     * @return  void
-     */
-    public function add_settings_section ( $settings, $current_section ) {
-    	if ( 'brands' == $current_section ) {
-    		$settings = $this->settings;
-    	}
-    	return $settings;
-    } // End add_settings_section()
+	/**
+	 * Add the settings for the new "Brands" subtab.
+	 * @access public
+	 * @since  1.3.0
+	 * @return  void
+	 */
+	public function add_settings_section ( $settings, $current_section ) {
+		if ( 'brands' == $current_section ) {
+			$settings = $this->settings;
+		}
+		return $settings;
+	} // End add_settings_section()
 
-    /**
-     * Add a new "Brands" subtab to the "Products" tab.
-     * @access public
-     * @since  1.3.0
-     * @return  void
-     */
-    public function add_settings_tab ( $sections ) {
-    	$sections = array_merge( $sections, $this->settings_tabs );
-    	return $sections;
-    } // End add_settings_tab()
+	/**
+	 * Add a new "Brands" subtab to the "Products" tab.
+	 * @access public
+	 * @since  1.3.0
+	 * @return  void
+	 */
+	public function add_settings_tab ( $sections ) {
+		$sections = array_merge( $sections, $this->settings_tabs );
+		return $sections;
+	} // End add_settings_tab()
 
-    /**
-     * Display coupon filter fields relating to brands.
-     * @access public
-     * @since  1.3.0
-     * @return  void
-     */
-    public function add_coupon_brands_fields () {
-    	global $post;
-    	// Brands
+	/**
+	 * Display coupon filter fields relating to brands.
+	 * @access public
+	 * @since  1.3.0
+	 * @return  void
+	 */
+	public function add_coupon_brands_fields () {
+		global $post;
+		// Brands
 		?>
 		<p class="form-field"><label for="product_brands"><?php _e( 'Product brands', 'wc_brands' ); ?></label>
 		<select id="product_brands" name="product_brands[]" style="width: 50%;"  class="wc-enhanced-select" multiple="multiple" data-placeholder="<?php _e( 'Any brand', 'wc_brands' ); ?>">
@@ -111,22 +111,22 @@ class WC_Brands_Admin {
 			?>
 		</select> <img class="help_tip" data-tip='<?php _e( 'Product must not be associated with these brands for the coupon to remain valid or, for "Product Discounts", products associated with these brands will not be discounted.', 'wc_brands' ) ?>' src="<?php echo WC()->plugin_url(); ?>/assets/images/help.png" height="16" width="16" /></p>
 		<?php
-    } // End add_coupon_brands_fields()
+	} // End add_coupon_brands_fields()
 
-    /**
-     * Save coupon filter fields relating to brands.
-     * @access public
-     * @since  1.3.0
-     * @return  void
-     */
-    public function save_coupon_brands ( $post_id ) {
-    	$product_brands         = isset( $_POST['product_brands'] ) ? array_map( 'intval', $_POST['product_brands'] ) : array();
+	/**
+	 * Save coupon filter fields relating to brands.
+	 * @access public
+	 * @since  1.3.0
+	 * @return  void
+	 */
+	public function save_coupon_brands ( $post_id ) {
+		$product_brands         = isset( $_POST['product_brands'] ) ? array_map( 'intval', $_POST['product_brands'] ) : array();
 		$exclude_product_brands = isset( $_POST['exclude_product_brands'] ) ? array_map( 'intval', $_POST['exclude_product_brands'] ) : array();
 
 		// Save
 		update_post_meta( $post_id, 'product_brands', $product_brands );
 		update_post_meta( $post_id, 'exclude_product_brands', $exclude_product_brands );
-    } // End save_coupon_brands()
+	} // End save_coupon_brands()
 
 	/**
 	 * init_form_fields()
@@ -138,16 +138,16 @@ class WC_Brands_Admin {
 		// Define settings
 		$this->settings = apply_filters( 'woocommerce_brands_settings_fields', array(
 
-			array(	'name' => __( 'Brands Archives', 'wc_brands' ), 'type' => 'title','desc' => '', 'id' => 'brands_archives' ),
+			array( 'name' => __( 'Brands Archives', 'wc_brands' ), 'type' => 'title','desc' => '', 'id' => 'brands_archives' ),
 
 			array(
-				'name' 		=> __( 'Show description', 'wc_brands' ),
-				'desc' 		=> __( 'Choose to show the brand description on the archive page. Turn this off if you intend to use the description widget instead.', 'wc_brands' ),
-				'tip' 		=> '',
-				'id' 		=> 'wc_brands_show_description',
-				'css' 		=> '',
-				'std' 		=> 'yes',
-				'type' 		=> 'checkbox',
+				'name' => __( 'Show description', 'wc_brands' ),
+				'desc' => __( 'Choose to show the brand description on the archive page. Turn this off if you intend to use the description widget instead.', 'wc_brands' ),
+				'tip'  => '',
+				'id'   => 'wc_brands_show_description',
+				'css'  => '',
+				'std'  => 'yes',
+				'type' => 'checkbox',
 			),
 
 			array( 'type' => 'sectionend', 'id' => 'brands_archives' ),
@@ -156,19 +156,19 @@ class WC_Brands_Admin {
 	}
 
 
-    /**
-     * scripts function.
-     *
-     * @access public
-     * @return void
-     */
-    function scripts() {
-    	$screen = get_current_screen();
+	/**
+	 * scripts function.
+	 *
+	 * @access public
+	 * @return void
+	 */
+	function scripts() {
+		$screen = get_current_screen();
 
-	    if ( in_array( $screen->id, array( 'edit-product_brand' ) ) ) {
+		if ( in_array( $screen->id, array( 'edit-product_brand' ) ) ) {
 			wp_enqueue_media();
 		}
-    }
+	}
 
 	/**
 	 * admin_settings function.
@@ -185,7 +185,9 @@ class WC_Brands_Admin {
 	 * @access public
 	 */
 	function save_admin_settings() {
-		woocommerce_update_options( $this->settings );
+		if ( isset( $_GET['section'] ) && 'brands' === $_GET['section'] ) {
+			woocommerce_update_options( $this->settings );
+		}
 	}
 
 	/**
@@ -388,8 +390,8 @@ class WC_Brands_Admin {
 		if ( $column == 'thumb' ) {
 			global $woocommerce;
 
-			$image 			= '';
-			$thumbnail_id 	= get_woocommerce_term_meta( $id, 'thumbnail_id', true );
+			$image        = '';
+			$thumbnail_id = get_woocommerce_term_meta( $id, 'thumbnail_id', true );
 
 			if ( $thumbnail_id ) {
 				$image = wp_get_attachment_url( $thumbnail_id );

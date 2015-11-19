@@ -788,6 +788,8 @@ class WC_Product_Booking extends WC_Product {
 			$intervals        = array( $default_interval, $default_interval );
 		}
 
+		$buffer_period = get_post_meta( $this->id, '_wc_booking_buffer_period', true );
+
 		list( $interval, $base_interval ) = $intervals;
 
 		$blocks = array();
@@ -899,6 +901,21 @@ class WC_Product_Booking extends WC_Product {
 							$from_interval = $i * $base_interval;
 							$start_time    = strtotime( "+{$from_interval} minutes", $time_block_start );
 
+							// Buffer time calculation
+							// we don't need to do this on the first set of minutes
+							if ( $i > 0 && ! empty ( $buffer_period ) ) {
+								$total_time = $from_interval + ( $buffer_period * $i );
+								$start_time    = strtotime( "+{$total_time} minutes", $time_block_start );
+								// Is this the last time? Make sure it fits after applying the buffer..
+								if ( $i == ( $base_intervals_in_block - 1 ) ) {
+									$end_of_last = $start_time + ( $interval * 60 );
+									$end = strtotime( "midnight +{$time_block[1]} minutes", $check_date );
+									if ( $end_of_last > $end ) {
+										break 2;
+									}
+								}
+							}
+
 							// Break if start time is after the end date being calced
 							if ( $start_time > $end_date ) {
 								break 2;
@@ -993,9 +1010,10 @@ class WC_Product_Booking extends WC_Product {
 	 * @param  array   $blocks      The blocks we'll be checking availability for.
 	 * @param  array   $intervals   Array containing 2 items; the interval of the block (maybe user set), and the base interval for the block/product.
 	 * @param  integer $resource_id Resource we're getting blocks for. Falls backs to product as a whole if 0.
+	 * @param  string  $from        The starting date for the set of blocks
 	 * @return array The available blocks array
 	 */
-	public function get_available_blocks( $blocks, $intervals = array(), $resource_id = 0 ) {
+	public function get_available_blocks( $blocks, $intervals = array(), $resource_id = 0, $from = '' ) {
 		if ( empty( $intervals ) ) {
 			$default_interval = 'hour' === $this->get_duration_unit() ? $this->wc_booking_duration * 60 : $this->wc_booking_duration;
 			$intervals        = array( $default_interval, $default_interval );
@@ -1059,6 +1077,17 @@ class WC_Product_Booking extends WC_Product {
 			}
 		}
 
+		// Even though we checked hours against other days/slots, make sure we only return blocks for this date..
+		if ( in_array( $this->get_duration_unit(), array( 'minute', 'hour' ) ) && ! empty ( $from ) ) {
+			$time_blocks = array();
+			foreach ( $available_blocks as $key => $block_date ) {
+				if ( date( 'ymd', $block_date ) == date( 'ymd', $from ) ) {
+					$time_blocks[] = $block_date;
+				}
+			}
+			$available_blocks = $time_blocks;
+		}
+
 		return $available_blocks;
 	}
 
@@ -1067,9 +1096,10 @@ class WC_Product_Booking extends WC_Product {
 	 * @param  array  $blocks
 	 * @param  array  $intervals
 	 * @param  integer $resource_id
+	 * @param  string  $from The starting date for the set of blocks
 	 * @return string
 	 */
-	public function get_available_blocks_html( $blocks, $intervals = array(), $resource_id = 0 ) {
+	public function get_available_blocks_html( $blocks, $intervals = array(), $resource_id = 0, $from = '' ) {
 		if ( empty( $intervals ) ) {
 			$default_interval = 'hour' === $this->get_duration_unit() ? $this->wc_booking_duration * 60 : $this->wc_booking_duration;
 			$intervals        = array( $default_interval, $default_interval );
@@ -1077,18 +1107,10 @@ class WC_Product_Booking extends WC_Product {
 
 		list( $interval, $base_interval ) = $intervals;
 
-		$blocks            = $this->get_available_blocks( $blocks, $intervals, $resource_id );
+		$blocks            = $this->get_available_blocks( $blocks, $intervals, $resource_id, $from );
 		$existing_bookings = $this->get_bookings_in_date_range( current( $blocks ), ( end( $blocks ) + ( $base_interval * 60 ) ), $resource_id );
 		$booking_resource  = $resource_id ? $this->get_resource( $resource_id ) : null;
 		$block_html        = '';
-
-		if ( in_array( $this->get_duration_unit(), array( 'hour', 'minute' ) ) ) {
-			$end_block = $blocks;
-			$end_block = end( $end_block );
-			if ( date( 'h', $end_block ) == '12' ) {
-				array_pop( $blocks );
-			}
-		}
 
 		foreach ( $blocks as $block ) {
 			$available_qty       = $this->has_resources() && $booking_resource && $booking_resource->has_qty() ? $booking_resource->get_qty() : $this->get_qty();
@@ -1110,10 +1132,12 @@ class WC_Product_Booking extends WC_Product {
 
 			$available_qty = $available_qty - $qty_booked_in_block;
 
-			if ( $qty_booked_in_block ) {
-				$block_html .= '<li class="block" data-block="' . esc_attr( date( 'Hi', $block ) ) . '"><a href="#" data-value="' . date( 'G:i', $block ) . '">' . date_i18n( get_option( 'time_format' ), $block ) . ' <small class="booking-spaces-left">(' . sprintf( _n( '%d left', '%d left', $available_qty, 'woocommerce-bookings' ), absint( $available_qty ) ) . ')</small></a></li>';
-			} else {
-				$block_html .= '<li class="block" data-block="' . esc_attr( date( 'Hi', $block ) ) . '"><a href="#" data-value="' . date( 'G:i', $block ) . '">' . date_i18n( get_option( 'time_format' ), $block ) . '</a></li>';
+			if ( $available_qty > 0 ) {
+				if ( $qty_booked_in_block ) {
+					$block_html .= '<li class="block" data-block="' . esc_attr( date( 'Hi', $block ) ) . '"><a href="#" data-value="' . date( 'G:i', $block ) . '">' . date_i18n( get_option( 'time_format' ), $block ) . ' <small class="booking-spaces-left">(' . sprintf( _n( '%d left', '%d left', $available_qty, 'woocommerce-bookings' ), absint( $available_qty ) ) . ')</small></a></li>';
+				} else {
+					$block_html .= '<li class="block" data-block="' . esc_attr( date( 'Hi', $block ) ) . '"><a href="#" data-value="' . date( 'G:i', $block ) . '">' . date_i18n( get_option( 'time_format' ), $block ) . '</a></li>';
+				}
 			}
 		}
 

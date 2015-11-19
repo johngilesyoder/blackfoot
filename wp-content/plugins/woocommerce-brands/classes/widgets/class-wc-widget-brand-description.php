@@ -21,10 +21,10 @@ class WC_Widget_Brand_Description extends WP_Widget {
 	function __construct() {
 
 		/* Widget variable settings. */
-		$this->woo_widget_name 			= __('WooCommerce Brand Description', 'wc_brands' );
-		$this->woo_widget_description 	= __( 'When viewing a brand archive, show the current brands description.', 'wc_brands' );
-		$this->woo_widget_idbase 		= 'wc_brands_brand_description';
-		$this->woo_widget_cssclass 		= 'widget_brand_description';
+		$this->woo_widget_name        = __('WooCommerce Brand Description', 'wc_brands' );
+		$this->woo_widget_description = __( 'When viewing a brand archive, show the current brands description.', 'wc_brands' );
+		$this->woo_widget_idbase      = 'wc_brands_brand_description';
+		$this->woo_widget_cssclass    = 'widget_brand_description';
 
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => $this->woo_widget_cssclass, 'description' => $this->woo_widget_description );
@@ -43,15 +43,15 @@ class WC_Widget_Brand_Description extends WP_Widget {
 		if ( ! get_query_var( 'term' ) )
 			return;
 
-		$thumbnail 		= '';
-		$term 			= get_term_by( 'slug', get_query_var( 'term' ), 'product_brand' );
+		$thumbnail = '';
+		$term      = get_term_by( 'slug', get_query_var( 'term' ), 'product_brand' );
 
 		$thumbnail = get_brand_thumbnail_url( $term->term_id, 'large' );
 
 		echo $before_widget . $before_title . $term->name . $after_title;
 
 		woocommerce_get_template( 'widgets/brand-description.php', array(
-			'thumbnail'	=> $thumbnail
+			'thumbnail' => $thumbnail
 		), 'woocommerce-brands', untrailingslashit( plugin_dir_path( dirname( dirname( __FILE__ ) ) ) ) . '/templates/' );
 
 		echo $after_widget;
