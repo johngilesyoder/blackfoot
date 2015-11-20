@@ -12,6 +12,61 @@
       line-height: 1.5em;
     }
   }
+  .category-sorting {
+    margin-bottom: 40px;
+    .woocommerce-ordering {
+      display: inline-block;
+      margin-right: 15px;
+      .orderby {
+        .form-control();
+        font-size: 14px;
+        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+        height: 31px;
+      }
+    }
+    .woocommerce-result-count {
+      display: inline-block;
+      font-weight: 700;
+      font-family: @font-family-sans-serif;
+      font-size: 16px;
+    }
+  }
+  ul.tiles {
+    position: relative;
+    margin-bottom: 30px;
+    .product-tile {
+      width: 50%;
+      float: left;
+      padding: 0 30px 30px;
+      &:nth-child(odd) {
+        background: url('assets/img/dotted-line-horiz.svg') 0 100% repeat-x
+      }
+      &:nth-child(even) {
+        background: 
+          url('assets/img/dotted-line-vert.svg') 0 0 repeat-y,
+          url('assets/img/dotted-line-horiz.svg') 0 100% repeat-x;
+      }
+      .product-title {
+        height: 40px;
+      }
+      .short-description {
+        display: none;
+      }
+      .btn-add-to-cart {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.hide-bottom {
+  display: block;
+  background: #fff;
+  height: 15px;
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+  width: 100%;
 }
 
 

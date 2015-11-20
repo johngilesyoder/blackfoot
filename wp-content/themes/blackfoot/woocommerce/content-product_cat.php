@@ -22,43 +22,34 @@ if ( empty( $woocommerce_loop['loop'] ) ) {
 
 // Store column count for displaying the grid
 if ( empty( $woocommerce_loop['columns'] ) ) {
-	$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 4 );
+	$woocommerce_loop['columns'] = apply_filters( 'wc_loop_shop_columns', '2' );
 }
 
 // Increase loop count
 $woocommerce_loop['loop'] ++;
 ?>
-<li <?php wc_product_cat_class(); ?>>
+
+<!-- Category tile wrapper -->
+<li <?php wc_product_cat_class('category-tile'); ?>>
+
 	<?php do_action( 'woocommerce_before_subcategory', $category ); ?>
 
+	<!-- Category tile anchor -->
 	<a href="<?php echo get_term_link( $category->slug, 'product_cat' ); ?>">
+		<div class="category-img-wrapper">
 
-		<?php
-			/**
-			 * woocommerce_before_subcategory_title hook
-			 *
-			 * @hooked woocommerce_subcategory_thumbnail - 10
-			 */
-			do_action( 'woocommerce_before_subcategory_title', $category );
-		?>
+			<!-- Category image -->
+			<?php do_action( 'woocommerce_before_subcategory_title', $category ); ?>
 
-		<h3>
-			<?php
-				echo $category->name;
+		</div>
 
-				if ( $category->count > 0 )
-					echo apply_filters( 'woocommerce_subcategory_count_html', ' <mark class="count">(' . $category->count . ')</mark>', $category );
-			?>
-		</h3>
+		<!-- Category Title -->
+		<h3 class="category-title">Shop <?php echo $category->name; ?></h3>
 
-		<?php
-			/**
-			 * woocommerce_after_subcategory_title hook
-			 */
-			do_action( 'woocommerce_after_subcategory_title', $category );
-		?>
+		<?php do_action( 'woocommerce_after_subcategory_title', $category ); ?>
 
 	</a>
 
 	<?php do_action( 'woocommerce_after_subcategory', $category ); ?>
+
 </li>

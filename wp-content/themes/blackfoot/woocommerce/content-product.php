@@ -41,12 +41,16 @@ if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 
 if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	$classes[] = 'last';
 }
+
+// Add proprietary class to product tiles
+$classes[] = 'product-tile';
 ?>
+
 <li <?php post_class( $classes ); ?>>
 
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
-	<a href="<?php the_permalink(); ?>">
+	<a class="product-anchor" href="<?php the_permalink(); ?>">
 
 		<?php
 			/**
@@ -85,5 +89,5 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 		do_action( 'woocommerce_after_shop_loop_item' );
 
 	?>
-test
+
 </li>

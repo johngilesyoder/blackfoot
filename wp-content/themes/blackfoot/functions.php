@@ -408,8 +408,8 @@ add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 
 // Shortcodes
-add_shortcode('html5_shortcode_demo', 'html5_shortcode_demo'); // You can place [html5_shortcode_demo] in Pages, Posts now.
-add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [html5_shortcode_demo_2] in Pages, Posts now.
+//add_shortcode('html5_shortcode_demo', 'html5_shortcode_demo'); // You can place [html5_shortcode_demo] in Pages, Posts now.
+//add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [html5_shortcode_demo_2] in Pages, Posts now.
 
 // Shortcodes above would be nested like this -
 // [html5_shortcode_demo] [html5_shortcode_demo_2] Here's the page title! [/html5_shortcode_demo_2] [/html5_shortcode_demo]
@@ -434,12 +434,15 @@ WooCommerce
 \*------------------------------------*/
 
 // Declare WooCommerce support
+// ---------------------------------------------------
 add_action('after_setup_theme', 'woocommerce_support');
 function woocommerce_support() {
   add_theme_support('woocommerce');
 }
 
+
 // Customize WooCommerce breadcrumbs
+// ---------------------------------------------------
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 function jk_woocommerce_breadcrumbs() {
   return array(
@@ -452,16 +455,22 @@ function jk_woocommerce_breadcrumbs() {
   );
 }
 
+
 // Change home link in WooCommerce breadcrumb to point to shop
+// ---------------------------------------------------
 add_filter( 'woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url' );
 function woo_custom_breadrumb_home_url() {
   return '/shop/';
 }
 
+
 // Unhook breadcrumb from wrapper-start
+// ---------------------------------------------------
 remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
 
+
 // Add class to body on SHOP page
+// ---------------------------------------------------
 add_filter( 'body_class', 'b5f_modify_body_classes', 10, 2 );
 
 function b5f_modify_body_classes( $classes, $class )
@@ -473,5 +482,39 @@ function b5f_modify_body_classes( $classes, $class )
   }    
   return $classes;
 }
+
+
+// Disable WooCommerce styles (a la carte)
+// ---------------------------------------------------
+add_filter( 'woocommerce_enqueue_styles', 'bro_dequeue_styles' );
+function bro_dequeue_styles( $enqueue_styles ) {
+	//unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
+	unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout
+	//unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
+	return $enqueue_styles;
+}
+
+
+// Do not hide empty categories
+// ---------------------------------------------------
+add_filter( 'woocommerce_product_subcategories_hide_empty', '__return_true');
+
+
+// Add product short description to product tiles
+// ---------------------------------------------------
+add_action('woocommerce_after_shop_loop_item_title','woocommerce_template_single_excerpt', 5);
+function woocommerce_template_single_excerpt(){ 
+echo '<p class="short-description">' . substr(get_the_excerpt(), 0,60) . ' &hellip;</p>';
+}
+
+
+// Reorder sorting elements on category page
+// ---------------------------------------------------
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
+add_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 30 );
+add_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 20 );
+
 
 ?>

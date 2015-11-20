@@ -21,35 +21,41 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="container">
   <div class="row">
     <div class="col-md-3">
+
       <?php do_action( 'woocommerce_sidebar' );?>
+
     </div>
     <div class="col-md-9">
-			<!-- If it's the SHOP page -->
+
 			<?php if ( is_shop() ) : ?>
+
+				<!-- SHOP PAGE -->
+				<!-- =================================== -->
+				<!-- =================================== -->
 
 				<?php get_template_part( 'includes/shop-home' ); ?>
 
-			<!-- If it's any other archive page -->
 			<?php else: ?>
 
+				<!-- CATEGORY PAGE -->
+				<!-- =================================== -->
+				<!-- =================================== -->
+
+				<hgroup class="category-title">
+				
 				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
 					<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
 
 				<?php endif; ?>
 
-				<?php
-					/**
-					 * woocommerce_archive_description hook
-					 *
-					 * @hooked woocommerce_taxonomy_archive_description - 10
-					 * @hooked woocommerce_product_archive_description - 10
-					 */
-					do_action( 'woocommerce_archive_description' );
-				?>
+				<?php do_action( 'woocommerce_archive_description' ); ?>
+
+				</hgroup>
 
 				<?php if ( have_posts() ) : ?>
 
+					<div class="category-sorting">
 					<?php
 						/**
 						 * woocommerce_before_shop_loop hook
@@ -59,6 +65,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						 */
 						do_action( 'woocommerce_before_shop_loop' );
 					?>
+					</div>
 
 					<?php woocommerce_product_loop_start(); ?>
 

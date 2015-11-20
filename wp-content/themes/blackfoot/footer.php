@@ -1,8 +1,15 @@
-		<footer class="site-footer">
+		<!-- SITE FOOTER -->
+    <!-- =================================== -->
+    <!-- =================================== -->
+    <footer class="site-footer">
+      <!-- Footer Top -->
+      <!-- =================================== -->
       <div class="footer-top">
       	<div class="container">
+          <!-- Back to top -->
           <a href="#top" id="back-to-top" class="back-to-top">Back to top</a>
           <div class="row">
+            <!-- Footer links -->
             <div class="footer-links">
               <div class="row">
                 <nav class="links-column">
@@ -25,6 +32,7 @@
                 </nav>
               </div>
             </div>
+            <!-- Footer connect -->
             <div class="footer-connect">
               <img class="logo-footer" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-footer.svg">
               <address>
@@ -43,8 +51,11 @@
       	 </div>
         </div>
       </div>
+      <!-- Footer Bottom -->
+      <!-- =================================== -->
       <div class="footer-bottom">
         <div class="container">
+          <!-- Footer trust -->
           <div class="footer-trust">
             <div class="row">
               <div class="col-md-4">
@@ -61,6 +72,7 @@
               </div>
             </div>
           </div>
+          <!-- Footer copyright -->
           <div class="footer-copyright">
             &copy; <?php echo date('Y'); ?> Blackfoot River Outfitters. All rights reserved. <a href="#">Privacy</a>
           </div>

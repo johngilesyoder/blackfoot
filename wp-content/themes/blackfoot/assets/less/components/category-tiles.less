@@ -1,0 +1,63 @@
+// category-tiles.less
+// -----------------------------------------------------------------
+
+.woocommerce ul.tiles {
+  .make-row();
+  .category-tile {
+    margin-bottom: 30px;
+    .make-md-column(6);
+    a {
+      display: block;
+      background: @brand-brown;
+      border: 2px solid @brand-brown;
+      .category-img-wrapper {
+        padding: 30px;
+        background: #fff;
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          margin: 0;
+        }
+      }
+      .category-title {
+        color: #fff;
+        font-family: @font-family-sans-serif;
+        font-weight: 600;
+        font-size: 21px;
+        margin: 0;
+        padding: 10px 15px;
+        &:after {
+          content: '';
+          display: inline-block;
+          background-image: url('assets/img/icon-chevron-r-white.svg');
+          width: 11px;
+          height: 18px;
+          background-size: 11px;
+          margin-left: 13px;
+          position: relative;
+          top: 3px;
+        }
+      }
+      &:hover .category-title {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.columns-3 {
+  ul.tiles {
+    .category-tile {
+      .make-md-column(4);
+    }
+  }
+}
+
+.columns-2 {
+  ul.tiles {
+    .category-tile {
+      .make-md-column(6);
+    }
+  }
+}

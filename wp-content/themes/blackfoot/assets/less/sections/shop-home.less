@@ -5,6 +5,127 @@
   .shop-banner {
     margin-bottom: 40px;
   }
+  .shop-section {
+    margin-bottom: 60px;
+  }
+  .section-title {
+    font-family: @font-family-sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 35px;
+    background: url('assets/img/dotted-line-horiz.svg');
+    background-repeat: repeat-x;
+    background-position: 0 50%;
+    span {
+      display: inline-block;
+      background: #fff;
+      padding-right: 20px;
+    }
+  }
+  // Featured Item
+  .shop-featured {
+    background: @brand-brown;
+    color: #fff;
+    padding: 15px;
+    .featured-item-content {
+      padding: 10px 0 15px 15px;
+    }
+    .featured-title {
+      font-family: @font-family-sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 1.5px;
+      color: @brand-peach;
+      text-transform: uppercase;
+      margin: 0 0 25px;
+      img {
+        margin-right: 8px;
+      }
+    }
+    .item-title {
+      font-size: 30px;
+      color: #fff;
+      font-family: @font-family-sans-serif;
+      font-weight: 700;
+      margin: 0 0 15px;
+    }
+    .short-description {
+      color: @text-color;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    .price {
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 30px;
+      display: block;
+      del {
+        margin-right: 10px;
+        display: inline-block;
+        opacity: 1;
+        .amount {
+          color: #c1bfbd;
+        }
+      }
+      ins {
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+      }
+    }
+    .btn-add-to-cart {
+      font-family: @font-family-sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .featured-item-img {
+      img {
+        .img-responsive();
+        border: 4px solid #401B00;
+      }
+    }
+  }
+  // Product Categories
+  .shop-categories {
+    .woocommerce ul.tiles {
+      .category-tile {
+        a {
+          .category-title {
+            font-size: 16px;
+            &:after {
+              width: 7px;
+              height: 12px;
+              background-size: 7px;
+              margin-left: 10px;
+              top: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+  // Featured Brands
+  .shop-brands {
+    margin-bottom: 80px;
+    .section-title {
+      margin-bottom: 50px;
+    }
+    .featured-brands {
+      text-align: center;
+      a {
+        
+        display: inline-block;
+        margin: 0 35px;
+        img {
+          height: 45px;
+        }
+      }
+    }
+  }
 }
 
 
