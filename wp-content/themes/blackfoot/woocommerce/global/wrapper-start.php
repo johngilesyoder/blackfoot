@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <!-- SHOP BANNER -->
-<?php echo get_template_part( 'includes/shop-banner' ); ?>
+<?php echo get_template_part( 'includes/shop/shop-banner' ); ?>
 
 <!-- BREADCRUMB -->
 <?php if ( !is_shop() ) : ?>

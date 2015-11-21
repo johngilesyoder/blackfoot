@@ -1,0 +1,62 @@
+// home-hero.less
+// -----------------------------------------------------------------
+
+.home {
+  .home-hero {
+    padding: 0;
+    border-bottom: 7px solid #999490;
+    background: @brand-brown;
+    .hero-panel {
+      height: 100vh;
+      width: 100%;
+      background-size: cover;
+      background-position: 50% 50%;
+      .hero-panel-gradient {
+        height: 100%;
+        #gradient > .horizontal(rgba(0,0,0,.43),rgba(0,0,0,0), 0%, 50%);
+      }
+      .container {
+        height: 100%;
+        position: relative;
+      }
+      .hero-panel-content {
+        color: #fff;
+        position: absolute;
+        bottom: 125px;
+        left: 0;
+        width: 60%;
+        .subtitle {
+          font-family: @font-family-sans-serif;
+          font-weight: 700;
+          font-size: 16px;
+          text-transform: uppercase;
+        }
+        h1 {
+          font-size: 75px;
+          font-weight: 700;
+          line-height: 1em;
+          margin: 0 0 40px;
+        }
+        .btn-secondary {
+          border: 0;
+          font-size: 24px;
+          font-weight: 700;
+        }
+        .subtext {
+          display: block;
+          font-style: italic;
+          font-size: 21px;
+          font-weight: 500;
+          margin-top: 10px;
+          a {
+            color: #fff;
+            text-decoration: underline;
+            &:hover {
+              color: rgba(255,255,255,.8);
+            }
+          }
+        }
+      }
+    }
+  }
+}

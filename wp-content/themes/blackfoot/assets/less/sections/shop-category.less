@@ -1,7 +1,9 @@
 // shop-category.less
 // -----------------------------------------------------------------
 
-.tax-product_cat {
+.tax-product_cat,
+.tax-product_brand,
+.search-results {
   .category-title {
     margin-bottom: 32px;
     .page-title {
@@ -33,11 +35,12 @@
   }
   ul.tiles {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     .product-tile {
       width: 50%;
       float: left;
       padding: 0 30px 30px;
+      margin-bottom: 3px;
       &:nth-child(odd) {
         background: url('assets/img/dotted-line-horiz.svg') 0 100% repeat-x
       }
@@ -54,6 +57,7 @@
       }
       .btn-add-to-cart {
         display: inline-block;
+        width: 100%;
       }
     }
   }
@@ -64,9 +68,15 @@
   background: #fff;
   height: 15px;
   position: absolute;
-  bottom: 20px;
+  bottom: 0;
   z-index: 10;
   width: 100%;
+}
+
+.tax-product_brand .brand-description img {
+  height: 100px;
+  width: auto;
+  margin: 0 0 0 30px;
 }
 
 

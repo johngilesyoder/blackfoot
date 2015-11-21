@@ -99,9 +99,9 @@
 <section id="shop-brands" class="shop-section shop-brands">
   <h3 class="section-title"><span>Featured Brands</span></h3>
   <div class="featured-brands">
-    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/featured-brand-orvis.jpg"></a>
-    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/featured-brand-gloomis.jpg"></a>
-    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/featured-brand-simms.jpg"></a>
-    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/featured-brand-sotar.jpg"></a>
+    <a href="/brand/orvis/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/featured-brand-orvis.jpg"></a>
+    <a href="/brand/g-loomis/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/featured-brand-gloomis.jpg"></a>
+    <a href="/brand/simms/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/featured-brand-simms.jpg"></a>
+    <a href="/brand/sotar"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/featured-brand-sotar.jpg"></a>
   </div>
 </section>

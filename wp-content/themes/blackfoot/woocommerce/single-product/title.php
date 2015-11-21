@@ -10,6 +10,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
 ?>
-<h1 itemprop="name" class="product_title entry-title"><?php the_title(); ?></h1>
+
+<?php echo do_shortcode('[product_brand width="" height="" class="brand-logo"]') ?>
+<h1 itemprop="name" class="product_title entry-title"><?php echo get_the_term_list( $post_id, 'product_brand' ) . '&nbsp'; ?><?php the_title(); ?></h1>

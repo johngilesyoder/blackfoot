@@ -367,7 +367,7 @@ Actions + Filters + ShortCodes
 add_action('init', 'html5blank_header_scripts'); // Add Custom Scripts to wp_head
 add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditional Page Scripts
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
-add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
+add_action('wp_enqueue_scripts', 'html5blank_styles', 15); // Add Theme Stylesheet
 add_action('wp_enqueue_scripts', 'html5blank_conditional_styles'); // Add Conditional Theme Stylesheets
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
@@ -436,6 +436,7 @@ WooCommerce
 // Declare WooCommerce support
 // ---------------------------------------------------
 add_action('after_setup_theme', 'woocommerce_support');
+
 function woocommerce_support() {
   add_theme_support('woocommerce');
 }
@@ -444,6 +445,7 @@ function woocommerce_support() {
 // Customize WooCommerce breadcrumbs
 // ---------------------------------------------------
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
+
 function jk_woocommerce_breadcrumbs() {
   return array(
     'delimiter'   => ' &#47; ',
@@ -459,6 +461,7 @@ function jk_woocommerce_breadcrumbs() {
 // Change home link in WooCommerce breadcrumb to point to shop
 // ---------------------------------------------------
 add_filter( 'woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url' );
+
 function woo_custom_breadrumb_home_url() {
   return '/shop/';
 }
@@ -487,6 +490,7 @@ function b5f_modify_body_classes( $classes, $class )
 // Disable WooCommerce styles (a la carte)
 // ---------------------------------------------------
 add_filter( 'woocommerce_enqueue_styles', 'bro_dequeue_styles' );
+
 function bro_dequeue_styles( $enqueue_styles ) {
 	//unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
 	unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout
@@ -503,6 +507,7 @@ add_filter( 'woocommerce_product_subcategories_hide_empty', '__return_true');
 // Add product short description to product tiles
 // ---------------------------------------------------
 add_action('woocommerce_after_shop_loop_item_title','woocommerce_template_single_excerpt', 5);
+
 function woocommerce_template_single_excerpt(){ 
 echo '<p class="short-description">' . substr(get_the_excerpt(), 0,60) . ' &hellip;</p>';
 }
@@ -515,6 +520,57 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 3
 
 add_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 30 );
 add_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 20 );
+
+
+// Change placeholder image
+// ---------------------------------------------------
+add_action( 'init', 'custom_fix_thumbnail' );
+
+function custom_fix_thumbnail() {
+  add_filter('woocommerce_placeholder_img_src', 'custom_woocommerce_placeholder_img_src');
+	function custom_woocommerce_placeholder_img_src( $src ) {
+	$src = get_template_directory_uri() . '/assets/img/placeholder.png';
+	return $src;
+	}
+}
+
+// Revise pagination qty
+// ---------------------------------------------------
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 16;' ), 20 );
+
+
+// Customize variation pricing display
+// ---------------------------------------------------
+add_filter('woocommerce_variable_price_html', 'custom_variation_price', 10, 2);
+function custom_variation_price( $price, $product ) {
+$price = '';
+if ( !$product->min_variation_price || $product->min_variation_price !== $product->max_variation_price ) $price .= '<span class="from">' . _x('From', 'min_price', 'woocommerce') . ' </span>';
+$price .= woocommerce_price($product->min_variation_price);
+return $price;
+}
+
+add_filter( 'woocommerce_variable_sale_price_html', 'bro_variation_price_format', 10, 2 );
+add_filter( 'woocommerce_variable_price_html', 'bro_variation_price_format', 10, 2 );
+
+function bro_variation_price_format( $price, $product ) {
+  // Main Price
+  $prices = array( $product->get_variation_price( 'min', true ), $product->get_variation_price( 'max', true ) );
+  $price = $prices[0] !== $prices[1] ? sprintf( __( 'From %1$s', 'woocommerce' ), wc_price( $prices[0] ) ) : wc_price( $prices[0] );
+  // Sale Price
+  $prices = array( $product->get_variation_regular_price( 'min', true ), $product->get_variation_regular_price( 'max', true ) );
+  sort( $prices );
+  $saleprice = $prices[0] !== $prices[1] ? sprintf( __( 'From %1$s', 'woocommerce' ), wc_price( $prices[0] ) ) : wc_price( $prices[0] );
+  if ( $price !== $saleprice ) {
+    $price = '<del>' . $saleprice . '</del> <ins>' . $price . '</ins>';
+  }
+  return $price;
+}
+
+
+// Remove SKU from product page
+// ---------------------------------------------------
+add_filter( 'wc_product_sku_enabled', '__return_false' );
+
 
 
 ?>

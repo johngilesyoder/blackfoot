@@ -27,17 +27,17 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
     <div class="col-md-9">
 
-			<?php if ( is_shop() ) : ?>
+			<?php if ( is_shop() && !is_search() ) : ?>
 
 				<!-- SHOP PAGE -->
 				<!-- =================================== -->
 				<!-- =================================== -->
 
-				<?php get_template_part( 'includes/shop-home' ); ?>
+				<?php get_template_part( 'includes/shop/shop-home' ); ?>
 
-			<?php else: ?>
+			<?php else : ?>
 
-				<!-- CATEGORY PAGE -->
+				<!-- SEARCH/CATEGORY PAGE -->
 				<!-- =================================== -->
 				<!-- =================================== -->
 

@@ -23,7 +23,7 @@
     <script src="https://use.typekit.net/las1vox.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-    <!-- Scripts -->
+    <!-- Wordpress Generated -->
     <!-- =================================== -->
 		<?php wp_head(); ?>
 

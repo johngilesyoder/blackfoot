@@ -1,0 +1,48 @@
+// shop-alerts.less
+// -----------------------------------------------------------------
+
+.woocommerce {
+  .woocommerce-message,
+  .woocommerce-error,
+  .woocommerce-info {
+    .alert();
+    .clearfix();
+    word-wrap: break-word;
+    &:before {
+      font-family: 'Glyphicons Halflings';
+      content: "\e086";
+      display: inline-block;
+      position: absolute;
+      top: 1em;
+      left: 1.5em;
+    }
+    .button {
+      float: right;
+    }
+    li {
+      list-style: none outside !important;
+      padding-left: 0 !important;
+      margin-left: 0 !important;
+    }
+  }
+  .woocommerce-message {
+    .alert-success();
+    &:before {
+      content: "\e086";
+      color: @state-success-text;
+    }
+  }
+  .woocommerce-info {
+    .alert-info();
+    &:before {
+      color: @state-info-text;
+    }
+  }
+  .woocommerce-error {
+    .alert-danger();
+    &:before {
+      content: "\e107";
+      color: @state-danger-text;
+    }
+  }
+}
