@@ -572,5 +572,20 @@ function bro_variation_price_format( $price, $product ) {
 add_filter( 'wc_product_sku_enabled', '__return_false' );
 
 
+// Change related products qty
+// ---------------------------------------------------
+function woo_related_products_limit() {
+  global $product;
+  
+  $args['posts_per_page'] = 6;
+  return $args;
+}
+add_filter( 'woocommerce_output_related_products_args', 'bro_related_products_args' );
+  function bro_related_products_args( $args ) {
+  $args['posts_per_page'] = 2; // 4 related products
+  $args['columns'] = 2; // arranged in 2 columns
+  return $args;
+}
+
 
 ?>

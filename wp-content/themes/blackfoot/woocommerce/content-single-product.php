@@ -100,6 +100,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 		</div>
 	</div>
+	<div class="item-bottom">
+		<div class="row">
+			<div class="col-md-8">
+				<?php woocommerce_output_product_data_tabs(); ?>
+			</div>
+			<div class="col-md-4">
+				<?php woocommerce_output_related_products(); ?>
+			</div>
+		</div>
+	</div>
 	<?php
 		/**
 		 * woocommerce_after_single_product_summary hook
@@ -108,7 +118,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 * @hooked woocommerce_upsell_display - 15
 		 * @hooked woocommerce_output_related_products - 20
 		 */
-		do_action( 'woocommerce_after_single_product_summary' );
+		//do_action( 'woocommerce_after_single_product_summary' );
 	?>
 
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />

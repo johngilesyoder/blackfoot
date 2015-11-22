@@ -1,0 +1,37 @@
+// item-lightbox.less
+// -----------------------------------------------------------------
+
+
+div.pp_woocommerce {
+  .ppt {
+    display: none !important;
+  }
+  .currentTextHolder {
+    font-family: @font-family-sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+  }
+  .pp_arrow_previous,
+  .pp_arrow_next {
+    font-size: 24px !important;
+    margin-top: 7px;
+  }
+  .pp_next,
+  .pp_previous {
+    &:before {
+      font-size: 36px !important;
+    }
+  }
+  .pp_gallery {
+    div {
+      overflow: visible;
+    }
+    ul {
+      height: auto;
+    }
+    a {
+      overflow: visible;
+      height: auto;
+    }
+  }
+}

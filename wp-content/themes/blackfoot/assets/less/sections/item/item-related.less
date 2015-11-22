@@ -4,6 +4,29 @@
 
 .single-product {
   .related {
-    display: none;
+    margin-top: 80px;
+    h2 {
+      font-family: @font-family-sans-serif;
+      font-size: 21px;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 35px;
+      background: url('assets/img/dotted-line-horiz.svg');
+      background-repeat: repeat-x;
+      background-position: 0 55%;
+      span {
+        display: inline-block;
+        background: #fff;
+        padding-right: 20px;
+      }
+    }
+    .tiles {
+      .product-tile {
+        .make-md-column(6);
+        .short-description {
+          display: none;
+        }
+      }
+    }
   }
 }

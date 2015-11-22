@@ -10071,6 +10071,9 @@ textarea.search-results .category-sorting .woocommerce-ordering .orderby {
   width: auto;
   margin: 0 0 0 30px;
 }
+.single-product.woocommerce .item-bottom {
+  border-top: 1px solid #D2D0CE;
+}
 .single-product.woocommerce .title-group {
   background-image: url('assets/img/dotted-line-horiz.svg');
   background-repeat: no-repeat;
@@ -10111,6 +10114,38 @@ textarea.search-results .category-sorting .woocommerce-ordering .orderby {
 .single-product.woocommerce .title-group .product-share .share-fb {
   position: relative;
   top: -8px;
+}
+.single-product.woocommerce .images .thumbnails a {
+  margin-bottom: 15px;
+  display: inline-block;
+  border: 1px solid #d4d3d1;
+}
+div.pp_woocommerce .ppt {
+  display: none !important;
+}
+div.pp_woocommerce .currentTextHolder {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+}
+div.pp_woocommerce .pp_arrow_previous,
+div.pp_woocommerce .pp_arrow_next {
+  font-size: 24px !important;
+  margin-top: 7px;
+}
+div.pp_woocommerce .pp_next:before,
+div.pp_woocommerce .pp_previous:before {
+  font-size: 36px !important;
+}
+div.pp_woocommerce .pp_gallery div {
+  overflow: visible;
+}
+div.pp_woocommerce .pp_gallery ul {
+  height: auto;
+}
+div.pp_woocommerce .pp_gallery a {
+  overflow: visible;
+  height: auto;
 }
 .single-product.woocommerce .purchase-console {
   background: #F7F5F4;
@@ -10437,6 +10472,76 @@ textarea.single-product.woocommerce .purchase-console .variations_form .variatio
 .single-product.woocommerce .purchase-console .free-shipping-message p img {
   margin-right: 8px;
 }
+.single-product.woocommerce .item-bottom .woocommerce-tabs .wc-tabs {
+  padding: 0;
+  margin: 0 0 30px;
+}
+.single-product.woocommerce .item-bottom .woocommerce-tabs .wc-tabs:before {
+  display: none;
+}
+.single-product.woocommerce .item-bottom .woocommerce-tabs .wc-tabs li {
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+.single-product.woocommerce .item-bottom .woocommerce-tabs .wc-tabs li:before,
+.single-product.woocommerce .item-bottom .woocommerce-tabs .wc-tabs li:after {
+  display: none;
+}
+.single-product.woocommerce .item-bottom .woocommerce-tabs .wc-tabs li a {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 0;
+  margin-right: 40px;
+  color: #BAB7B5;
+}
+.single-product.woocommerce .item-bottom .woocommerce-tabs .wc-tabs li a:hover {
+  color: #665F5A;
+}
+.single-product.woocommerce .item-bottom .woocommerce-tabs .wc-tabs li.active a {
+  border-top: 5px solid #665F5A;
+  color: #665F5A;
+}
+.single-product.woocommerce .item-bottom .woocommerce-tabs .panel {
+  box-shadow: none;
+  border: 0;
+}
+.single-product.woocommerce .item-bottom .woocommerce-tabs .panel h2 {
+  display: none;
+}
 .single-product .related {
+  margin-top: 80px;
+}
+.single-product .related h2 {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 35px;
+  background: url('assets/img/dotted-line-horiz.svg');
+  background-repeat: repeat-x;
+  background-position: 0 55%;
+}
+.single-product .related h2 span {
+  display: inline-block;
+  background: #fff;
+  padding-right: 20px;
+}
+.single-product .related .tiles .product-tile {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .single-product .related .tiles .product-tile {
+    float: left;
+    width: 50%;
+  }
+}
+.single-product .related .tiles .product-tile .short-description {
   display: none;
 }

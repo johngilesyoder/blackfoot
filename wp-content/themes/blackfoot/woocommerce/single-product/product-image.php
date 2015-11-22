@@ -17,9 +17,12 @@ global $post, $woocommerce, $product;
 <div class="images">
 	<div class="row">
 		<div class="col-md-2">
+
 			<?php do_action( 'woocommerce_product_thumbnails' ); ?>
+
 		</div>
 		<div class="col-md-10">
+
 			<?php
 				if ( has_post_thumbnail() ) {
 

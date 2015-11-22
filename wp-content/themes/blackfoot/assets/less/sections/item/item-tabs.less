@@ -1,0 +1,51 @@
+// item-tabs.less
+// -----------------------------------------------------------------
+
+.single-product.woocommerce {
+  .item-bottom {
+    .woocommerce-tabs {
+      .wc-tabs {
+        padding: 0;
+        margin: 0 0 30px;
+        &:before {
+          display: none;
+        }
+        li {
+          border: 0;
+          border-radius: 0;
+          margin: 0;
+          padding: 0;
+          background: #fff;
+          &:before,
+          &:after {
+            display: none;
+          }
+          a {
+            font-family: @font-family-sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 10px 0;
+            margin-right: 40px;
+            color: #BAB7B5;
+            &:hover {
+              color: @brand-brown;
+            }
+          }
+          &.active {
+            a {
+              border-top: 5px solid @brand-brown;
+              color: @brand-brown;
+            }
+          }
+        }
+      }
+      .panel {
+        box-shadow: none;
+        border: 0;
+        h2 {
+          display: none;
+        }
+      }
+    }
+  }
+}
