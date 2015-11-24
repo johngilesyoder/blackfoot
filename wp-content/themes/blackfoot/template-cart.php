@@ -4,13 +4,20 @@
 
 	<main role="main">
 		<div class="container">
-			<!-- Breadcrumbs -->
-			<?php if ( function_exists('yoast_breadcrumb') ) 
-			{yoast_breadcrumb('<nav id="breadcrumbs" class="breadcrumbs">','</nav>');} ?>
-			<!-- Page Title -->
-			<h1 class="page-title">Your Cart</h1>
+			<div class="title-area">
+				<div class="row">
+					<div class="col-md-7"><!-- Page Title -->
+						<h1 class="page-title">Your Cart</h1>
+					</div>
+					<div class="col-md-5">
+						<div class="checkout-top">
+							<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-12">
 					<!-- Article -->
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<?php echo do_shortcode( '[woocommerce_cart]' ); ?>

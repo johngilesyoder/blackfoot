@@ -7,6 +7,7 @@
       .wc-tabs {
         padding: 0;
         margin: 0 0 30px;
+        list-style-type: none;
         &:before {
           display: none;
         }
@@ -16,6 +17,7 @@
           margin: 0;
           padding: 0;
           background: #fff;
+          display: inline-block;
           &:before,
           &:after {
             display: none;
@@ -27,6 +29,7 @@
             padding: 10px 0;
             margin-right: 40px;
             color: #BAB7B5;
+            display: block;
             &:hover {
               color: @brand-brown;
             }
@@ -42,8 +45,25 @@
       .panel {
         box-shadow: none;
         border: 0;
+        margin-bottom: 60px;
         h2 {
           display: none;
+        }
+        .shop_attributes {
+          .table();
+          .table-striped();
+          .table-condensed();
+          th {
+            font-family: @font-family-sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-size: 13px;
+          }
+          td {
+            p {
+              margin: 0;
+            }
+          }
         }
       }
     }

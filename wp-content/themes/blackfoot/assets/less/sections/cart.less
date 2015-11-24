@@ -1,0 +1,215 @@
+// cart.less
+// -----------------------------------------------------------------
+
+.woocommerce-cart {
+  .title-area {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    .page-title {
+      margin: 0;
+    }
+    .checkout-top {
+      text-align: right;
+      position: relative;
+      top: -10px;
+      .checkout-button {
+        .btn();
+        .btn-primary();
+        font-family: @font-family-sans-serif;
+        width: 100%;
+      }
+    }
+  }
+  // Cart items
+  .shop_table {
+    thead {
+      tr {
+        th {
+          font-family: @font-family-sans-serif;
+          padding: 0 15px 15px;
+          font-size: 14px;
+          text-transform: uppercase;
+          letter-spacing: 2.5px;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          background: @brand-off-white;
+          padding: 15px;
+          border: 0;
+          .amount {
+            font-family: @font-family-sans-serif;
+            font-weight: 500;
+          }
+          .input-text {
+            .form-control();
+            height: 50px;
+            font-size: 24px;
+            font-weight: 600;
+            width: 80px;
+          }
+        }
+        .product-name {
+          font-size: 16px;
+          a {
+            font-family: @font-family-sans-serif;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: block;
+          }
+          dl {
+            dt {
+              font-family: @font-family-sans-serif;
+
+            }
+            dd {
+
+            }
+          }
+        }
+        .product-thumbnail {
+          a {
+            display: inline-block;
+            border: 5px solid rgba(0,0,0,.1);
+            img {
+              height: 80px;
+            }
+          }
+        }
+        .product-remove {
+          .remove {
+            color: #fff;
+            background: @brand-danger;
+            border-radius: 50%;
+            height: 18px;
+            width: 18px;
+            line-height: 14px;
+            display: inline-block;
+            font-weight: 700;
+            padding: 0;
+            text-align: center;
+            font-family: @font-family-sans-serif;
+            &:hover {
+              background: darken(@brand-danger, 10%);
+              text-decoration: none;
+            }
+          }
+        }
+        &:nth-child(even) td {
+          background: darken(@brand-off-white, 2%);
+        }
+      }
+    }
+  }
+  // Cart Actions
+  .actions {
+    .clearfix();
+    .coupon {
+      float: left;
+      label {
+        display: none;
+      }
+      .form-control {
+        font-family: @font-family-sans-serif;
+      }
+      .btn {
+        font-family: @font-family-sans-serif;
+        font-weight: 600;
+      }
+    }
+    .btn-update-cart {
+      .btn-sm();
+      float: right;
+    }
+  }
+  // Cart Totals
+  .cart-collaterals {
+    margin-bottom: 30px;
+    .cart_totals {
+      h2 {
+        font-size: 24px;
+        font-family: @font-family-sans-serif;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+      table {
+        margin-bottom: 50px;
+        tr {
+          th,
+          td {
+            vertical-align: top;
+            padding: 12px 15px;
+          }
+          th {
+            font-family: @font-family-sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-size: 13px;
+          }
+          td {
+            background: @brand-off-white;
+          }
+          &:nth-child(odd) {
+            td {
+              background: darken(@brand-off-white, 3%);
+            }
+          }
+        }
+        .cart-subtotal,
+        .order-total {
+          .amount {
+            font-family: @font-family-sans-serif;
+            font-weight: 700;
+
+          }
+        }
+        .shipping p {
+          font-size: 16px;
+        }
+        .woocommerce-shipping-calculator {
+          font-family: @font-family-sans-serif;
+          font-weight: 600;
+        }
+      }
+      .wc-proceed-to-checkout {
+        width: 100%;
+        .checkout-button {
+          .btn();
+          .btn-primary();
+          display: block;
+        }
+      }
+    }
+    .shipping-calculator-form {
+      select,
+      input {
+        .form-control();
+        .input-sm();
+      }
+      .button {
+        .btn-sm();
+      }
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {}
+
+// Up to landscape phone
+@media (max-width: 480px) {}

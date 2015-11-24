@@ -492,7 +492,7 @@ function b5f_modify_body_classes( $classes, $class )
 add_filter( 'woocommerce_enqueue_styles', 'bro_dequeue_styles' );
 
 function bro_dequeue_styles( $enqueue_styles ) {
-	//unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
+	unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
 	unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout
 	//unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
 	return $enqueue_styles;
@@ -586,6 +586,16 @@ add_filter( 'woocommerce_output_related_products_args', 'bro_related_products_ar
   $args['columns'] = 2; // arranged in 2 columns
   return $args;
 }
+
+
+
+function woocommerce_button_proceed_to_checkout() {
+       $checkout_url = WC()->cart->get_checkout_url();
+       ?>
+       <a href="<?php echo $checkout_url; ?>" class="checkout-button button alt wc-forward"><?php _e( 'Proceed to Checkout &rarr;', 'woocommerce' ); ?></a>
+       <?php
+     }
+
 
 
 ?>
