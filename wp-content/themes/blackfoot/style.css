@@ -8235,9 +8235,28 @@ body {
 .site-header .header-secondary-nav .header-cart {
   margin-left: 0;
   background: rgba(0, 0, 0, 0.04);
+  position: relative;
 }
 .site-header .header-secondary-nav .header-cart:hover {
   background: rgba(0, 0, 0, 0.08);
+}
+.site-header .header-secondary-nav .header-cart .cart-qty {
+  color: #fff;
+  background: #46A0CE;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  vertical-align: middle;
+  font-weight: 700;
+  line-height: 1em;
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  border: 2px solid #fff;
+  font-size: 14px;
 }
 .site-header .header-secondary-nav .header-cart .icon-cart {
   display: inline-block;
@@ -8417,8 +8436,13 @@ body {
   position: relative;
   top: -2px;
 }
+.site-header-lg .container .home-header-secondary-nav .home-header-cart .cart-qty {
+  margin-left: 5px;
+  font-weight: 600;
+}
 .site-header-lg .container .home-header-secondary-nav .home-header-cart:hover {
   background: #2f87b3;
+  text-decoration: none;
 }
 .site-header-lg .container .navbar-brand {
   padding: 0;
@@ -11459,6 +11483,14 @@ select[multiple].woocommerce-cart .cart-collaterals .shipping-calculator-form in
   line-height: 1.5;
   border-radius: 3px;
 }
+.woocommerce-checkout .select2-drop,
+.woocommerce-checkout .select2-container {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+}
+.woocommerce-checkout .select2-container {
+  margin: 0;
+  height: auto;
+}
 .woocommerce-checkout .woocommerce-billing-fields h3 {
   font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
   font-size: 24px;
@@ -11486,6 +11518,7 @@ select[multiple].woocommerce-cart .cart-collaterals .shipping-calculator-form in
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
 }
 .woocommerce-checkout .woocommerce-billing-fields .input-text:focus,
 .woocommerce-checkout .woocommerce-billing-fields textarea:focus {
@@ -11527,4 +11560,319 @@ textarea.woocommerce-checkout .woocommerce-billing-fields textarea {
 }
 .woocommerce-checkout .woocommerce-billing-fields .form-row {
   margin-bottom: 25px;
+}
+.woocommerce-checkout .woocommerce-billing-fields .form-row:before,
+.woocommerce-checkout .woocommerce-billing-fields .form-row:after {
+  content: " ";
+  display: table;
+}
+.woocommerce-checkout .woocommerce-billing-fields .form-row:after {
+  clear: both;
+}
+.woocommerce-checkout .woocommerce-billing-fields .form-row:before,
+.woocommerce-checkout .woocommerce-billing-fields .form-row:after {
+  content: " ";
+  display: table;
+}
+.woocommerce-checkout .woocommerce-billing-fields .form-row:after {
+  clear: both;
+}
+.woocommerce-checkout .woocommerce-billing-fields .form-row-first,
+.woocommerce-checkout .woocommerce-billing-fields .form-row-last {
+  float: left;
+  width: 47.5%;
+}
+.woocommerce-checkout .woocommerce-billing-fields .form-row-first {
+  margin-right: 5%;
+}
+.woocommerce-checkout .woocommerce-billing-fields .validate-state {
+  float: none;
+  display: inline-block;
+}
+.woocommerce-checkout .woocommerce-billing-fields .validate-postcode {
+  float: none;
+  display: inline-block;
+}
+.woocommerce-checkout .woocommerce-billing-fields .woocommerce-invalid .help-block,
+.woocommerce-checkout .woocommerce-billing-fields .woocommerce-invalid .control-label,
+.woocommerce-checkout .woocommerce-billing-fields .woocommerce-invalid .radio,
+.woocommerce-checkout .woocommerce-billing-fields .woocommerce-invalid .checkbox,
+.woocommerce-checkout .woocommerce-billing-fields .woocommerce-invalid .radio-inline,
+.woocommerce-checkout .woocommerce-billing-fields .woocommerce-invalid .checkbox-inline,
+.woocommerce-checkout .woocommerce-billing-fields .woocommerce-invalid.radio label,
+.woocommerce-checkout .woocommerce-billing-fields .woocommerce-invalid.checkbox label,
+.woocommerce-checkout .woocommerce-billing-fields .woocommerce-invalid.radio-inline label,
+.woocommerce-checkout .woocommerce-billing-fields .woocommerce-invalid.checkbox-inline label {
+  color: #a94442;
+}
+.woocommerce-checkout .woocommerce-billing-fields .woocommerce-invalid .form-control {
+  border-color: #a94442;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.woocommerce-checkout .woocommerce-billing-fields .woocommerce-invalid .form-control:focus {
+  border-color: #843534;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+.woocommerce-checkout .woocommerce-billing-fields .woocommerce-invalid .input-group-addon {
+  color: #a94442;
+  border-color: #a94442;
+  background-color: #f2dede;
+}
+.woocommerce-checkout .woocommerce-billing-fields .woocommerce-invalid .form-control-feedback {
+  color: #a94442;
+}
+.woocommerce-checkout .woocommerce-billing-fields .country_select,
+.woocommerce-checkout .woocommerce-billing-fields .state_select {
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+}
+.woocommerce-checkout .woocommerce-shipping-fields h3 label {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  display: inline-block;
+  margin-right: 10px;
+}
+.woocommerce-checkout .woocommerce-shipping-fields label {
+  display: block;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .input-text,
+.woocommerce-checkout .woocommerce-shipping-fields textarea {
+  display: block;
+  width: 100%;
+  height: 41px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .input-text:focus,
+.woocommerce-checkout .woocommerce-shipping-fields textarea:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.woocommerce-checkout .woocommerce-shipping-fields .input-text::-moz-placeholder,
+.woocommerce-checkout .woocommerce-shipping-fields textarea::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .input-text:-ms-input-placeholder,
+.woocommerce-checkout .woocommerce-shipping-fields textarea:-ms-input-placeholder {
+  color: #999;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .input-text::-webkit-input-placeholder,
+.woocommerce-checkout .woocommerce-shipping-fields textarea::-webkit-input-placeholder {
+  color: #999;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .input-text[disabled],
+.woocommerce-checkout .woocommerce-shipping-fields textarea[disabled],
+.woocommerce-checkout .woocommerce-shipping-fields .input-text[readonly],
+.woocommerce-checkout .woocommerce-shipping-fields textarea[readonly],
+fieldset[disabled] .woocommerce-checkout .woocommerce-shipping-fields .input-text,
+fieldset[disabled] .woocommerce-checkout .woocommerce-shipping-fields textarea {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .input-text[disabled],
+.woocommerce-checkout .woocommerce-shipping-fields textarea[disabled],
+fieldset[disabled] .woocommerce-checkout .woocommerce-shipping-fields .input-text,
+fieldset[disabled] .woocommerce-checkout .woocommerce-shipping-fields textarea {
+  cursor: not-allowed;
+}
+textarea.woocommerce-checkout .woocommerce-shipping-fields .input-text,
+textarea.woocommerce-checkout .woocommerce-shipping-fields textarea {
+  height: auto;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .form-row {
+  margin-bottom: 25px;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .form-row:before,
+.woocommerce-checkout .woocommerce-shipping-fields .form-row:after {
+  content: " ";
+  display: table;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .form-row:after {
+  clear: both;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .form-row:before,
+.woocommerce-checkout .woocommerce-shipping-fields .form-row:after {
+  content: " ";
+  display: table;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .form-row:after {
+  clear: both;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .form-row-first,
+.woocommerce-checkout .woocommerce-shipping-fields .form-row-last {
+  float: left;
+  width: 47.5%;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .form-row-first {
+  margin-right: 5%;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .validate-state {
+  float: none;
+  display: inline-block;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .validate-postcode {
+  float: none;
+  display: inline-block;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .woocommerce-invalid .help-block,
+.woocommerce-checkout .woocommerce-shipping-fields .woocommerce-invalid .control-label,
+.woocommerce-checkout .woocommerce-shipping-fields .woocommerce-invalid .radio,
+.woocommerce-checkout .woocommerce-shipping-fields .woocommerce-invalid .checkbox,
+.woocommerce-checkout .woocommerce-shipping-fields .woocommerce-invalid .radio-inline,
+.woocommerce-checkout .woocommerce-shipping-fields .woocommerce-invalid .checkbox-inline,
+.woocommerce-checkout .woocommerce-shipping-fields .woocommerce-invalid.radio label,
+.woocommerce-checkout .woocommerce-shipping-fields .woocommerce-invalid.checkbox label,
+.woocommerce-checkout .woocommerce-shipping-fields .woocommerce-invalid.radio-inline label,
+.woocommerce-checkout .woocommerce-shipping-fields .woocommerce-invalid.checkbox-inline label {
+  color: #a94442;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .woocommerce-invalid .form-control {
+  border-color: #a94442;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.woocommerce-checkout .woocommerce-shipping-fields .woocommerce-invalid .form-control:focus {
+  border-color: #843534;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .woocommerce-invalid .input-group-addon {
+  color: #a94442;
+  border-color: #a94442;
+  background-color: #f2dede;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .woocommerce-invalid .form-control-feedback {
+  color: #a94442;
+}
+.woocommerce-checkout .woocommerce-shipping-fields .country_select,
+.woocommerce-checkout .woocommerce-shipping-fields .state_select {
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+}
+.woocommerce-checkout .order-review {
+  border: 4px solid #0081A5;
+}
+.woocommerce-checkout .order-review h3 {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+.woocommerce-checkout .order-review .table thead tr th {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  padding: 0 15px 15px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+.woocommerce-checkout .order-review .table tbody tr td {
+  background: #F7F5F4;
+  padding: 15px;
+  border: 0;
+}
+.woocommerce-checkout .order-review .table tbody tr td .amount {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+}
+.woocommerce-checkout .order-review .table tbody tr td .input-text {
+  display: block;
+  width: 100%;
+  height: 41px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  height: 50px;
+  font-size: 24px;
+  font-weight: 600;
+  width: 80px;
+}
+.woocommerce-checkout .order-review .table tbody tr td .input-text:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.woocommerce-checkout .order-review .table tbody tr td .input-text::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.woocommerce-checkout .order-review .table tbody tr td .input-text:-ms-input-placeholder {
+  color: #999;
+}
+.woocommerce-checkout .order-review .table tbody tr td .input-text::-webkit-input-placeholder {
+  color: #999;
+}
+.woocommerce-checkout .order-review .table tbody tr td .input-text[disabled],
+.woocommerce-checkout .order-review .table tbody tr td .input-text[readonly],
+fieldset[disabled] .woocommerce-checkout .order-review .table tbody tr td .input-text {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.woocommerce-checkout .order-review .table tbody tr td .input-text[disabled],
+fieldset[disabled] .woocommerce-checkout .order-review .table tbody tr td .input-text {
+  cursor: not-allowed;
+}
+textarea.woocommerce-checkout .order-review .table tbody tr td .input-text {
+  height: auto;
+}
+.woocommerce-checkout .order-review .table tbody tr .product-name {
+  font-size: 16px;
+}
+.woocommerce-checkout .order-review .table tbody tr .product-name a {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: block;
+}
+.woocommerce-checkout .order-review .table tbody tr .product-name dl dt {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+}
+.woocommerce-checkout .order-review .table tbody tr .product-thumbnail a {
+  display: inline-block;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+}
+.woocommerce-checkout .order-review .table tbody tr .product-thumbnail a img {
+  height: 80px;
+}
+.woocommerce-checkout .order-review .table tbody tr .product-remove .remove {
+  color: #fff;
+  background: #d9534f;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  line-height: 14px;
+  display: inline-block;
+  font-weight: 700;
+  padding: 0;
+  text-align: center;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+}
+.woocommerce-checkout .order-review .table tbody tr .product-remove .remove:hover {
+  background: #c9302c;
+  text-decoration: none;
+}
+.woocommerce-checkout .order-review .table tbody tr:nth-child(even) td {
+  background: #f3f0ee;
 }

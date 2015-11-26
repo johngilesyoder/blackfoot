@@ -57,8 +57,28 @@ body {
     .header-cart {
       margin-left: 0;
       background: rgba(0,0,0,.04);
+      position: relative;
       &:hover {
         background: rgba(0,0,0,.08);
+      }
+      .cart-qty {
+        color: #fff;
+        background: @brand-blue;
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        padding: 0;
+        vertical-align: middle;
+        font-weight: 700;
+        line-height: 1em;
+        position: absolute;
+        top: 7px;
+        right: 5px;
+        border: 2px solid #fff;
+        font-size: 14px;
+
       }
       .icon-cart {
         display: inline-block;

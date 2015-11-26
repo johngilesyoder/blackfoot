@@ -597,5 +597,44 @@ function woocommerce_button_proceed_to_checkout() {
      }
 
 
+// Add control-label class to checkout form labels
+// ---------------------------------------------------
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+
+function custom_override_checkout_fields( $fields ) {
+  $fields['billing']['billing_first_name']['label_class'] = 'control-label';
+  $fields['billing']['billing_last_name']['label_class'] = 'control-label';
+  $fields['billing']['billing_company']['label_class'] = 'control-label';
+  $fields['billing']['billing_address_1']['label_class'] = 'control-label';
+  $fields['billing']['billing_address_2']['label_class'] = 'control-label';
+  $fields['billing']['billing_city']['label_class'] = 'control-label';
+  $fields['billing']['billing_postcode']['label_class'] = 'control-label';
+  $fields['billing']['billing_country']['label_class'] = 'control-label';
+  $fields['billing']['billing_state']['label_class'] = 'control-label';
+  $fields['billing']['billing_email']['label_class'] = 'control-label';
+  $fields['billing']['billing_phone']['label_class'] = 'control-label';
+  $fields['shipping']['shipping_first_name']['label_class'] = 'control-label';
+  $fields['shipping']['shipping_last_name']['label_class'] = 'control-label';
+  $fields['shipping']['shipping_company']['label_class'] = 'control-label';
+  $fields['shipping']['shipping_address_1']['label_class'] = 'control-label';
+  $fields['shipping']['shipping_address_2']['label_class'] = 'control-label';
+  $fields['shipping']['shipping_city']['label_class'] = 'control-label';
+  $fields['shipping']['shipping_postcode']['label_class'] = 'control-label';
+  $fields['shipping']['shipping_country']['label_class'] = 'control-label';
+  $fields['shipping']['shipping_state']['label_class'] = 'control-label';
+  $fields['account']['account_password']['label_class'] = 'control-label';
+  $fields['order']['order_comments']['label_class'] = 'control-label';
+
+  return $fields;
+}
+
+
+// Add Bootstrap class to checkout form inputs (OVERRIDDEN IN CORE AS WELL)
+// ---------------------------------------------------
+add_filter( 'wc_input_class', 'add_wc_input_class' );
+function add_wc_input_class($classes) {
+    $classes[] = 'form-control';
+    return $classes;
+}
 
 ?>
