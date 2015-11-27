@@ -113,15 +113,18 @@
   }
   // Order Review
   .order-review {
-    border: 4px solid @brand-green;
+    border: 4px solid @brand-warning;
     h3 {
       font-family: @font-family-sans-serif;
       font-size: 24px;
       font-weight: 700;
+      padding: 15px;
+      margin-top: 0;
     }
     .table {
+      margin: 0;
+      border-bottom: 2px solid #ddd;
       thead {
-        //background: @brand-off-white;
         tr {
           th {
             font-family: @font-family-sans-serif;
@@ -133,7 +136,7 @@
         }
       }
       tbody {
-        tr {
+        .cart_item {
           td {
             background: @brand-off-white;
             padding: 15px;
@@ -152,28 +155,22 @@
           }
           .product-name {
             font-size: 16px;
-            a {
-              font-family: @font-family-sans-serif;
+            font-family: @font-family-sans-serif;
+            display: block;
+            min-width: 200px;
+            .product-qty {
               font-weight: 600;
-              margin-bottom: 15px;
-              display: block;
             }
             dl {
+              font-size: 13px;
+              margin-top: 10px;
+              margin-bottom: 0;
               dt {
                 font-family: @font-family-sans-serif;
 
               }
               dd {
 
-              }
-            }
-          }
-          .product-thumbnail {
-            a {
-              display: inline-block;
-              border: 5px solid rgba(0,0,0,.1);
-              img {
-                height: 80px;
               }
             }
           }
@@ -201,6 +198,69 @@
           }
         }
       }
+      tfoot {
+        th {
+          font-family: @font-family-sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 2.5px;
+          font-size: 13px;
+          padding: 10px 15px;
+        }
+        p {
+          font-size: 14px;
+        }
+        .amount {
+          font-family: @font-family-sans-serif;
+          font-weight: 700;
+        }
+      }
+    }
+    .woocommerce-checkout-payment {
+      .payment_methods {
+        list-style-type: none;
+        padding: 15px;
+        margin: 0;
+        & > li {
+          border-radius: 5px;
+          background: @brand-off-white;
+          padding: 15px;
+        }
+        label {
+          font-family: @font-family-sans-serif;
+        }
+        .payment_method_stripe {
+          & > label {
+            
+          }
+        }
+        .stripe_new_card {
+          label {
+            display: block;
+            font-weight: 500;
+          }
+          input {
+            .form-control();
+            width: 50%;
+          }
+          .form-row-wide {
+            input {
+              width: 100%;
+            }
+          }
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+    .place-order {
+      padding: 15px;
+    }
+    .button {
+      .btn();
+      .btn-primary();
+      display: block;
+      width: 100%;
     }
   }
 }

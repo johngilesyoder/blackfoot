@@ -1,0 +1,188 @@
+// confirmation.less
+// -----------------------------------------------------------------
+
+.woocommerce-order-received {
+  .order_details {
+    list-style-type: none;
+    margin: 0 0 60px;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, .1);
+    position: relative;
+    font-family: @font-family-sans-serif;
+    .clearfix();
+    li {
+      float: left;
+      padding: 1em 1.618em;
+      border-right: 1px solid rgba(0, 0, 0, .1);
+      font-size: .8em;
+      text-transform: uppercase;
+      &:last-child {
+        border-right: 0;
+      }
+      strong {
+        display: block;
+        font-size: 1.387em;
+        text-transform: none;
+      }
+    }
+  }
+  h2 {
+    font-family: @font-family-sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .shop_table {
+    .table();
+    border: 0;
+    margin-bottom: 60px;
+    thead {
+      tr {
+        th {
+          font-family: @font-family-sans-serif;
+          padding: 0 15px 15px;
+          font-size: 14px;
+          text-transform: uppercase;
+          letter-spacing: 2.5px;
+        }
+      }
+    }
+    tbody {
+      .order_item {
+        td {
+          background: @brand-off-white;
+          padding: 15px;
+          border: 0;
+          .amount {
+            font-family: @font-family-sans-serif;
+            font-weight: 500;
+          }
+          .input-text {
+            .form-control();
+            height: 50px;
+            font-size: 24px;
+            font-weight: 600;
+            width: 80px;
+          }
+        }
+        .product-name {
+          font-size: 16px;
+          font-family: @font-family-sans-serif;
+          display: block;
+          min-width: 200px;
+          a {
+            font-weight: 700;
+          }
+          .product-qty {
+            font-weight: 600;
+          }
+          dl {
+            font-size: 13px;
+            margin-top: 10px;
+            margin-bottom: 0;
+            dt {
+              font-family: @font-family-sans-serif;
+
+            }
+            dd {
+
+            }
+          }
+        }
+        .product-remove {
+          .remove {
+            color: #fff;
+            background: @brand-danger;
+            border-radius: 50%;
+            height: 18px;
+            width: 18px;
+            line-height: 14px;
+            display: inline-block;
+            font-weight: 700;
+            padding: 0;
+            text-align: center;
+            font-family: @font-family-sans-serif;
+            &:hover {
+              background: darken(@brand-danger, 10%);
+              text-decoration: none;
+            }
+          }
+        }
+        &:nth-child(even) td {
+          background: darken(@brand-off-white, 2%);
+        }
+      }
+    }
+    tfoot {
+      th {
+        font-family: @font-family-sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-size: 13px;
+        padding: 10px 15px;
+      }
+      p {
+        font-size: 14px;
+      }
+      .amount {
+        font-family: @font-family-sans-serif;
+        font-weight: 700;
+      }
+    }
+  }
+  .customer_details {
+    margin-bottom: 60px;
+    tr {
+      th {
+        font-family: @font-family-sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-size: 13px;
+        padding: 10px 15px;
+      }
+      th,
+      td {
+        border: 0 !important;
+      }
+      td {
+        background: @brand-off-white;
+        padding: 10px 15px !important;
+        font-family: @font-family-sans-serif;
+      }
+      &:nth-child(even) td {
+        background: darken(@brand-off-white, 2%);
+      }
+    }
+  }
+  // Addresses
+  .addresses {
+    h3 {
+      font-family: @font-family-sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    address {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {}
+
+// Up to landscape phone
+@media (max-width: 480px) {}

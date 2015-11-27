@@ -7,7 +7,7 @@
 			<div class="title-area">
 				<div class="row">
 					<div class="col-md-7"><!-- Page Title -->
-						<h1 class="page-title">Your Cart</h1>
+						<h1 class="page-title"><?php the_title(); ?></h1>
 					</div>
 					<div class="col-md-5">
 						<div class="checkout-top">
