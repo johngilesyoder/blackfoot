@@ -126,30 +126,26 @@
 								<div class="other-waters">
 									<h2 class="sidebar-title">More of Our Waters</h2>
 									<div>
-										<a href="#" class="other-water" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/water-bitterroot.jpg');">
-											<span class="other-water-title">Bitterroot River</span>
-										</a>
-										<a href="#" class="other-water" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/water-bitterroot.jpg');">
-											<span class="other-water-title">Bitterroot River</span>
-										</a>
-										<a href="#" class="other-water" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/water-bitterroot.jpg');">
-											<span class="other-water-title">Bitterroot River</span>
-										</a>
-										<a href="#" class="other-water" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/water-bitterroot.jpg');">
-											<span class="other-water-title">Bitterroot River</span>
-										</a>
-										<a href="#" class="other-water" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/water-bitterroot.jpg');">
-											<span class="other-water-title">Bitterroot River</span>
-										</a>
-										<a href="#" class="other-water" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/water-bitterroot.jpg');">
-											<span class="other-water-title">Bitterroot River</span>
-										</a>
-										<a href="#" class="other-water" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/water-bitterroot.jpg');">
-											<span class="other-water-title">Bitterroot River</span>
-										</a>
-										<a href="#" class="other-water" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/water-bitterroot.jpg');">
-											<span class="other-water-title">Bitterroot River</span>
-										</a>
+										<?php
+										  // Define loop
+										  $loop = new WP_Query( array( 'post_type' => 'water', 'posts_per_page' => 9 ) );
+										  // Start loop
+										  while ( $loop->have_posts() ) : $loop->the_post();
+										  // Set variables
+										  $thumb_id           = get_post_thumbnail_id();
+										  $thumb_url_array    = wp_get_attachment_image_src($thumb_id, 'full', true);
+										  $thumb_url          = $thumb_url_array[0];
+										  $water_species      = types_render_field("popular-fish-species", array());
+										  $water_trips        = types_render_field("trip-types", array());
+										?>
+
+									  <!-- Water Block -->
+								    <a href="<?php the_permalink(); ?>" class="other-water" style="background-image: url('<?php echo $thumb_url; ?>');">
+								    	<span class="other-water-title"><?php if (strlen($post->post_title) > 15) { echo substr(the_title($before = '', $after = '', FALSE), 0, 15) . '...'; } else { the_title(); } ?></span>
+								    </a>
+
+										<?php endwhile; wp_reset_query(); ?>
+										
 									</div>
 								</div>
 							</aside>

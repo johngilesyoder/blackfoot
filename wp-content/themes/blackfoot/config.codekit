@@ -84,6 +84,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/email-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18257,
+		"inputAbbreviatedPath": "\/assets\/img\/email-logo.png",
+		"outputAbbreviatedPath": "\/assets\/img\/email-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/family.png": {
 		"fileType": 32768,
 		"ignore": 0,

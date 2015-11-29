@@ -9490,7 +9490,7 @@ fieldset[disabled] .home section .btn-book.active {
 .single-water .water-sidebar .other-waters .other-water .other-water-title {
   font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   height: 44px;
   line-height: 44px;
   padding: 0 15px;
@@ -11258,6 +11258,7 @@ textarea.woocommerce-cart .shop_table tbody tr td .input-text {
 }
 .woocommerce-cart .cart-collaterals .cart_totals table {
   margin-bottom: 50px;
+  width: 100%;
 }
 .woocommerce-cart .cart-collaterals .cart_totals table tr th,
 .woocommerce-cart .cart-collaterals .cart_totals table tr td {
@@ -11996,6 +11997,7 @@ textarea.woocommerce-checkout .order-review .table tbody .cart_item td .input-te
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   width: 50%;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
 }
 .woocommerce-checkout .order-review .woocommerce-checkout-payment .payment_methods .stripe_new_card input:focus {
   border-color: #66afe9;
