@@ -624,6 +624,8 @@ function custom_override_checkout_fields( $fields ) {
   $fields['shipping']['shipping_state']['label_class'] = 'control-label';
   $fields['account']['account_password']['label_class'] = 'control-label';
   $fields['order']['order_comments']['label_class'] = 'control-label';
+  unset($fields['billing']['billing_country']);
+  unset($fields['shipping']['shipping_country']);
 
   return $fields;
 }
@@ -636,5 +638,8 @@ function add_wc_input_class($classes) {
     $classes[] = 'form-control';
     return $classes;
 }
+
+
+
 
 ?>

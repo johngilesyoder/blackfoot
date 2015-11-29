@@ -7535,6 +7535,99 @@ fieldset[disabled] .book-now-banner .btn-book.active {
   top: -4px;
   position: relative;
 }
+.water-tile-wrapper {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .water-tile-wrapper {
+    float: left;
+    width: 50%;
+  }
+}
+.water-tile-wrapper:last-child {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .water-tile-wrapper:last-child {
+    float: left;
+    width: 100%;
+  }
+}
+.water-tile-wrapper:last-child .water-block {
+  height: 435px;
+}
+.water-tile {
+  margin-bottom: 30px;
+  min-height: 400px;
+}
+.water-tile .water-block {
+  height: 300px;
+  background-size: cover;
+  background-position: 50% 50%;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+.water-tile .water-block:hover h1 {
+  background-position: 0 0;
+}
+.water-tile .water-block:hover h1:after {
+  opacity: 1;
+  right: 0;
+}
+.water-tile .water-block h1 {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  height: 65px;
+  line-height: 65px;
+  padding: 0 15px;
+  background-size: 200% auto;
+  -webkit-transition: background-position 150ms;
+  transition: background-position 150ms;
+  background-position: 100% 0;
+  margin: 0;
+  background-image: -webkit-linear-gradient(left, #46a0ce 0%, rgba(70, 160, 206, 0.58) 100%);
+  background-image: linear-gradient(to right, #46a0ce 0%, rgba(70, 160, 206, 0.58) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff46a0ce', endColorstr='#9446a0ce', GradientType=1);
+}
+.water-tile .water-block h1:after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 20px;
+  background-image: url('assets/img/icon-chevron-r-white.svg');
+  background-size: cover;
+  margin-left: 15px;
+  vertical-align: middle;
+  opacity: 0;
+  -webkit-transition: 150ms;
+  transition: 150ms;
+  position: relative;
+  right: -30px;
+  top: -2px;
+}
+.water-tile .water-summary {
+  background: #E6E2E1;
+  color: #665F5A;
+  padding: 15px;
+}
+.water-tile .water-summary .water-detail {
+  font-size: 16px;
+  display: block;
+}
+.water-tile .water-summary .water-detail strong {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
 .shop-banner {
   background-color: #665F5A;
   background-image: url('assets/img/bg-booking-banner.png');
@@ -8997,75 +9090,6 @@ fieldset[disabled] .home section .btn-book.active {
   background-image: url('assets/img/dotted-line-horiz.svg');
   background-position: 0 100%;
   background-repeat: repeat-x;
-}
-.home .home-waters .home-water {
-  margin-bottom: 30px;
-  min-height: 400px;
-}
-.home .home-waters .home-water.lg .water-block {
-  height: 435px;
-}
-.home .home-waters .home-water .water-block {
-  height: 300px;
-  background-size: cover;
-  background-position: 50% 50%;
-  display: block;
-  color: #fff;
-  text-decoration: none;
-}
-.home .home-waters .home-water .water-block:hover h1 {
-  background-position: 0 0;
-}
-.home .home-waters .home-water .water-block:hover h1:after {
-  opacity: 1;
-  right: 0;
-}
-.home .home-waters .home-water .water-block h1 {
-  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 30px;
-  height: 65px;
-  line-height: 65px;
-  padding: 0 15px;
-  background-size: 200% auto;
-  -webkit-transition: background-position 150ms;
-  transition: background-position 150ms;
-  background-position: 100% 0;
-  margin: 0;
-  background-image: -webkit-linear-gradient(left, #46a0ce 0%, rgba(70, 160, 206, 0.58) 100%);
-  background-image: linear-gradient(to right, #46a0ce 0%, rgba(70, 160, 206, 0.58) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff46a0ce', endColorstr='#9446a0ce', GradientType=1);
-}
-.home .home-waters .home-water .water-block h1:after {
-  content: '';
-  display: inline-block;
-  width: 12px;
-  height: 20px;
-  background-image: url('assets/img/icon-chevron-r-white.svg');
-  background-size: cover;
-  margin-left: 15px;
-  vertical-align: middle;
-  opacity: 0;
-  -webkit-transition: 150ms;
-  transition: 150ms;
-  position: relative;
-  right: -30px;
-  top: -2px;
-}
-.home .home-waters .home-water .water-summary {
-  background: #E6E2E1;
-  color: #665F5A;
-  padding: 15px;
-}
-.home .home-waters .home-water .water-summary .water-detail {
-  font-size: 16px;
-  display: block;
-}
-.home .home-waters .home-water .water-summary .water-detail strong {
-  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
-  font-size: 13px;
-  letter-spacing: 2px;
 }
 .home .home-shop hgroup {
   margin-bottom: 60px;
@@ -11482,6 +11506,51 @@ select[multiple].woocommerce-cart .cart-collaterals .shipping-calculator-form in
   font-size: 16px;
   line-height: 1.5;
   border-radius: 3px;
+}
+.woocommerce-checkout .checkout_coupon .input-text {
+  display: block;
+  width: 100%;
+  height: 41px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  width: 300px;
+}
+.woocommerce-checkout .checkout_coupon .input-text:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.woocommerce-checkout .checkout_coupon .input-text::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.woocommerce-checkout .checkout_coupon .input-text:-ms-input-placeholder {
+  color: #999;
+}
+.woocommerce-checkout .checkout_coupon .input-text::-webkit-input-placeholder {
+  color: #999;
+}
+.woocommerce-checkout .checkout_coupon .input-text[disabled],
+.woocommerce-checkout .checkout_coupon .input-text[readonly],
+fieldset[disabled] .woocommerce-checkout .checkout_coupon .input-text {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.woocommerce-checkout .checkout_coupon .input-text[disabled],
+fieldset[disabled] .woocommerce-checkout .checkout_coupon .input-text {
+  cursor: not-allowed;
+}
+textarea.woocommerce-checkout .checkout_coupon .input-text {
+  height: auto;
 }
 .woocommerce-checkout .select2-drop,
 .woocommerce-checkout .select2-container {

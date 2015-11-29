@@ -17,112 +17,36 @@
     <!-- Waters List -->
     <div class="home-waters-list">
       <div class="row">
-        <div class="col-md-6">
-          <article class="home-water">
-            <a href="#" class="water-block" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/water-rockcreek.jpg');">
-              <h1 class="trip-title">Rock Creek</h1>
-            </a>
-            <div class="water-summary">
-              <p>Western Montana boasts hundreds of miles of floatable world class fly fishing waters. Our most popular trip will create a lifetime of memories.</p>
-              <span class="water-detail water-species"><strong>FISH SPECIES:</strong>&nbsp; Rainbow Trout, Perch, Bass</span>
-              <span class="water-detail water-trips"><strong>TRIP TYPES:</strong>&nbsp; Limited Float Trips, Walk &amp; Wade</span>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-6">
-          <article class="home-water">
-            <a href="#" class="water-block" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/water-blackfoot.jpg');">
-              <h1 class="trip-title">The Big Blackfoot River</h1>
-            </a>
-            <div class="water-summary">
-              <p>Western Montana boasts hundreds of miles of floatable world class fly fishing waters. Our most popular trip will create a lifetime of memories.</p>
-              <span class="water-detail water-species"><strong>FISH SPECIES:</strong>&nbsp; Rainbow Trout, Perch, Bass</span>
-              <span class="water-detail water-trips"><strong>TRIP TYPES:</strong>&nbsp; Limited Float Trips, Walk &amp; Wade</span>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-6">
-          <article class="home-water">
-            <a href="#" class="water-block" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/water-bitterroot.jpg');">
-              <h1 class="trip-title">Bitterroot River</h1>
-            </a>
-            <div class="water-summary">
-              <p>Western Montana boasts hundreds of miles of floatable world class fly fishing waters. Our most popular trip will create a lifetime of memories.</p>
-              <span class="water-detail water-species"><strong>FISH SPECIES:</strong>&nbsp; Rainbow Trout, Perch, Bass</span>
-              <span class="water-detail water-trips"><strong>TRIP TYPES:</strong>&nbsp; Limited Float Trips, Walk &amp; Wade</span>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-6">
-          <article class="home-water">
-            <a href="#" class="water-block" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/water-clarkfork.jpg');">
-              <h1 class="trip-title">Clark Fork River</h1>
-            </a>
-            <div class="water-summary">
-              <p>Western Montana boasts hundreds of miles of floatable world class fly fishing waters. Our most popular trip will create a lifetime of memories.</p>
-              <span class="water-detail water-species"><strong>FISH SPECIES:</strong>&nbsp; Rainbow Trout, Perch, Bass</span>
-              <span class="water-detail water-trips"><strong>TRIP TYPES:</strong>&nbsp; Limited Float Trips, Walk &amp; Wade</span>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-6">
-          <article class="home-water">
-            <a href="#" class="water-block" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/water-smith.jpg');">
-              <h1 class="trip-title">Smith River</h1>
-            </a>
-            <div class="water-summary">
-              <p>Western Montana boasts hundreds of miles of floatable world class fly fishing waters. Our most popular trip will create a lifetime of memories.</p>
-              <span class="water-detail water-species"><strong>FISH SPECIES:</strong>&nbsp; Rainbow Trout, Perch, Bass</span>
-              <span class="water-detail water-trips"><strong>TRIP TYPES:</strong>&nbsp; Limited Float Trips, Walk &amp; Wade</span>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-6">
-          <article class="home-water">
-            <a href="#" class="water-block" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/water-missouri.jpg');">
-              <h1 class="trip-title">Missouri River</h1>
-            </a>
-            <div class="water-summary">
-              <p>Western Montana boasts hundreds of miles of floatable world class fly fishing waters. Our most popular trip will create a lifetime of memories.</p>
-              <span class="water-detail water-species"><strong>FISH SPECIES:</strong>&nbsp; Rainbow Trout, Perch, Bass</span>
-              <span class="water-detail water-trips"><strong>TRIP TYPES:</strong>&nbsp; Limited Float Trips, Walk &amp; Wade</span>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-6">
-          <article class="home-water">
-            <a href="#" class="water-block" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/water-bighole.jpg');">
-              <h1 class="trip-title">Big Hole River</h1>
-            </a>
-            <div class="water-summary">
-              <p>Western Montana boasts hundreds of miles of floatable world class fly fishing waters. Our most popular trip will create a lifetime of memories.</p>
-              <span class="water-detail water-species"><strong>FISH SPECIES:</strong>&nbsp; Rainbow Trout, Perch, Bass</span>
-              <span class="water-detail water-trips"><strong>TRIP TYPES:</strong>&nbsp; Limited Float Trips, Walk &amp; Wade</span>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-6">
-          <article class="home-water">
-            <a href="#" class="water-block" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/water-beaverhead.jpg');">
-              <h1 class="trip-title">Beaverhead River</h1>
-            </a>
-            <div class="water-summary">
-              <p>Western Montana boasts hundreds of miles of floatable world class fly fishing waters. Our most popular trip will create a lifetime of memories.</p>
-              <span class="water-detail water-species"><strong>FISH SPECIES:</strong>&nbsp; Rainbow Trout, Perch, Bass</span>
-              <span class="water-detail water-trips"><strong>TRIP TYPES:</strong>&nbsp; Limited Float Trips, Walk &amp; Wade</span>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-12">
-          <article class="home-water lg">
-            <a href="#" class="water-block" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/water-stillwater.jpg');">
-              <h1 class="trip-title">Still water / Georgetown Lake</h1>
-            </a>
-            <div class="water-summary">
-              <p>Western Montana boasts hundreds of miles of floatable world class fly fishing waters. Our most popular trip will create a lifetime of memories. Our most popular trip will create a lifetime of memories.</p>
-            </div>
-          </article>
-        </div>
+
+        <?php
+          // Define loop
+          $loop = new WP_Query( array( 'post_type' => 'water', 'posts_per_page' => 9 ) );
+          // Start loop
+          while ( $loop->have_posts() ) : $loop->the_post();
+          // Set testimonial variables
+          $thumb_id           = get_post_thumbnail_id();
+          $thumb_url_array    = wp_get_attachment_image_src($thumb_id, 'full', true);
+          $thumb_url          = $thumb_url_array[0];
+          $water_species      = types_render_field("popular-fish-species", array());
+          $water_trips        = types_render_field("trip-types", array());
+        ?>
+
+          <!-- Water Block -->
+          <div class="water-tile-wrapper">
+            <article class="water-tile">
+              <a href="#" class="water-block" style="background-image: url('<?php echo $thumb_url; ?>');">
+                <h1 class="trip-title"><?php the_title(); ?></h1>
+              </a>
+              <div class="water-summary">
+                <p><?php the_excerpt(); ?></p>
+                <span class="water-detail water-species"><strong>FISH SPECIES:</strong>&nbsp; <?php echo $water_species; ?></span>
+                <span class="water-detail water-trips"><strong>TRIP TYPES:</strong>&nbsp; <?php echo $water_trips; ?></span>
+              </div>
+            </article>
+          </div>
+
+        <?php endwhile; wp_reset_query(); ?>
+        
       </div>
     </div>
     <!-- Section Book -->
