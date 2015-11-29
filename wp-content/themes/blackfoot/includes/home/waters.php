@@ -3,12 +3,6 @@
   $testimonial_3_photo      = types_render_field("testimonial-3-photo", array());
   $testimonial_3_name       = types_render_field("testimonial-3-name", array());
   $testimonial_3_location   = types_render_field("testimonial-3-location", array());
-
-  $thumb_id                 = get_post_thumbnail_id();
-  $thumb_url_array          = wp_get_attachment_image_src($thumb_id, 'full', true);
-  $thumb_url                = $thumb_url_array[0];
-  $water_species            = types_render_field("popular-fish-species", array());
-  $water_trips              = types_render_field("trip-types", array());
 ?>
 
 <section id="home-waters" class="home-waters">
@@ -36,6 +30,12 @@
           $loop = new WP_Query( array( 'post_type' => 'water', 'posts_per_page' => 9 ) );
           // Start loop
           while ( $loop->have_posts() ) : $loop->the_post();
+          // Set variables
+          $thumb_id           = get_post_thumbnail_id();
+          $thumb_url_array    = wp_get_attachment_image_src($thumb_id, 'full', true);
+          $thumb_url          = $thumb_url_array[0];
+          $water_species      = types_render_field("popular-fish-species", array());
+          $water_trips        = types_render_field("trip-types", array());
         ?>
 
           <!-- Water Block -->

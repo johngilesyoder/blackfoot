@@ -10,8 +10,6 @@
 
 			<?php get_template_part('loop-water'); ?>
 
-			<?php get_template_part('pagination'); ?>
-
     </div>
 	</main>
 

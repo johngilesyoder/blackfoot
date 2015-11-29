@@ -11,7 +11,7 @@
 ?>
 
 	<!-- Water Block -->
-	<div class="col-md-6">
+	<div class="water-tile-wrapper">
 	  <article id="post-<?php the_ID(); ?>" class="water-tile">
 	    <a href="<?php the_permalink(); ?>" class="water-block" style="background-image: url('<?php echo $thumb_url; ?>');">
 	      <h1 class="trip-title"><?php the_title(); ?></h1>
