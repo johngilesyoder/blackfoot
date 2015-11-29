@@ -1,3 +1,11 @@
+<?php
+  $details_summary      = types_render_field("trip-details-summary", array());
+  $testimonial_2            = types_render_field("testimonial-2", array());
+  $testimonial_2_photo      = types_render_field("testimonial-2-photo", array());
+  $testimonial_2_name       = types_render_field("testimonial-2-name", array());
+  $testimonial_2_location   = types_render_field("testimonial-2-location", array());
+?>
+
 <section id="home-trips" class="home-trips">
   <div class="container">
     <!-- Section title -->
@@ -6,11 +14,11 @@
     <blockquote class="section-quote">
       <div class="row">
         <div class="col-md-1">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/section-testimonial-1.png">
+          <?php echo $testimonial_2_photo; ?>
         </div>
         <div class="col-md-11">
-          <p>"We spent five days floating, fishing and camping on the Smith River. I can’t imagine a more beautiful place or better people to experience it with."</p>
-          <footer><span>&mdash;</span> Steve Rosenblum <cite>Ann Arbor, Michigan</cite></footer>
+          <?php echo $testimonial_2; ?>
+          <footer><span>&mdash;</span> <?php echo $testimonial_2_name; ?> <cite><?php echo $testimonial_2_location; ?></cite></footer>
         </div>
       </div>
     </blockquote>
@@ -78,7 +86,7 @@
     <!-- Trip details -->
     <div class="trips-details">
       <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-question-white.svg">Wondering about the details?</h3>
-      <p>When you schedule your trip with Blackfoot River Outfitters, we provide everything you need to relax and enjoy your time on the water. Full day trips include a guide, terminal tackle, a shuttle to the water and lunch. Overnight trips include all meals, tents and camping gear. Personal gear, fishing licenses and alcoholic beverages are not included.</p>
+      <p><?php echo $details_summary; ?></p>
     </div>
     <!-- Section book -->
     <div class="section-book">

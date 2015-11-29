@@ -1,3 +1,11 @@
+<?php
+  $family_summary           = types_render_field("family-business-summary", array());
+  $testimonial_1            = types_render_field("testimonial-1", array());
+  $testimonial_1_photo      = types_render_field("testimonial-1-photo", array());
+  $testimonial_1_name       = types_render_field("testimonial-1-name", array());
+  $testimonial_1_location   = types_render_field("testimonial-1-location", array());
+?>
+
 <section id="home-trust" class="home-trust">
   <div class="container">
     <!-- ===== Trust family ===== -->
@@ -12,7 +20,7 @@
           </div>
         </div>
         <div class="col-md-9">
-          <p><strong>Blackfoot River Outfitters</strong> is a family-run business located in the heart of trout fishing paradise. Owners John Herzer and Terri Raugland are experienced guides and outfitters who have worked the waters of Western Montana for more than 15 years and guided around the world. They are keenly aware that their livelihood depends on clean water and healthy fisheries. Blackfoot River Outfitters supports catch-and-release fishing and habitat preservation.</p>
+          <p><?php echo $family_summary; ?></p>
         </div>
       </div>
     </div>
@@ -24,11 +32,11 @@
       <blockquote class="section-quote">
         <div class="row">
           <div class="col-md-1">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/section-testimonial-1.png">
+            <?php echo $testimonial_1_photo; ?>
           </div>
           <div class="col-md-11">
-            <p>"I never touched a fly rod before, but an hour into my first day, John had me excited about fish and really fishing well."</p>
-            <footer><span>&mdash;</span> Karen Rodgers <cite>San Diego, California</cite></footer>
+            <?php echo $testimonial_1; ?>
+            <footer><span>&mdash;</span> <?php echo $testimonial_1_name; ?> <cite><?php echo $testimonial_1_location; ?></cite></footer>
           </div>
         </div>
       </blockquote>
