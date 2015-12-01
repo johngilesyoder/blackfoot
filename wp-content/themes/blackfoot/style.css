@@ -7619,9 +7619,17 @@ fieldset[disabled] .book-now-banner .btn-book.active {
   color: #665F5A;
   padding: 15px;
 }
+.water-tile .water-summary p {
+  margin-bottom: 20px;
+}
 .water-tile .water-summary .water-detail {
   font-size: 16px;
   display: block;
+  height: 48px;
+  margin-bottom: 5px;
+}
+.water-tile .water-summary .water-detail:last-child {
+  margin-bottom: 0;
 }
 .water-tile .water-summary .water-detail strong {
   font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
