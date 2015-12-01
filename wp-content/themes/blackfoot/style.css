@@ -8651,15 +8651,18 @@ body {
   }
 }
 .error404 {
+  background: #F7F5F4;
   padding-top: 100px;
 }
 .error404 h1 {
   margin-top: 0;
   font-size: 100px;
-  margin-bottom: 0;
+  margin-bottom: 15px;
   font-weight: 400;
   line-height: 1em;
-  color: #347799;
+  color: #665F5A;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
 }
 .error404 h2 {
   line-height: 1em;
@@ -8667,16 +8670,18 @@ body {
   letter-spacing: .02em;
   font-size: 21px;
   margin: 0 0 50px;
-  color: #347799;
+  color: #665F5A;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
 }
-.error404 .blackfoot-logo {
+.error404 .bro-logo {
   font-size: 30px;
   text-align: center;
   padding-top: 35px;
   display: block;
   color: #0081A5;
 }
-.error404 .blackfoot-logo:hover {
+.error404 .bro-logo:hover {
   color: #0081A5;
   text-decoration: none;
 }
@@ -9505,6 +9510,9 @@ fieldset[disabled] .home section .btn-book.active {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff46a0ce', endColorstr='#9446a0ce', GradientType=1);
 }
+.post-type-archive-water .page-content {
+  margin-bottom: 50px;
+}
 .single-fishing-report .breadcrumbs {
   margin-bottom: 40px;
 }
@@ -9775,6 +9783,156 @@ textarea.single-fishing-report .select-report select {
 }
 .single-fishing-report .report-sidebar .mailing-list-signup .input-group .btn-subscribe:hover {
   background-color: #24678a;
+}
+.post-type-archive-fishing-report .page-content {
+  margin-bottom: 50px;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper {
+  color: #665F5A;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report {
+  background: #F7F5F4;
+  padding: 30px;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report hgroup {
+  margin-bottom: 15px;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report hgroup:before,
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report hgroup:after {
+  content: " ";
+  display: table;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report hgroup:after {
+  clear: both;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report hgroup:before,
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report hgroup:after {
+  content: " ";
+  display: table;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report hgroup:after {
+  clear: both;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report hgroup .report-illustration {
+  float: left;
+  margin-right: 25px;
+  height: 65px;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report hgroup .report-title {
+  margin-bottom: 5px;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 27px;
+  margin-top: 0;
+  color: #347799;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report hgroup .report-updated {
+  font-size: 16px;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report h3 {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 3.5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #B2AFAC;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report .read-more {
+  color: #347799;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report .condition-rating {
+  width: 447px;
+  height: 31px;
+  background-image: url('assets/img/condition-rating-inactive.svg');
+  background-repeat: no-repeat;
+  margin-top: 20px;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report .condition-rating .rating-active {
+  height: 100%;
+  display: block;
+  background-image: url('assets/img/condition-rating-active.svg');
+  background-repeat: no-repeat;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report .condition-rating .rating-active.excellent {
+  width: 100%;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report .condition-rating .rating-active.good {
+  width: 361px;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report .condition-rating .rating-active.ok {
+  width: 270px;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report .condition-rating .rating-active.poor {
+  width: 179px;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper .fishing-report .condition-rating .rating-active.bad {
+  width: 88px;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper:hover .fishing-report {
+  background: #f5f2f1;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper:hover .fishing-report .report-title {
+  color: #214b60;
+  text-decoration: underline;
+}
+.post-type-archive-fishing-report .fishing-report-wrapper:hover .read-more {
+  color: #214b60;
+  text-decoration: underline;
+}
+.page-template-template-testimonials article {
+  margin-bottom: 50px;
+}
+.page-template-template-testimonials .testimonial {
+  border: 0;
+  background: #F7F5F4;
+  padding: 20px 15px;
+  margin: 0 0 5px;
+}
+.page-template-template-testimonials .testimonial .testimonial-photo {
+  border-radius: 50%;
+  width: 93px;
+  height: 93px;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.page-template-template-testimonials .testimonial p {
+  font-size: 21px;
+  font-style: italic;
+  margin: 10px 0;
+}
+.page-template-template-testimonials .testimonial footer {
+  font-size: 24px;
+  color: #94D17B;
+  font-weight: 700;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+}
+.page-template-template-testimonials .testimonial footer span {
+  color: #444;
+  font-weight: 500;
+}
+.page-template-template-testimonials .testimonial footer cite {
+  font-size: 14px;
+  color: #444;
+  font-weight: 500;
+  font-style: normal;
+}
+.page-template-template-testimonials .testimonial footer:before {
+  content: '';
+  display: none;
+}
+@media (max-width: 480px) {
+  .error404 {
+    padding-top: 60px;
+  }
+  .error-message {
+    margin-bottom: 30px;
+  }
 }
 .contact-us .gform_wrapper {
   margin-right: 0;

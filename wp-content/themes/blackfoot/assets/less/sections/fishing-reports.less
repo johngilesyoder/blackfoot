@@ -1,0 +1,102 @@
+// fishing-reports.less
+// -----------------------------------------------------------------
+
+.post-type-archive-fishing-report {
+  .page-content {
+    margin-bottom: 50px;
+  }
+  .fishing-report-wrapper {
+    color: @brand-brown;
+    text-decoration: none;
+    margin-bottom: 30px;
+    .fishing-report {
+      background: @brand-off-white;
+      padding: 30px;
+      hgroup {
+        .clearfix();
+        margin-bottom: 15px;
+        .report-illustration {
+          float: left;
+          margin-right: 25px;
+          height: 65px;
+        }
+        .report-title {
+          margin-bottom: 5px;
+          font-family: @font-family-sans-serif;
+          font-weight: 700;
+          font-size: 27px;
+          margin-top: 0;
+          color: @link-color;
+        }
+        .report-updated {
+          font-size: 16px;
+          font-family: @font-family-sans-serif;
+          font-weight: 500;
+        }
+      }
+      h3 {
+        font-family: @font-family-sans-serif;
+        font-size: 16px;
+        letter-spacing: 3.5px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: #B2AFAC;
+      }
+      .read-more {
+        color: @link-color;
+      }
+      .condition-rating {
+        width: 447px;
+        height: 31px;
+        background-image: url('assets/img/condition-rating-inactive.svg');
+        background-repeat: no-repeat;
+        margin-top: 20px;
+        .rating-active {
+          height: 100%;
+          display: block;
+          background-image: url('assets/img/condition-rating-active.svg');
+          background-repeat: no-repeat;
+          &.excellent { width: 100%; }
+          &.good      { width: 361px; }
+          &.ok        { width: 270px; }
+          &.poor      { width: 179px; }
+          &.bad       { width: 88px; }
+        }
+      }
+    }
+    &:hover {
+      .fishing-report {
+        background: darken(@brand-off-white, 1%);
+        .report-title {
+          color: @link-hover-color;
+          text-decoration: underline;
+        }
+      }
+      .read-more {
+        color: @link-hover-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {}
+
+// Up to landscape phone
+@media (max-width: 480px) {}

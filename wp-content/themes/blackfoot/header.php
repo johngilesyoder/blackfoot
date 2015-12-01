@@ -4,11 +4,11 @@
 
     <!-- Title -->
     <!-- =================================== -->
-		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
+		<title><?php wp_title(''); ?></title>
     
     <!-- Styles -->
     <!-- =================================== -->
-		<link href="//www.google-analytics.com" rel="dns-prefetch">
+		<link href="//www.//www.blackfootriver.com" rel="dns-prefetch">
     <link href="<?php echo get_template_directory_uri(); ?>/assets/icons/favicon.png" rel="shortcut icon">
     <link href="<?php echo get_template_directory_uri(); ?>/assets/icons/touch.png" rel="apple-touch-icon-precomposed">
 
@@ -41,6 +41,9 @@
 	</head>
 
 	<body id="top" <?php body_class(); ?>>
+    <!-- Google Analytics -->
+    <!-- =================================== -->
+    <?php get_template_part( 'includes/analyticstracking' ); ?>
 
     <!-- Navbar (Big homepage one) -->
     <!-- =================================== -->

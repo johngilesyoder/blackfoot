@@ -179,12 +179,26 @@
 						<div class="mailing-list-signup">
 							<h2 class="sidebar-title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-updates.svg"> Stay tuned</h2>
 							<p>Get alerts when we post a new report.</p>
-							<div class="input-group">
-					      <input type="text" class="form-control" placeholder="email address">
-					      <span class="input-group-btn">
-					        <button class="btn btn-default btn-subscribe" type="button">Subscribe</button>
-					      </span>
-					    </div>
+
+							<!-- Begin MailChimp Signup Form -->
+							<div id="mc_embed_signup">
+								<form action="//blackfoot.us12.list-manage.com/subscribe/post?u=3c4a344d1d0c615470903a5ce&amp;id=a44ead3a0f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								  <div id="mce-responses" class="clear">
+										<div class="response" id="mce-error-response" style="display:none"></div>
+										<div class="response" id="mce-success-response" style="display:none"></div>
+									</div>
+									<div class="input-group mc-field-group">
+										<input type="email" value="" name="EMAIL" class="form-control required email" id="mce-EMAIL" placeholder="email address">
+										<span class="input-group-btn">
+											<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default btn-subscribe">
+										</span>
+									</div>
+									<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+						    	<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_3c4a344d1d0c615470903a5ce_a44ead3a0f" tabindex="-1" value=""></div>
+								</form>
+							</div>
+							<!--End mc_embed_signup-->
+							
 						</div>
 					</aside>
 				</div>
