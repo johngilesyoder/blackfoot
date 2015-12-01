@@ -7627,6 +7627,7 @@ fieldset[disabled] .book-now-banner .btn-book.active {
   display: block;
   height: 48px;
   margin-bottom: 5px;
+  font-style: italic;
 }
 .water-tile .water-summary .water-detail:last-child {
   margin-bottom: 0;
@@ -7635,6 +7636,7 @@ fieldset[disabled] .book-now-banner .btn-book.active {
   font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
   font-size: 13px;
   letter-spacing: 2px;
+  font-style: normal;
 }
 .shop-banner {
   background-color: #665F5A;
