@@ -45,7 +45,7 @@
                 <h1 class="trip-title"><?php the_title(); ?></h1>
               </a>
               <div class="water-summary">
-                <p><?php the_excerpt(); ?></p>
+                <p><?php echo get_excerpt(120); ?></p>
                 <span class="water-detail water-species"><strong>FISH SPECIES:</strong>&nbsp; <?php echo $water_species; ?></span>
                 <span class="water-detail water-trips"><strong>TRIP TYPES:</strong>&nbsp; <?php echo $water_trips; ?></span>
               </div>

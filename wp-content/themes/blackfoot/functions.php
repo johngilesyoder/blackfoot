@@ -310,30 +310,27 @@ function html5wp_pagination() {
 }
 
 // Custom Excerpts
-function html5wp_index($length) // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
-{
-  return 54;
+function html5wp_index($length) { // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
+    return 20;
 }
-
-// Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');
-function html5wp_custom_post($length) {
-  return 40;
+function html5wp_custom_post($length) { // Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');
+    return 40;
 }
 
 // Create the Custom Excerpts callback
-function html5wp_excerpt($length_callback = '', $more_callback = '') {
-  global $post;
-  if (function_exists($length_callback)) {
-    add_filter('excerpt_length', $length_callback);
-  }
-  if (function_exists($more_callback)) {
-    add_filter('excerpt_more', $more_callback);
-  }
-  $output = get_the_excerpt();
-  $output = apply_filters('wptexturize', $output);
-  $output = apply_filters('convert_chars', $output);
-  $output = '<p>' . $output . '</p>';
-  echo $output;
+function html5wp_excerpt($length_callback='', $more_callback='') {
+    global $post;
+    if(function_exists($length_callback)){
+        add_filter('excerpt_length', $length_callback);
+    }
+    if(function_exists($more_callback)){
+        add_filter('excerpt_more', $more_callback);
+    }
+    $output = get_the_excerpt();
+    $output = apply_filters('wptexturize', $output);
+    $output = apply_filters('convert_chars', $output);
+    $output = '<p>'.$output.'</p>';
+    echo $output;
 }
 
 // Remove Admin bar
@@ -640,6 +637,17 @@ function add_wc_input_class($classes) {
 }
 
 
-
+// Custom function for character limiting excerpts
+function get_excerpt($limit, $source = null){
+  if($source == "content" ? ($excerpt = get_the_content()) : ($excerpt = get_the_excerpt()));
+  $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
+  $excerpt = strip_shortcodes($excerpt);
+  $excerpt = strip_tags($excerpt);
+  $excerpt = substr($excerpt, 0, $limit);
+  $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+  $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
+  $excerpt = $excerpt.' ... <a href="'.get_permalink($post->ID).'">more</a>';
+  return $excerpt;
+}
 
 ?>
