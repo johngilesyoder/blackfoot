@@ -10630,10 +10630,25 @@ textarea.search-results .category-sorting .woocommerce-ordering .orderby {
   position: relative;
   top: -8px;
 }
+.single-product.woocommerce .images {
+  margin-bottom: 30px;
+}
 .single-product.woocommerce .images .thumbnails a {
   margin-bottom: 15px;
   display: inline-block;
   border: 1px solid #d4d3d1;
+  width: 100%;
+}
+.single-product.woocommerce .images .thumbnails a img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.single-product.woocommerce .images .woocommerce-main-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 div.pp_woocommerce .ppt {
   display: none !important;
@@ -11122,6 +11137,14 @@ textarea.single-product.woocommerce .purchase-console .variations_form .variatio
 }
 .single-product .related .tiles .product-tile .short-description {
   display: none;
+}
+.woocommerce-cart .empty-cart {
+  margin-bottom: 60px;
+}
+.woocommerce-cart .empty-cart h2 {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
 }
 .woocommerce-cart .title-area {
   margin-top: 15px;

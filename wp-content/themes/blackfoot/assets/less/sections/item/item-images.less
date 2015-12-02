@@ -4,11 +4,22 @@
 
 .single-product.woocommerce {
   .images {
+    margin-bottom: 30px;
     .thumbnails  {
       a {
         margin-bottom: 15px;
         display: inline-block;
         border: 1px solid #d4d3d1;
+        width: 100%;
+        img {
+          .img-responsive();
+        }
+      }
+    }
+    .woocommerce-main-image {
+      img {
+        .img-responsive();
+        margin: 0 auto;
       }
     }
   }

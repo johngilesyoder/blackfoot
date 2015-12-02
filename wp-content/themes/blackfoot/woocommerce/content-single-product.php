@@ -29,6 +29,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 }
 ?>
 
+<?php 
+global $post;
+if( function_exists('get_product') ){
+	$product = get_product( $post->ID );
+	if( $product->is_type( 'external' ) ){
+		// do something with external products
+	}
+}
+?>
+
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<hgroup class="title-group">
@@ -54,7 +64,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</hgroup>
 
 	<div class="row">
+		<?php if ( $product->is_type( 'booking' ) ) : ?>
+		<div class="col-md-6">
+		<?php else : ?>
 		<div class="col-md-8">
+		<?php endif; ?>
 			
 			<?php woocommerce_show_product_images(); ?>
 			<?php 
@@ -68,7 +82,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 			?>
 
 		</div>
-		<div class="col-md-4">
+		<?php if ( $product->is_type( 'booking' ) ) : ?>
+			<div class="col-md-6">
+			<?php else : ?>
+			<div class="col-md-4">
+			<?php endif; ?>
 			<div class="purchase-console summary entry-summary">
 
 			<?php woocommerce_template_single_rating(); ?>

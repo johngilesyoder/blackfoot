@@ -12,16 +12,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $post, $woocommerce, $product;
-
+$attachment_count = count( $product->get_gallery_attachment_ids() );
 ?>
 <div class="images">
 	<div class="row">
+
+		<?php if ( $attachment_count > 0 ) : ?>
+
 		<div class="col-md-2">
 
 			<?php do_action( 'woocommerce_product_thumbnails' ); ?>
 
 		</div>
 		<div class="col-md-10">
+		
+		<?php else : ?>
+
+		<div class="col-md-12">
+
+		<?php endif; ?>
 
 			<?php
 				if ( has_post_thumbnail() ) {
@@ -33,8 +42,6 @@ global $post, $woocommerce, $product;
 						'title'	=> $image_title,
 						'alt'	=> $image_title
 						) );
-
-					$attachment_count = count( $product->get_gallery_attachment_ids() );
 
 					if ( $attachment_count > 0 ) {
 						$gallery = '[product-gallery]';

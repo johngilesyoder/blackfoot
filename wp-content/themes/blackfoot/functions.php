@@ -637,7 +637,12 @@ function add_wc_input_class($classes) {
 }
 
 
+/*------------------------------------*\
+Blackfoot Custom Stuff
+\*------------------------------------*/
+
 // Custom function for character limiting excerpts
+// ---------------------------------------------------
 function get_excerpt($limit, $source = null){
   if($source == "content" ? ($excerpt = get_the_content()) : ($excerpt = get_the_excerpt()));
   $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);

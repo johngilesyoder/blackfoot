@@ -7,12 +7,10 @@
 			<div class="title-area">
 				<div class="row">
 					<div class="col-md-7"><!-- Page Title -->
-						<h1 class="page-title"><?php the_title(); ?></h1>
+						<h1 class="page-title">Your Cart</h1>
 					</div>
 					<div class="col-md-5">
-						<div class="checkout-top">
-							<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
-						</div>
+
 					</div>
 				</div>
 			</div>

@@ -15,9 +15,10 @@ wc_print_notices();
 
 ?>
 
-Hey now
-<p class="cart-empty"><?php _e( 'Your cart is currently empty.', 'woocommerce' ) ?></p>
+<div class="empty-cart">
+  <h2>Uh oh! Your cart is empty.</h2>
+  <p>Take a look at some of the products in our shop to get you started.</p>
+  <p class="return-to-shop"><a class="btn button wc-backward" href="/shop/"><?php _e( 'Return To Shop', 'woocommerce' ) ?></a></p>
+</div>
 
 <?php do_action( 'woocommerce_cart_is_empty' ); ?>
-
-<p class="return-to-shop"><a class="button wc-backward" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>"><?php _e( 'Return To Shop', 'woocommerce' ) ?></a></p>
