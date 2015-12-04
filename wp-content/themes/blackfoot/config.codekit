@@ -60,6 +60,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/amex.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6415,
+		"inputAbbreviatedPath": "\/assets\/img\/amex.png",
+		"outputAbbreviatedPath": "\/assets\/img\/amex.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/badge-orvis.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -89,6 +100,28 @@
 		"initialSize": 1.88892e+06,
 		"inputAbbreviatedPath": "\/assets\/img\/bg-booking-banner.png",
 		"outputAbbreviatedPath": "\/assets\/img\/bg-booking-banner.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/diners.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2813,
+		"inputAbbreviatedPath": "\/assets\/img\/diners.png",
+		"outputAbbreviatedPath": "\/assets\/img\/diners.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/discover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3516,
+		"inputAbbreviatedPath": "\/assets\/img\/discover.png",
+		"outputAbbreviatedPath": "\/assets\/img\/discover.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -302,6 +335,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/jcb.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2812,
+		"inputAbbreviatedPath": "\/assets\/img\/jcb.png",
+		"outputAbbreviatedPath": "\/assets\/img\/jcb.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/logo-flintcreek.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -309,6 +353,17 @@
 		"initialSize": 21683,
 		"inputAbbreviatedPath": "\/assets\/img\/logo-flintcreek.png",
 		"outputAbbreviatedPath": "\/assets\/img\/logo-flintcreek.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/mastercard.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4154,
+		"inputAbbreviatedPath": "\/assets\/img\/mastercard.png",
+		"outputAbbreviatedPath": "\/assets\/img\/mastercard.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -507,6 +562,17 @@
 		"initialSize": 105376,
 		"inputAbbreviatedPath": "\/assets\/img\/trip-wade.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/trip-wade.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/visa.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3182,
+		"inputAbbreviatedPath": "\/assets\/img\/visa.png",
+		"outputAbbreviatedPath": "\/assets\/img\/visa.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3413,6 +3479,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/includes\/accepted-payments.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/accepted-payments.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/includes\/analyticstracking.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -3472,6 +3547,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/includes\/home\/testimonials.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/home\/trip-block.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/home\/trip-block.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

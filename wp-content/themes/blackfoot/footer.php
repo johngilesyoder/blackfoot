@@ -72,9 +72,15 @@
               </div>
             </div>
           </div>
-          <!-- Footer copyright -->
-          <div class="footer-copyright">
-            &copy; <?php echo date('Y'); ?> Blackfoot River Outfitters. All rights reserved. <a href="#">Privacy</a>
+          <div class="footer-info">
+            <!-- Footer copyright -->
+            <div class="footer-copyright">
+              &copy; <?php echo date('Y'); ?> Blackfoot River Outfitters. All rights reserved. <a href="#">Privacy</a>
+            </div>
+            <!-- Footer accepted payments -->
+            <div class="footer-accepted-payments">
+              <?php get_template_part( 'includes/accepted-payments' ); ?>
+            </div>
           </div>
          </div>
         </div>

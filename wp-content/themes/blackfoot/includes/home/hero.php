@@ -8,8 +8,8 @@
           <div class="hero-panel-content">
             <span class="subtitle">Blackfoot Adventure</span>
             <h1>Before You Know It, You’re in <em>Deep</em>.</h1>
-            <a href="#" class="btn btn-secondary">Book your Blackfoot trip now!</a>
-            <span class="subtext">or <a href="#">learn more</a> about our trips</span>
+            <a href="/products/float-fishing-trip/" class="btn btn-secondary">Book your Blackfoot trip now!</a>
+            <span class="subtext">or <a href="/waers/the-big-blackfoot-river">learn more</a> about The Big Blackfoot River</span>
           </div>
         </div>
       </div>

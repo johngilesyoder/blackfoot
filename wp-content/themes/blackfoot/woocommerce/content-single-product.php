@@ -91,12 +91,19 @@ if( function_exists('get_product') ){
 			<?php woocommerce_template_single_add_to_cart(); ?>
 			<?php //woocommerce_template_single_meta(); ?>
 
-			<?php if ( $product->is_type( !'booking' ) ) : ?>
+			<?php if ( !$product->is_type( 'booking' ) ) : ?>
 
 			<div class="free-shipping-message">
 				<p><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-shipping-brown.svg"> <strong>Free Shipping</strong> on orders over $50!</p>
 			</div>
-
+			<!-- Shop with confidence -->
+			<div class="shop-confidence">
+				<h4>Shop with Confidence</h4>
+			  <div>
+			  	<img src="<?php echo get_template_directory_uri(); ?>/assets/img/RapidSSL_SEAL-90x50.gif">
+			  	<img src="<?php echo get_template_directory_uri(); ?>/assets/img/powered-by-stripe.svg">
+			  </div>
+			</div>
 			<?php endif; ?>
 
 			<?php woocommerce_template_single_sharing(); ?>

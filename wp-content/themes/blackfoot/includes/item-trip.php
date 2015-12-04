@@ -11,6 +11,9 @@
        */
       //do_action( 'woocommerce_before_single_product_summary' );
     ?>
+    <div class="alert alert-success alert-contact">
+      <span class="glyphicon glyphicon-question-sign"></span> <strong>Have questions or want to book over the phone?</strong> Please feel free to call us at <a href="tel:+14065427411">(406) 542-7411</a> or <a href="/contact-us/">send us a message</a>.
+    </div>
     <div class="trip-content">
       <?php the_content(); ?>
     </div>

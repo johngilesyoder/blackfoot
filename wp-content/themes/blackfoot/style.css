@@ -7979,10 +7979,10 @@ textarea.widget_product_search .woocommerce-product-search .search-field {
 .woocommerce .woocommerce-info ul {
   margin-top: 10px;
 }
-.woocommerce .woocommerce-message strong,
-.woocommerce .woocommerce-error strong,
-.woocommerce .woocommerce-info strong {
-  font-weight: normal;
+.woocommerce .woocommerce-message a,
+.woocommerce .woocommerce-error a,
+.woocommerce .woocommerce-info a {
+  text-decoration: underline;
 }
 .woocommerce .woocommerce-message:before,
 .woocommerce .woocommerce-error:before,
@@ -8340,8 +8340,8 @@ textarea.widget_product_search .woocommerce-product-search .search-field {
 .alert ul {
   margin-top: 10px;
 }
-.alert strong {
-  font-weight: normal;
+.alert a {
+  text-decoration: underline;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .container-fluid {
@@ -8483,6 +8483,7 @@ textarea.widget_product_search .woocommerce-product-search .search-field {
   font-size: 16px;
   line-height: 1.25em;
   margin-top: 15px;
+  margin-bottom: 30px;
 }
 .site-footer .footer-bottom .footer-trust .footer-trust-copy h3 {
   font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
@@ -8493,12 +8494,45 @@ textarea.widget_product_search .woocommerce-product-search .search-field {
 .site-footer .footer-bottom .footer-trust .footer-trust-copy p:last-child {
   margin-bottom: 0;
 }
-.site-footer .footer-bottom .footer-copyright {
+.site-footer .footer-bottom .footer-info {
   border-top: 1px solid #D9D2CC;
   padding: 30px 0;
   font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
   font-size: 13px;
   font-weight: 500;
+}
+.site-footer .footer-bottom .footer-info:before,
+.site-footer .footer-bottom .footer-info:after {
+  content: " ";
+  display: table;
+}
+.site-footer .footer-bottom .footer-info:after {
+  clear: both;
+}
+.site-footer .footer-bottom .footer-info:before,
+.site-footer .footer-bottom .footer-info:after {
+  content: " ";
+  display: table;
+}
+.site-footer .footer-bottom .footer-info:after {
+  clear: both;
+}
+.site-footer .footer-bottom .footer-copyright {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+}
+.site-footer .footer-bottom .footer-accepted-payments {
+  float: right;
+}
+.site-footer .footer-bottom .footer-accepted-payments img {
+  height: 30px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.site-footer .footer-bottom .footer-accepted-payments img:first-child {
+  height: 40px;
+  margin-right: 30px;
 }
 body {
   padding-top: 60px;
@@ -10472,8 +10506,8 @@ fieldset[disabled] .contact-us .contact-form .gform_footer .gform_button.active 
 .contact-us .contact-form .validation_error ul {
   margin-top: 10px;
 }
-.contact-us .contact-form .validation_error strong {
-  font-weight: normal;
+.contact-us .contact-form .validation_error a {
+  text-decoration: underline;
 }
 .contact-us .contact-form .validation_error hr {
   border-top-color: #e4b9c0;
@@ -10607,6 +10641,30 @@ fieldset[disabled] .contact-us .contact-form .gform_footer .gform_button.active 
 }
 .page-template-template-trips .trips .trip .price .amount {
   font-weight: 700;
+}
+.page-template-template-trips .trips .trip .most-popular {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 20px;
+  background: #F7915E;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.page-template-template-trips .trips .trip .most-popular:before {
+  content: '';
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background-image: url('assets/img/icon-star-white.svg');
+  background-size: cover;
+  margin-right: 10px;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
 }
 .page-template-template-trips .trips .trip-callout {
   height: 500px;
@@ -11331,7 +11389,7 @@ textarea.single-product.woocommerce .purchase-console .variations_form .variatio
   clear: both;
 }
 .single-product.woocommerce .purchase-console .free-shipping-message {
-  margin-top: 30px;
+  margin: 30px 0 15px;
 }
 .single-product.woocommerce .purchase-console .free-shipping-message p {
   margin: 0;
@@ -11339,6 +11397,24 @@ textarea.single-product.woocommerce .purchase-console .variations_form .variatio
 }
 .single-product.woocommerce .purchase-console .free-shipping-message p img {
   margin-right: 8px;
+}
+.single-product.woocommerce .purchase-console .shop-confidence {
+  border-top: 1px solid #d6d2d0;
+  padding-top: 15px;
+}
+.single-product.woocommerce .purchase-console .shop-confidence h4 {
+  margin: 0 0 15px;
+  font-weight: 700;
+  font-size: 16px;
+}
+.single-product.woocommerce .purchase-console .shop-confidence div img {
+  height: 30px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.single-product.woocommerce .purchase-console .shop-confidence div img:first-child {
+  height: 40px;
+  margin-right: 30px;
 }
 .single-product.woocommerce .item-bottom .woocommerce-tabs .wc-tabs {
   padding: 0;
@@ -11470,6 +11546,13 @@ textarea.single-product.woocommerce .purchase-console .variations_form .variatio
 }
 .single-product .related .tiles .product-tile .short-description {
   display: none;
+}
+.single-product .alert-contact {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+}
+.single-product .alert-contact .glyphicon {
+  margin-right: 5px;
 }
 .single-product .product-type-booking .blockUI,
 .single-product .product-type-booking .blockOverlay {
@@ -11727,8 +11810,8 @@ textarea.single-product .product-type-booking .wc-bookings-booking-form .product
 .single-product .product-type-booking .wc-bookings-booking-cost .booking-error ul {
   margin-top: 10px;
 }
-.single-product .product-type-booking .wc-bookings-booking-cost .booking-error strong {
-  font-weight: normal;
+.single-product .product-type-booking .wc-bookings-booking-cost .booking-error a {
+  text-decoration: underline;
 }
 .single-product .product-type-booking .wc-bookings-booking-cost .booking-error hr {
   border-top-color: #f7e1b5;
@@ -12307,6 +12390,21 @@ select[multiple].woocommerce-cart .cart-collaterals .shipping-calculator-form in
   font-size: 16px;
   line-height: 1.5;
   border-radius: 3px;
+}
+.woocommerce-cart .cart-accepted-payments {
+  background: #F7F5F4;
+  padding: 15px;
+  margin-top: 30px;
+  text-align: center;
+}
+.woocommerce-cart .cart-accepted-payments img {
+  height: 30px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+.woocommerce-cart .cart-accepted-payments img:first-child {
+  height: 40px;
+  margin-right: 15px;
 }
 .woocommerce-checkout .order-again {
   display: none;

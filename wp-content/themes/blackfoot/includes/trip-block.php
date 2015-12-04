@@ -6,5 +6,8 @@
       <a href="<?php the_permalink(); ?>" class="btn btn-primary">Select options &amp; book now</a>
     </div>
     <?php woocommerce_template_single_price(); ?>
+    <?php if ( has_term( 'most-popular', 'product_tag' ) ) : ?>
+      <span class="most-popular">Most Popular</span>
+    <?php endif; ?>
   </div>
 </div>

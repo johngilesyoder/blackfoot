@@ -110,6 +110,7 @@
         font-size: 16px;
         line-height: 1.25em;
         margin-top: 15px;
+        margin-bottom: 30px;
         h3 {
           font-family: @font-family-sans-serif;
           font-size: 16px;
@@ -123,12 +124,30 @@
         }
       }
     }
-    .footer-copyright {
+    .footer-info {
       border-top: 1px solid #D9D2CC;
       padding: 30px 0;
       font-family: @font-family-sans-serif;
       font-size: 13px;
       font-weight: 500;
+      .clearfix();
+    }
+    .footer-copyright {
+      float: left;
+      height: 40px;
+      line-height: 40px;
+    }
+    .footer-accepted-payments {
+      float: right;
+      img {
+        height: 30px;
+        margin-left: 10px;
+        vertical-align: middle;
+        &:first-child {
+          height: 40px;
+          margin-right: 30px;
+        }
+      }
     }
   }
 }
