@@ -585,15 +585,6 @@ add_filter( 'woocommerce_output_related_products_args', 'bro_related_products_ar
 }
 
 
-
-function woocommerce_button_proceed_to_checkout() {
-       $checkout_url = WC()->cart->get_checkout_url();
-       ?>
-       <a href="<?php echo $checkout_url; ?>" class="checkout-button button alt wc-forward"><?php _e( 'Proceed to Checkout &rarr;', 'woocommerce' ); ?></a>
-       <?php
-     }
-
-
 // Add control-label class to checkout form labels
 // ---------------------------------------------------
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
@@ -635,6 +626,30 @@ function add_wc_input_class($classes) {
     $classes[] = 'form-control';
     return $classes;
 }
+
+
+// Reorder booking fields on trip booking page
+// ---------------------------------------------------
+function custom_order_booking_fields ( $fields ) {
+
+$reorder  = array();
+$reorder[] = $fields['wc_bookings_field_start_date'];  // Calendar or Start Date
+$reorder[] = $fields['wc_bookings_field_duration'];  // Duration
+$reorder[] = $fields['wc_bookings_field_persons'];  // Persons
+$reorder[] = $fields['wc_bookings_field_resource'];  // Resource
+
+return $reorder;
+}
+add_filter( 'booking_form_fields', 'custom_order_booking_fields');
+
+
+// Unhook Bookings styles
+function woo_dequeue_booking_styles() {
+    wp_dequeue_style( 'wc-bookings-styles' );
+    wp_deregister_style( 'wc-bookings-styles' );
+}
+add_action( 'wp_print_styles', 'woo_dequeue_booking_styles', 100 );
+
 
 
 /*------------------------------------*\

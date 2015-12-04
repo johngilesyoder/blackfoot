@@ -45,10 +45,10 @@
     <!-- =================================== -->
     <?php get_template_part( 'includes/analyticstracking' ); ?>
 
+    <?php if ( is_front_page() ) : ?>
+      
     <!-- Navbar (Big homepage one) -->
     <!-- =================================== -->
-    <?php if ( is_front_page() ) : ?>
-
     <?php get_template_part( 'includes/header-home' ); ?>
 
     <?php endif; ?>

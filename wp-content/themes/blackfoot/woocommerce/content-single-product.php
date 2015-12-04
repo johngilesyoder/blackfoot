@@ -13,30 +13,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+global $post;
+if( function_exists('get_product') ){
+	$product = get_product( $post->ID );
+}
+
 ?>
 
 <?php
 	/**
-	 * woocommerce_before_single_product hook
-	 *
-	 * @hooked wc_print_notices - 10
-	 */
-	 do_action( 'woocommerce_before_single_product' );
+	* woocommerce_before_single_product hook
+	*
+	* @hooked wc_print_notices - 10
+	*/
+	do_action( 'woocommerce_before_single_product' );
 
-	 if ( post_password_required() ) {
-	 	echo get_the_password_form();
-	 	return;
-	 }
-?>
-
-<?php 
-global $post;
-if( function_exists('get_product') ){
-	$product = get_product( $post->ID );
-	if( $product->is_type( 'external' ) ){
-		// do something with external products
+	if ( post_password_required() ) {
+		echo get_the_password_form();
+		return;
 	}
-}
 ?>
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -63,12 +58,18 @@ if( function_exists('get_product') ){
 		</div>
 	</hgroup>
 
+	<?php if ( $product->is_type( 'booking' ) ) : ?>
+
+	<!-- TRIP ITEM TYPE -->
+	<!-- =================================== -->
+	<!-- =================================== -->
+	
+	<?php get_template_part( 'includes/item-trip' ); ?>
+
+	<?php else : ?>
+
 	<div class="row">
-		<?php if ( $product->is_type( 'booking' ) ) : ?>
-		<div class="col-md-6">
-		<?php else : ?>
 		<div class="col-md-8">
-		<?php endif; ?>
 			
 			<?php woocommerce_show_product_images(); ?>
 			<?php 
@@ -82,11 +83,7 @@ if( function_exists('get_product') ){
 			?>
 
 		</div>
-		<?php if ( $product->is_type( 'booking' ) ) : ?>
-			<div class="col-md-6">
-			<?php else : ?>
 			<div class="col-md-4">
-			<?php endif; ?>
 			<div class="purchase-console summary entry-summary">
 
 			<?php woocommerce_template_single_rating(); ?>
@@ -94,9 +91,13 @@ if( function_exists('get_product') ){
 			<?php woocommerce_template_single_add_to_cart(); ?>
 			<?php //woocommerce_template_single_meta(); ?>
 
+			<?php if ( $product->is_type( !'booking' ) ) : ?>
+
 			<div class="free-shipping-message">
 				<p><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-shipping-brown.svg"> <strong>Free Shipping</strong> on orders over $50!</p>
 			</div>
+
+			<?php endif; ?>
 
 			<?php woocommerce_template_single_sharing(); ?>
 				
@@ -128,6 +129,9 @@ if( function_exists('get_product') ){
 			</div>
 		</div>
 	</div>
+
+	<?php endif; ?>
+
 	<?php
 		/**
 		 * woocommerce_after_single_product_summary hook

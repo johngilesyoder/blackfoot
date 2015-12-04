@@ -16,4 +16,4 @@ global $product;
 $brand = array_shift( wc_get_product_terms( $product->id, 'product_brand', array( 'fields' => 'names' ) ) );
 
 ?>
-<h3 class="product-title"><?php echo $brand . '&nbsp;'; ?><?php the_title(); ?></h3>
+<h3 class="product-title"><?php echo $brand . ' '; ?><?php the_title(); ?></h3>

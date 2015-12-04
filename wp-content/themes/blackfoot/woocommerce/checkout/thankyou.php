@@ -64,6 +64,6 @@ if ( $order ) : ?>
 
 <?php else : ?>
 
-	<p><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), null ); ?></p>
+	<p class="confirmation-message"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), null ); ?></p>
 
 <?php endif; ?>

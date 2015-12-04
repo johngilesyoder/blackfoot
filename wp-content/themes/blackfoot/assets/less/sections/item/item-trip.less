@@ -1,0 +1,149 @@
+// item-trip.less
+// -----------------------------------------------------------------
+
+
+.single-product {
+  .product-type-booking {
+    .blockUI,
+    .blockOverlay {
+      background: @brand-off-white !important;
+    }
+    .title-group {
+      background: transparent;
+      padding-bottom: 0;
+    }
+    .trip-content {
+      margin-bottom: 60px;
+    }
+    .purchase-console {
+      margin-bottom: 60px;
+    }
+    .wc-bookings-booking-form {
+      border: 0;
+      padding: 0;
+      margin-bottom: 0;
+      legend {
+        margin-bottom: 15px;
+        font-size: 1em;
+        line-height: 1em;
+        border: 0;
+        text-transform: uppercase;
+        background: url('assets/img/dotted-line-horiz.svg');
+        background-repeat: repeat-x;
+        background-position: 0 55%;
+        span {
+          font-weight: 700;
+          font-size: 16px;
+          color: @brand-brown;
+          display: inline-block;
+          background: @brand-off-white;
+          padding-right: 10px;
+        }
+      }
+      .wc_bookings_field_duration,
+      .wc_bookings_field_persons {
+        .make-md-column(6);
+        margin-bottom: 40px;
+        label {
+          margin-bottom: 8px;
+          font-size: 1em;
+          line-height: 1em;
+          border: 0;
+          //text-transform: uppercase;
+          span {
+            font-weight: 700;
+            font-size: 16px;
+            color: @brand-brown;
+            display: inline-block;
+          }
+        }
+        input {
+          width: 100%;
+          display: inline-block;
+        }
+      }
+      .wc_bookings_field_duration {
+        padding-left: 0;
+        input {
+          width: 75%;
+          margin-right: 5px;
+        }
+      }
+      .wc_bookings_field_persons {
+        padding-right: 0;
+      }
+      .product-addon {
+        .clearfix();
+        margin-bottom: 5px;
+        margin-top: 0;
+        .addon-name {
+          margin-bottom: 15px;
+          border: 0;
+          font-weight: 600;
+          font-size: 16px;
+          color: @brand-brown;
+          display: inline-block;
+        }
+        .addon-description {
+          display: none;
+        }
+        .addon-select {
+          .form-control();
+        }
+        label {
+          display: none;
+        }
+        textarea {
+          .form-control();
+          height: 80px;
+        }
+      }
+    }
+    #product-addons-total {
+      .product-addon-totals {
+        margin: 0 -30px;
+        padding: 25px 30px 0;
+        border: 0;
+        dt {
+          font-weight: 400;
+        }
+        dd {
+          float: right;
+          font-size: 24px;
+        }
+      }
+    }
+    .wc-bookings-booking-cost {
+      background: transparent;
+      margin: 0;
+      padding: 15px 0 15px;
+      border: 0;
+      .amount {
+        font-size: 36px;
+        line-height: 1em;
+        float: right;
+      }
+      .booking-error {
+        .alert();
+        .alert-warning();
+        width: 100%;
+        display: block;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .cart {
+    .btn-wrapper {
+      //background: rgba(0,0,0,.05);
+      margin: 0 -30px -30px;
+      padding: 15px 30px 30px;
+    }
+    .btn-primary {
+      width: 100% !important;
+      background-color: #659457;
+      &.disabled {
+        background-color: #659457 !important;
+      }
+    }
+  }
+}

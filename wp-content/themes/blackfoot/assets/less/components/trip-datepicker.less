@@ -1,0 +1,206 @@
+// trip-datepicker.less
+// -----------------------------------------------------------------
+
+.ui-widget {
+  font-family: @font-family-sans-serif;
+}
+.wc-bookings-date-picker {
+  margin-bottom: 20px;
+  .ui-datepicker {
+    padding: 0;
+    width: auto;
+    border: none;
+    background: #fff;
+    box-shadow: none;
+    .ui-datepicker-header {
+      padding: 0;
+      border-bottom: none;
+      overflow: hidden;
+      text-transform: uppercase;
+      border-radius: 8px 8px 0 0;
+      background-color: #999999;
+      height: 45px;
+      #gradient > .vertical(#807770,#57514C);
+      border: 0;
+      color: #fff;
+      .ui-icon-circle-triangle-e {
+        background-image: url('assets/img/icon-chevron-r-white.svg');
+        background-position: 0;
+        background-size: 10px 18px;
+        width: 10px;
+        height: 18px;
+        margin-left: -3px;
+      }
+      .ui-icon-circle-triangle-w {
+        background-image: url('assets/img/icon-chevron-l-white.svg');
+        background-position: 0;
+        background-size: 10px 18px;
+        width: 10px;
+        height: 18px;
+        margin-left: -3px;
+        
+      }
+      .ui-state-hover {
+        background: transparent;
+        border-color: transparent;
+        cursor: pointer;
+      }
+      .ui-datepicker-title {
+        line-height: 42px;
+        padding: 0;
+        font-size: 21px;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+      .ui-datepicker-prev,
+      .ui-datepicker-next {
+        top: 0;
+        background: darken(@brand-brown, 10%);
+        border-radius: 0;
+        font-weight: normal;
+        border: 0;
+        height: 45px;
+        width: 2em;
+        &.ui-state-hover {
+          background: darken(@brand-brown, 20%);
+        }
+        span {
+          margin-top: -4px;
+          top: 40%;
+        }
+      }
+      .ui-datepicker-prev {
+        left: 0;
+      }
+      .ui-datepicker-next {
+        right: 0;
+      }
+    }
+    table {
+      margin: 0;
+      border: 1px solid #BAB9B8;
+      border-top: 0;
+      font-size: 16px;
+      font-weight: 700;
+      th {
+        padding: 5px 0;
+        text-transform: uppercase;
+        color: #918c88;
+        font-weight: 700;
+        border-top: 0;
+        background: @brand-off-white;
+      }
+      td {
+        border: none;
+        border-top: 1px solid #d9d8d7;
+        border-right: 1px solid #d9d8d7;
+        background: #fff;
+        padding: 0;
+        &:last-child {
+          border-right: 0;
+        }
+        .ui-state-default {
+          background: transparent;
+          background-image: none;
+          border: none;
+          color: @brand-brown;
+          margin: 0;
+          font-size: 21px;
+          font-weight: 700;
+          text-align: center;
+          padding: 3px 0 8px;
+          &.ui-state-hover {
+            background: @brand-brown;
+            color: #fff;
+          }
+        }
+        a.ui-state-active,
+        a.ui-state-active.ui-state-hover {
+          background: #46A0CE;
+          color: #fff;
+          background-image: none;
+        }
+        &.fully_booked {
+          opacity: 1;
+          span, a {
+            background-color: @brand-off-white;
+            background-image: none;
+            border-color: rgba(0,0,0,0.1);
+            color: #d1cfcd;
+            text-shadow: none;
+          }
+        }
+        &.bookable {
+          a {
+            background-color: #fff;
+            background-image: none;
+            border-color: rgba(0,0,0,0.1);
+            color: #444;
+            text-shadow: none;
+          }
+        }
+        &.partial_booked {
+          a {
+            background-color: #2ecc71;
+            background-image: none;
+            border-color: rgba(0,0,0,0.1);
+            color: #fff;
+            text-shadow: none;
+            position: relative;
+            z-index: 1;
+            &:before {
+              content: "";
+              position: absolute;
+              top:0;
+              left: 0;
+              width: 0;
+              height: 0;
+              border-top: 2.5em solid #C96259;
+              border-right: 2.5em solid transparent;
+              z-index: -10;
+              opacity: 0.75;
+            }
+          }
+        }
+        &.ui-datepicker-current-day {
+          a {
+            background: #46A0CE;
+            color: #fff;
+            opacity: 1;
+          }
+        }
+        &.ui-datepicker-other-month {
+          background: #fff;
+          //color: #d1cfcd;
+          opacity: 1;
+          .ui-state-default {
+            color: #fff;
+          }
+          &.fully_booked {
+            span, a {
+              background-color: #fff;
+              color: #fff;
+            }
+          }
+          &.bookable {
+            background: #fff;
+            .ui-state-default {
+              background: #fff;
+              color: #fff;
+              opacity: 1;
+            }
+            .ui-state-active {
+              background: #46A0CE;
+              color: #fff;
+              opacity: 1;
+            }
+          }
+        }
+        &.bookable-range .ui-state-default {
+          background: #239e57;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
