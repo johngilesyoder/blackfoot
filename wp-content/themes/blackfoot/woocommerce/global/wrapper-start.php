@@ -16,7 +16,16 @@ if( function_exists('get_product') ){
 }
 ?>
 
-<?php if ( $product->is_type( !'booking' ) ) : ?>
+<?php if ( $product->is_type( 'booking' ) ) : ?>
+
+  <!-- BREADCRUMB -->
+  <div class="trip-breadcrumb">
+    <div class="container">
+      <?php woocommerce_breadcrumb(); ?>
+    </div>
+  </div>
+
+<?php else : ?>
 
   <!-- SHOP BANNER -->
   <?php echo get_template_part( 'includes/shop/shop-banner' ); ?>
@@ -27,16 +36,6 @@ if( function_exists('get_product') ){
       <?php woocommerce_breadcrumb(); ?>
     </div>
   <?php endif; ?>
-
-<?php else : ?>
-
-  <div class="trip-breadcrumb">
-    <!-- BREADCRUMB -->
-    <?php if ( !is_shop() ) : ?>
-      <div class="container">
-        <?php woocommerce_breadcrumb(); ?>
-      </div>
-    <?php endif; ?>
-  </div>
+  
 
 <?php endif; ?>
