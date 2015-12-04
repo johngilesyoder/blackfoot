@@ -10547,7 +10547,7 @@ fieldset[disabled] .contact-us .contact-form .gform_footer .gform_button.active 
 }
 .page-template-template-trips .trips {
   list-style-type: none;
-  margin: 0 0 80px;
+  margin: 0 0 50px;
   padding: 0;
 }
 .page-template-template-trips .trips .trip {
@@ -10557,6 +10557,7 @@ fieldset[disabled] .contact-us .contact-form .gform_footer .gform_button.active 
   background-position: 50% 50%;
   background-repeat: no-repeat;
   color: #fff;
+  margin-bottom: 30px;
 }
 .page-template-template-trips .trips .trip .trip-content {
   text-align: center;
@@ -10606,6 +10607,37 @@ fieldset[disabled] .contact-us .contact-form .gform_footer .gform_button.active 
 }
 .page-template-template-trips .trips .trip .price .amount {
   font-weight: 700;
+}
+.page-template-template-trips .trips .trip-callout {
+  height: 500px;
+  position: relative;
+  background-color: #F7F5F4;
+  color: #665F5A;
+  margin-bottom: 30px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.page-template-template-trips .trips .trip-callout .callout-content {
+  text-align: center;
+  padding: 30px;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+}
+.page-template-template-trips .trips .trip-callout .callout-content img {
+  margin-bottom: 30px;
+}
+.page-template-template-trips .trips .trip-callout .callout-content h3 {
+  font-size: 34px;
+  font-weight: 700;
+  margin: 0 0 30px;
+}
+.page-template-template-trips .trips .trip-callout .callout-content p {
+  font-weight: 500;
+  font-size: 24px;
 }
 .shop-home .shop-banner {
   margin-bottom: 40px;

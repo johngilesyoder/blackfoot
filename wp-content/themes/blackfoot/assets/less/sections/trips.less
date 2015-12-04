@@ -14,7 +14,7 @@
   }
   .trips {
     list-style-type: none;
-    margin: 0 0 80px;
+    margin: 0 0 50px;
     padding: 0;
     .trip {
       height: 500px;
@@ -23,6 +23,7 @@
       background-position: 50% 50%;
       background-repeat: no-repeat;
       color: #fff;
+      margin-bottom: 30px;
       .trip-content {
         text-align: center;
         position: absolute;
@@ -67,6 +68,32 @@
         padding: 5px 10px;
         .amount {
           font-weight: 700;
+        }
+      }
+    }
+    .trip-callout {
+      height: 500px;
+      position: relative;
+      background-color: @brand-off-white;
+      color: @brand-brown;
+      margin-bottom: 30px;
+      .vertical-center-parent();
+      .callout-content {
+        text-align: center;
+        padding: 30px;
+        font-family: @font-family-sans-serif;
+        .vertical-center();
+        img {
+          margin-bottom: 30px;
+        }
+        h3 {
+          font-size: 34px;
+          font-weight: 700;
+          margin: 0 0 30px;
+        }
+        p {
+          font-weight: 500;
+          font-size: 24px;
         }
       }
     }
