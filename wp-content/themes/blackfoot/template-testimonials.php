@@ -48,6 +48,7 @@
 				    </div>
 				  </blockquote>
 				  <?php endwhile; wp_reset_query(); ?>
+
 				</div>
 				<div class="col-md-4">
 					<!-- Sidebar -->

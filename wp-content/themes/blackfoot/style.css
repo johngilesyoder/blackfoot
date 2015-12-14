@@ -8474,10 +8474,15 @@ textarea.widget_product_search .woocommerce-product-search .search-field {
 }
 .site-footer .footer-bottom .footer-trust .footer-trust-badges .badge-trout-unlimited {
   height: 122px;
-  margin-right: 70px;
+  margin-right: 50px;
 }
 .site-footer .footer-bottom .footer-trust .footer-trust-badges .badge-orvis {
   height: 95px;
+  margin-right: 50px;
+}
+.site-footer .footer-bottom .footer-trust .footer-trust-badges .TA_rated {
+  display: inline-block;
+  vertical-align: middle;
 }
 .site-footer .footer-bottom .footer-trust .footer-trust-copy {
   font-size: 16px;
