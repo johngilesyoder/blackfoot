@@ -40,7 +40,7 @@
 
 					<!-- Static Trips -->
 					<!-- =================================== -->
-					<div class="col-md-4">
+					<!-- <div class="col-md-4">
 					  <div class="trip" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/trip-stillwater.jpg');">
 					    <div class="trip-content">
 					      <h2 class="trip-title">Still Water Trip</h2>
@@ -63,7 +63,7 @@
 					    	From: <span class="amount">$500.00</span>
 					    </div>
 					  </div>
-					</div>
+					</div> -->
 					<div class="col-md-4">
 					  <div class="trip-callout">
 					    <div class="callout-content">

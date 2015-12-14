@@ -50,30 +50,6 @@
           wp_reset_postdata();
         ?>
 
-        <div class="col-md-4">
-          <article class="home-trip">
-            <a href="/book-a-trip-with-us/" class="trip-block" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/trip-alberton.jpg');">
-              <h1 class="trip-title">Alberton Gorge Whitewater</h1>
-            </a>
-            <p class="trip-summary">Carved by the great Missoula flood, the Alberton Gorge combines the thrill of whitewater with an unforgettable fishing opportunity. Did we mention big fish live in these waters?</p>
-          </article>
-        </div>
-        <div class="col-md-4">
-          <article class="home-trip">
-            <a href="/trips/" class="trip-block" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/trip-stillwater.jpg');">
-              <h1 class="trip-title">Still Water Trip</h1>
-            </a>
-            <p class="trip-summary">Carved by the great Missoula flood, the Alberton Gorge combines the thrill of whitewater with an unforgettable fishing opportunity. Did we mention big fish live in these waters.</p>
-          </article>
-        </div>
-        <div class="col-md-4">
-          <article class="home-trip">
-            <a href="/trips/" class="trip-block" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/trip-smith.jpg');">
-              <h1 class="trip-title">Smith River Trip</h1>
-            </a>
-            <p class="trip-summary">Carved by the great Missoula flood, the Alberton Gorge combines the thrill of whitewater with an unforgettable fishing opportunity. Did we mention big fish live in these waters.</p>
-          </article>
-        </div>
       </div>
     </div>
     <!-- Trip details -->
