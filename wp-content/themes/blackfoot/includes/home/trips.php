@@ -1,5 +1,5 @@
 <?php
-  $details_summary      = types_render_field("trip-details-summary", array());
+  $details_summary          = types_render_field("trip-details-summary", array());
   $testimonial_2            = types_render_field("testimonial-2", array());
   $testimonial_2_photo      = types_render_field("testimonial-2-photo", array());
   $testimonial_2_name       = types_render_field("testimonial-2-name", array());
@@ -52,7 +52,7 @@
 
         <div class="col-md-4">
           <article class="home-trip">
-            <a href="/trips/" class="trip-block" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/trip-alberton.jpg');">
+            <a href="/book-a-trip-with-us/" class="trip-block" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/trip-alberton.jpg');">
               <h1 class="trip-title">Alberton Gorge Whitewater</h1>
             </a>
             <p class="trip-summary">Carved by the great Missoula flood, the Alberton Gorge combines the thrill of whitewater with an unforgettable fishing opportunity. Did we mention big fish live in these waters?</p>
