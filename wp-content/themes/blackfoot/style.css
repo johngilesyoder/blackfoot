@@ -10081,6 +10081,7 @@ textarea.single-fishing-report .select-report select {
   width: 100%;
 }
 .single-fishing-report .awesome-weather-wrap .awesome-weather-forecast .awesome-weather-forecast-day {
+  color: #665F5A !important;
   width: 18%;
 }
 .single-fishing-report .awesome-weather-wrap .awesome-weather-forecast .awesome-weather-forecast-day .awesome-weather-forecast-day-abbr {
