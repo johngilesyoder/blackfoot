@@ -132,7 +132,7 @@ class WC_Bookings_Controller {
 						continue;
 					}
 
-					$blocks_in_range  = $product->get_blocks_in_range( strtotime( 'midnight', $check_date ), strtotime( 'tomorrow midnight', $check_date ), array(), $resource_id );
+					$blocks_in_range  = $product->get_blocks_in_range( strtotime( 'midnight', $check_date ), strtotime( 'tomorrow midnight -1 min', $check_date ), array(), $resource_id );
 					$available_blocks = $product->get_available_blocks( $blocks_in_range, array(), $resource_id );
 
 					if ( sizeof( $available_blocks ) < sizeof( $blocks_in_range ) ) {

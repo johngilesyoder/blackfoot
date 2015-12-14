@@ -5,7 +5,7 @@
  * Description: Enables custom themes for the grid display of Envira galleries.
  * Author:      Thomas Griffin
  * Author URI:  http://thomasgriffinmedia.com
- * Version:     1.0.5
+ * Version:     1.0.7
  * Text Domain: envira-gallery-themes
  * Domain Path: languages
  *
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Define necessary addon constants.
 define( 'ENVIRA_GALLERY_THEMES_PLUGIN_NAME', 'Envira Gallery - Gallery Themes Addon' );
-define( 'ENVIRA_GALLERY_THEMES_PLUGIN_VERSION', '1.0.5' );
+define( 'ENVIRA_GALLERY_THEMES_PLUGIN_VERSION', '1.0.7' );
 define( 'ENVIRA_GALLERY_THEMES_PLUGIN_SLUG', 'envira-gallery-themes' );
 
 add_action( 'plugins_loaded', 'envira_gallery_themes_plugins_loaded' );

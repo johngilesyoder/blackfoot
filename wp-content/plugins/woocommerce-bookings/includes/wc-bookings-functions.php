@@ -25,20 +25,19 @@ function wc_booking_sanitize_time( $raw_time ) {
  * @return string
  */
 function get_wc_booking_data_label( $key, $product ) {
-	switch ( $key ) {
-		case "type" :
-			return $product->wc_booking_resouce_label ? $product->wc_booking_resouce_label : __( 'Booking Type', 'woocommerce-bookings' );
-		case "date" :
-			return __( 'Booking Date', 'woocommerce-bookings' );
-		case "time" :
-			return __( 'Booking Time', 'woocommerce-bookings' );
-		case "duration" :
-			return __( 'Duration', 'woocommerce-bookings' );
-		case "persons" :
-			return __( 'Person(s)', 'woocommerce-bookings' );
-		default :
-			return $key;
+	$labels = apply_filters( 'woocommerce_bookings_data_labels', array(
+			'type'     => ( $product->wc_booking_resouce_label ? $product->wc_booking_resouce_label : __( 'Booking Type', 'woocommerce-bookings' ) ),
+			'date'     => __( 'Booking Date', 'woocommerce-bookings' ),
+			'time'     => __( 'Booking Time', 'woocommerce-bookings' ),
+			'duration' => __( 'Duration', 'woocommerce-bookings' ),
+			'persons'  => __( 'Person(s)', 'woocommerce-bookings' )
+	) );
+
+	if ( ! in_array( $key, $labels ) ) {
+		return $key;
 	}
+
+	return $labels[ $key ];
 }
 
 /**

@@ -4,7 +4,7 @@
  */
 
 $wrapper_class = '';
-if ( 'true' == (string)$fluid_columns ) {
+if ( wp_validate_boolean( $fluid_columns ) ) {
 	$wrapper_class = ' fluid-columns';
 }
 ?>
@@ -12,7 +12,7 @@ if ( 'true' == (string)$fluid_columns ) {
 
 <?php
 	$count = 0;
-	$style_att;
+	$style_att = '';
 	foreach ( $brands as $index => $brand ) :
 			$count++;
 		$thumbnail = get_brand_thumbnail_url( $brand->term_id, apply_filters( 'woocommerce_brand_thumbnail_size', 'brand-thumb' ) );

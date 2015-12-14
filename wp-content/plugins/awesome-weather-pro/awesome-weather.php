@@ -7,7 +7,7 @@ Author: Hal Gatewood
 Author URI: https://www.halgatewood.com
 Text Domain: awesome-weather-pro
 Domain Path: /languages
-Version: 1.1.1
+Version: 1.1.3
 
 
 FILTERS AVAILABLE:
@@ -21,13 +21,13 @@ awesome_weather_location_lookup_url			= Change IP location lookup URL
 
 */
 
-define( 'AWESOME_WEATHER_PRO_VERSION', '1.1.1' );
+define( 'AWESOME_WEATHER_PRO_VERSION', '1.1.3' );
 define( 'AWESOME_WEATHER_LOOKUP_URL', 'http://ipinfo.io/[[IP]]/json' );
 define( 'AWESOME_WEATHER_PLUGIN_BASE', plugin_dir_url( __FILE__ ) );
 
 
 // SETTINGS
-$awesome_weather_sizes = apply_filters( 'awesome_weather_sizes' , array( 'tall', 'wide', 'micro', 'showcase', 'long', 'custom' ) );
+$awesome_weather_sizes = apply_filters( 'awesome_weather_sizes' , array( 'tall' => __('Tall', 'awesome-weather-pro'), 'wide' => __('Wide', 'awesome-weather-pro'), 'micro' => __('Micro', 'awesome-weather-pro'), 'showcase' => __('Showcase', 'awesome-weather-pro'), 'long' => __('Long', 'awesome-weather-pro'), 'custom' => __('Custom', 'awesome-weather-pro') ) );
 
 
 // SETUP
@@ -43,8 +43,8 @@ add_action('plugins_loaded', 'awesome_weather_setup', 99999);
 // ENQUEUE CSS
 function awesome_weather_wp_head( ) 
 {
-	wp_enqueue_script( 'awesome_weather_pro', plugin_dir_url( __FILE__ ) . 'js/awesome-weather-widget-frontend.js', 'jquery', '1.1', add_filter('awesome_weather_js_in_footer', false) );
-	wp_enqueue_script( 'js-cookie', plugin_dir_url( __FILE__ ) . 'js/js-cookie.js', 'jquery', '1.1', add_filter('awesome_weather_js_in_footer', false) );
+	wp_enqueue_script( 'awesome_weather_pro', plugin_dir_url( __FILE__ ) . 'js/awesome-weather-widget-frontend.js', array('jquery'), '1.1', add_filter('awesome_weather_js_in_footer', false) );
+	wp_enqueue_script( 'js-cookie', plugin_dir_url( __FILE__ ) . 'js/js-cookie.js', array('jquery'), '1.1', add_filter('awesome_weather_js_in_footer', false) );
 	wp_enqueue_style( 'awesome-weather', plugins_url( '/awesome-weather.css', __FILE__ ) );
 	wp_enqueue_style( 'opensans-googlefont', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300' );
 }
@@ -106,6 +106,7 @@ function awesome_weather_logic( $atts )
 	$weather->background_color 			= isset($atts['custom_bg_color']) ? $atts['custom_bg_color'] : false;
 	$weather->background_color 			= isset($atts['background_color']) ? $atts['background_color'] : $weather->background_color;
 	$weather->background_by_weather 	= (isset($atts['background_by_weather']) AND $atts['background_by_weather'] == 1) ? 1 : 0;
+	$weather->text_color				= isset($atts['text_color']) ? $atts['text_color'] : '#ffffff';
 	
 	$weather->data 						= array();
 	$weather->provider 					= (get_option( 'aw-weather-provider' ) != "") ? get_option( 'aw-weather-provider' ) : add_filter('awesome_weather_proivder', 'openweathermaps');
@@ -341,11 +342,6 @@ function awesome_weather_logic( $atts )
 	if($weather->background_image) $weather->background_classes[] = "darken";
 	if($weather->allow_user_to_change) $weather->background_classes[] = "awe_changeable";
 
-
-	// PREP INLINE STYLE
-	$inline_style = "";
-	if($weather->inline_style != "") { $inline_style = " style=\"{$weather->inline_style}\""; }
-	
 	
 	// WEATHER CONDITION CSS
 	$weather_code = $weather_description_slug = ''; 
@@ -369,11 +365,11 @@ function awesome_weather_logic( $atts )
 			// CHECK FOR CODE
 			if( $weather_code AND file_exists( get_stylesheet_directory() . "/awe-backgrounds/" . $weather_code . "." . $bg_ext))
 			{
-				$background = get_stylesheet_directory_uri() . "/awe-backgrounds/" . $weather_code . "." . $bg_ext;
+				$weather->background_image = get_stylesheet_directory_uri() . "/awe-backgrounds/" . $weather_code . "." . $bg_ext;
 			}
 			else if( $weather_description_slug AND file_exists( get_stylesheet_directory() . "/awe-backgrounds/" . $weather_description_slug . "." . $bg_ext))
 			{
-				$background = get_stylesheet_directory_uri() . "/awe-backgrounds/" . $weather_description_slug . "." . $bg_ext;
+				$weather->background_image = get_stylesheet_directory_uri() . "/awe-backgrounds/" . $weather_description_slug . "." . $bg_ext;
 			}
 			else
 			{
@@ -390,11 +386,39 @@ function awesome_weather_logic( $atts )
 				if( $preset_background_img_name )
 				{
 					$weather->background_classes[] = "awe-preset-" . $preset_background_img_name;
-					if( file_exists( get_stylesheet_directory() . "/awe-backgrounds/" . $preset_background_img_name . "." . $bg_ext) ) $background = get_stylesheet_directory_uri() . "/awe-backgrounds/" . $preset_background_img_name . "." . $bg_ext;
+					if( file_exists( get_stylesheet_directory() . "/awe-backgrounds/" . $preset_background_img_name . "." . $bg_ext) ) $weather->background_image = get_stylesheet_directory_uri() . "/awe-backgrounds/" . $preset_background_img_name . "." . $bg_ext;
 				}
 			}
 		}
+		else
+		{
+			// USE LOCAL PRESET IMAGES
+			if( $weather->provider == "openweathermaps" )
+			{
+				$preset_background_img_name = awesome_weather_preset_condition_names_openweathermaps($weather_code);
+			}
+			else if ( $weather->provider == "yahoo" ) 
+			{
+				$preset_background_img_name = awesome_weather_preset_condition_names_yahoo($weather_code);
+			}
+
+			if( $preset_background_img_name )
+			{
+				$weather->background_classes[] = "awe-preset-" . $preset_background_img_name;
+				if( file_exists( dirname(__FILE__) . "/img/awe-backgrounds/" . $preset_background_img_name . ".jpg") ) $weather->background_image = AWESOME_WEATHER_PLUGIN_BASE . "/img/awe-backgrounds/" . $preset_background_img_name . ".jpg";
+			}
+		}
 	}
+	
+	
+	// TEXT COLOR
+	if( substr(trim($weather->text_color), 0, 1) != "#" ) $weather->text_color = "#" . $weather->text_color;
+	$weather->inline_style .= " color: {$weather->text_color}; ";
+	
+	
+	// PREP INLINE STYLE
+	$inline_style = "";
+	if($weather->inline_style != "") { $inline_style = " style=\"{$weather->inline_style}\""; }
 	
 	
 	// PREP BACKGROUND CLASSES
@@ -492,7 +516,12 @@ function awesome_weather_error( $msg = false )
 function awesome_weather_admin_scripts( $hook )
 {
 	if( 'widgets.php' != $hook ) return;
+	
+	wp_enqueue_style('jquery');
+	wp_enqueue_style('underscore');
     wp_enqueue_script( 'awesome_weather_admin_script', plugin_dir_url( __FILE__ ) . '/js/awesome-weather-widget-admin.js', array('jquery', 'underscore') );
+	wp_enqueue_style('wp-color-picker');
+    wp_enqueue_script('wp-color-picker');
     
 	wp_localize_script( 'awesome_weather_admin_script', 'awe_script', array(
 			'no_owm_city'				=> esc_attr(__("No city found in OpenWeatherMap.", 'awesome-weather-pro')),

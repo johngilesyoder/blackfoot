@@ -619,7 +619,8 @@ function custom_override_checkout_fields( $fields ) {
 }
 
 
-// Add Bootstrap class to checkout form inputs (OVERRIDDEN IN CORE AS WELL)
+// Add Bootstrap class to checkout form inputs (OVERRIDDEN IN CORE AS WELL : /includes/wc-template-functions.php : line 1613)
+// 'input_class'       => apply_filters('wc_input_class',array()),
 // ---------------------------------------------------
 add_filter( 'wc_input_class', 'add_wc_input_class' );
 function add_wc_input_class($classes) {

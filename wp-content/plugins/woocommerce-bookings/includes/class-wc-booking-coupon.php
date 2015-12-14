@@ -96,6 +96,11 @@ class WC_Booking_Coupon {
 					if ( in_array( $cart_item['booking']['_booking_id'], $this->already_applied ) ) {
 						continue;
 					}
+
+					if ( 'booking_person' !== $coupon->discount_type ) {
+						continue;
+					}
+
 					$discount_amount = ( $price < $coupon->amount ) ? $price : $coupon->amount;
 					$total_persons   = array_sum( $cart_item['booking']['_persons'] );
 					$discount_amount = $discount_amount * $total_persons;

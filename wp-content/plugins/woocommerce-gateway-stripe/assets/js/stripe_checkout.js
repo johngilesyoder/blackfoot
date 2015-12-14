@@ -2,15 +2,36 @@ jQuery( function( $ ) {
 
 	var stripe_submit = false;
 
-	$( 'form.checkout' ).on( 'checkout_place_order_stripe', function() {
+	// We need to bind directly to the click (and not checkout_place_order_stripe) to avoid popup blockers
+	// especially on mobile devices (like on Chrome for iOS) from blocking StripeCheckout.open from opening a tab
+	$( 'form.checkout' ).on( 'click', '#place_order', function( event ) {
 		return stripeFormHandler();
-    });
+	} );
 
-    $( 'form#order_review' ).submit( function() {
+	// WooCommerce lets us return a false on checkout_place_order_{gateway} to keep the form from submitting
+	$( 'form.checkout' ).on( 'checkout_place_order_stripe', function() {
+		// Stripe submit (i.e. from StripeCheckout.open token callback)?  Go ahead and let the form submit
+		// (or at the very least, not block submittal on our account - another gateway might still block it)
+		if ( stripe_submit ) {
+			return true;
+		}
+
+		// Stripe isn't the selected payment method?  Go ahead and let the form submit then too
+		// (or at the very least, not block submittal on our account - the other gateway might still block it)
+		if ( ! $( '#payment_method_stripe' ).is( ':checked' ) ) {
+			return true;
+		}
+
+		// Otherwise, always return false - allow the onclick handler, stripeFormHandler, to do its work
+		return false;
+	} );
+
+	$( 'form#order_review' ).submit( function() {
 		return stripeFormHandler();
-    });
+	});
 
 	function stripeFormHandler() {
+		// If this submit is a result of the stripe request callback firing, let submit proceed by returning true immediately
 		if ( stripe_submit ) {
 			stripe_submit = false;
 			return true;

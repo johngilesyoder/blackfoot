@@ -12,13 +12,13 @@
 class WC_Widget_Brand_Thumbnails extends WP_Widget {
 
 	/** Variables to setup the widget. */
-	var $woo_widget_cssclass;
-	var $woo_widget_description;
-	var $woo_widget_idbase;
-	var $woo_widget_name;
+	public $woo_widget_cssclass;
+	public $woo_widget_description;
+	public $woo_widget_idbase;
+	public $woo_widget_name;
 
 	/** constructor */
-	function __construct() {
+	public function __construct() {
 
 		/* Widget variable settings. */
 		$this->woo_widget_name        = __('WooCommerce Brand Thumbnails', 'wc_brands' );
@@ -34,7 +34,7 @@ class WC_Widget_Brand_Thumbnails extends WP_Widget {
 	}
 
 	/** @see WP_Widget */
-	function widget( $args, $instance ) {
+	public function widget( $args, $instance ) {
 		extract( $args );
 
 		$exclude = array_map( 'intval', explode( ',', $instance['exclude'] ) );
@@ -54,46 +54,61 @@ class WC_Widget_Brand_Thumbnails extends WP_Widget {
 		}
 
 		woocommerce_get_template( 'widgets/brand-thumbnails.php', array(
-			'brands'  => $brands,
-			'columns' => $instance['columns']
+			'brands'        => $brands,
+			'columns'       => $instance['columns'],
+			'fluid_columns' => ! empty( $instance['fluid_columns'] ) ? true : false,
 		), 'woocommerce-brands', untrailingslashit( plugin_dir_path( dirname( dirname( __FILE__ ) ) ) ) . '/templates/' );
 
 		echo $after_widget;
 	}
 
 	/** @see WP_Widget->update */
-	function update( $new_instance, $old_instance ) {
-		$instance['title'] = strip_tags( stripslashes( $new_instance['title'] ) );
-		$instance['columns'] = strip_tags( stripslashes( $new_instance['columns'] ) );
-		$instance['orderby'] = strip_tags( stripslashes( $new_instance['orderby'] ) );
-		$instance['exclude'] = strip_tags( stripslashes( $new_instance['exclude'] ) );
-		$instance['hide_empty'] = strip_tags( stripslashes( $new_instance['hide_empty'] ) );
-		$instance['number'] = strip_tags( stripslashes( $new_instance['number'] ) );
+	public function update( $new_instance, $old_instance ) {
+		$instance['title']         = strip_tags( stripslashes( $new_instance['title'] ) );
+		$instance['columns']       = strip_tags( stripslashes( $new_instance['columns'] ) );
+		$instance['fluid_columns'] = ! empty( $new_instance['fluid_columns'] ) ? true : false;
+		$instance['orderby']       = strip_tags( stripslashes( $new_instance['orderby'] ) );
+		$instance['exclude']       = strip_tags( stripslashes( $new_instance['exclude'] ) );
+		$instance['hide_empty']    = strip_tags( stripslashes( $new_instance['hide_empty'] ) );
+		$instance['number']        = strip_tags( stripslashes( $new_instance['number'] ) );
 
-		if ( ! $instance['columns'] )
+		if ( ! $instance['columns'] ) {
 			$instance['columns'] = 1;
+		}
 
-		if ( ! $instance['orderby'] )
+		if ( ! $instance['orderby'] ) {
 			$instance['orderby'] = 'name';
+		}
 
-		if ( ! $instance['exclude'] )
+		if ( ! $instance['exclude'] ) {
 			$instance['exclude'] = '';
+		}
 
-		if ( ! $instance['hide_empty'] )
+		if ( ! $instance['hide_empty'] ) {
 			$instance['hide_empty'] = 0;
+		}
 
-		if ( ! $instance['number'] )
+		if ( ! $instance['number'] ) {
 			$instance['number'] = '';
+		}
 
 		return $instance;
 	}
 
 	/** @see WP_Widget->form */
-	function form( $instance ) {
-		if ( ! isset( $instance['hide_empty'] ) )
+	public function form( $instance ) {
+		if ( ! isset( $instance['hide_empty'] ) ) {
 			$instance['hide_empty'] = 0;
-		if ( ! isset( $instance['orderby'] ) )
+		}
+
+		if ( ! isset( $instance['orderby'] ) ) {
 			$instance['orderby'] = 'name';
+		}
+
+		if ( empty( $instance['fluid_columns'] ) ) {
+			$instance['fluid_columns'] = false;
+		}
+
 		?>
 			<p>
 				<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'wc_brands') ?></label>
@@ -103,6 +118,11 @@ class WC_Widget_Brand_Thumbnails extends WP_Widget {
 			<p>
 				<label for="<?php echo $this->get_field_id( 'columns' ); ?>"><?php _e('Columns:', 'wc_brands') ?></label>
 				<input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'columns' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'columns' ) ); ?>" value="<?php if ( isset ( $instance['columns'] ) ) echo esc_attr( $instance['columns'] ); else echo '1'; ?>" />
+			</p>
+
+			<p>
+				<label for="<?php echo $this->get_field_id( 'fluid_columns' ); ?>"><?php _e('Fluid columns:', 'wc_brands') ?></label>
+				<input type="checkbox" <?php checked( $instance['fluid_columns'] ); ?> id="<?php echo esc_attr( $this->get_field_id( 'fluid_columns' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'fluid_columns' ) ); ?>" />
 			</p>
 
 			<p>

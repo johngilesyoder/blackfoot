@@ -25,6 +25,7 @@ class WC_Brands_Admin {
 		add_filter( 'woocommerce_sortable_taxonomies', array( $this, 'sort_brands' ) );
 		add_filter( 'manage_edit-product_brand_columns', array( $this, 'columns' ) );
 		add_filter( 'manage_product_brand_custom_column', array( $this, 'column' ), 10, 3);
+		add_action( 'woocommerce_product_filters', array( $this, 'product_filter' ) );
 
 		$this->settings_tabs = array(
 			'brands' => __( 'Brands', 'wc_brands' )
@@ -406,6 +407,37 @@ class WC_Brands_Admin {
 		return $columns;
 	}
 
+	/**
+	 * Filter products by brand
+	 */
+	public function product_filter() {
+		global $wp_query;
+
+		$current_product_brand = isset( $wp_query->query['product_brand'] ) ? $wp_query->query['product_brand'] : '';
+		$args                  = array(
+			'pad_counts'         => 1,
+			'show_count'         => 1,
+			'hierarchical'       => 1,
+			'hide_empty'         => 1,
+			'show_uncategorized' => 1,
+			'orderby'            => 'name',
+			'selected'           => $current_product_brand,
+			'menu_order'         => false
+		);
+
+		$terms = get_terms( 'product_brand' );
+
+		if ( ! $terms ) {
+			return;
+		}
+
+		$output  = "<select name='product_brand' class='dropdown_product_brand'>";
+		$output .= '<option value="" ' .  selected( $current_product_brand, '', false ) . '>' . __( 'Select a brand', 'wc_brands' ) . '</option>';
+		$output .= wc_walk_category_dropdown_tree( $terms, 0, $args );
+		$output .= "</select>";
+
+		echo $output;
+	}
 
 }
 

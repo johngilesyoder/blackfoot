@@ -3,7 +3,7 @@
 	overflow: hidden;
 	zoom: 1;
 }
-.tax-product_brand .brand-description img {
+.tax-product_brand .brand-description img.brand-thumbnail {
 	width: 25%;
 	float: right;
 }

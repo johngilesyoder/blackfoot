@@ -143,7 +143,7 @@ class Envira_Gallery_Widget extends WP_Widget {
     public function form( $instance ) {
 
         // Get all avilable galleries and widget properties.
-        $galleries  = Envira_Gallery::get_instance()->get_galleries();
+        $galleries  = Envira_Gallery::get_instance()->get_galleries( false );
         $title      = isset( $instance['title'] ) ? $instance['title'] : '';
         $gallery_id = isset( $instance['envira_gallery_id'] ) ? $instance['envira_gallery_id'] : false;
 
@@ -158,16 +158,18 @@ class Envira_Gallery_Widget extends WP_Widget {
             <label for="<?php echo $this->get_field_id( 'envira_gallery_id' ); ?>"><?php _e( 'Gallery', 'envira-gallery' ); ?></label>
             <select id="<?php echo esc_attr( $this->get_field_id( 'envira_gallery_id' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'envira_gallery_id' ) ); ?>" style="width: 100%;">
                 <?php
-                foreach ( $galleries as $gallery ) {
-                    if ( ! empty( $gallery['config']['title'] ) ) {
-                        $title = $gallery['config']['title'];
-                    } else if ( ! empty( $gallery['config']['slug'] ) ) {
-                        $title = $gallery['config']['title'];
-                    } else {
-                        $title = sprintf( __( 'Gallery ID #%s', 'envira-gallery' ), $gallery['id'] );
-                    }
+                if ( is_array( $galleries ) ) {
+                    foreach ( $galleries as $gallery ) {
+                        if ( ! empty( $gallery['config']['title'] ) ) {
+                            $title = $gallery['config']['title'];
+                        } else if ( ! empty( $gallery['config']['slug'] ) ) {
+                            $title = $gallery['config']['title'];
+                        } else {
+                            $title = sprintf( __( 'Gallery ID #%s', 'envira-gallery' ), $gallery['id'] );
+                        }
 
-                    echo '<option value="' . absint( $gallery['id'] ) . '"' . selected( absint( $gallery['id'] ), $gallery_id, false ) . '>' . $title . '</option>';
+                        echo '<option value="' . absint( $gallery['id'] ) . '"' . selected( absint( $gallery['id'] ), $gallery_id, false ) . '>' . $title . '</option>';
+                    }
                 }
                 ?>
             </select>

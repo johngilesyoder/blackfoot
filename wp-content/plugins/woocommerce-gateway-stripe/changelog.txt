@@ -1,5 +1,11 @@
 *** Stripe Changelog ***
 
+2015.12.02 - version 2.6.5
+* Do not require a card id when updating a subscription payment method
+
+2015.11.20 - version 2.6.4
+* Fix a JavaScript bug that caused the Stripe Checkout popup to be blocked on Chrome for iOS
+
 2015.11.12 - version 2.6.3
 * Add metadata to subscription payments in stripe dashboard to indicate whether it is the initial or a recurring payment
 

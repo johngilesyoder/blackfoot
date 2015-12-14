@@ -87,7 +87,7 @@ if( !$weather_data )
 		{
 			$wind_speed 		= apply_filters('awesome_weather_wind_speed', round($city_data->wind->speed));
 			$wind_direction 	= apply_filters('awesome_weather_wind_direction', fmod((($city_data->wind->deg + 11) / 22.5),16));
-			$wind_speed_text 	= ($weather->units_query == "metric") ? __('km/h', 'awesome-weather-pro') : __('mph', 'awesome-weather-pro');
+			$wind_speed_text 	= __('m/s', 'awesome-weather-pro');
 			
 			$weather_data['current']['wind_speed'] = $wind_speed;		
 			$weather_data['current']['wind_direction'] = $awe_wind_label[ $wind_direction ];

@@ -519,8 +519,11 @@ class WC_Bookings_Google_Calendar_Integration extends WC_Integration {
 
 		// Set the event start and end dates
 		if ( $booking->is_all_day() ) {
+			// 1440 min = 24 hours. Bookings includes 'end' in its set of days, where as GCal uses that
+			// as the cut off, so we need to add 24 hours to include our final 'end' day.
+			// https://developers.google.com/google-apps/calendar/v3/reference/events/insert
 			$data['end'] = array(
-				'date' => date( 'Y-m-d', $booking->end ),
+				'date' => date( 'Y-m-d', ( $booking->end + 1440 ) ),
 			);
 
 			$data['start'] = array(

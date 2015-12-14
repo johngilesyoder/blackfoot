@@ -117,7 +117,7 @@ class Envira_Gallery_Editor {
         $this->loaded = true;
 
         global $post;
-        $galleries = $this->base->get_galleries();
+        $galleries = $this->base->get_galleries( false );
 
         ob_start();
         ?>

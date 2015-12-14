@@ -5,7 +5,7 @@
  * Description: Envira Gallery is best responsive WordPress gallery plugin.
  * Author:      Thomas Griffin
  * Author URI:  http://thomasgriffinmedia.com
- * Version:     1.3.8.1
+ * Version:     1.4.0.1
  * Text Domain: envira-gallery
  * Domain Path: languages
  *
@@ -54,7 +54,7 @@ class Envira_Gallery {
      *
      * @var string
      */
-    public $version = '1.3.8.1';
+    public $version = '1.4.0.1';
 
     /**
      * The name of the plugin.
@@ -138,6 +138,7 @@ class Envira_Gallery {
 
         // Load admin only components.
         if ( is_admin() ) {
+            $this->check_installation();
             $this->require_admin();
             $this->require_updater();
         }
@@ -147,6 +148,34 @@ class Envira_Gallery {
 
         // Add hook for when Envira has loaded.
         do_action( 'envira_gallery_loaded' );
+
+    }
+
+    /**
+    * Display a nag notice if the user still has Lite activated
+    *
+    * @since 1.3.8.2
+    */
+    public function check_installation() {
+
+        if ( class_exists( 'Envira_Gallery_Lite' ) ) {
+            add_action( 'admin_notices', array( $this, 'lite_notice' ) );
+        }
+
+    }
+
+    /**
+     * Output a nag notice if the user has both Lite and Pro activated
+     *
+     * @since 1.3.8.2
+     */
+    function lite_notice() {
+
+        ?>
+        <div class="error">
+            <p><?php printf( __( 'Please <a href="%s">deactivate</a> the Envira Lite Plugin. Your premium version of Envira Gallery may not work as expected until the Lite version is deactivated.', 'envira-gallery' ), 'plugins.php' ); ?></p>
+        </div>
+        <?php
 
     }
 
@@ -367,13 +396,16 @@ class Envira_Gallery {
      *
      * @since 1.0.0
      *
+     * @param bool $skip_empty Skip empty sliders
+     * @param bool $ignore_cache Ignore Transient cache
+     *
      * @return array|bool Array of gallery data or false if none found.
      */
-    public function get_galleries() {
+    public function get_galleries( $skip_empty = true, $ignore_cache = false ) {
 
         // Attempt to return the transient first, otherwise generate the new query to retrieve the data.
-        if ( false === ( $galleries = get_transient( '_eg_cache_all' ) ) ) {
-            $galleries = $this->_get_galleries();
+        if ( $ignore_cache || false === ( $galleries = get_transient( '_eg_cache_all' ) ) ) {
+            $galleries = $this->_get_galleries( $skip_empty );
             if ( $galleries ) {
                 $expiration = Envira_Gallery_Common::get_instance()->get_transient_expiration_time();
                 set_transient( '_eg_cache_all', $galleries, $expiration );
@@ -390,9 +422,10 @@ class Envira_Gallery {
      *
      * @since 1.0.0
      *
+     * @param bool $skip_empty Skip Empty Galleries
      * @return array|bool Array of gallery data or false if none found.
      */
-    public function _get_galleries() {
+    public function _get_galleries( $skip_empty = true ) {
 
         $galleries = get_posts(
             array(
@@ -418,7 +451,7 @@ class Envira_Gallery {
             $data = get_post_meta( $id, '_eg_gallery_data', true );
             
             // Skip empty galleries
-            if ( empty( $data['gallery'] ) ) {
+            if ( $skip_empty && empty( $data['gallery'] ) ) {
                 continue;
             }
 

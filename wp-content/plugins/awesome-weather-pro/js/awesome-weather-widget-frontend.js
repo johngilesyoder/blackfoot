@@ -55,9 +55,6 @@ jQuery(document).ready(function()
 	// WEATHER TRIGGER
 	jQuery(document).delegate('.awe-weather-trigger a', 'click', function(e) 
 	{
-		
-		console.log(awe);
-		
 		var this_btn = jQuery(this);
 		this_btn.addClass('loading');
 		

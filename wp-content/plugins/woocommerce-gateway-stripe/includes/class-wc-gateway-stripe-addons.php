@@ -524,9 +524,7 @@ class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 				throw new Exception( 'Invalid customer ID. A valid "_stripe_customer_id" must begin with "cus_".' );
 			}
 
-			if ( ! isset( $payment_meta['post_meta']['_stripe_card_id']['value'] ) || empty( $payment_meta['post_meta']['_stripe_card_id']['value'] ) ) {
-				throw new Exception( 'A "_stripe_card_id" value is required.' );
-			} elseif ( 0 !== strpos( $payment_meta['post_meta']['_stripe_card_id']['value'], 'card_' ) ) {
+			if ( ! empty( $payment_meta['post_meta']['_stripe_card_id']['value'] ) && 0 !== strpos( $payment_meta['post_meta']['_stripe_card_id']['value'], 'card_' ) ) {
 				throw new Exception( 'Invalid card ID. A valid "_stripe_card_id" must begin with "card_".' );
 			}
 		}

@@ -4,13 +4,37 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/awesome-weather-pro\n"
-"POT-Creation-Date: 2015-10-09 19:41:23+00:00\n"
+"POT-Creation-Date: 2015-10-12 16:56:41+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: awesome-weather.php:30
+msgid "Tall"
+msgstr ""
+
+#: awesome-weather.php:30
+msgid "Wide"
+msgstr ""
+
+#: awesome-weather.php:30
+msgid "Micro"
+msgstr ""
+
+#: awesome-weather.php:30
+msgid "Showcase"
+msgstr ""
+
+#: awesome-weather.php:30
+msgid "Long"
+msgstr ""
+
+#: awesome-weather.php:30
+msgid "Custom"
+msgstr ""
 
 #: awesome-weather.php:127
 msgid "C"
@@ -416,12 +440,8 @@ msgstr ""
 msgid "Change the Location"
 msgstr ""
 
-#: pro/openweathermaps/data.php:90 pro/yahoo/data.php:103
-msgid "km/h"
-msgstr ""
-
-#: pro/openweathermaps/data.php:90 pro/yahoo/data.php:103
-msgid "mph"
+#: pro/openweathermaps/data.php:90
+msgid "m/s"
 msgstr ""
 
 #: pro/yahoo/data.php:48
@@ -486,6 +506,70 @@ msgstr ""
 
 #: widget.php:210
 msgid "Forecast:"
+msgstr ""
+
+#: widget.php:214
+msgid "15 Days"
+msgstr ""
+
+#: widget.php:215
+msgid "14 Days"
+msgstr ""
+
+#: widget.php:216
+msgid "13 Days"
+msgstr ""
+
+#: widget.php:217
+msgid "12 Days"
+msgstr ""
+
+#: widget.php:218
+msgid "11 Days"
+msgstr ""
+
+#: widget.php:219
+msgid "10 Days"
+msgstr ""
+
+#: widget.php:220
+msgid "9 Days"
+msgstr ""
+
+#: widget.php:221
+msgid "8 Days"
+msgstr ""
+
+#: widget.php:222
+msgid "7 Days"
+msgstr ""
+
+#: widget.php:223
+msgid "6 Days"
+msgstr ""
+
+#: widget.php:224
+msgid "5 Days"
+msgstr ""
+
+#: widget.php:227
+msgid "4 Days"
+msgstr ""
+
+#: widget.php:228
+msgid "3 Days"
+msgstr ""
+
+#: widget.php:229
+msgid "2 Days"
+msgstr ""
+
+#: widget.php:230
+msgid "1 Days"
+msgstr ""
+
+#: widget.php:231
+msgid "Don't Show"
 msgstr ""
 
 #: widget.php:236

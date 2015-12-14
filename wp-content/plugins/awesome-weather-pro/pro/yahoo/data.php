@@ -26,7 +26,7 @@ if( !$weather_data AND $weather->woeid )
 	
 				
 	// PING YAHOO		
-	$yahoo_ping = "https://query.yahooapis.com/v1/public/yql?format=json&q=";
+	$yahoo_ping = "http://query.yahooapis.com/v1/public/yql?format=json&q=";
 	$yahoo_select = "select * from weather.forecast where woeid={$weather->woeid} and u='" . strtolower($weather->units_query) . "'";
 	$yahoo_ping = $yahoo_ping . urlencode($yahoo_select) . $appid_string;
 
@@ -100,11 +100,9 @@ if( !$weather_data AND $weather->woeid )
 		
 	// WIND
 	$wind_direction = apply_filters('awesome_weather_wind_direction', fmod((($yw_channel->wind->direction + 11) / 22.5),16));
-	$wind_speed_text = ($weather->units_query == "c") ? __('km/h', 'awesome-weather-pro') : __('mph', 'awesome-weather-pro');
-	
 	$weather_data['current']['wind_speed'] 			= apply_filters('awesome_weather_wind_speed', round($yw_channel->wind->speed));		
 	$weather_data['current']['wind_direction'] 		= $awe_wind_label[ $wind_direction ];
-	$weather_data['current']['wind_speed_text'] 	= apply_filters('awesome_weather_wind_speed_text', $wind_speed_text);	
+	$weather_data['current']['wind_speed_text'] 	= apply_filters('awesome_weather_wind_speed_text', $yw_channel->units->speed);	
 		
 	// CODE
 	$weather_data['current']['condition_code'] 	= $item_yweather->condition->code;

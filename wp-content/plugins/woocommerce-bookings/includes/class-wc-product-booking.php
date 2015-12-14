@@ -836,6 +836,13 @@ class WC_Product_Booking extends WC_Product {
 							$from_min     = absint( date( 'i', strtotime( $rules['from'] ) ) );
 							$to_hour      = absint( date( 'H', strtotime( $rules['to'] ) ) );
 							$to_min       = absint( date( 'i', strtotime( $rules['to'] ) ) );
+
+							// If "to" is set to midnight, it is safe to assume they mean the end of the day
+							// php wraps 24 hours to "12AM the next day"
+							if ( 0 === $to_hour ) {
+								$to_hour = 24;
+							}
+
 							$minute_range = array( ( ( $from_hour * 60 ) + $from_min ) + $day_mod, ( ( $to_hour * 60 ) + $to_min ) + $day_mod );
 							$merge_ranges = array();
 
@@ -904,16 +911,28 @@ class WC_Product_Booking extends WC_Product {
 							// Buffer time calculation
 							// we don't need to do this on the first set of minutes
 							if ( $i > 0 && ! empty ( $buffer_period ) ) {
-								$total_time = $from_interval + ( $buffer_period * $i );
+								if ( 'minute' === $this->get_duration_unit() ) {
+									$total_time = $from_interval + ( $buffer_period * $i );
+									$multiplier = 60;
+								} else {
+									$total_time = $from_interval + ( $buffer_period * $i );
+									$multiplier = 360;
+								}
+
 								$start_time    = strtotime( "+{$total_time} minutes", $time_block_start );
-								// Is this the last time? Make sure it fits after applying the buffer..
+								$end = strtotime( "midnight +{$time_block[1]} minutes", $check_date );
+
+								if ( $start_time >= $end ) {
+									break;
+								}
+
 								if ( $i == ( $base_intervals_in_block - 1 ) ) {
-									$end_of_last = $start_time + ( $interval * 60 );
-									$end = strtotime( "midnight +{$time_block[1]} minutes", $check_date );
-									if ( $end_of_last > $end ) {
-										break 2;
+									$end_of_last = $start_time + ( $interval * $multiplier );
+									if ( ! empty( $rules ) && $end_of_last > $end ) {
+										break;
 									}
 								}
+
 							}
 
 							// Break if start time is after the end date being calced

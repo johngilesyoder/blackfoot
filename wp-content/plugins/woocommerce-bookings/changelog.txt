@@ -1,5 +1,18 @@
 *** WooCommerce Bookings Changelog ***
 
+2015.11.25 - version 1.8.4
+* Fix - An additional fix for accurate buffer calculations.
+* Tweak - New filter to change custom bookings labels.
+
+2015.11.24 - version 1.8.3
+* Fix - Rules ending at midnight will now properly be parsed.
+* Fix - Google Calendar events now properly include the correct end date.
+* Fix - Make sure person discount applies correctly.
+* Fix - Previously if the last day of the month happened to fall on the same day of the week as your "start of week setting", events would not show. This is now fixed.
+* Fix - Minute buffer calculation fix, making sure all proper blocks display.
+* Fix - Blocks smaller than 30 minute chunks will no longer get cut off on the admin calendar.
+* Fix - Prevent the partial booked indicator from sometimes showing on a previous day to a day with bookings.
+
 2015.11.11 - version 1.8.2
 * Fix - If there are 0 time slots left, make sure not to show the block at all.
 * Fix - Resolved an issue with avaibility times and buffer times.

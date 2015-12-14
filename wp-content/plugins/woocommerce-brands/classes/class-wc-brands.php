@@ -469,6 +469,48 @@ class WC_Brands {
 	}
 
 	/**
+	 * Loop over found products.
+	 *
+	 * @access public
+	 * @param  array $query_args
+	 * @param  array $atts
+	 * @param  string $loop_name
+	 * @return string
+	 */
+	public function product_loop( $query_args, $atts, $loop_name ) {
+		global $woocommerce_loop;
+
+		$products                    = new WP_Query( apply_filters( 'woocommerce_shortcode_products_query', $query_args, $atts ) );
+		$columns                     = absint( $atts['columns'] );
+		$woocommerce_loop['columns'] = $columns;
+
+		ob_start();
+
+		if ( $products->have_posts() ) : ?>
+
+			<?php do_action( "woocommerce_shortcode_before_{$loop_name}_loop" ); ?>
+
+			<?php woocommerce_product_loop_start(); ?>
+
+				<?php while ( $products->have_posts() ) : $products->the_post(); ?>
+
+					<?php wc_get_template_part( 'content', 'product' ); ?>
+
+				<?php endwhile; // end of the loop. ?>
+
+			<?php woocommerce_product_loop_end(); ?>
+
+			<?php do_action( "woocommerce_shortcode_after_{$loop_name}_loop" ); ?>
+
+		<?php endif;
+
+		woocommerce_reset_loop();
+		wp_reset_postdata();
+
+		return '<div class="woocommerce columns-' . $columns . '">' . ob_get_clean() . '</div>';
+	}
+
+	/**
 	 * register_shortcodes function.
 	 *
 	 * @access public
@@ -479,6 +521,7 @@ class WC_Brands {
 		add_shortcode( 'product_brand_thumbnails', array( $this, 'output_product_brand_thumbnails' ) );
 		add_shortcode( 'product_brand_thumbnails_description', array( $this, 'output_product_brand_thumbnails_description' ) );
 		add_shortcode( 'product_brand_list', array( $this, 'output_product_brand_list' ) );
+		add_shortcode( 'brand_products', array( $this, 'output_brand_products' ) );
 
 	}
 
@@ -676,6 +719,61 @@ class WC_Brands {
 		), 'woocommerce-brands', untrailingslashit( plugin_dir_path( dirname( __FILE__ ) ) ) . '/templates/' );
 
 		return ob_get_clean();
+	}
+
+	/**
+	 * output_brand_products function.
+	 *
+	 * @access public
+	 * @param mixed $atts
+	 * @return void
+	 */
+	public function output_brand_products( $atts ) {
+
+		$atts = shortcode_atts( array(
+			'per_page' => '12',
+			'columns'  => '4',
+			'orderby'  => 'title',
+			'order'    => 'desc',
+			'brand'    => '',
+			'operator' => 'IN'
+		), $atts );
+
+		if ( ! $atts['brand'] ) {
+			return '';
+		}
+
+		// Default ordering args
+		$ordering_args = WC()->query->get_catalog_ordering_args( $atts['orderby'], $atts['order'] );
+		$meta_query    = WC()->query->get_meta_query();
+		$query_args    = array(
+			'post_type'            => 'product',
+			'post_status'          => 'publish',
+			'ignore_sticky_posts'  => 1,
+			'orderby'              => $ordering_args['orderby'],
+			'order'                => $ordering_args['order'],
+			'posts_per_page'       => $atts['per_page'],
+			'meta_query'           => $meta_query,
+			'tax_query'            => array(
+				array(
+					'taxonomy'     => 'product_brand',
+					'terms'        => array_map( 'sanitize_title', explode( ',', $atts['brand'] ) ),
+					'field'        => 'slug',
+					'operator'     => $atts['operator']
+				)
+			)
+		);
+
+		if ( isset( $ordering_args['meta_key'] ) ) {
+			$query_args['meta_key'] = $ordering_args['meta_key'];
+		}
+
+		$return = $this->product_loop( $query_args, $atts, 'product_cat' );
+
+		// Remove ordering query arguments
+		WC()->query->remove_ordering_args();
+
+		return $return;
 	}
 }
 

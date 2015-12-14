@@ -1,5 +1,12 @@
 *** Brands Changelog ***
 
+2015.12.02 - version 1.4.2
+* Fix - Undefined variable: fluid_columns in brand-thumbnails.php
+* Fix - Added fluid_columns field in brand thumbnails widget
+* Fix - Shortcodes not working in taxonomy description
+* Enhancement: Product Shortcode
+* Enhancement: Filter by brand in the dashbard
+
 2015.11.16 - version 1.4.1
 * Fix - Coupons can be applied but no discount shows if the coupon is brand restricted
 * Fix - Only update/save settings when the brands settings page is currently active

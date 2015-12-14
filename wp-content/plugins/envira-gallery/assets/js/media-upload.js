@@ -4,7 +4,6 @@
  *
  * @since 1.3.1.3
  */
-
 (function( $ ) {
     $(function() {
 
@@ -33,17 +32,17 @@
 
                 // AJAX call to Envira to store the newly uploaded image in the meta against this Gallery
                 $.post(
-                    envira_gallery_media_uploader.ajax,
+                    envira_gallery_metabox.ajax,
                     {
                         action:  'envira_gallery_load_image',
-                        nonce:   envira_gallery_media_uploader.load_image,
+                        nonce:   envira_gallery_metabox.load_image,
                         id:      info.response,
-                        post_id: envira_gallery_media_uploader.id
+                        post_id: envira_gallery_metabox.id
                     },
                     function(res){
                         // Prepend or append the new image to the existing grid of images,
                         // depending on the media_position setting
-                        switch ( envira_gallery_media_uploader.media_position ) {
+                        switch ( envira_gallery_metabox.media_position ) {
                             case 'before':
                                 $(envira_output).prepend(res);
                                 break;

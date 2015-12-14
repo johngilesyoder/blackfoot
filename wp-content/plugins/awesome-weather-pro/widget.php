@@ -31,6 +31,7 @@ class AwesomeWeatherWidget extends WP_Widget
         $extended_url				= isset($instance['extended_url']) ? $instance['extended_url'] : false;
         $extended_text				= isset($instance['extended_text']) ? $instance['extended_text'] : false;
         $background_by_weather 		= (isset($instance['background_by_weather']) AND $instance['background_by_weather'] == 1) ? 1 : 0;
+		$text_color					= isset($instance['text_color']) ? $instance['text_color'] : "#ffffff";
 		
 		echo $before_widget;
 		if($widget_title != "") echo $before_title . $widget_title . $after_title;
@@ -54,6 +55,7 @@ class AwesomeWeatherWidget extends WP_Widget
 									'extended_url' => $extended_url,
 									'extended_text' => $extended_text,
 									'background_by_weather' => $background_by_weather,
+									'text_color' => $text_color
 								));
 		echo $after_widget;
     }
@@ -71,6 +73,7 @@ class AwesomeWeatherWidget extends WP_Widget
 		$instance['forecast_days'] 				= strip_tags($new_instance['forecast_days']);
 		$instance['background'] 				= strip_tags($new_instance['background']);
 		$instance['custom_bg_color'] 			= strip_tags($new_instance['custom_bg_color']);
+		$instance['text_color'] 				= strip_tags($new_instance['text_color']);
 		$instance['custom_template_name'] 		= strip_tags($new_instance['custom_template_name']);
 		$instance['extended_url'] 				= strip_tags($new_instance['extended_url']);
 		$instance['extended_text'] 				= strip_tags($new_instance['extended_text']);
@@ -106,7 +109,9 @@ class AwesomeWeatherWidget extends WP_Widget
         $extended_url			= isset($instance['extended_url']) ? esc_attr($instance['extended_url']) : "";
         $extended_text			= isset($instance['extended_text']) ? esc_attr($instance['extended_text']) : "";
         $background_by_weather 		= (isset($instance['background_by_weather']) AND $instance['background_by_weather'] == 1) ? 1 : 0;
-	
+		$text_color					= isset($instance['text_color']) ? esc_attr($instance['text_color']) : "#ffffff";
+		
+		
 		if( $instance['units'] == "auto" ) $units = "auto";
 	
 		$theme_folder = substr(strrchr(get_stylesheet_directory(),'/'),1);
@@ -130,8 +135,8 @@ class AwesomeWeatherWidget extends WP_Widget
 		<p>
 	    	<label for="<?php echo $this->get_field_id('location'); ?>"><?php _e('Template:', 'awesome-weather-pro'); ?></label><br>
 	    	<select id="<?php echo $this->get_field_id('size'); ?>" name="<?php echo $this->get_field_name('size'); ?>" class="awesome-weather-size-select" data-widgetid="<?php echo $this->id; ?>">
-	      	<?php foreach($awesome_weather_sizes as $size) { ?>
-	      		<option value="<?php echo $size; ?>"<?php if($selected_size == $size) echo " selected=\"selected\""; ?>><?php echo $size; ?></option>
+	      	<?php foreach($awesome_weather_sizes as $size => $text) { ?>
+	      		<option value="<?php echo $size; ?>"<?php if($selected_size == $size) echo " selected=\"selected\""; ?>><?php echo $text; ?></option>
 	      	<?php } ?>
 	    	</select>
         </p>
@@ -211,24 +216,24 @@ class AwesomeWeatherWidget extends WP_Widget
 			<select id="<?php echo $this->get_field_id('forecast_days'); ?>" name="<?php echo $this->get_field_name('forecast_days'); ?>">
 				
 				<?php if( $weather_provider == "openweathermaps" ) { ?>
-				<option value="15"<?php if($forecast_days == 15) echo " selected=\"selected\""; ?>>15 Days</option>
-				<option value="14"<?php if($forecast_days == 14) echo " selected=\"selected\""; ?>>14 Days</option>
-				<option value="13"<?php if($forecast_days == 13) echo " selected=\"selected\""; ?>>13 Days</option>
-				<option value="12"<?php if($forecast_days == 12) echo " selected=\"selected\""; ?>>12 Days</option>
-				<option value="11"<?php if($forecast_days == 11) echo " selected=\"selected\""; ?>>11 Days</option>
-				<option value="10"<?php if($forecast_days == 10) echo " selected=\"selected\""; ?>>10 Days</option>
-				<option value="9"<?php if($forecast_days == 9) echo " selected=\"selected\""; ?>>9 Days</option>
-				<option value="8"<?php if($forecast_days == 8) echo " selected=\"selected\""; ?>>8 Days</option>
-				<option value="7"<?php if($forecast_days == 7) echo " selected=\"selected\""; ?>>7 Days</option>
-				<option value="6"<?php if($forecast_days == 6) echo " selected=\"selected\""; ?>>6 Days</option>
-				<option value="5"<?php if($forecast_days == 5) echo " selected=\"selected\""; ?>>5 Days</option>
+				<option value="15"<?php if($forecast_days == 15) echo " selected=\"selected\""; ?>><?php _e('15 Days', 'awesome-weather-pro'); ?></option>
+				<option value="14"<?php if($forecast_days == 14) echo " selected=\"selected\""; ?>><?php _e('14 Days', 'awesome-weather-pro'); ?></option>
+				<option value="13"<?php if($forecast_days == 13) echo " selected=\"selected\""; ?>><?php _e('13 Days', 'awesome-weather-pro'); ?></option>
+				<option value="12"<?php if($forecast_days == 12) echo " selected=\"selected\""; ?>><?php _e('12 Days', 'awesome-weather-pro'); ?></option>
+				<option value="11"<?php if($forecast_days == 11) echo " selected=\"selected\""; ?>><?php _e('11 Days', 'awesome-weather-pro'); ?></option>
+				<option value="10"<?php if($forecast_days == 10) echo " selected=\"selected\""; ?>><?php _e('10 Days', 'awesome-weather-pro'); ?></option>
+				<option value="9"<?php if($forecast_days == 9) echo " selected=\"selected\""; ?>><?php _e('9 Days', 'awesome-weather-pro'); ?></option>
+				<option value="8"<?php if($forecast_days == 8) echo " selected=\"selected\""; ?>><?php _e('8 Days', 'awesome-weather-pro'); ?></option>
+				<option value="7"<?php if($forecast_days == 7) echo " selected=\"selected\""; ?>><?php _e('7 Days', 'awesome-weather-pro'); ?></option>
+				<option value="6"<?php if($forecast_days == 6) echo " selected=\"selected\""; ?>><?php _e('6 Days', 'awesome-weather-pro'); ?></option>
+				<option value="5"<?php if($forecast_days == 5) echo " selected=\"selected\""; ?>><?php _e('5 Days', 'awesome-weather-pro'); ?></option>
 				<?php } ?>
 				
-				<option value="4"<?php if($forecast_days == 4) echo " selected=\"selected\""; ?>>4 Days</option>
-				<option value="3"<?php if($forecast_days == 3) echo " selected=\"selected\""; ?>>3 Days</option>
-				<option value="2"<?php if($forecast_days == 2) echo " selected=\"selected\""; ?>>2 Days</option>
-				<option value="1"<?php if($forecast_days == 1) echo " selected=\"selected\""; ?>>1 Days</option>
-				<option value="hide"<?php if($forecast_days == 'hide') echo " selected=\"selected\""; ?>>Don't Show</option>
+				<option value="4"<?php if($forecast_days == 4) echo " selected=\"selected\""; ?>><?php _e('4 Days', 'awesome-weather-pro'); ?></option>
+				<option value="3"<?php if($forecast_days == 3) echo " selected=\"selected\""; ?>><?php _e('3 Days', 'awesome-weather-pro'); ?></option>
+				<option value="2"<?php if($forecast_days == 2) echo " selected=\"selected\""; ?>><?php _e('2 Days', 'awesome-weather-pro'); ?></option>
+				<option value="1"<?php if($forecast_days == 1) echo " selected=\"selected\""; ?>><?php _e('1 Day', 'awesome-weather-pro'); ?></option>
+				<option value="hide"<?php if($forecast_days == 'hide') echo " selected=\"selected\""; ?>><?php _e("Don't Show", 'awesome-weather-pro'); ?></option>
 			</select>
 		</p>
 		
@@ -247,6 +252,24 @@ class AwesomeWeatherWidget extends WP_Widget
         	<small><?php _e('overrides color changing', 'awesome-weather-pro'); ?>: #7fb761 or rgba(0,0,0,0.5)</small>
         	<input class="widefat" id="<?php echo $this->get_field_id('custom_bg_color'); ?>" name="<?php echo $this->get_field_name('custom_bg_color'); ?>" type="text" value="<?php echo $custom_bg_color; ?>" />
 		</p>
+		
+		<p>
+		    <label for="<?php echo $this->get_field_id( 'text_color' ); ?>" style="display:block;"><?php _e( 'Text Color', 'awesome-weather' ); ?></label> 
+		    <input class="widefat color-picker" id="<?php echo $this->get_field_id( 'text_color' ); ?>" name="<?php echo $this->get_field_name( 'text_color' ); ?>" type="text" value="<?php echo esc_attr( $text_color ); ?>" />
+		</p>
+		
+		<script type="text/javascript">
+		    jQuery(document).ready(function($) 
+		    { 
+		            jQuery('#<?php echo $this->get_field_id( 'text_color' ); ?>').on('focus', function(){
+		                var parent = jQuery(this).parent();
+		                jQuery(this).wpColorPicker()
+		                parent.find('.wp-color-result').click();
+		            }); 
+		            
+		            jQuery('#<?php echo $this->get_field_id( 'text_color' ); ?>').wpColorPicker()
+		    }); 
+		</script>
 		      
 		<p>
         	<label for="<?php echo $this->get_field_id('units'); ?>"><?php _e('Units:', 'awesome-weather-pro'); ?></label> &nbsp;

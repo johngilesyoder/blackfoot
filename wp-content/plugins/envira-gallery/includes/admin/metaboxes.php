@@ -50,9 +50,12 @@ class Envira_Gallery_Metaboxes {
         add_action( 'admin_enqueue_scripts', array( $this, 'meta_box_styles' ) );
         add_action( 'admin_enqueue_scripts', array( $this, 'meta_box_scripts' ) );
 
+        // Modals
+        add_filter( 'media_view_strings', array( $this, 'media_view_strings' ) );
+
         // Load the metabox hooks and filters.
         add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes' ), 100 );
-
+ 
         // Load all tabs.
         add_action( 'envira_gallery_tab_images', array( $this, 'images_tab' ) );
         add_action( 'envira_gallery_tab_config', array( $this, 'config_tab' ) );
@@ -63,6 +66,40 @@ class Envira_Gallery_Metaboxes {
 
         // Add action to save metabox config options.
         add_action( 'save_post', array( $this, 'save_meta_boxes' ), 10, 2 );
+
+    }
+
+    /**
+    * Changes strings in the modal image selector if we're editing an Envira Gallery
+    *
+    * @since 1.4.0
+    *
+    * @param    array   $strings    Media View Strings
+    * @return   array               Media View Strings
+    */
+    public function media_view_strings( $strings ) {
+
+        // Get the current screen
+        $screen = get_current_screen();
+
+        // Check we're editing an Envira CPT
+        if ( ! $screen ) {
+            return $strings;
+        }
+        if ( $screen->post_type != 'envira' ) {
+            return $strings;
+        }
+
+        // If here, we're editing an Envira CPT
+        // Modify some of the media view's strings
+        $strings['insertIntoPost'] = __( 'Insert into Gallery', 'envira-gallery' );
+        $strings['inserting'] = __( 'Inserting...', 'envira-gallery' );
+        
+        // Allow addons to filter strings
+        $strings = apply_filters( 'envira_gallery_media_view_strings', $strings, $screen );
+
+        // Return
+        return $strings;
 
     }
 
@@ -131,25 +168,13 @@ class Envira_Gallery_Metaboxes {
             'post' => $post_id, 
         ) );
         add_filter( 'plupload_init', array( $this, 'plupload_init' ) );
-        wp_register_script( $this->base->plugin_slug . '-media-uploader', plugins_url( 'assets/js/media-uploader.js', $this->base->file ), array( 'jquery' ), $this->base->version, true );
-        wp_enqueue_script( $this->base->plugin_slug . '-media-uploader' );
-        wp_localize_script( 
-            $this->base->plugin_slug . '-media-uploader',
-            'envira_gallery_media_uploader',
-            array(
-                'ajax'           => admin_url( 'admin-ajax.php' ),
-                'id'             => $post_id,
-                'load_image'     => wp_create_nonce( 'envira-gallery-load-image' ),
-                'media_position' => Envira_Gallery_Settings::get_instance()->get_setting( 'media_position' ),
-            )
-        );
 
         // Tabs
         wp_register_script( $this->base->plugin_slug . '-tabs-script', plugins_url( 'assets/js/tabs.js', $this->base->file ), array( 'jquery' ), $this->base->version, true );
         wp_enqueue_script( $this->base->plugin_slug . '-tabs-script' );
         
         // Metaboxes
-        wp_register_script( $this->base->plugin_slug . '-metabox-script', plugins_url( 'assets/js/metabox.js', $this->base->file ), array( 'jquery', 'plupload-handlers', 'quicktags', 'jquery-ui-sortable' ), $this->base->version, true );
+        wp_register_script( $this->base->plugin_slug . '-metabox-script', plugins_url( 'assets/js/min/metabox-min.js', $this->base->file ), array( 'jquery', 'plupload-handlers', 'quicktags', 'jquery-ui-sortable' ), $this->base->version, true );
         wp_enqueue_script( $this->base->plugin_slug . '-metabox-script' );
         wp_localize_script(
             $this->base->plugin_slug . '-metabox-script',
@@ -163,6 +188,8 @@ class Envira_Gallery_Metaboxes {
                 'inserting'             => __( 'Inserting...', 'envira-gallery' ),
                 'library_search'        => wp_create_nonce( 'envira-gallery-library-search' ),
                 'load_gallery'          => wp_create_nonce( 'envira-gallery-load-gallery' ),
+                'load_image'            => wp_create_nonce( 'envira-gallery-load-image' ),
+                'media_position'        => Envira_Gallery_Settings::get_instance()->get_setting( 'media_position' ),
                 'refresh_nonce'         => wp_create_nonce( 'envira-gallery-refresh' ),
                 'remove'                => __( 'Are you sure you want to remove this image from the gallery?', 'envira-gallery' ),
                 'remove_multiple'       => __( 'Are you sure you want to remove these images from the gallery?', 'envira-gallery' ),
@@ -469,7 +496,7 @@ class Envira_Gallery_Metaboxes {
                 <?php endforeach; ?>
             <?php endif; ?>
         </ul>
-        <?php $this->media_library( $post );
+        <?php
 
     }
 
@@ -513,129 +540,6 @@ class Envira_Gallery_Metaboxes {
                 <?php endif; ?>
             </div>
         </div>
-        <?php
-
-    }
-
-    /**
-     * Callback for displaying the UI for selecting images from the media library to insert.
-     *
-     * @since 1.0.0
-     *
-     * @param object $post The current post object.
-     */
-    public function media_library( $post ) {
-
-        ?>
-        <div id="envira-gallery-upload-ui-wrapper">
-            <div id="envira-gallery-upload-ui" class="envira-gallery-image-meta" style="display: none;">
-                <div class="media-modal wp-core-ui">
-                    <a class="media-modal-close" href="#"><span class="media-modal-icon"></span></a>
-                    <div class="media-modal-content">
-                        <div class="media-frame envira-gallery-media-frame wp-core-ui hide-menu envira-gallery-meta-wrap">
-                            <div class="media-frame-title">
-                                <h1><?php _e( 'Insert Media into Gallery', 'envira-gallery' ); ?></h1>
-                            </div>
-
-                            <!-- Tabs -->
-                            <div class="media-frame-router">
-                                <div class="media-router">
-                                    <a href="#" class="media-menu-item active" data-envira-gallery-content="select-images"><?php _e( 'Library Images', 'envira-gallery' ); ?></a>
-                                    <?php do_action( 'envira_gallery_modal_router', $post ); ?>
-                                </div><!-- end .media-router -->
-                            </div><!-- end .media-frame-router -->
-
-                            <!-- Content Sections -->
-                            <?php $this->images_content( $post ); ?>
-                            <?php do_action( 'envira_gallery_modal_content', $post ); ?>
-
-                            <!-- Button -->
-                            <div class="media-frame-toolbar">
-                                <div class="media-toolbar">
-                                    <div class="media-toolbar-secondary">
-                                        <div class="media-selection">
-                                            <div class="selection-info">
-                                                <span class="count">
-                                                    <span class="number">0</span>
-                                                    <?php _e( 'selected', 'envira-gallery' ); ?>
-                                                </span>
-                                                <a href="#" class="clear-selection">Clear</a>
-                                            </div>
-                                            <div class="selection-view">
-                                                <ul tabindex="-1" class="attachments" id="__attachments-view-<?php echo $post->ID; ?>">
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="media-toolbar-primary">
-                                        <a href="#" class="envira-gallery-media-insert button media-button button-large button-primary media-button-insert" title="<?php esc_attr_e( 'Insert Media into Gallery', 'envira-gallery' ); ?>"><?php _e( 'Insert Media into Gallery', 'envira-gallery' ); ?></a>
-                                    </div><!-- end .media-toolbar-primary -->
-                                </div><!-- end .media-toolbar -->
-                            </div><!-- end .media-frame-toolbar -->
-                        </div><!-- end .media-frame -->
-                    </div><!-- end .media-modal-content -->
-                </div><!-- end .media-modal -->
-                <div class="media-modal-backdrop"></div>
-            </div><!-- end .envira-gallery-image-meta -->
-        </div><!-- end #envira-gallery-upload-ui-wrapper-->
-        <?php
-
-    }
-
-    /**
-     * Outputs the image content in the modal selection window.
-     *
-     * @since 1.3.2.5
-     *
-     * @param object $post The current post object.
-     */
-    public function images_content( $post ) {
-
-        ?>
-        <!-- begin content for inserting slides from media library -->
-        <div id="envira-gallery-select-images">
-            <div class="media-frame-content">
-                <div class="attachments-browser">
-                    <div class="media-toolbar envira-gallery-library-toolbar">
-                        <div class="media-toolbar-primary">
-                            <input type="search" placeholder="<?php esc_attr_e( 'Search', 'envira-gallery' ); ?>" id="envira-gallery-gallery-search" class="search" value="" />
-                        </div>
-                        <div class="media-toolbar-secondary">
-                            <a class="button media-button button-large button-secodary envira-gallery-load-library" href="#" data-envira-gallery-offset="20"><?php _e( 'Load More Images from Library', 'envira-gallery' ); ?></a>
-                            <span class="spinner envira-gallery-spinner"></span>
-                        </div>
-                    </div>
-                    <?php $library = get_posts( array( 'post_type' => 'attachment', 'post_mime_type' => 'image', 'post_status' => 'inherit', 'posts_per_page' => 20 ) ); ?>
-                    <?php if ( $library ) : ?>
-                    <ul class="attachments envira-gallery-gallery">
-                    <?php foreach ( (array) $library as $image ) :
-                        $has_gallery = get_post_meta( $image->ID, '_eg_has_gallery', true );
-                        $class       = $has_gallery && in_array( $post->ID, (array) $has_gallery ) ? ' selected envira-gallery-in-gallery' : ''; ?>
-                        <li class="attachment<?php echo $class; ?>" data-attachment-id="<?php echo absint( $image->ID ); ?>">
-                            <div class="attachment-preview landscape">
-                                <div class="thumbnail">
-                                    <div class="centered">
-                                        <?php $src = wp_get_attachment_image_src( $image->ID, 'thumbnail' ); ?>
-                                        <img src="<?php echo esc_url( $src[0] ); ?>" />
-                                    </div>
-                                </div>
-                                <a class="check" href="#"><div class="media-modal-icon"></div></a>
-                            </div>
-                        </li>
-                    <?php endforeach; ?>
-                    </ul><!-- end .envira-gallery-meta -->
-                    <?php endif; ?>
-                    <div class="media-sidebar">
-                        <div class="envira-gallery-meta-sidebar">
-                            <h3><?php _e( 'Helpful Tips', 'envira-gallery' ); ?></h3>
-                            <strong><?php _e( 'Selecting Images', 'envira-gallery' ); ?></strong>
-                            <p><?php _e( 'You can insert any image from your Media Library into your gallery. If the image you want to insert is not shown on the screen, you can either click on the "Load More Images from Library" button to load more images or use the search box to find the images you are looking for.', 'envira-gallery' ); ?></p>
-                        </div><!-- end .envira-gallery-meta-sidebar -->
-                    </div><!-- end .media-sidebar -->
-                </div><!-- end .attachments-browser -->
-            </div><!-- end .media-frame-content -->
-        </div><!-- end #envira-gallery-image-slides -->
-        <!-- end content for inserting slides from media library -->
         <?php
 
     }
@@ -1686,7 +1590,7 @@ class Envira_Gallery_Metaboxes {
         $gallery_data = get_post_meta( $post_id, '_eg_gallery_data', true );
         if ( ! empty( $gallery_data['gallery'] ) ) {
             foreach ( (array) $gallery_data['gallery'] as $id => $item ) {
-                $gallery_data['gallery'][$id]['status'] = 'active';
+                $gallery_data['gallery'][ $id ]['status'] = 'active';
             }
         }
 

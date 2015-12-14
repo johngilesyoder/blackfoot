@@ -592,9 +592,10 @@
 
 /* ==========================================================================
    Modal
-   4.3: Close links are replaced by buttons, which break styling on our close links - so we style our links in 4.3+
+   4.3+: Close links are replaced by buttons, which break styling on our close links - so we style our links in 4.3+
    ========================================================================== */
-body.branch-4-3 {
+body.branch-4-3,
+body.branch-4-4 {
     div.media-modal {
         /**
         * Close Button
@@ -643,7 +644,7 @@ body.branch-4-3 {
 		* Inputs
 		*/
 		input[type=text] {
-			width: 75%;
+			width: 75% !important;
 		}
 		textarea {
 			height: 150px;
@@ -654,7 +655,7 @@ body.branch-4-3 {
 		*/
 		.wp-editor-wrap {
 			float: right;
-			width: 75%;
+			width: 75% !important;
 		}
 	}
 	
@@ -770,6 +771,41 @@ body.branch-4-3 {
 			}
 		}
 	}	
+}
+
+/* ==========================================================================
+   Media View in Metabox
+   ========================================================================== */
+div.attachments-browser.envira-gallery {
+    /**
+    * Error
+    */
+    div.envira-gallery-error {
+        position: absolute;
+        top: 50px;
+        left: 15px;
+        right: 315px;
+        padding: 1px 12px;
+        background: #fff;
+        border-left: 4px solid #dd3d36;
+        -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    }
+
+    ul.attachments.envira-gallery-attachments {
+        li.attachment {
+            div.thumbnail {
+                /**
+                * Text
+                */
+                span {
+                    display: block;
+                    margin: 0 auto;
+                    padding: 5px;
+                }
+            }
+        }
+    }
 }
 
 /* ==========================================================================

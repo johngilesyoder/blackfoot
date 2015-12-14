@@ -12,6 +12,7 @@
 
 	<?php if( isset($weather->data['current'])) { ?>
 	
+		<div class="awecf">
 		<div class="awesome-weather-current-temp">
 			<?php echo $weather->data['current']['temp']; ?><sup>&deg;</sup>
 					<?php if($weather->show_icons) { ?>
@@ -27,7 +28,8 @@
 			<div class="awe_highlow"><?php _e('H', 'awesome-weather-pro'); ?> <?php echo $weather->data['current']['high']; ?> &bull; <?php _e('L', 'awesome-weather-pro'); ?> <?php echo $weather->data['current']['low']; ?></div>	
 		</div><!-- /.awesome-weather-todays-stats -->
 		<?php } ?>
-	
+		</div>
+		
 	<?php } ?>
 	
 	<?php if($weather->forecast_days != "hide") { ?>

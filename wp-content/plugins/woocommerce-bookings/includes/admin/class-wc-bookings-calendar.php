@@ -57,8 +57,11 @@ class WC_Bookings_Calendar {
 			$end_day_offset = 7 - ( $last_day % 7 ) - $day_offset;
 			$end_day_offset = $end_day_offset >= 0 && $end_day_offset < 7 ? $end_day_offset : 7 - abs( $end_day_offset );
 
+			// We want to get the last minute of the day, so we will go forward one day to midnight and subtract a min
+			$end_day_offset = $end_day_offset + 1;
+
 			$start_timestamp   = strtotime( "-{$day_offset} day", strtotime( "$year-$month-01" ) );
-			$end_timestamp     = strtotime( "+{$end_day_offset} day", strtotime( "$year-$month-$last_day" ) );
+			$end_timestamp     = strtotime( "+{$end_day_offset} day midnight -1 min", strtotime( "$year-$month-$last_day" ) );
 
 			$this->bookings     = WC_Bookings_Controller::get_bookings_in_date_range(
 				$start_timestamp,
@@ -165,7 +168,11 @@ class WC_Bookings_Calendar {
 
 				$start_time = $booking->get_start_date( '', 'Gi' );
 				$end_time   = $booking->get_end_date( '', 'Gi' );
+
 				$height     = ( $end_time - $start_time ) / 1.66666667;
+				if ( $height < 30 ) {
+					$height = 30;
+				}
 
 				if ( $last_end > $start_time )
 					$column++;
