@@ -94,7 +94,9 @@
 
 				</div>
 				<div class="col-md-4">
-					MARKETING SIDEBAR
+
+					<?php get_sidebar(); ?>
+					
 				</div>
 
 				<?php endif; ?>

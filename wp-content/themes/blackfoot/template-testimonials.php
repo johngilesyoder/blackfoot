@@ -52,8 +52,8 @@
 				</div>
 				<div class="col-md-4">
 					<!-- Sidebar -->
-					<aside class="water-sidebar">
-						<?php get_template_part( 'includes/book-now-block' ); ?>
+					<aside class="global-sidebar">
+						<?php get_sidebar(); ?>
 					</aside>
 				</div>
 

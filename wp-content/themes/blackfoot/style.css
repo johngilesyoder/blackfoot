@@ -7657,6 +7657,63 @@ fieldset[disabled] .book-now-banner .btn-book.active {
   margin-bottom: 30px;
   margin-top: 0;
 }
+.sidebar-featured {
+  margin-top: 50px;
+}
+.sidebar-featured .featured-title {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  color: #F7915E;
+  text-transform: uppercase;
+  margin: 2px 0 0;
+}
+.sidebar-featured .featured-title img {
+  margin-right: 8px;
+}
+.sidebar-featured .item-title {
+  font-size: 16px;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  color: #347799;
+  margin: 0 0 5px;
+  padding: 0;
+  line-height: 1.25em;
+}
+.sidebar-featured .item-title:hover {
+  color: #214b60;
+}
+.sidebar-featured .item-title + p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 5px;
+}
+.sidebar-featured .price {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  display: block;
+}
+.sidebar-featured .price del {
+  margin-right: 10px;
+  display: inline-block;
+  opacity: 1;
+}
+.sidebar-featured .price ins {
+  text-decoration: none;
+  display: inline-block;
+}
+.sidebar-featured .btn-add-to-cart {
+  display: none;
+}
+.sidebar-featured .featured-item-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 30px;
+  margin: 0;
+}
 .shop-banner {
   background-color: #665F5A;
   background-image: url('assets/img/bg-booking-banner.png');
@@ -8977,6 +9034,34 @@ main {
   font-size: 36px;
   margin: 0 0 30px;
 }
+.page-sidebar {
+  padding-right: 0;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  background: #F7F5F4;
+  padding: 25px 30px 30px;
+}
+.page-sidebar h2 {
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0 0 20px;
+}
+.page-sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.page-sidebar ul li a {
+  line-height: 1.75em;
+  font-weight: 500;
+}
+.page-sidebar ul li.current_page_item a {
+  color: #444;
+  text-decoration: none;
+}
+.page-sidebar ul li.current_page_item a:hover {
+  cursor: default;
+  color: #444;
+}
 .home section {
   padding: 60px 0;
 }
@@ -10027,6 +10112,13 @@ textarea.single-fishing-report .select-report select {
 }
 .single-fishing-report .report-sidebar .sidebar-title img {
   margin-right: 8px;
+}
+.single-fishing-report .report-sidebar .mailing-list-signup {
+  background-image: url('assets/img/dotted-line-horiz.svg');
+  background-position: 0 100%;
+  padding-bottom: 50px;
+  margin-bottom: 30px;
+  background-repeat: repeat-x;
 }
 .single-fishing-report .report-sidebar .mailing-list-signup .sidebar-title {
   margin-bottom: 5px;

@@ -278,9 +278,9 @@ if (function_exists('register_sidebar')) {
 
   // Define Sidebar Widget Area 2
   register_sidebar(array(
-    'name'          => __('Widget Area 2', 'html5blank'),
-    'description'   => __('Description for this widget-area...', 'html5blank'),
-    'id'            => 'widget-area-2',
+    'name'          => __('Global Sidebar', 'html5blank'),
+    'description'   => __('The global sidebar', 'html5blank'),
+    'id'            => 'global-sidebar',
     'before_widget' => '<div id="%1$s" class="%2$s">',
     'after_widget'  => '</div>',
     'before_title'  => '<h3>',
