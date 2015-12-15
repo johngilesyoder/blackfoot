@@ -1,6 +1,6 @@
 <?php
   $testimonial_3            = types_render_field("testimonial-3", array());
-  $testimonial_3_photo      = types_render_field("testimonial-3-photo", array());
+  $testimonial_3_photo      = types_render_field("testimonial-3-photo", array('raw' => true));
   $testimonial_3_name       = types_render_field("testimonial-3-name", array());
   $testimonial_3_location   = types_render_field("testimonial-3-location", array());
 ?>
@@ -13,7 +13,7 @@
     <blockquote class="section-quote">
       <div class="row">
         <div class="col-md-1">
-          <?php echo $testimonial_3_photo; ?>
+          <span class="testimonial-bubble" style="background-image:url('<?php echo $testimonial_3_photo; ?>');"><span>
         </div>
         <div class="col-md-11">
           <?php echo $testimonial_3; ?>

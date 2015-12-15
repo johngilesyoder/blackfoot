@@ -1,7 +1,7 @@
 <?php
   $details_summary          = types_render_field("trip-details-summary", array());
   $testimonial_2            = types_render_field("testimonial-2", array());
-  $testimonial_2_photo      = types_render_field("testimonial-2-photo", array());
+  $testimonial_2_photo      = types_render_field("testimonial-2-photo", array('raw' => true));
   $testimonial_2_name       = types_render_field("testimonial-2-name", array());
   $testimonial_2_location   = types_render_field("testimonial-2-location", array());
 ?>
@@ -14,7 +14,7 @@
     <blockquote class="section-quote">
       <div class="row">
         <div class="col-md-1">
-          <?php echo $testimonial_2_photo; ?>
+          <span class="testimonial-bubble" style="background-image:url('<?php echo $testimonial_2_photo; ?>');"><span>
         </div>
         <div class="col-md-11">
           <?php echo $testimonial_2; ?>
