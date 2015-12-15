@@ -71,17 +71,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/badge-orvis.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 58281,
-		"inputAbbreviatedPath": "\/assets\/img\/badge-orvis.png",
-		"outputAbbreviatedPath": "\/assets\/img\/badge-orvis.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/assets\/img\/badge-trout-unlimited.png": {
 		"fileType": 32768,
 		"ignore": 0,

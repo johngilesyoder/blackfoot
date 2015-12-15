@@ -61,7 +61,7 @@
               <div class="col-md-6">
                 <div class="footer-trust-badges">
                   <img class="badge-trout-unlimited" src="<?php echo get_template_directory_uri(); ?>/assets/img/badge-trout-unlimited.png">
-                  <img class="badge-orvis" src="<?php echo get_template_directory_uri(); ?>/assets/img/badge-orvis.png">
+                  <img class="badge-orvis" src="<?php echo get_template_directory_uri(); ?>/assets/img/badge-orvis.gif">
                   <div id="TA_rated962" class="TA_rated">
                     <ul id="7XBxF3" class="TA_links FROh1OTFY">
                       <li id="j2EPwUo8G6" class="CpXczI">
