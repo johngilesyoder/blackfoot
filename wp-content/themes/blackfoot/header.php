@@ -1,6 +1,6 @@
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
-	<head>
+	<head <?php do_action( 'add_head_attributes' ); ?>>
 
     <!-- Title -->
     <!-- =================================== -->
