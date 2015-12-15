@@ -368,6 +368,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/og-default.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 427814,
+		"inputAbbreviatedPath": "\/assets\/img\/og-default.png",
+		"outputAbbreviatedPath": "\/assets\/img\/og-default.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/og-home.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 811446,
+		"inputAbbreviatedPath": "\/assets\/img\/og-home.png",
+		"outputAbbreviatedPath": "\/assets\/img\/og-home.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/og-image.png": {
 		"fileType": 32768,
 		"ignore": 0,

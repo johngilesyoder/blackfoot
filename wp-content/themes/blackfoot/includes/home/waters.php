@@ -41,7 +41,7 @@
           <!-- Water Block -->
           <div class="water-tile-wrapper">
             <article class="water-tile">
-              <a href="#" class="water-block" style="background-image: url('<?php echo $thumb_url; ?>');">
+              <a href="<?php the_permalink(); ?>" class="water-block" style="background-image: url('<?php echo $thumb_url; ?>');">
                 <h1 class="trip-title"><?php the_title(); ?></h1>
               </a>
               <div class="water-summary">
