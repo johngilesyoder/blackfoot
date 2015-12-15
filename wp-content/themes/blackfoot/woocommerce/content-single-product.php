@@ -47,7 +47,7 @@ if( function_exists('get_product') ){
 				<div class="product-share">
 					<!-- FB -->
 					<div class="share-fb">
-						<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
+						<div class="fb-share-button" data-href="<?php the_permalink(); ?>" data-layout="button"></div>
 					</div>
 					<!-- Tweet -->
 					<div class="share-tweet">
