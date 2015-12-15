@@ -7,6 +7,9 @@
   $trust_block_1_text       = types_render_field("trust-block-1-text", array());
   $trust_block_2_text       = types_render_field("trust-block-2-text", array());
   $trust_block_3_text       = types_render_field("trust-block-3-text", array());
+  $trust_block_1_photo      = types_render_field("trust-block-1-photo", array('raw' => true));
+  $trust_block_2_photo      = types_render_field("trust-block-2-photo", array('raw' => true));
+  $trust_block_3_photo      = types_render_field("trust-block-3-photo", array('raw' => true));
 ?>
 
 <section id="home-trust" class="home-trust">
@@ -48,7 +51,7 @@
         <div class="col-md-4">
           <div class="relax-block">
             <div class="relax-block-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax-block-1.jpg">
+              <span class="trust-photo" style="background-image:url('<?php echo $trust_block_1_photo; ?>');"><span>
             </div>
             <p><?php echo $trust_block_1_text; ?></p>
           </div>
@@ -56,7 +59,7 @@
         <div class="col-md-4">
           <div class="relax-block">
             <div class="relax-block-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax-block-2.jpg">
+              <span class="trust-photo" style="background-image:url('<?php echo $trust_block_2_photo; ?>');"><span>
             </div>
             <p><?php echo $trust_block_2_text; ?></p>
           </div>
@@ -64,7 +67,7 @@
         <div class="col-md-4">
           <div class="relax-block">
             <div class="relax-block-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax-block-3.jpg">
+              <span class="trust-photo" style="background-image:url('<?php echo $trust_block_3_photo; ?>');"><span>
             </div>
             <p><?php echo $trust_block_3_text; ?></p>
           </div>

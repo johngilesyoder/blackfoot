@@ -9308,10 +9308,11 @@ fieldset[disabled] .home section .btn-book.active {
   text-align: center;
   padding: 15px;
 }
-.home .home-trust .home-relax .relax-block .relax-block-img img {
+.home .home-trust .home-relax .relax-block .relax-block-img .trust-photo {
+  height: 220px;
+  background-size: cover;
+  background-position: 50% 50%;
   display: block;
-  max-width: 100%;
-  height: auto;
 }
 .home .home-trust .home-relax .relax-block .relax-block-img:after {
   content: '';
