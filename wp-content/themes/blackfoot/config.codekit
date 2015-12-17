@@ -236,6 +236,50 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/home-hero-4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 881225,
+		"inputAbbreviatedPath": "\/assets\/img\/home-hero-4.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/home-hero-4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/home-hero-5.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.23688e+06,
+		"inputAbbreviatedPath": "\/assets\/img\/home-hero-5.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/home-hero-5.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/home-hero-6.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.15116e+06,
+		"inputAbbreviatedPath": "\/assets\/img\/home-hero-6.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/home-hero-6.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/home-hero-7.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 873183,
+		"inputAbbreviatedPath": "\/assets\/img\/home-hero-7.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/home-hero-7.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/illustration-beaverhead.png": {
 		"fileType": 32768,
 		"ignore": 0,

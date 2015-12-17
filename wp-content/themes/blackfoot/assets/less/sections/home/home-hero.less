@@ -24,7 +24,10 @@
         position: absolute;
         bottom: 125px;
         left: 0;
-        width: 60%;
+        width: 65%;
+        background: rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        padding: 30px;
         .subtitle {
           font-family: @font-family-sans-serif;
           font-weight: 700;
@@ -36,11 +39,26 @@
           font-weight: 700;
           line-height: 1em;
           margin: 0 0 40px;
+          text-shadow: 0 1px 10px rgba(0,0,0,.5);
         }
         .btn-secondary {
           border: 0;
           font-size: 24px;
           font-weight: 700;
+          position: relative;
+          z-index: 10;
+          &:before {
+            content: '';
+            position: absolute;
+            z-index: -2;
+            top: -7px;
+            bottom: -7px;
+            left: -7px;
+            right: -7px;
+            border:7px solid rgba(0, 0, 0, 0.35);
+            border-radius: 6px;
+            display: inline-block;
+          }
         }
         .subtext {
           display: block;

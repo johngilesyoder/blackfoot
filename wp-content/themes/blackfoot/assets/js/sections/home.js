@@ -8,7 +8,8 @@
     $('#hero-carousel').flickity({
       // options
       autoPlay: 5000,
-      pageDots: false
+      pageDots: false,
+      wrapAround: true
     });
 
     // init controller
