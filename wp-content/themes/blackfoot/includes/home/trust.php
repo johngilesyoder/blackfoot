@@ -19,7 +19,7 @@
       <div class="row">
         <div class="col-md-3">
           <div class="family-photo">
-            <img class="photo" src="<?php echo get_template_directory_uri(); ?>/assets/img/family.png">
+            <img class="photo" src="<?php echo get_template_directory_uri(); ?>/assets/img/family.jpg">
             <span class="bro-logo">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-text-white.svg">
             </span>
