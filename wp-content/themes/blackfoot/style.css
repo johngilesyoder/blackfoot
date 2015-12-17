@@ -7547,21 +7547,6 @@ fieldset[disabled] .book-now-banner .btn-book.active {
     width: 50%;
   }
 }
-.water-tile-wrapper:last-child {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 992px) {
-  .water-tile-wrapper:last-child {
-    float: left;
-    width: 100%;
-  }
-}
-.water-tile-wrapper:last-child .water-block {
-  height: 435px;
-}
 .water-tile {
   margin-bottom: 30px;
   min-height: 400px;
