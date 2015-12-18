@@ -130,6 +130,7 @@ if( function_exists('get_product') ){
 		<div class="row">
 			<div class="col-md-8">
 				<?php woocommerce_output_product_data_tabs(); ?>
+				<?php get_template_part( 'includes/shop/shop-retail-block' ); ?>
 			</div>
 			<div class="col-md-4">
 				<?php woocommerce_output_related_products(); ?>

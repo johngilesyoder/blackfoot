@@ -11120,6 +11120,26 @@ textarea.search-results .category-sorting .woocommerce-ordering .orderby {
 .single-product.woocommerce .item-bottom {
   border-top: 1px solid #D2D0CE;
 }
+.single-product.woocommerce .product-retail {
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  margin-bottom: 30px;
+  background: #F7F5F4;
+  border-radius: 6px;
+}
+.single-product.woocommerce .product-retail h3 {
+  font-size: 21px;
+  font-weight: 700;
+  margin: 15px 0 5px;
+  color: #665F5A;
+}
+.single-product.woocommerce .product-retail img {
+  border-radius: 6px 0 0 6px;
+}
+.single-product.woocommerce .product-retail p {
+  font-size: 14px;
+  padding: 10px;
+  margin: 0;
+}
 .single-product.woocommerce .title-group {
   background-image: url('assets/img/dotted-line-horiz.svg');
   background-repeat: no-repeat;
