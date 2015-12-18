@@ -78,7 +78,7 @@
 
 <?php endwhile; wp_reset_query(); ?>  
 
-<?php endif; ?> 
+<?php endif; ?>
 
 <!-- NEW ITEMS -->
 <!-- =================================== -->
