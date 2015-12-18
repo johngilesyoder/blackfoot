@@ -27,7 +27,7 @@
 
         <?php
           // Define loop
-          $loop = new WP_Query( array( 'post_type' => 'water', 'posts_per_page' => 9 ) );
+          $loop = new WP_Query( array( 'post_type' => 'water', 'posts_per_page' => 9, 'order' => 'asc' ) );
           // Start loop
           while ( $loop->have_posts() ) : $loop->the_post();
           // Set variables
