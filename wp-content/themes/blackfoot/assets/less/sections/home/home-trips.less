@@ -30,6 +30,7 @@
         text-decoration: none;
         box-shadow: none;
         transition: box-shadow 150ms;
+        position: relative;
         &:hover {
           box-shadow: 0 1px 10px rgba(0,0,0,.3);
           h1 {
@@ -65,6 +66,30 @@
             position: relative;
             right: -30px;
             top: -2px;
+          }
+        }
+        .most-popular {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          padding: 4px 20px;
+          font-family: @font-family-sans-serif;
+          color: #fff;
+          font-weight: 700;
+          font-size: 13px;
+          text-transform: uppercase;
+          background: @brand-peach;
+          &:before {
+            content: '';
+            display: inline-block;
+            height: 14px;
+            width: 14px;
+            background-image: url('assets/img/icon-star-white.svg');
+            background-size: cover;
+            margin-right: 10px;
+            vertical-align: middle;
+            position: relative;
+            top: -1px;
           }
         }
       }

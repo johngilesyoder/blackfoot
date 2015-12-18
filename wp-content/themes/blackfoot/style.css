@@ -7578,10 +7578,7 @@ fieldset[disabled] .book-now-banner .btn-book.active {
   transition: background-position 150ms;
   background-position: 100% 0;
   margin: 0;
-  background-image: -webkit-linear-gradient(left, #46a0ce 0%, rgba(70, 160, 206, 0.58) 100%);
-  background-image: linear-gradient(to right, #46a0ce 0%, rgba(70, 160, 206, 0.58) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff46a0ce', endColorstr='#9446a0ce', GradientType=1);
+  background: rgba(54, 41, 32, 0.8);
 }
 .water-tile .water-block h1:after {
   content: '';
@@ -9355,6 +9352,7 @@ fieldset[disabled] .home section .btn-book.active {
   box-shadow: none;
   -webkit-transition: box-shadow 150ms;
   transition: box-shadow 150ms;
+  position: relative;
 }
 .home .home-trips .home-trip .trip-block:hover {
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
@@ -9394,6 +9392,30 @@ fieldset[disabled] .home section .btn-book.active {
   position: relative;
   right: -30px;
   top: -2px;
+}
+.home .home-trips .home-trip .trip-block .most-popular {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 4px 20px;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  background: #F7915E;
+}
+.home .home-trips .home-trip .trip-block .most-popular:before {
+  content: '';
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  background-image: url('assets/img/icon-star-white.svg');
+  background-size: cover;
+  margin-right: 10px;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
 }
 .home .home-trips .col-md-4:nth-child(1) .home-trip .trip-block h1 {
   background-image: -webkit-linear-gradient(left, #aa7144 0%, rgba(170, 113, 68, 0.58) 100%);
