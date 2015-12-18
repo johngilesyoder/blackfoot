@@ -11122,14 +11122,14 @@ textarea.search-results .category-sorting .woocommerce-ordering .orderby {
 }
 .single-product.woocommerce .product-retail {
   font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   background: #F7F5F4;
   border-radius: 6px;
 }
 .single-product.woocommerce .product-retail h3 {
   font-size: 21px;
   font-weight: 700;
-  margin: 15px 0 5px;
+  margin: 20px 0 0;
   color: #665F5A;
 }
 .single-product.woocommerce .product-retail img {
