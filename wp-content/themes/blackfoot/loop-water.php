@@ -1,16 +1,10 @@
 <div class="row">
 <?php 
-  // Arguments
-  $waters_args = array (
-    'order'      => 'ASC',
-    'post_type'  => array( 'water' ),
-  );
-  // Query
-  $waters_query = new WP_Query( $water_args );
-?>
-<?php if ($waters_query->have_posts()): while ($waters_query->have_posts()) : $waters_query->the_post();
-
-	// Set testimonial variables
+  // Define loop
+  $loop = new WP_Query( array( 'post_type' => 'water', 'posts_per_page' => 9, 'order' => 'asc' ) );
+  // Start loop
+  while ( $loop->have_posts() ) : $loop->the_post();
+  // Set variables
   $thumb_id           = get_post_thumbnail_id();
   $thumb_url_array    = wp_get_attachment_image_src($thumb_id, 'full', true);
   $thumb_url          = $thumb_url_array[0];
