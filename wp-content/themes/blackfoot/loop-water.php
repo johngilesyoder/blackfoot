@@ -1,5 +1,6 @@
 <div class="row">
-<?php if (have_posts()): while (have_posts()) : the_post();
+<?php $waters_query = new WP_Query( 'order=ASC' ); ?>
+<?php if ($query->have_posts()): while ($query->have_posts()) : $query->the_post();
 
 	// Set testimonial variables
   $thumb_id           = get_post_thumbnail_id();
