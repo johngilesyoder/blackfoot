@@ -78,6 +78,7 @@
           </button>
           <!-- Site logo -->
           <a class="navbar-brand" href="/">
+          Test
             <span class="site-logo">
               <img class="logo-left" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-mark-white.svg">
               <img class="logo-right" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-text-white.svg">
