@@ -19,6 +19,18 @@
     $stat_distance = types_render_field("travel-distances-from-missoula", array("raw"=>"true"));
     $stat_accommodations = types_render_field("bank-side-accommodations", array("raw"=>"true"));
     $stat_style = types_render_field("primary-style-of-fishing", array("raw"=>"true"));
+    $stat_pattern_1_title = types_render_field("pattern-1-title", array("raw"=>"true"));
+    $stat_pattern_2_title = types_render_field("pattern-2-title", array("raw"=>"true"));
+    $stat_pattern_3_title = types_render_field("pattern-3-title", array("raw"=>"true"));
+    $stat_pattern_4_title = types_render_field("pattern-4-title", array("raw"=>"true"));
+    $stat_pattern_5_title = types_render_field("pattern-5-title", array("raw"=>"true"));
+    $stat_pattern_6_title = types_render_field("pattern-6-title", array("raw"=>"true"));
+    $stat_pattern_1_image = types_render_field("pattern-1-image", array("raw"=>"true"));
+    $stat_pattern_2_image = types_render_field("pattern-2-image", array("raw"=>"true"));
+    $stat_pattern_3_image = types_render_field("pattern-3-image", array("raw"=>"true"));
+    $stat_pattern_4_image = types_render_field("pattern-4-image", array("raw"=>"true"));
+    $stat_pattern_5_image = types_render_field("pattern-5-img", array("raw"=>"true"));
+    $stat_pattern_6_image = types_render_field("pattern-6-img", array("raw"=>"true"));
 	?>
 
 		<!-- Article -->
@@ -88,22 +100,22 @@
 										<h4>Total River Miles We Guide</h4>
 										<p><?php echo $stat_miles; ?></p>
 									</li>
-									<?php if ( $stat_distance !== '' ) : ?>
 									<? endif; ?>
+									<?php if ( $stat_distance !== '' ) : ?>
 									<li class="stat">
 										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-stat-distance.svg">
 										<h4>Travel Distances from Missoula</h4>
 										<p><?php echo $stat_distance; ?></p>
 									</li>
-									<?php if ( $stat_accommodations !== '' ) : ?>
 									<? endif; ?>
+									<?php if ( $stat_accommodations !== '' ) : ?>
 									<li class="stat">
 										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-stat-accommodations.svg">
 										<h4>Bank-side Accommodations</h4>
 										<p><?php echo $stat_accommodations; ?></p>
 									</li>
-									<?php if ( $stat_style !== '' ) : ?>
 									<? endif; ?>
+									<?php if ( $stat_style !== '' ) : ?>
 									<li class="stat">
 										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-stat-style.svg">
 										<h4>Primary Style of Fishing</h4>
@@ -115,7 +127,44 @@
 							<section class="water-patterns">
 								<h2 class="section-title">BRO’s Top Five Patterns for <em><?php the_title(); ?></em></h2>	
 								<div class="row">	
-									<?php echo types_render_field("top-five-patterns", array( )) ?>
+									<ul>
+									<?php if ( $stat_pattern_1_title !== '' ) : ?>
+									<li>
+										<span class="pattern-img" style="background-image:url('<?php echo $stat_pattern_1_image; ?>');"></span>
+										<?php echo $stat_pattern_1_title; ?>
+									</li>
+									<? endif; ?>
+									<?php if ( $stat_pattern_2_title !== '' ) : ?>
+									<li>
+										<span class="pattern-img" style="background-image:url('<?php echo $stat_pattern_2_image; ?>');"></span>
+										<?php echo $stat_pattern_2_title; ?>
+									</li>
+									<? endif; ?>
+									<?php if ( $stat_pattern_3_title !== '' ) : ?>
+									<li>
+										<span class="pattern-img" style="background-image:url('<?php echo $stat_pattern_3_image; ?>');"></span>
+										<?php echo $stat_pattern_3_title; ?>
+									</li>
+									<? endif; ?>
+									<?php if ( $stat_pattern_4_title !== '' ) : ?>
+									<li>
+										<span class="pattern-img" style="background-image:url('<?php echo $stat_pattern_4_image; ?>');"></span>
+										<?php echo $stat_pattern_4_title; ?>
+									</li>
+									<? endif; ?>
+									<?php if ( $stat_pattern_5_title !== '' ) : ?>
+									<li>
+										<span class="pattern-img" style="background-image:url('<?php echo $stat_pattern_5_image; ?>');"></span>
+										<?php echo $stat_pattern_5_title; ?>
+									</li>
+									<? endif; ?>
+									<?php if ( $stat_pattern_6_title !== '' ) : ?>
+									<li>
+										<span class="pattern-img" style="background-image:url('<?php echo $stat_pattern_6_image; ?>');"></span>
+										<?php echo $stat_pattern_6_title; ?>
+									</li>
+									<? endif; ?>
+									</ul>
 								</div>					
 							</section>
 						</div>

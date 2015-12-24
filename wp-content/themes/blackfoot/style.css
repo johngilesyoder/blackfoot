@@ -9847,12 +9847,16 @@ fieldset[disabled] .home section .btn-book.active {
     width: 50%;
   }
 }
-.single-water .water-patterns li img {
+.single-water .water-patterns li .pattern-img {
   border-radius: 50%;
+  height: 72px;
+  width: 72px;
   border: 3px solid #665F5A;
   float: left;
-  width: 20%;
+  display: inline-block;
   margin-right: 15px;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 .single-water .water-sidebar .sidebar-title {
   font-size: 21px;
