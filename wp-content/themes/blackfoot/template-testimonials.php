@@ -23,6 +23,10 @@
 				
 				<?php endif; ?>
 
+				<div class="orvis-reviews">
+					<iframe src="http://reviews.orvis.com/7532npa/8e2a/reviews.htm?format=noscript" width="100%" height="600" frameBorder="0" seamless="seamless"></iframe>
+				</div>
+				
 					<?php
 					  // Define loop
 					  $loop = new WP_Query( array( 'post_type' => 'testimonial', 'posts_per_page' => 6 ) );

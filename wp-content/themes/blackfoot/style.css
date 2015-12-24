@@ -10300,7 +10300,10 @@ textarea.single-fishing-report .select-report select {
   text-decoration: underline;
 }
 .page-template-template-testimonials article {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+.page-template-template-testimonials .orvis-reviews {
+  margin-bottom: 30px;
 }
 .page-template-template-testimonials .testimonial {
   border: 0;

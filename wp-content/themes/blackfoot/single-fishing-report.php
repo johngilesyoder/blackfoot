@@ -103,64 +103,94 @@
 							<section class="report-specifics">
 								<h3 class="section-title">Specifics</h3>
 								<div class="report-specification">
+									<?php if ( $report_flow !== '' ) : ?>
 									<h4>Water Flow</h4>
 									<?php echo $report_flow; ?>
+									<? endif; ?>
 								</div>
 								<div class="report-specification">
+									<?php if ( $report_visibility !== '' ) : ?>
 									<h4>Visibility</h4>
 									<?php echo $report_visibility; ?>
+									<? endif; ?>
 								</div>
 								<div class="report-specification">
+									<?php if ( $report_temperature !== '' ) : ?>
 									<h4>Water temperature at mid-day</h4>
 									<?php echo $report_temperature; ?>
+									<? endif; ?>
 								</div>
 								<div class="report-specification">
+									<?php if ( $report_water_condition !== '' ) : ?>
 									<h4>Water Condition</h4>
 									<?php echo $report_water_condition; ?>
+									<? endif; ?>
 								</div>
 								<div class="report-specification">
+									<?php if ( $report_time !== '' ) : ?>
 									<h4>Best time of day to fish</h4>
 									<?php echo $report_time; ?>
+									<? endif; ?>
 								</div>
 								<div class="report-specification">
+									<?php if ( $report_stretch !== '' ) : ?>
 									<h4>Best stretch</h4>
 									<?php echo $report_stretch; ?>
+									<? endif; ?>
 								</div>
 								<div class="report-specification">
+									<?php if ( $report_access !== '' ) : ?>
 									<h4>Best access point</h4>
 									<?php echo $report_access; ?>
+									<? endif; ?>
 								</div>
 								<div class="report-specification">
+									<?php if ( $report_species !== '' ) : ?>
 									<h4>Fish species</h4>
 									<?php echo $report_species; ?>
+									<? endif; ?>
 								</div>
 								<div class="report-specification">
+									<?php if ( $report_season !== '' ) : ?>
 									<h4>Fishing season</h4>
 									<?php echo $report_season; ?>
+									<? endif; ?>
 								</div>
 								<div class="report-specification">
+									<?php if ( $report_airport !== '' ) : ?>
 									<h4>Nearest airport</h4>
 									<?php echo $report_airport; ?>
+									<? endif; ?>
 								</div>
 								<div class="report-specification">
+									<?php if ( $report_leader !== '' ) : ?>
 									<h4>Recommended fly fishing leader</h4>
 									<?php echo $report_leader; ?>
+									<? endif; ?>
 								</div>
 								<div class="report-specification">
+									<?php if ( $report_tippet !== '' ) : ?>
 									<h4>Recommended fly fishing tippet</h4>
 									<?php echo $report_tippet; ?>
+									<? endif; ?>
 								</div>
 								<div class="report-specification">
+									<?php if ( $report_rod !== '' ) : ?>
 									<h4>Best fly fishing rod</h4>
 									<?php echo $report_rod; ?>
+									<? endif; ?>
 								</div>
 								<div class="report-specification">
+									<?php if ( $report_floating_line !== '' ) : ?>
 									<h4>Best floating fly line</h4>
 									<?php echo $report_floating_line; ?>
+									<? endif; ?>
 								</div>
 								<div class="report-specification">
+									<?php if ( $report_sinking_line !== '' ) : ?>
 									<h4>Best sinking fly line</h4>
 									<?php echo $report_sinking_line; ?>
+									<? endif; ?>
 								</div>
 							</section>
 						</div>
