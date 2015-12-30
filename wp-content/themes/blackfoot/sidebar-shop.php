@@ -1,5 +1,6 @@
 <aside class="shop-sidebar" role="complementary">
 	<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-shop')) ?>
+  <a class="sidebar-sale" href="/on-sale/"><span class="glyphicon glyphicon-tag"></span>Shop Sales</a>
   <div class="sidebar-retail">
     <h3><span class="glyphicon glyphicon-map-marker"></span> Come visit us!</h3>
     <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/img/home-hero-5.jpg">

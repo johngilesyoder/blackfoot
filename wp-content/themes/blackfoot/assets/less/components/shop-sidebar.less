@@ -36,7 +36,7 @@
   color: @brand-brown;
   font-family: @font-family-sans-serif;
   padding: 15px;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
   h3 {
     font-size: 21px;
     font-weight: 700;
@@ -61,6 +61,24 @@
     .current-cat > a {
       font-weight: 700;
     }
+  }
+}
+
+// Categories list
+.sidebar-sale {
+  background: lighten(@brand-peach,30%);
+  color: @brand-peach;
+  display: block;
+  font-family: @font-family-sans-serif;
+  padding: 15px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  &:hover {
+    color: darken(@brand-peach, 15%);
+  }
+  .glyphicon {
+    vertical-align: middle;
+    margin-right: 10px;
   }
 }
 

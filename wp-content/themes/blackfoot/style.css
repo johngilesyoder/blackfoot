@@ -7790,7 +7790,7 @@ textarea.widget_product_search .woocommerce-product-search .search-field {
   color: #665F5A;
   font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
   padding: 15px;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 .widget_product_categories h3 {
   font-size: 21px;
@@ -7814,6 +7814,22 @@ textarea.widget_product_search .woocommerce-product-search .search-field {
 }
 .widget_product_categories ul .current-cat > a {
   font-weight: 700;
+}
+.sidebar-sale {
+  background: #fef5f0;
+  color: #F7915E;
+  display: block;
+  font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
+  padding: 15px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+.sidebar-sale:hover {
+  color: #f35f15;
+}
+.sidebar-sale .glyphicon {
+  vertical-align: middle;
+  margin-right: 10px;
 }
 .sidebar-retail {
   font-family: "freight-sans-pro", "Helvetica Neue", Arial, sans-serif;
