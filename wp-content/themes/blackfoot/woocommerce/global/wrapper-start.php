@@ -16,7 +16,7 @@ if( function_exists('get_product') ){
 }
 ?>
 
-<?php if ( $product->is_type( 'booking' ) ) : ?>
+<?php if is_product() && ( $product->is_type( 'booking' ) ) : ?>
 
   <!-- BREADCRUMB -->
   <div class="trip-breadcrumb">
