@@ -16,7 +16,7 @@ if( function_exists('get_product') ){
 }
 ?>
 
-<?php if is_product() : ?>
+<?php if (is_product()) : ?>
   <?php if ( $product->is_type( 'booking' ) ) : ?>
 
   <!-- BREADCRUMB -->
@@ -25,7 +25,7 @@ if( function_exists('get_product') ){
       <?php woocommerce_breadcrumb(); ?>
     </div>
   </div>
-  
+
   <?php endif; ?>
 <?php else : ?>
 
