@@ -33,6 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	    <?php
 	    	$args = array(
 	    	    'post_type'      => 'product',
+	    	    'paged'          => $paged,
 	    	    'meta_query'     => array(
 	    	        'relation' => 'OR',
 	    	        array( // Simple products type
