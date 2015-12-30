@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="col-md-9">
 
     	<hgroup class="category-title">
-				<h1 class="page-title"><?php the_title(); ?></h1>
+				<h1 class="page-title"><span class="glyphicon glyphicon-tag"></span> <?php the_title(); ?></h1>
 				<div class="term-description">
 					<?php the_content(); ?>
 				</div>

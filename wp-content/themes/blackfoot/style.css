@@ -13817,6 +13817,10 @@ textarea.woocommerce-order-received .shop_table tbody .order_item td .input-text
 .woocommerce-order-received .addresses address {
   margin-bottom: 30px;
 }
+.page-template-archive-product_sale .category-title .page-title .glyphicon {
+  vertical-align: middle;
+  margin-right: 5px;
+}
 .page-template-archive-product_sale .shop-banner {
   margin-bottom: 40px;
 }
