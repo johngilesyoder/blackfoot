@@ -16,9 +16,8 @@ if( function_exists('get_product') ){
 }
 ?>
 
-<?php if (is_product()) : ?>
-  <?php if ( $product->is_type( 'booking' ) ) : ?>
-
+<?php if (is_product() && $product->is_type( 'booking' ) ) : ?>
+  
   <!-- BREADCRUMB -->
   <div class="trip-breadcrumb">
     <div class="container">
@@ -26,7 +25,6 @@ if( function_exists('get_product') ){
     </div>
   </div>
 
-  <?php endif; ?>
 <?php else : ?>
 
   <!-- SHOP BANNER -->
