@@ -46,10 +46,10 @@
 						<h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-flintcreek.png"></h3>
 						<div class="address-wrapper">
 							<address>
-								116 West Broadway<br>
+								148 West Broadway<br>
 								Philipsburg, Montana 59858
 							</address>
-							<span class="location-email"><strong>Email:</strong> <a href="info@flintcreekoutdoors.com">info@flintcreekoutdoors.com</a></span>
+							<span class="location-email"><strong>Email:</strong> <a href="info@flintcreekoutdoors.com">matthew@blackfootriver.com</a></span>
 							<span class="location-phone"><strong>Phone:</strong> (406) 859-9500</span>
 						</div>
 						<div class="map-wrapper">
