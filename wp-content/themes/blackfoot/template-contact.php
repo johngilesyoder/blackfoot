@@ -34,7 +34,7 @@
 								3055 North Reserve Street, Suite A-1<br>
 								Missoula, Montana 59808
 							</address>
-							<span class="location-email"><strong>Email:</strong> <a href="mailto:info@blackfootriver.com">info@blackfootriver.com</a></span>
+							<span class="location-email"><strong>Email:</strong> <a href="mailto:trout@blackfootriver.com">trout@blackfootriver.com</a></span>
 							<span class="location-phone"><strong>Phone:</strong> (406) 542-7411</span>
 						</div>
 						<div class="map-wrapper">
