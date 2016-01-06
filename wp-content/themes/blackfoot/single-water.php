@@ -55,7 +55,7 @@
 									<span class="water-location"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-location-white.svg"><?php echo $water_location; ?></span>
 								<? endif; ?>
 								<?php if ( $water_video !== '' ) : ?>
-									<a href="<?php echo $water_video; ?>" class="water-video"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-water-video.svg">Watch the Video</a>
+									<a href="<?php echo $water_video; ?>" target="_blank" class="water-video"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-water-video.svg">Watch the Video</a>
 								<? endif; ?>
 								<?php if ( $water_report !== '' ) : ?>
 									<a href="<?php echo $water_report; ?>" class="water-report"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-water-report.svg">View Fishing Report</a>
