@@ -125,7 +125,7 @@
 							</section>
 							<!-- Top 5 Patterns -->
 							<section class="water-patterns">
-								<h2 class="section-title">BRO’s Top Five Patterns for <em><?php the_title(); ?></em></h2>	
+								<h2 class="section-title">BRO’s Top Six Patterns for <em><?php the_title(); ?></em></h2>	
 								<div class="row">	
 									<ul>
 									<?php if ( $stat_pattern_1_title !== '' ) : ?>
