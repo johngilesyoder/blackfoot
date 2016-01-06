@@ -65,11 +65,11 @@
                   <div id="TA_rated962" class="TA_rated">
                     <ul id="7XBxF3" class="TA_links FROh1OTFY">
                       <li id="j2EPwUo8G6" class="CpXczI">
-                        <a target="_blank" href="http://www.tripadvisor.com/"><img src="https://www.tripadvisor.com/img/cdsi/img2/badges/ollie-11424-2.gif" alt="TripAdvisor"/></a>
+                        <a target="_blank" href="http://www.tripadvisor.com/"><img src="//www.tripadvisor.com/img/cdsi/img2/badges/ollie-11424-2.gif" alt="TripAdvisor"/></a>
                       </li>
                     </ul>
                   </div>
-                  <script src="https://www.tripadvisor.com/WidgetEmbed-rated?amp;locationId=4242339&amp;lang=en_US&amp;display_version=2&amp;uniq=962"></script>
+                  <script src="//www.jscache.com/wejs?wtype=rated&amp;uniq=962&amp;locationId=4242339&amp;lang=en_US&amp;display_version=2"></script>
                 </div>
               </div>
               <div class="col-md-6">
