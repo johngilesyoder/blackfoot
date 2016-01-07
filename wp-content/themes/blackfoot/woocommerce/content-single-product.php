@@ -95,6 +95,7 @@ if( function_exists('get_product') ){
 
 			<div class="free-shipping-message">
 				<p><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-shipping-brown.svg"> <strong>Free Shipping</strong> on orders over $50!</p>
+				<p><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-tax-brown.svg"> <strong>No Sales Tax!</strong></p>
 			</div>
 			<!-- Shop with confidence -->
 			<div class="shop-confidence">
