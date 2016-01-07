@@ -775,6 +775,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/assets\/js\/lib\/bootstrap.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/lib\/bootstrap.min.js",
+		"outputAbbreviatedPath": "\/assets\/js\/lib\/min\/bootstrap.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/assets\/js\/lib\/conditionizr-4.3.0.min.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -803,6 +814,28 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/js\/lib\/modernizr-2.7.1.min.js",
 		"outputAbbreviatedPath": "\/assets\/js\/lib\/min\/modernizr-2.7.1.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/assets\/js\/lib\/ScrollMagic.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/lib\/ScrollMagic.min.js",
+		"outputAbbreviatedPath": "\/assets\/js\/lib\/min\/ScrollMagic.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/assets\/js\/lib\/TweenMax.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/lib\/TweenMax.min.js",
+		"outputAbbreviatedPath": "\/assets\/js\/lib\/min\/TweenMax.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
