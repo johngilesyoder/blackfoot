@@ -58,7 +58,7 @@
     </div>
     <!-- Section Book -->
     <div class="section-book">
-      <a href="/book-a-trip-with-us/" class="btn btn-book">Book your trip on Montana's legendary waters</a>
+      <a href="/trips/" class="btn btn-book">Book your trip on Montana's legendary waters</a>
     </div>
   </div>
 </section>

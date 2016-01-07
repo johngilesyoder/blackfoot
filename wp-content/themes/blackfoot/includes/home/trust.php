@@ -75,7 +75,7 @@
       </div>
       <!-- Section book -->
       <div class="section-book">
-        <a href="/book-a-trip-with-us/" class="btn btn-book">Book your Montana fly fishing adventure</a>
+        <a href="/trips/" class="btn btn-book">Book your Montana fly fishing adventure</a>
       </div>
     </div>
   </div>
