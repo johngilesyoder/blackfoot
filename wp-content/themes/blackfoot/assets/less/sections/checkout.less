@@ -230,6 +230,13 @@
         margin: 0;
         list-style-type: none;
         width: 200px;
+        input {
+          margin-right: 3px;
+        }
+        label {
+          font-weight: 400;
+          font-family: @font-family-sans-serif;
+        }
       }
     }
     .woocommerce-checkout-payment {
@@ -246,6 +253,9 @@
           font-family: @font-family-sans-serif;
         }
         .payment_method_stripe {
+          .button {
+            margin-bottom: 15px;
+          }
           & > label {
             
           }
