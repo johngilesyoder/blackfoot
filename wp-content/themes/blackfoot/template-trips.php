@@ -6,7 +6,15 @@
 				<div class="col-md-10 col-md-offset-1">
 					<!-- Page Title -->
 					<h1 class="page-title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-fly.svg"> <?php the_title(); ?></h1>
+
+					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+					
 					<div class="page-summary"><?php the_content(); ?></div>
+
+					<?php endwhile; ?>
+
+					<?php else: ?>
+						
 				</div>
 			</div>
 		</div>
