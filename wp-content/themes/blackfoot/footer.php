@@ -62,14 +62,6 @@
                 <div class="footer-trust-badges">
                   <img class="badge-trout-unlimited" src="<?php echo get_template_directory_uri(); ?>/assets/img/badge-trout-unlimited.png">
                   <img class="badge-orvis" src="<?php echo get_template_directory_uri(); ?>/assets/img/badge-orvis.gif">
-                  <!-- <div id="TA_rated962" class="TA_rated">
-                    <ul id="7XBxF3" class="TA_links FROh1OTFY">
-                      <li id="j2EPwUo8G6" class="CpXczI">
-                        <a target="_blank" href="http://www.tripadvisor.com/"><img src="//www.tripadvisor.com/img/cdsi/img2/badges/ollie-11424-2.gif" alt="TripAdvisor"/></a>
-                      </li>
-                    </ul>
-                  </div> -->
-                  <!--<script src="//www.tripadvisor.com/WidgetEmbed-rated?amp;locationId=4242339&amp;lang=en_US&amp;display_version=2&amp;uniq=962"></script>-->
                   <div id="TA_cdsratingsonlynarrow294" class="TA_cdsratingsonlynarrow">
                   <ul id="cHawndw68FTP" class="TA_links NLqReYcK">
                   <li id="OjEizlKd" class="DzoCNUjA1SS">
@@ -78,7 +70,6 @@
                   </ul>
                   </div>
                   <script src="//www.tripadvisor.com/WidgetEmbed-cdsratingsonlynarrow?amp;locationId=4242339&amp;border=true&amp;uniq=294&amp;lang=en_US&amp;display_version=2"></script>
-
                 </div>
               </div>
               <div class="col-md-6">
