@@ -83,7 +83,7 @@
           <div class="footer-info">
             <!-- Footer copyright -->
             <div class="footer-copyright">
-              &copy; <?php echo date('Y'); ?> Blackfoot River Outfitters. All rights reserved. <a href="/privacy-policy">Privacy</a>
+              &copy; <?php echo date('Y'); ?> Blackfoot River Outfitters. All rights reserved. <a href="/privacy-policy">Privacy</a> &nbsp;<a href="/terms-of-service">Terms of Service</a>
             </div>
             <!-- Footer accepted payments -->
             <div class="footer-accepted-payments">
