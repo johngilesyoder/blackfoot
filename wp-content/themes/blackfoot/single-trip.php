@@ -8,6 +8,8 @@
 		$thumb_id = get_post_thumbnail_id();
     $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
     $thumb_url = $thumb_url_array[0];
+
+    $from_price = types_render_field("from-price", array("raw"=>"true"));
 	?>
 
 		<!-- Article -->
@@ -22,6 +24,11 @@
 						<div class="trip-hero-content">
 							<!-- Water Title -->
 							<h1 class="trip-title"><?php the_title(); ?></h1>
+							<div class="trip-meta">
+								<span class="price">
+				        	From <span class="amount">$<?php echo $from_price; ?></span> per day
+				      	</span>
+				      </div>
 						</div>
 					</div>
 				</div>
