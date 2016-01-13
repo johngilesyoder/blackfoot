@@ -8,7 +8,7 @@
           <div class="hero-panel-content">
             <span class="subtitle">Montana Fly Fishing Adventure</span>
             <h1>Before You Know It, You’re in <em>Deep</em>.</h1>
-            <a href="/trips/" class="btn btn-secondary">Book your trip now!</a>
+            <a href="/trip/" class="btn btn-secondary">Book your trip now!</a>
             <span class="subtext">or <a href="/water/">learn more</a> about our Montana Waters</span>
           </div>
         </div>

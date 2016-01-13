@@ -28,15 +28,9 @@
 
         <?php
           $args = array(
-            'post_type' => 'product',
+            'post_type' => 'trip',
             'posts_per_page' => 12,
-            'tax_query' => array(
-                array(
-                  'taxonomy' => 'product_type',
-                  'field'    => 'slug',
-                  'terms'    => 'booking', 
-                ),
-              ),
+            'order' => 'ASC',
             );
 
           $loop = new WP_Query( $args );
@@ -45,7 +39,7 @@
               get_template_part( 'includes/home/trip-block' );
             endwhile;
           } else {
-            echo __( 'No products found' );
+            echo __( 'No trips found' );
           }
           wp_reset_postdata();
         ?>
@@ -59,7 +53,7 @@
     </div>
     <!-- Section book -->
     <div class="section-book">
-      <a href="/trips/" class="btn btn-book">Book the trip of a lifetime</a>
+      <a href="/trip/" class="btn btn-book">Book the trip of a lifetime</a>
     </div>
   </div>
 </section>

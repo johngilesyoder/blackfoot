@@ -10,7 +10,7 @@
         </p>
       </div>
       <div class="col-md-4">
-        <a href="/trips/" class="btn btn-book">View rates &amp; book now</a>
+        <a href="/trip/" class="btn btn-book">View rates &amp; book now</a>
       </div>
     </div>
   </div>
