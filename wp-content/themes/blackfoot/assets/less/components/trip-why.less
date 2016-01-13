@@ -7,7 +7,7 @@
   hr {
     border: 0;
     height: 5px;
-    width: 350px;
+    //width: 350px;
     background-image: url('assets/img/dotted-line-horiz.svg');
     background-repeat: no-repeat;
     margin-bottom: 60px;
@@ -18,5 +18,65 @@
     font-weight: 700;
     margin-bottom: 30px;
     margin-top: 0;
+  }
+  // RELAX
+  .trip-relax {
+    margin-top: 60px;
+    .relax-block {
+      text-align: left;
+      margin-bottom: 60px;
+      .relax-block-img {
+        .trust-photo {
+          height: 220px;
+          background-size: cover;
+          background-position: 50% 50%;
+          display: block;
+          margin-bottom: 15px;
+        }
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .testimonial {
+    border: 0;
+    background: lighten(@brand-green, 30%);
+    padding: 20px 15px;
+    margin: 0 0 5px;
+    text-align: left;
+    .testimonial-photo {
+      border-radius: 50%;
+      width: 125px;
+      height: 125px;
+      background-size: cover;
+      background-position: 50% 50%;
+      margin: 0 auto;
+    }
+    p {
+      font-size: 21px;
+      font-style: italic;
+      margin: 0 0 10px;
+    }
+    footer {
+      font-size: 24px;
+      color: @brand-green;
+      font-weight: 700;
+      font-family: @font-family-sans-serif;
+      span {
+        color: @text-color;
+        font-weight: 500;
+      }
+      cite {
+        font-size: 14px;
+        color: @text-color;
+        font-weight: 500;
+        font-style: normal;
+      }
+      &:before {
+        content: '';
+        display: none;
+      }
+    }
   }
 }
