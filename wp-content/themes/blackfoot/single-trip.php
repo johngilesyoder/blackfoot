@@ -55,13 +55,13 @@
 								  <p>
 								    If you are interested in booking a trip on the beautiful Smith River, please call us at <a href="tel:+14065427411">(406) 542-7411</a> or <a href="/contact-us/">send us a message</a>.
 								  </p>
-								  <a href="/book-a-trip-with-us/" class="btn btn-book">Inquire or Book now</a>
+								  <a href="/contact-us/" class="btn btn-book">Inquire or Book now</a>
 									<?php else : ?>
 								  <h2>Book a trip!</h2>
 								  <p>
 								    <strong>Floatfish</strong>, <strong>Floatfish/Whitewater</strong>, <strong>Walk/Wade Combos</strong>, <strong>Overnight Trips</strong>, and <strong>Scenic trips</strong> available for many Montana waters.
 								  </p>
-								  <a href="/contact-us/" class="btn btn-book">Inquire or Book now</a>
+								  <a href="/book-a-trip-with-us/" class="btn btn-book">Inquire or Book now</a>
 									<? endif; ?>
 								</div>
 								<div class="badge-orvis">
