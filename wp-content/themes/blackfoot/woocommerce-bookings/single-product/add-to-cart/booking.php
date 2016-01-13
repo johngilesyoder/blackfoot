@@ -25,7 +25,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
     <?php $booking_form->output(); ?>
 
     <legend>
-      <span>2. Select your trip options</span>
+      <span>2. Choose Your Options</span>
     </legend>
 
     <?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>

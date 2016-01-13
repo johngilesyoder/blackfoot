@@ -64,7 +64,7 @@ if( function_exists('get_product') ){
 	<!-- =================================== -->
 	<!-- =================================== -->
 	
-	<?php get_template_part( 'includes/item-trip' ); ?>
+	<?php get_template_part( 'includes/item-booking' ); ?>
 
 	<?php else : ?>
 

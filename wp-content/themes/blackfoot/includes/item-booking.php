@@ -52,14 +52,12 @@
 <!-- =================================== -->
 <!-- =================================== -->
 
-<?php get_template_part( 'includes/trip-why' ); ?>
-
 <script type="text/javascript">
 
   // Set default value to 0 for Custom price input
   jQuery(document).ready(function(){
-      jQuery('.product-addon-if-conditions-permit-do-you-have-a-river-preference select').val("no-preference-1");
-      jQuery('.product-addon-would-you-like-to-add-a-detailed-flycasting-lesson select').val("no-thank-you-2");
+    //jQuery('.product-addon-if-conditions-permit-do-you-have-a-river-preference select').val("no-preference-1");
+    //jQuery('.product-addon-would-you-like-to-add-a-detailed-flycasting-lesson select').val("no-thank-you-2");
   });
 
 </script>
