@@ -51,7 +51,11 @@
 							<aside class="trip-sidebar">
 								<div class="book-now-block">
 									<?php if (is_single( 'smith-river-trips' )) : ?>
-									Do this
+									<h2>Book this trip!</h2>
+								  <p>
+								    If you are interested in booking a trip on the beautiful Smith River, please call us at <a href="tel:+14065427411">(406) 542-7411</a> or <a href="/contact-us/">send us a message</a>.
+								  </p>
+								  <a href="/book-a-trip-with-us/" class="btn btn-book">Inquire or Book now</a>
 									<?php else : ?>
 								  <h2>Book a trip!</h2>
 								  <p>
