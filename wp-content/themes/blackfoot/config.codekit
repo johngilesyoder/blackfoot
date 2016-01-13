@@ -20,6 +20,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/archive-trip.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/archive-trip.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/archive-water.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -482,7 +491,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 5.53356e+06,
+		"initialSize": 66767,
 		"inputAbbreviatedPath": "\/assets\/img\/relax-block-1.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/relax-block-1.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -493,7 +502,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 430684,
+		"initialSize": 103123,
 		"inputAbbreviatedPath": "\/assets\/img\/relax-block-2.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/relax-block-2.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -504,7 +513,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 346804,
+		"initialSize": 53476,
 		"inputAbbreviatedPath": "\/assets\/img\/relax-block-3.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/relax-block-3.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -3908,6 +3917,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/loop-search.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/loop-trip.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/loop-trip.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
