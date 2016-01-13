@@ -203,6 +203,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/guide-staff.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 408668,
+		"inputAbbreviatedPath": "\/assets\/img\/guide-staff.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/guide-staff.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/home-bg-trips.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -471,7 +482,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 66767,
+		"initialSize": 5.53356e+06,
 		"inputAbbreviatedPath": "\/assets\/img\/relax-block-1.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/relax-block-1.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -482,7 +493,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 103123,
+		"initialSize": 430684,
 		"inputAbbreviatedPath": "\/assets\/img\/relax-block-2.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/relax-block-2.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -493,7 +504,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 53476,
+		"initialSize": 346804,
 		"inputAbbreviatedPath": "\/assets\/img\/relax-block-3.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/relax-block-3.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -639,6 +650,17 @@
 		"initialSize": 60089,
 		"inputAbbreviatedPath": "\/assets\/img\/trip-stillwater.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/trip-stillwater.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/trip-testimonial.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 181981,
+		"inputAbbreviatedPath": "\/assets\/img\/trip-testimonial.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/trip-testimonial.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2807,6 +2829,26 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/assets\/less\/sections\/booking.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/less\/sections\/booking.less",
+		"outputAbbreviatedPath": "\/assets\/css\/sections\/booking.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/assets\/less\/sections\/cart.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -3337,6 +3379,26 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/less\/sections\/testimonials.less",
 		"outputAbbreviatedPath": "\/assets\/css\/sections\/testimonials.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/assets\/less\/sections\/trip.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/less\/sections\/trip.less",
+		"outputAbbreviatedPath": "\/assets\/css\/sections\/trip.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -3963,6 +4025,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/single-trip.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/single-trip.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/single-water.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -4004,6 +4075,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/tag.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/template-booking-form.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/template-booking-form.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
