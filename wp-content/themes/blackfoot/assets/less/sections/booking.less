@@ -1,0 +1,196 @@
+// booking.less
+// -----------------------------------------------------------------
+
+.page-template-template-booking-form {
+  .ui-datepicker {
+    padding: .2em;
+    width: auto;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  }
+  .gform_wrapper {
+    margin-right: 0;
+    margin-top: 0;
+    max-width: 100%;
+    .shop-confidence {
+      label {
+        font-family: @font-family-sans-serif;
+        display: block;
+        margin-bottom: 10px;
+      }
+      img {
+        margin-right: 10px;
+      }
+    }
+    .hidden {
+      display: none;
+    }
+    .gfield {
+      margin-bottom: 30px;
+    }
+    .ginput_complex {
+      .ginput_full {
+        input[type="text"] {
+          width: 100% !important
+        }
+      }
+    }
+    .top_label {
+      .gfield_error {
+        width: 100%;
+      }
+    }
+    .ginput_complex.ginput_container.has_first_name.no_middle_name.has_last_name span.name_first {
+      width: 49%;
+    }
+  }
+  // Contact Us Form
+  .booking-form {
+    background: @brand-off-white;
+    color: @brand-brown;
+    padding: 25px 30px 30px;
+    .gform_title {
+      margin-top: 0;
+      border-bottom: 1px solid #E0DFDE;
+      padding-bottom: 20px;
+      font-size: 24px;
+      font-family: @font-family-sans-serif;
+      font-weight: 700;
+    }
+    .gform_fields {
+      .gfield_label {
+        font-family: @font-family-sans-serif;
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+      .gfield_required {
+        color: @brand-danger;
+      }
+      input[type="text"] {
+        .form-control();
+        width: 100%;
+        display: inline-block;
+      }
+      select {
+        .form-control();
+        font-family: @font-family-sans-serif;
+      }
+      .gfield_checkbox {
+        font-size: 16px;
+        font-family: @font-family-sans-serif;
+        label {
+          font-weight: 400;
+        }
+        input:checked+label {
+          font-weight: 400;
+        }
+      }
+      .gfield_radio {
+        font-size: 16px;
+        font-family: @font-family-sans-serif;
+        label {
+          font-weight: 400;
+        }
+        input:checked+label {
+          font-weight: 400;
+        }
+      }
+      .ginput_complex {
+        label {
+          font-family: @font-family-sans-serif;
+          font-weight: 400;
+          letter-spacing: 0;
+        }
+      }
+      textarea {
+        .form-control();
+        height: 150px;
+      }
+      // Opt in
+      .gchoice_1_3_1 {
+        margin-top: -30px;
+      }
+      .gfield_error {
+        background-color: @state-danger-bg;
+        .gfield_label {
+          color: @state-danger-text;
+        }
+        .validation_message {
+          color: @state-danger-text;
+          font-family: @font-family-sans-serif;
+          margin-bottom: 0;
+          font-weight: 400;
+          font-size: 14px;
+        }
+      }
+    }
+    .gform_footer {
+      // Submit
+      .gform_button {
+        .btn();
+        .btn-primary();
+        width: 100%;
+        font-size: 24px;
+      }
+    }
+    .validation_error {
+      .alert();
+      .alert-danger();
+      font-family: @font-family-sans-serif;
+      font-size: 16px;
+    }
+  }
+  .gform_confirmation_wrapper {
+    border-radius: 5px;
+    font-family: @font-family-sans-serif;
+    .glyphicon {
+      margin-right: 5px;
+    }
+  }
+  // Sidebar
+  .booking-sidebar {
+    .booking-photo {
+      width: 100%;
+      border-radius: 4px 4px 0 0;
+    }
+    .alert-booking {
+      border-radius: 0 0 4px 4px;
+      font-family: @font-family-sans-serif;
+      border: 0;
+      p {
+        margin: 10px 0 0;
+      }
+    }
+    .badge-orvis {
+      border-radius: 4px;
+      text-align: center;
+      padding: 30px;
+      background: lighten(@brand-green,30%);
+      img {
+
+      }
+      span {
+        margin-bottom: 15px;
+        display: block;
+      }
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {}
+
+// Up to landscape phone
+@media (max-width: 480px) {}

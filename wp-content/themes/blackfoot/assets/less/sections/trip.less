@@ -1,0 +1,135 @@
+// trip.less
+// -----------------------------------------------------------------
+
+.single-trip {
+  padding-top: 0;
+  main {
+    margin-top: 0;
+  }
+  .breadcrumbs {
+    margin-bottom: 190px;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,1);
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .breadcrumb_last {
+      font-weight: 600;
+    }
+  }
+  .trip-hero {
+    height: 560px;
+    border-bottom: 7px solid #999490;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-bottom: 40px;
+    position: relative;
+    .trip-hero-gradient {
+      height: 100%;
+      padding-top: 110px;
+      #gradient > .horizontal(rgba(0,0,0,.43),rgba(0,0,0,0), 0%, 50%);
+    }
+    .trip-hero-content {
+      position: absolute;
+      bottom: 60px;
+      color: #fff;
+      a {
+        color: #fff;
+      }
+      .trip-title {
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 1em;
+        margin: 0 0 30px;
+        text-shadow: 0 1px 10px rgba(0,0,0,.4);
+      }
+    }
+  }
+  section {
+    margin-bottom: 60px;
+    .section-title {
+      font-family: @font-family-sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #B0ADAA;
+      font-weight: 700;
+      letter-spacing: 3.5px;
+      margin-top: 0;
+      margin-bottom: 25px;
+      em {
+        font-family: @font-family-serif;
+        text-transform: none;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+  .trip-description {
+    .leading-words {
+      font-size: 21px;
+    }
+    .trip-gallery {
+      &:before {
+        content: 'Gallery';
+        font-family: @font-family-sans-serif;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #B0ADAA;
+        font-weight: 700;
+        letter-spacing: 3.5px;
+        margin-top: 60px;
+        margin-bottom: 25px;
+        display: block;
+      }
+    }
+  }
+  .trip-sidebar {
+    .sidebar-title {
+      font-size: 21px;
+      font-family: @font-family-sans-serif;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .badge-orvis {
+      border-radius: 4px;
+      text-align: center;
+      padding: 30px;
+      background: lighten(@brand-green,30%);
+      margin-bottom: 30px;
+      img {
+
+      }
+      span {
+        margin-bottom: 15px;
+        display: block;
+      }
+    }
+    .alert-booking {
+      border: 0;
+      font-family: @font-family-sans-serif;
+      p {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {}
+
+// Up to landscape phone
+@media (max-width: 480px) {}
