@@ -25,6 +25,7 @@
 						$args = array(
 							'post_type' => 'trip',
 							'posts_per_page' => 12,
+							'order' => 'ASC',
 							);
 
 						$loop = new WP_Query( $args );
