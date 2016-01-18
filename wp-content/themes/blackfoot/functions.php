@@ -205,7 +205,7 @@ function html5blank_conditional_scripts() {
 
 // Load styles
 function html5blank_styles() {
-  //wp_register_style('styles', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+  wp_register_style('styles', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
   wp_enqueue_style('styles'); // Enqueue it!
 }
 
