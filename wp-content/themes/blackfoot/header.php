@@ -11,7 +11,6 @@
 		<link href="//www.//www.blackfootriver.com" rel="dns-prefetch">
     <link href="<?php echo get_template_directory_uri(); ?>/assets/icons/favicon.png" rel="shortcut icon">
     <link href="<?php echo get_template_directory_uri(); ?>/assets/icons/touch.png" rel="apple-touch-icon-precomposed">
-    <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet" type="text/css">
 
     <!-- Meta -->
     <!-- =================================== -->
@@ -24,7 +23,6 @@
     <script src="https://use.typekit.net/las1vox.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-    <?php gravity_form_enqueue_scripts( 6, false ); ?>
     <!-- Wordpress Generated -->
     <!-- =================================== -->
 		<?php wp_head(); ?>
@@ -93,10 +91,10 @@
         <!-- Phone / Cart -->
         <div class="header-secondary-nav">
           <a class="header-phone" href="tel:+14065427411"><span class="icon-phone">Call us</span>(406) 542-7411</a>
-          <a class="header-cart" href="<?php //echo WC()->cart->get_cart_url(); ?>">
-            <?php //if ( WC()->cart->get_cart_contents_count() !== 0 ) : ?>
-            <span class="cart-qty"><?php //echo sprintf (_n( '%d', '%d', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?></span>
-            <?php //endif; ?>
+          <a class="header-cart" href="<?php echo WC()->cart->get_cart_url(); ?>">
+            <?php if ( WC()->cart->get_cart_contents_count() !== 0 ) : ?>
+            <span class="cart-qty"><?php echo sprintf (_n( '%d', '%d', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?></span>
+            <?php endif; ?>
             <span class="icon-cart">View your cart</span>
           </a>
         </div>
