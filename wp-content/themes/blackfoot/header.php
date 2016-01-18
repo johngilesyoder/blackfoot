@@ -23,6 +23,7 @@
     <script src="https://use.typekit.net/las1vox.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
+    <?php gravity_form_enqueue_scripts( 6, false ); ?>
     <!-- Wordpress Generated -->
     <!-- =================================== -->
 		<?php wp_head(); ?>
