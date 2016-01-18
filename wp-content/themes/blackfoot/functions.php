@@ -153,9 +153,7 @@ function footer_links_6() {
 }
 
 // Load scripts (header.php)
-function html5blank_header_scripts() {
 
-}
 
 // Load conditional scripts
 function html5blank_conditional_scripts() {
