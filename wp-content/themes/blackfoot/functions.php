@@ -4,140 +4,25 @@
 Theme Support
 \*------------------------------------*/
 
+if (function_exists('add_theme_support')) {
+  // Add Menu Support
+  add_theme_support('menus');
 
+  // Add Thumbnail Theme Support
+  add_theme_support('post-thumbnails');
+  add_image_size('large', 700, '', true); // Large Thumbnail
+  add_image_size('medium', 250, '', true); // Medium Thumbnail
+  add_image_size('small', 120, '', true); // Small Thumbnail
+  add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+
+  // Enables post and comment RSS feed links to head
+  add_theme_support('automatic-feed-links');
+}
 
 /*------------------------------------*\
 Functions
 \*------------------------------------*/
 
-// Register Custom Navigation Walker
-require_once 'wp_bootstrap_navwalker.php';
-
-// Bootstrap primary navigation
-function primary_nav() {
-  wp_nav_menu(
-    array(
-      'theme_location'  => 'header-menu',
-      'menu'            => '',
-      'container'       => false,
-      'container_class' => 'menu-{menu slug}-container',
-      'container_id'    => '',
-      'menu_class'      => 'menu',
-      'menu_id'         => '',
-      'echo'            => true,
-      'fallback_cb'     => 'wp_page_menu',
-      'before'          => '',
-      'after'           => '',
-      'link_before'     => '<span>',
-      'link_after'      => '</span>',
-      'items_wrap'      => '<ul class="nav navbar-nav navbar-left">%3$s</ul>',
-      'depth'           => 2,
-      'walker'          => new wp_bootstrap_navwalker(),
-    )
-  );
-}
-
-function home_navigation_left() {
-  wp_nav_menu(
-    array(
-      'theme_location'  => 'home-navigation-left',
-      'menu'            => '',
-      'container'       => false,
-      'container_class' => 'menu-{menu slug}-container',
-      'container_id'    => '',
-      'menu_class'      => 'menu',
-      'menu_id'         => '',
-      'echo'            => true,
-      'fallback_cb'     => 'wp_page_menu',
-      'before'          => '',
-      'after'           => '',
-      'link_before'     => '<span>',
-      'link_after'      => '</span>',
-      'items_wrap'      => '<ul class="nav navbar-nav navbar-left">%3$s</ul>',
-      'depth'           => 2,
-      'walker'          => new wp_bootstrap_navwalker(),
-    )
-  );
-}
-
-function home_navigation_right() {
-  wp_nav_menu(
-    array(
-      'theme_location'  => 'home-navigation-right',
-      'menu'            => '',
-      'container'       => false,
-      'container_class' => 'menu-{menu slug}-container',
-      'container_id'    => '',
-      'menu_class'      => 'menu',
-      'menu_id'         => '',
-      'echo'            => true,
-      'fallback_cb'     => 'wp_page_menu',
-      'before'          => '',
-      'after'           => '',
-      'link_before'     => '<span>',
-      'link_after'      => '</span>',
-      'items_wrap'      => '<ul class="nav navbar-nav navbar-right">%3$s</ul>',
-      'depth'           => 2,
-      'walker'          => new wp_bootstrap_navwalker(),
-    )
-  );
-}
-
-function get_menu_by_location($location) {
-  if (empty($location)) {
-    return false;
-  }
-
-  $locations = get_nav_menu_locations();
-  if (!isset($locations[$location])) {
-    return false;
-  }
-
-  $menu_obj = get_term($locations[$location], 'nav_menu');
-  return $menu_obj;
-}
-
-function footer_links_1() {
-  $location = 'footer-links-1';
-  get_menu_by_location($location);
-  $menu_obj = get_menu_by_location($location);
-  wp_nav_menu(array('theme_location' => $location, 'items_wrap' => '<h3 class="links-header">' . esc_html($menu_obj->name) . '</h3><ul id=\"%1$s\" class=\"%2$s\">%3$s</ul>'));
-}
-
-function footer_links_2() {
-  $location = 'footer-links-2';
-  get_menu_by_location($location);
-  $menu_obj = get_menu_by_location($location);
-  wp_nav_menu(array('theme_location' => $location, 'items_wrap' => '<h3 class="links-header">' . esc_html($menu_obj->name) . '</h3><ul id=\"%1$s\" class=\"%2$s\">%3$s</ul>'));
-}
-
-function footer_links_3() {
-  $location = 'footer-links-3';
-  get_menu_by_location($location);
-  $menu_obj = get_menu_by_location($location);
-  wp_nav_menu(array('theme_location' => $location, 'items_wrap' => '<h3 class="links-header">' . esc_html($menu_obj->name) . '</h3><ul id=\"%1$s\" class=\"%2$s\">%3$s</ul>'));
-}
-
-function footer_links_4() {
-  $location = 'footer-links-4';
-  get_menu_by_location($location);
-  $menu_obj = get_menu_by_location($location);
-  wp_nav_menu(array('theme_location' => $location, 'items_wrap' => '<h3 class="links-header">' . esc_html($menu_obj->name) . '</h3><ul id=\"%1$s\" class=\"%2$s\">%3$s</ul>'));
-}
-
-function footer_links_5() {
-  $location = 'footer-links-5';
-  get_menu_by_location($location);
-  $menu_obj = get_menu_by_location($location);
-  wp_nav_menu(array('theme_location' => $location, 'items_wrap' => '<h3 class="links-header">' . esc_html($menu_obj->name) . '</h3><ul id=\"%1$s\" class=\"%2$s\">%3$s</ul>'));
-}
-
-function footer_links_6() {
-  $location = 'footer-links-6';
-  get_menu_by_location($location);
-  $menu_obj = get_menu_by_location($location);
-  wp_nav_menu(array('theme_location' => $location, 'items_wrap' => '<h3 class="links-header">' . esc_html($menu_obj->name) . '</h3><ul id=\"%1$s\" class=\"%2$s\">%3$s</ul>'));
-}
 
 // Load scripts (header.php)
 function html5blank_header_scripts() {
