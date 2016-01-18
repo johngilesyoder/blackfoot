@@ -44,7 +44,7 @@
                 <span class="bullet">&bull;</span>
                 <a href="/contact-us/">Contact us</a>
                 <span class="bullet">&bull;</span>
-                <div class="fb-follow" data-href="https://www.facebook.com/zuck" data-layout="button" data-show-faces="false"></div>
+                <div class="fb-follow" data-href="https://www.facebook.com/Blackfoot.River.Outfitters" data-layout="button" data-show-faces="false"></div>
               </div>
             </div>
           </div>
