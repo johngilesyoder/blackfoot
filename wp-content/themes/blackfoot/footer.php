@@ -62,15 +62,7 @@
                 <div class="footer-trust-badges">
                   <img class="badge-trout-unlimited" src="<?php echo get_template_directory_uri(); ?>/assets/img/badge-trout-unlimited.png">
                   <img class="badge-orvis" src="<?php echo get_template_directory_uri(); ?>/assets/img/badge-orvis.gif">
-                  <div id="TA_cdsratingsonlynarrow294" class="TA_cdsratingsonlynarrow">
-                  <ul id="cHawndw68FTP" class="TA_links NLqReYcK">
-                  <li id="OjEizlKd" class="DzoCNUjA1SS">
-                  <a target="_blank" href="http://www.tripadvisor.com/"><img src="https://www.tripadvisor.com/img/cdsi/img2/branding/tripadvisor_logo_transp_340x80-18034-2.png" alt="TripAdvisor"/></a>
-                  </li>
-                  </ul>
                   </div>
-                  <script src="//www.tripadvisor.com/WidgetEmbed-cdsratingsonlynarrow?amp;locationId=4242339&amp;border=true&amp;uniq=294&amp;lang=en_US&amp;display_version=2"></script>
-                </div>
               </div>
               <div class="col-md-6">
                 <div class="footer-trust-copy">
