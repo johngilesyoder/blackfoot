@@ -11,7 +11,7 @@
 		<link href="//www.//www.blackfootriver.com" rel="dns-prefetch">
     <link href="<?php echo get_template_directory_uri(); ?>/assets/icons/favicon.png" rel="shortcut icon">
     <link href="<?php echo get_template_directory_uri(); ?>/assets/icons/touch.png" rel="apple-touch-icon-precomposed">
-    <link href="<?php echo get_template_directory_uri(); ?>/style.css">
+    <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet" type="text/css">
 
     <!-- Meta -->
     <!-- =================================== -->
