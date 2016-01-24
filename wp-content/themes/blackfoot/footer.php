@@ -58,7 +58,7 @@
           <!-- Footer trust -->
           <div class="footer-trust">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-12 col-lg-6">
                 <div class="footer-trust-badges">
                   <img class="badge-trout-unlimited" src="<?php echo get_template_directory_uri(); ?>/assets/img/badge-trout-unlimited.png">
                   <img class="badge-orvis" src="<?php echo get_template_directory_uri(); ?>/assets/img/badge-orvis.gif">
@@ -72,7 +72,7 @@
                   <script src="//www.tripadvisor.com/WidgetEmbed-cdsratingsonlynarrow?amp;locationId=4242339&amp;border=true&amp;uniq=294&amp;lang=en_US&amp;display_version=2"></script>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-12 col-lg-6">
                 <div class="footer-trust-copy">
                   <h3>Missoula, Montana's family owned, Orvis-endorsed fly fishing company.</h3>
                   <p>Sharing Montana rivers with anglers for over 20 years, Blackfoot River Outfitters' reputation as a leader in the Montana fly fishing industry, sits firmly on a foundation of loyal clients and their referrals. When you book a guided trip with us or have a question about fly fishing in Montana, a lifetime of experience is pressed into action.</p>
