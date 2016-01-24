@@ -10,7 +10,7 @@
     .onsale {
       
     }
-    .product-anchor {
+    & > a:not(.btn) {
       display: block;
       text-decoration: none;
       img {
@@ -20,18 +20,20 @@
         padding: 30px;
         margin: 0;
       }
-      .product-title {
+      h3 {
         font-family: @font-family-sans-serif;
         font-weight: 700;
         font-size: 16px;
         margin: 0 0 5px;
         padding: 0;
         line-height: 1.25em;
+        height: 40px;
       }
       .short-description {
         color: @text-color;
         font-size: 16px;
         margin-bottom: 5px;
+        display: none;
       }
       .price {
         font-size: 21px;
@@ -54,8 +56,9 @@
         }
       }
     }
-    .btn-add-to-cart {
-      display: none;
+    .button {
+      .btn();
+      .btn-primary();
       font-family: @font-family-sans-serif;
       font-size: 16px;
       text-transform: uppercase;
