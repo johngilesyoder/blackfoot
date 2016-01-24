@@ -7,7 +7,7 @@ body {
 
 .site-header {
   font-family: @font-family-sans-serif;
-  border-bottom: 0;
+  border: 0;
   .navbar-brand {
     padding: 0;
   }
@@ -17,6 +17,8 @@ body {
     width: 229px;
     display: inline-block;
     padding: 12px 15px 15px 25px;
+    z-index: 100;
+    position: relative;
     .logo-left {
       height: 45px;
       margin-right: 3px;
@@ -27,6 +29,8 @@ body {
   }
   .header-secondary-nav {
     float: right;
+    position: absolute;
+    right: 30px;
     font-weight: 500;
     height: @navbar-height;
     line-height: @line-height-computed;
@@ -56,7 +60,6 @@ body {
     }
     .header-cart {
       margin-left: 0;
-      background: rgba(0,0,0,.04);
       position: relative;
       &:hover {
         background: rgba(0,0,0,.08);
@@ -117,7 +120,6 @@ body {
       }
     }
     .header-cart {
-      background: rgba(0,0,0,1);
       &:hover {
         background: rgba(0,0,0,1);
       }
@@ -133,56 +135,64 @@ body {
 // --------------------------------------------------
 
 // Large desktop and up
-@media (max-width: 1300px) {
-
-  .navbar-nav {
-    li {
-      &:after {
-        display: none;
-      }
-    }
-  }
-
-}
+@media (max-width: 1300px) {}
 
 // Large desktop and up
-@media (max-width: 1150px) {
-
-  .header-contact {
-    .header-phone {
-      display: none;
-    }
-    .btn-inquire {
-      margin-left: 0;
-    }
-  }
-
-}
-
+@media (max-width: 1150px) {}
 
 // Large desktop and up
 @media (min-width: 1200px) {}
 
+// Fixed position above 992px
+@media (min-width: 992px) {
+
+  .site-header {
+    .navbar-fixed-top();
+  }
+
+}
+
 // Desktop to large desktop
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
 
-// Tablet to desktop
-@media (min-width: 768px) and (max-width: 991px) {
-
-  .navbar-nav {
-    li {
-      a {
-        float: none;
+  .site-header {
+    .site-logo {
+      width: 175px;
+      height: 60px;
+      background-size: 175px;
+      padding: 9px 15px 15px 20px;
+      .logo-left {
+        height: 30px;
+      }
+      .logo-right {
+        height: 25px;
+      }
+    }
+    .navbar-nav {
+      & > li {
+        & > a {
+          font-size: 14px;
+          padding-left: 12px;
+          padding-right: 12px;
+        }
       }
     }
   }
 
-  .header-contact {
-    float: none;
-    .btn-inquire {
-      display: block;
-      width: 50%;
-      margin-bottom: 15px;
+}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  body {
+    padding-top: 0;
+  }
+  .site-header {
+    .header-secondary-nav {
+      right: 90px;
+      .header-phone {
+        margin-right: 0;
+      }
     }
   }
 
@@ -191,20 +201,44 @@ body {
 // Up to tablet
 @media (max-width: 767px) {
 
-  .navbar-nav {
-    li {
-      a {
-        float: none;
+  body {
+    padding-top: 0;
+  }
+  .site-header {
+    .header-secondary-nav {
+      right: 90px;
+      .header-phone {
+        margin-right: 0;
       }
+    }
+    .navbar-collapse {
+      float: none;
     }
   }
 
-  .header-contact {
-    float: none;
-    .btn-inquire {
-      display: block;
-      width: 100%;
-      margin-bottom: 15px;
+}
+
+// Up to landscape phone (custom)
+@media (max-width: 535px) {
+
+  .site-header {
+    .site-logo {
+      width: 175px;
+      height: 60px;
+      background-size: 175px;
+      padding: 9px 15px 15px 20px;
+      .logo-left {
+        height: 30px;
+      }
+      .logo-right {
+        height: 25px;
+      }
+    }
+    .header-secondary-nav {
+      right: 60px;
+      .header-phone {
+        display: none;
+      }
     }
   }
 

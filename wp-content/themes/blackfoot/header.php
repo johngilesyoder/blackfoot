@@ -45,29 +45,21 @@
     <!-- =================================== -->
     <?php get_template_part( 'includes/analyticstracking' ); ?>
 
-    <?php if ( is_front_page() ) : ?>
-      
-    <!-- Navbar (Big homepage one) -->
-    <!-- =================================== -->
-    <?php get_template_part( 'includes/header-home' ); ?>
-
-    <?php endif; ?>
-
     <!-- Navbar -->
     <!-- =================================== -->
-    <?php if ( is_singular( 'water' )  || is_front_page() ) : ?>
+    <?php if ( is_singular( 'water' ) || is_front_page() ) : ?>
 
     <!-- Conditionally loaded inverted navbar -->
-    <nav id="site-header" class="site-header navbar navbar-inverse navbar-fixed-top">
+    <nav id="site-header" class="site-header navbar navbar-inverse">
 
     <?php else: ?>
 
     <!-- Default navbar -->
-    <nav id="site-header" class="site-header navbar navbar-default navbar-fixed-top">
+    <nav id="site-header" class="site-header navbar navbar-default">
 
     <?php endif; ?>
 
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
           <!-- Mobile menu toggle -->
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -76,6 +68,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <!-- Phone / Cart -->
+          <div class="header-secondary-nav">
+            <a class="header-phone" href="tel:+14065427411"><span class="icon-phone">Call us</span>(406) 542-7411</a>
+            <a class="header-cart" href="<?php echo WC()->cart->get_cart_url(); ?>">
+              <?php if ( WC()->cart->get_cart_contents_count() !== 0 ) : ?>
+              <span class="cart-qty"><?php echo sprintf (_n( '%d', '%d', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?></span>
+              <?php endif; ?>
+              <span class="icon-cart">View your cart</span>
+            </a>
+          </div>
           <!-- Site logo -->
           <a class="navbar-brand" href="/">
             <span class="site-logo">
@@ -87,16 +89,6 @@
         <!-- Collect the nav links for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <?php primary_nav(); ?>
-        </div>
-        <!-- Phone / Cart -->
-        <div class="header-secondary-nav">
-          <a class="header-phone" href="tel:+14065427411"><span class="icon-phone">Call us</span>(406) 542-7411</a>
-          <a class="header-cart" href="<?php echo WC()->cart->get_cart_url(); ?>">
-            <?php if ( WC()->cart->get_cart_contents_count() !== 0 ) : ?>
-            <span class="cart-qty"><?php echo sprintf (_n( '%d', '%d', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?></span>
-            <?php endif; ?>
-            <span class="icon-cart">View your cart</span>
-          </a>
         </div>
       </div>
     </nav>

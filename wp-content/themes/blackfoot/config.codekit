@@ -2733,7 +2733,7 @@
 		"disableJavascript": 0,
 		"fileType": 1,
 		"ieCompatibility": 1,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/less\/layout\/site-header-home.less",
 		"outputAbbreviatedPath": "\/assets\/css\/layout\/site-header-home.css",
