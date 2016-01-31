@@ -42,3 +42,67 @@
     }
   }
 }
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .book-now-banner {
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .book-now-banner {
+    padding: 80px 0;
+    h2 {
+      margin-bottom: 15px;
+      margin-top: 0;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .book-now-banner {
+    padding: 40px 0;
+    h2 {
+      margin-bottom: 15px;
+      margin-top: 0;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .book-now-banner {
+    .btn-book {
+      font-size: 18px;
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+}

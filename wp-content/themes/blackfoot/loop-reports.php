@@ -9,20 +9,22 @@
 ?>
 
 	<!-- Report -->
-  <a href="<?php the_permalink(); ?>" class="fishing-report-wrapper col-md-6">
-    <article id="post-<?php the_ID(); ?>" class="fishing-report">
-      <hgroup>
-        <img class="report-illustration" src="<?php echo $report_illustration; ?>">
-        <!-- Page Title -->
-        <h2 class="report-title"><?php the_title(); ?></h2>
-        <span class="report-updated">Updated <strong><?php the_modified_time('m/d/Y'); ?> at <?php the_modified_time('g:ia'); ?></strong></span>
-      </hgroup>
-      <p><?php echo substr(get_the_excerpt(), 0,80); ?> &hellip; <span class="read-more">Read more</span></p>
-      <div class="condition-rating">
-        <span class="rating-active <?php echo $report_rating; ?>"></span>
-      </div>
-    </article>
-  </a>
+  <div class="col-md-6">
+    <a href="<?php the_permalink(); ?>" class="fishing-report-wrapper">
+      <article id="post-<?php the_ID(); ?>" class="fishing-report">
+        <hgroup>
+          <img class="report-illustration" src="<?php echo $report_illustration; ?>">
+          <!-- Page Title -->
+          <h2 class="report-title"><?php the_title(); ?></h2>
+          <span class="report-updated">Updated <strong><?php the_modified_time('m/d/Y'); ?> at <?php the_modified_time('g:ia'); ?></strong></span>
+        </hgroup>
+        <p><?php echo substr(get_the_excerpt(), 0,80); ?> &hellip; <span class="read-more">Read more</span></p>
+        <div class="condition-rating">
+          <span class="rating-active <?php echo $report_rating; ?>"></span>
+        </div>
+      </article>
+    </a>
+  </div>
 
 <?php endwhile; ?>
 

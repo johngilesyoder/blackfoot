@@ -9,6 +9,7 @@
     color: @brand-brown;
     text-decoration: none;
     margin-bottom: 30px;
+    display: block;
     .fishing-report {
       background: @brand-off-white;
       padding: 30px;
@@ -59,10 +60,10 @@
           background-image: url('assets/img/condition-rating-active.svg');
           background-repeat: no-repeat;
           &.excellent { width: 100%; }
-          &.good      { width: 361px; }
-          &.ok        { width: 270px; }
-          &.poor      { width: 179px; }
-          &.bad       { width: 88px; }
+          &.good      { width: 80%; }
+          &.ok        { width: 60%; }
+          &.poor      { width: 40%; }
+          &.bad       { width: 20%; }
         }
       }
     }
@@ -90,13 +91,77 @@
 @media (min-width: 1200px) {}
 
 // Desktop to large desktop
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .post-type-archive-fishing-report {
+    .fishing-report-wrapper {
+      .fishing-report {
+        hgroup {
+          .report-title {
+            font-size: 24px;
+          }
+        }
+        .condition-rating {
+          width: 320px;
+          background-size: 320px;
+          .rating-active {
+            background-size: 320px;
+          }
+        }
+      }
+    }
+  }
+
+}
 
 // Tablet to desktop
 @media (min-width: 768px) and (max-width: 991px) {}
 
 // Up to tablet
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+  .post-type-archive-fishing-report {
+    .fishing-report-wrapper {
+      .fishing-report {
+        padding: 15px;
+        hgroup {
+          .report-title {
+            font-size: 24px;
+          }
+        }
+        .condition-rating {
+          width: 320px;
+          background-size: 320px;
+          .rating-active {
+            background-size: 320px;
+          }
+        }
+      }
+    }
+  }
+
+}
 
 // Up to landscape phone
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+
+  .post-type-archive-fishing-report {
+    .fishing-report-wrapper {
+      .fishing-report {
+        hgroup {
+          .report-illustration {
+            display: none;
+          }
+        }
+        .condition-rating {
+          width: 200px;
+          background-size: 200px;
+          .rating-active {
+            background-size: 200px;
+          }
+        }
+      }
+    }
+  }
+
+}

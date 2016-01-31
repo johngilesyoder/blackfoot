@@ -63,16 +63,48 @@
 @media (min-width: 768px) and (max-width: 991px) {}
 
 // Up to tablet
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+  .page-template-template-testimonials {
+    .testimonial {
+      margin-bottom: 15px;
+      .testimonial-photo {
+        border-radius: 0;
+        width: 100%;
+        height: 200px;
+      }
+      p {
+        font-size: 18px;
+      }
+      footer {
+        font-size: 21px;
+        line-height: 1em;
+        cite {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+}
 
 // Up to landscape phone
 @media (max-width: 480px) {
 
-  .error404 {
-    padding-top: 60px;
-  }
-  .error-message {
-    margin-bottom: 30px;
+  .page-template-template-testimonials {
+    iframe {
+      display: none;
+    }
+    .testimonial {
+      footer {
+        span {
+          display: none;
+        }
+        cite {
+          display: block;
+        }
+      }
+    }
   }
 
 }
