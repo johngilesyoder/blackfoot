@@ -147,6 +147,7 @@
       font-size: 16px;
       font-family: @font-family-sans-serif;
       font-weight: 500;
+      .clearfix();
       .pattern-img {
         border-radius: 50%;
         height: 72px;
@@ -215,13 +216,83 @@
 @media (min-width: 1200px) {}
 
 // Desktop to large desktop
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .single-water {
+    .water-sidebar {
+      .other-waters {
+        .other-water {
+          width: 100%;
+          float: none;
+          margn-right: 0;
+        }
+      }
+    }
+  }
+
+}
 
 // Tablet to desktop
-@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .single-water {
+    .breadcrumbs {
+
+    }
+    .water-hero {
+      height: 500px;
+      .water-hero-gradient {
+        padding-top: 50px;
+      }
+      .water-hero-content {
+
+      }
+    }
+  }
+
+}
 
 // Up to tablet
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+  .single-water {
+    .breadcrumbs {
+      margin-bottom: 150px;
+    }
+    .water-hero {
+      height: 500px;
+      .water-hero-gradient {
+        padding-top: 50px;
+      }
+      .water-hero-content {
+        .water-title {
+          font-size: 55px;
+        }
+        .water-location,
+        .water-video,
+        .water-report {
+          display: block;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+}
 
 // Up to landscape phone
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+
+  .single-water {
+    .water-hero {
+      height: auto;
+      .water-hero-gradient {
+        padding-top: 50px;
+      }
+      .water-hero-content {
+        padding: 30px 0;
+      }
+    }
+  }
+
+}
