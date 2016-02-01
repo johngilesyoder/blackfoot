@@ -11,11 +11,19 @@ main {
   margin: 0 0 30px;
 }
 
+article.hentry {
+  margin-bottom: 30px;
+  img {
+    max-width: 100%;
+  }
+}
+
 .page-sidebar {
   padding-right: 0;
   font-family: @font-family-sans-serif;
   background: @brand-off-white;
   padding: 25px 30px 30px;
+  margin-bottom: 30px;
   h2 {
     font-weight: 600;
     font-size: 24px;
@@ -58,7 +66,16 @@ main {
 @media (min-width: 768px) and (max-width: 991px) {}
 
 // Up to tablet
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+  main {
+    margin: 30px 0;
+  }
+  .page-sidebar {
+    padding: 10px 15px 15px;
+  }
+
+}
 
 // Up to landscape phone
 @media (max-width: 480px) {}

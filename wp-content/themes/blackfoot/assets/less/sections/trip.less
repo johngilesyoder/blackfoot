@@ -133,10 +133,66 @@
 @media (min-width: 992px) and (max-width: 1199px) {}
 
 // Tablet to desktop
-@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .single-trip {
+    .site-header {
+      margin-bottom: 0;
+    }
+    .trip-hero {
+      height: 560px;
+      .trip-hero-gradient {
+        padding-top: 40px;
+      }
+      .trip-hero-content {
+        .trip-title {
+        }
+      }
+    }
+  }
+
+}
 
 // Up to tablet
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+  .single-trip {
+    .site-header {
+      margin-bottom: 0;
+    }
+    .trip-hero {
+      height: auto;
+      .trip-hero-gradient {
+        padding-top: 40px;
+      }
+      .trip-hero-content {
+        position: static;
+        margin: 0 0 40px;
+        .trip-title {
+          font-size: 60px;
+        }
+      }
+    }
+  }
+
+}
 
 // Up to landscape phone
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+
+  .single-trip {
+    .trip-hero {
+      .trip-hero-gradient {
+        padding-top: 0;
+      }
+      .trip-hero-content {
+        
+        margin: 120px 0 30px;
+        .trip-title {
+          font-size: 42px;
+        }
+      }
+    }
+  }
+
+}

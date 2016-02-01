@@ -46,6 +46,8 @@
       background-position: 100% 0;
       .make-md-column(8);
       .links-column {
+        .make-xs-column(6);
+        .make-sm-column(4);
         .make-md-column(4);
         &:nth-child(1),
         &:nth-child(2),
@@ -167,13 +169,162 @@
 @media (min-width: 1200px) {}
 
 // Desktop to large desktop
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .site-footer {
+    .footer-bottom {
+      .footer-trust {
+        text-align: center;
+        .footer-trust-badges {
+          .badge-trout-unlimited,
+          .badge-orvis,
+          #TA_cdsratingsonlynarrow294 {
+            margin: 0 25px 30px;
+          }
+        }
+      }
+      .footer-copyright {
+        float: none;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .footer-accepted-payments {
+        float: none;
+        text-align: center;
+        img {
+          margin: 0 5px 30px;
+          &:first-child {
+            margin-right: 25px;
+          }
+        }
+      }
+    }
+  }
+
+}
 
 // Tablet to desktop
-@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .site-footer {
+    .footer-top {
+      .footer-links {
+        background: none;
+        margin-bottom: 60px;
+      }
+    }
+    .footer-bottom {
+      .footer-trust {
+        text-align: center;
+        .footer-trust-badges {
+          .badge-trout-unlimited,
+          .badge-orvis,
+          #TA_cdsratingsonlynarrow294 {
+            margin: 0 25px 30px;
+          }
+        }
+      }
+      .footer-copyright {
+        float: none;
+        text-align: center;
+        margin-bottom: 30px;
+        height: auto;
+        line-height: 1.5em;
+      }
+      .footer-accepted-payments {
+        float: none;
+        text-align: center;
+        img {
+          margin: 0 5px 10px;
+          &:first-child {
+            display: block;
+            margin: 0 auto 30px;
+          }
+        }
+      }
+    }
+  }
+
+}
 
 // Up to tablet
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+  .site-footer {
+    .footer-top {
+      .footer-links {
+        background: none;
+        margin-bottom: 40px;
+        .links-column {
+          margin-bottom: 30px;
+        }
+      }
+      .footer-connect {
+        padding: 0 15px;
+        .logo-footer {
+          display: none;
+        }
+      }
+    }
+    .footer-bottom {
+      .footer-trust {
+        text-align: center;
+        padding: 50px 0 30px;
+        .footer-trust-badges {
+          .badge-trout-unlimited,
+          .badge-orvis,
+          #TA_cdsratingsonlynarrow294 {
+            margin: 0 25px 30px;
+          }
+        }
+      }
+      .footer-copyright {
+        float: none;
+        text-align: center;
+        margin-bottom: 30px;
+        height: auto;
+        line-height: 1.5em;
+      }
+      .footer-accepted-payments {
+        float: none;
+        text-align: center;
+        img {
+          margin: 0 5px 10px;
+          &:first-child {
+            display: block;
+            margin: 0 auto 30px;
+          }
+        }
+      }
+    }
+  }
+
+}
 
 // Up to landscape phone
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+
+  .site-footer {
+    .footer-top {
+      .footer-links {
+        .links-column {
+          width: 100%;
+          float: none;
+          margin-bottom: 15px;
+          &:nth-child(3),
+          &:nth-child(2),
+          &:nth-child(1) {
+            margin-bottom: 15px;
+          }
+          &:nth-child(3),
+          &:nth-child(4),
+          &:nth-child(5),
+          &:nth-child(6) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+}

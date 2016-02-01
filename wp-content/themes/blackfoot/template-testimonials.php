@@ -42,10 +42,10 @@
 				  <!-- Section quote -->
 				  <blockquote class="testimonial">
 				    <div class="row">
-				      <div class="col-md-2">
+				      <div class="col-sm-2">
 				        <div class="testimonial-photo" style="background-image: url('<?php echo $thumb_url; ?>');"></div>
 				      </div>
-				      <div class="col-md-10">
+				      <div class="col-sm-10">
 				        <?php echo the_content(); ?>
 				        <footer><span>&mdash;</span> <?php the_title(); ?> <cite><?php echo $testimonial_home; ?></cite></footer>
 				      </div>

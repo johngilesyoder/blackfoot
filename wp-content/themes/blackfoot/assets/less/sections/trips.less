@@ -135,3 +135,128 @@
     }
   }
 }
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .post-type-archive-trip {
+    .trips {
+      .trip {
+        .trip-left {
+          width: 60%;
+        }
+        .trip-right {
+          width: 40%;
+        }
+      }
+    }
+  }
+
+}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .post-type-archive-trip {
+    .trips {
+      .trip {
+        .trip-left {
+          width: 50%;
+        }
+        .trip-right {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .post-type-archive-trip {
+    .page-title {
+      font-size: 42px;
+      img {
+        display: none;
+      }
+    }
+    .page-summary {
+      font-size: 21px;
+      line-height: 30px;
+    }
+    .trips {
+      margin-bottom: 0;
+      .trip {
+        height: auto;
+        .trip-left {
+          width: 100%;
+          float: none;
+        }
+        .trip-right {
+          width: 100%;
+          float: none;
+        }
+        .trip-photo {
+          height: 250px;
+        }
+        .trip-content {
+          height: auto;
+          .trip-title {
+            font-size: 30px;
+          }
+          .trip-summary {
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .post-type-archive-trip {
+    .page-title {
+      font-size: 36px;
+    }
+    .page-summary {
+      font-size: 18px;
+      line-height: 27px;
+    }
+    .trips {
+      .trip {
+        margin-left: -15px;
+        margin-right: -15px;
+        .trip-photo {
+          height: 250px;
+        }
+        .trip-content {
+          padding: 15px;
+          .trip-title {
+            font-size: 30px;
+          }
+          .trip-summary {
+            margin-bottom: 15px;
+          }
+          .btn-primary {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

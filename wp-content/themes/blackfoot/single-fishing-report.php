@@ -3,12 +3,12 @@
 	<main role="main">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-5">
 					<!-- Breadcrumbs -->
 					<?php if ( function_exists('yoast_breadcrumb') ) 
 					{yoast_breadcrumb('<nav id="breadcrumbs" class="breadcrumbs">','</nav>');} ?>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-7">
 					<div class="select-report">	
 						<form action="<?php bloginfo('url'); ?>" method="get">
 							Select a river to view it’s report <?php wp_dropdown_pages(array('post_type'=>'fishing-report','selected'=>'0','show_option_none'=>'Select a river')); ?>
@@ -44,7 +44,7 @@
 				<div class="col-md-8">
 					<div class="report-header">
 						<div class="row">
-							<div class="col-md-9">
+							<div class="col-sm-12 col-md-9">
 								<hgroup>
 									<img class="report-illustration" src="<?php echo $report_illustration; ?>">
 									<!-- Page Title -->
@@ -52,7 +52,7 @@
 									<span class="report-updated">Updated <strong><?php the_modified_time('m/d/Y'); ?> at <?php the_modified_time('g:ia'); ?></strong></span>
 								</hgroup>
 							</div>
-							<div class="col-md-3">
+							<div class="col-sm-12 col-md-3">
 								<div class="report-share">
 									<!-- FB -->
 									<div class="share-fb">

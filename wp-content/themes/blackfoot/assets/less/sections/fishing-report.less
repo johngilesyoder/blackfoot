@@ -127,10 +127,10 @@
       background-image: url('assets/img/condition-rating-active.svg');
       background-repeat: no-repeat;
       &.excellent { width: 100%; }
-      &.good      { width: 361px; }
-      &.ok        { width: 270px; }
-      &.poor      { width: 179px; }
-      &.bad       { width: 88px; }
+      &.good      { width: 80%; }
+      &.ok        { width: 60%; }
+      &.poor      { width: 40%; }
+      &.bad       { width: 20%; }
     }
   }
   .condition-rating-text {
@@ -234,13 +234,141 @@
 @media (min-width: 1200px) {}
 
 // Desktop to large desktop
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .single-fishing-report {
+    .report-header {
+      margin-bottom: 30px;
+    }
+    hgroup {
+      .report-illustration {
+        top: 5px;
+      }
+      .page-title {
+        font-size: 30px;
+      }
+    }
+    .report-share {
+      margin-top: 10px;
+    }
+    .condition-rating {
+      width: 320px;
+      background-size: 320px;
+      .rating-active {
+        background-size: 320px;
+      }
+    }
+  }
+
+}
 
 // Tablet to desktop
-@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .single-fishing-report {
+    .breadcrumbs {
+      margin-bottom: 30px;
+    }
+    .select-report {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+    hgroup {
+
+    }
+    .report-share {
+      text-align: left;
+      margin-top: 15px;
+    }
+  }
+
+}
 
 // Up to tablet
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+  .single-fishing-report {
+    .breadcrumbs {
+      margin-bottom: 30px;
+    }
+    .select-report {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+    hgroup {
+      .report-illustration {
+        display: none;
+      }
+    }
+    .report-share {
+      text-align: left;
+      margin-top: 15px;
+    }
+    .condition-rating {
+      width: 320px;
+      background-size: 320px;
+      float: none;
+      .rating-active {
+        background-size: 320px;
+      }
+    }
+    .condition-rating-text {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+}
 
 // Up to landscape phone
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+
+  .single-fishing-report {
+    .select-report {
+      font-size: 14px;
+      text-align: left;
+      margin-bottom: 30px;
+      select {
+        font-size: 14px;
+        height: 25px;
+        margin-left: 0;
+        margin-top: 10px;
+      }
+      .btn {
+        height: 25px;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+    }
+    .report-body {
+      border: 0;
+      margin-left: -15px;
+      margin-right: -15px;
+      section {
+        padding: 15px;
+      }
+    }
+    .condition-rating {
+      width: 270px;
+      background-size: 270px;
+      .rating-active {
+        background-size: 270px;
+      }
+    }
+    // Forecast
+    .awesome-weather-wrap {
+      .awesome-weather-forecast {
+        .awesome-weather-forecast-day {
+          width: 30%;
+          &:nth-child(4),
+          &:nth-child(5) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+}
