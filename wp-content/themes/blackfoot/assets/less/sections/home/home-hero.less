@@ -7,7 +7,7 @@
     border-bottom: 7px solid #999490;
     background: @brand-brown;
     .hero-panel {
-      height: 100vh;
+      height: 700px;
       width: 100%;
       background-size: cover;
       background-position: 50% 50%;
@@ -22,7 +22,7 @@
       .hero-panel-content {
         color: #fff;
         position: absolute;
-        bottom: 125px;
+        bottom: 50px;
         left: 0;
         width: 65%;
         background: rgba(0, 0, 0, 0.15);
@@ -40,6 +40,9 @@
           line-height: 1em;
           margin: 0 0 40px;
           text-shadow: 0 1px 10px rgba(0,0,0,.5);
+          span {
+            display: block;
+          }
         }
         .btn-secondary {
           border: 0;
@@ -77,4 +80,102 @@
       }
     }
   }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+
+// Large desktop and up
+@media (min-width: 1441px) {
+
+  .home {
+    .home-hero {
+      .hero-panel {
+        height: 800px;
+      }
+    }
+  }
+  
+}
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .home {
+    .home-hero {
+      .hero-panel {
+        height: 600px;
+        .hero-panel-content {
+          bottom: 30px;
+          left: 60px;
+          h1 {
+            font-size: 55px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .home {
+    .home-hero {
+      .flickity-prev-next-button {
+        display: none;
+      }
+      .hero-panel {
+        height: 400px;
+        .hero-panel-gradient {
+          background-image: none;
+        }
+        .hero-panel-content {
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background: rgba(0,0,0,.5);
+          box-shadow: none;
+          padding: 15px;
+          h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            span {
+              display: inline;
+            }
+          }
+          .subtext {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .home {
+    .home-hero {
+      .hero-panel {
+        .hero-panel-content {
+          h1 {
+            font-size: 36px;
+          }
+        }
+      }
+    }
+  }
+
 }
