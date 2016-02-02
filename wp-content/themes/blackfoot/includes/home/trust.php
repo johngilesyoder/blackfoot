@@ -17,7 +17,7 @@
     <!-- ===== Trust family ===== -->
     <div class="home-family">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-sm-4 col-md-3">
           <div class="family-photo">
             <img class="photo" src="<?php echo get_template_directory_uri(); ?>/assets/img/family.jpg">
             <span class="bro-logo">
@@ -25,7 +25,7 @@
             </span>
           </div>
         </div>
-        <div class="col-md-9">
+        <div class="col-sm-8 col-md-9">
           <p><?php echo $family_summary; ?></p>
         </div>
       </div>
@@ -75,7 +75,7 @@
       </div>
       <!-- Section book -->
       <div class="section-book">
-        <a href="/trip/" class="btn btn-book">Book your Montana fly fishing adventure</a>
+        <a href="/trip/" class="btn btn-book">Book your <span class="visble-xs hidden-sm hidden-md hidden-lg">adventure</span><span class="hidden-xs">Montana fly fishing adventure</span></a>
       </div>
     </div>
   </div>

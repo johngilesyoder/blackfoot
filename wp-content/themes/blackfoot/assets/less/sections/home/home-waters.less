@@ -9,3 +9,39 @@
     background-repeat: repeat-x;
   }
 }
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .home {
+    .home-waters {
+      .btn-book {
+        //width: 100%;
+      }
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .home {
+    .home-waters {
+      display: none;
+    }
+  }
+
+}
