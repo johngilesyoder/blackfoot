@@ -102,6 +102,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/boats-hero-bg.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.38393e+06,
+		"inputAbbreviatedPath": "\/assets\/img\/boats-hero-bg.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/boats-hero-bg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/boats-sidebar-john.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 505188,
+		"inputAbbreviatedPath": "\/assets\/img\/boats-sidebar-john.png",
+		"outputAbbreviatedPath": "\/assets\/img\/boats-sidebar-john.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/diners.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -300,6 +322,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/icon-sotar-black.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12624,
+		"inputAbbreviatedPath": "\/assets\/img\/icon-sotar-black.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icon-sotar-black.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icon-sotar-white.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12804,
+		"inputAbbreviatedPath": "\/assets\/img\/icon-sotar-white.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icon-sotar-white.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/illustration-beaverhead.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -461,6 +505,17 @@
 		"initialSize": 349082,
 		"inputAbbreviatedPath": "\/assets\/img\/og-image.png",
 		"outputAbbreviatedPath": "\/assets\/img\/og-image.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/photo-boats-sidebar.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 406250,
+		"inputAbbreviatedPath": "\/assets\/img\/photo-boats-sidebar.png",
+		"outputAbbreviatedPath": "\/assets\/img\/photo-boats-sidebar.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2827,6 +2882,26 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/assets\/less\/sections\/boats.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/less\/sections\/boats.less",
+		"outputAbbreviatedPath": "\/assets\/css\/sections\/boats.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/assets\/less\/sections\/booking.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -4082,6 +4157,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/tag.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/template-boats.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/template-boats.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

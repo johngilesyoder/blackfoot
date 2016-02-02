@@ -1,0 +1,197 @@
+// boats.less
+// -----------------------------------------------------------------
+
+.page-template-template-boats {
+  .subnav {
+    border-top: 1px solid #DBD8D7;
+    border-bottom: 1px solid #DBD8D7;
+    .clearfix();
+    .page-title {
+      float: left;
+      margin: 0;
+      font-size: 18px;
+      line-height: 65px;
+      img {
+        margin-right: 8px;
+      }
+    }
+    ul {
+      float: right;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        margin-left: 27px;
+        a {
+          line-height: 65px;
+          display: block;
+          font-family: @font-family-sans-serif;
+          font-size: 16px;
+          color: @text-color;
+          font-weight: 500;
+          &.link-consultation {
+            color: #fff;
+            background: @link-color;
+            border-radius: 18px;
+            height: 35px;
+            line-height: 34px;
+            padding: 0 15px;
+            font-weight: 600;
+            &:hover {
+              background: @link-hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  main {
+    margin-top: 0;
+  }
+  .boats-hero {
+    height: 660px;
+    border-bottom: 7px solid #999490;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-bottom: 50px;
+    .boats-hero-content {
+      text-align: center;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 750px;
+      color: #fff;
+      background: rgba(0,0,0,.26);
+      box-shadow: 0 0 30px 30px rgba(0,0,0,.26);
+      margin-top: 300px;
+      padding: 30px 0;
+      h2 {
+        font-size: 75px;
+        font-weight: 700;
+        margin: 0 0 40px;
+        span {
+          text-decoration: underline;
+        }
+      }
+      .logo-blackfoot {
+        height: 50px;
+      }
+      .logo-byob {
+        height: 45px;
+        margin: 0 30px;
+      }
+      .logo-sotar {
+        height: 50px;
+      }
+    }
+  }
+  .strike-main {
+    .strike-sidebar {
+      padding-top: 40px;
+      .john-photo {
+        border-radius: 8px;
+        border: 4px solid @brand-brown;
+        margin-bottom: 30px;
+        font-family: @font-family-sans-serif;
+        .photo {
+          .img-responsive();
+          border-radius: 4px 4px 0 0;
+        }
+        .john-title {
+          background: @brand-brown;
+          color: #fff;
+          display: block;
+          text-align: center;
+          padding: 10px 15px;
+        }
+        span,
+        strong {
+          display: block;
+        }
+        span {
+          font-size: 16px;
+          line-height: 1.25em;
+        }
+        strong {
+          font-size: 21px;
+          margin-bottom: 5px;
+        }
+      }
+      .sidebar-photo {
+        border-radius: 6px;
+        .img-responsive();
+      }
+    }
+    .content-block {
+      background: #fff;
+      box-shadow: 0 1px 30px rgba(0,0,0,.08);
+      padding: 30px;
+      .hentry {
+        margin-bottom: 0;
+      }
+      .subtitle {
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 3.5px;
+        font-family: @font-family-sans-serif;
+      }
+      h2 {
+        font-size: 63px;
+        font-family: @font-family-sans-serif;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 20px;
+        img {
+          margin-right: 10px;
+          height: 40px;
+          vertical-align: middle;
+          position: relative;
+          top: -3px;
+        }
+      }
+      .btn-byob {
+        margin-bottom: 40px;
+        img {
+          margin-right: 10px;
+          height: 25px;
+          vertical-align: middle;
+          position: relative;
+          top: -2px;
+        }
+        &:after {
+          content: '';
+          display: inline-block;
+          width: 14px;
+          height: 24px;
+          background-image: url('assets/img/icon-chevron-r-white.svg');
+          background-size: cover;
+          margin-left: 30px;
+          vertical-align: middle;
+          top: -4px;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {}
+
+// Up to landscape phone
+@media (max-width: 480px) {}
