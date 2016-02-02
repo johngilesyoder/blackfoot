@@ -9,7 +9,7 @@
       margin-bottom: 50px;
     }
     .testimonial-block {
-      width: 33.3333%;
+      width: 33%;
       height: 333px;
       float: left;
       perspective: 1000;
@@ -40,7 +40,6 @@
         transform: rotateY(0deg);
         .testimonial-img {
           background-size: cover;
-          background-position: 50% 50%;
           height: 100%;
           width: 100%;
         }
@@ -80,76 +79,4 @@
       }
     }
   }
-}
-
-
-// Media Queries
-// --------------------------------------------------
-
-// Large desktop and up
-@media (min-width: 1200px) {}
-
-// Desktop to large desktop
-@media (min-width: 992px) and (max-width: 1199px) {}
-
-// Tablet to desktop
-@media (min-width: 768px) and (max-width: 991px) {
-
-  .home {
-    .home-testimonials {
-      .testimonial-block {
-        height: 250px;
-        .front,
-        .back {
-          height: 250px;
-        }
-        .back {
-          .testimonial-content {
-            .testimonial-fished {
-              display: none;
-            }
-          }
-        }
-      }
-    }
-  }
-
-}
-
-// Up to tablet
-@media (max-width: 767px) {
-
-  .home {
-    .home-testimonials {
-      .testimonial-block {
-        height: 175px;
-        .front,
-        .back {
-          height: 175px;
-        }
-        .back {
-          .testimonial-content {
-            .testimonial-name {
-              font-size: 18px;
-            }
-            .testimonial-fished {
-              display: none;
-            }
-          }
-        }
-      }
-    }
-  }
-
-}
-
-// Up to landscape phone
-@media (max-width: 480px) {
-
-  .home {
-    .home-testimonials {
-      display: none;
-    }
-  }
-
 }

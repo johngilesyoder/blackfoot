@@ -53,7 +53,7 @@
     </div>
     <!-- Section book -->
     <div class="section-book">
-      <a href="/trip/" class="btn btn-book">Book <span class="visble-xs hidden-sm hidden-md hidden-lg">your adventure</span><span class="hidden-xs">the trip of a lifetime</span></a>
+      <a href="/trip/" class="btn btn-book">Book the trip of a lifetime</a>
     </div>
   </div>
 </section>

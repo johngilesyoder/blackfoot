@@ -20,7 +20,7 @@
         <div class="container">
           <div class="hero-panel-content">
             <span class="subtitle">Shop Blackfoot River Outfitters</span>
-            <h1>If we don't use it, <span>we don't sell it.</span></h1>
+            <h1>If we don't use it,<br>we don't sell it.</h1>
             <a href="/shop/" class="btn btn-secondary">Shop our online store now!</a>
             <span class="subtext">or <a href="/contact-us/">learn more</a> about our physical retail locations</span>
           </div>
