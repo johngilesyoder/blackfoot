@@ -102,6 +102,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/boats-cats.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 191064,
+		"inputAbbreviatedPath": "\/assets\/img\/boats-cats.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/boats-cats.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/boats-hero-bg.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -113,6 +124,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/boats-kayaks.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 194533,
+		"inputAbbreviatedPath": "\/assets\/img\/boats-kayaks.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/boats-kayaks.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/boats-rafts.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 182552,
+		"inputAbbreviatedPath": "\/assets\/img\/boats-rafts.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/boats-rafts.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/boats-sidebar-john.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -120,6 +153,17 @@
 		"initialSize": 505188,
 		"inputAbbreviatedPath": "\/assets\/img\/boats-sidebar-john.png",
 		"outputAbbreviatedPath": "\/assets\/img\/boats-sidebar-john.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/boats-video-placeholder.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.35951e+06,
+		"inputAbbreviatedPath": "\/assets\/img\/boats-video-placeholder.png",
+		"outputAbbreviatedPath": "\/assets\/img\/boats-video-placeholder.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -571,6 +615,17 @@
 		"initialSize": 20498,
 		"inputAbbreviatedPath": "\/assets\/img\/section-testimonial-1.png",
 		"outputAbbreviatedPath": "\/assets\/img\/section-testimonial-1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/strike-product-img.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 173507,
+		"inputAbbreviatedPath": "\/assets\/img\/strike-product-img.png",
+		"outputAbbreviatedPath": "\/assets\/img\/strike-product-img.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

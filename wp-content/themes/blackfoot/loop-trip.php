@@ -21,7 +21,7 @@
       <h2 class="trip-title"><?php the_title(); ?></h2>
       <p class="trip-summary"><?php the_excerpt(); ?></p>
       <span class="price">
-        From <span class="amount">$<?php echo $price_statement; ?></span> per day
+        <?php echo $price_statement; ?>
       </span>
       <a href="<?php the_permalink(); ?>" class="btn btn-primary">View details &amp; book now</a>
     </div>

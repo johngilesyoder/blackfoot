@@ -9,7 +9,7 @@
     $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
     $thumb_url = $thumb_url_array[0];
 
-    $from_price = types_render_field("from-price", array("raw"=>"true"));
+    $price_statement = types_render_field("price-statement", array("raw"=>"true"));
 	?>
 
 		<!-- Article -->
@@ -26,7 +26,7 @@
 							<h1 class="trip-title"><?php the_title(); ?></h1>
 							<div class="trip-meta">
 								<span class="price">
-				        	From <span class="amount">$<?php echo $from_price; ?></span> per day
+				        	<?php echo $price_statement; ?>
 				      	</span>
 				      </div>
 						</div>

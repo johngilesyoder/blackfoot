@@ -2,6 +2,7 @@
 // -----------------------------------------------------------------
 
 .page-template-template-boats {
+  background: #FAF8F7;
   .subnav {
     border-top: 1px solid #DBD8D7;
     border-bottom: 1px solid #DBD8D7;
@@ -51,6 +52,7 @@
   .boats-hero {
     height: 660px;
     border-bottom: 7px solid #999490;
+    background-color: @brand-brown;
     background-size: cover;
     background-position: 50% 50%;
     margin-bottom: 50px;
@@ -126,6 +128,9 @@
       background: #fff;
       box-shadow: 0 1px 30px rgba(0,0,0,.08);
       padding: 30px;
+      margin-bottom: -40px;
+      position: relative;
+      z-index: 10;
       .hentry {
         margin-bottom: 0;
       }
@@ -171,6 +176,182 @@
           top: -4px;
           position: relative;
         }
+      }
+    }
+    .strike-video {
+      margin-left: -30px;
+      margin-right: -30px;
+      margin-bottom: -30px;
+      .video-placeholder {
+        height: 620px;
+        background-size: cover;
+        background-position: 50% 50%;
+        position: relative;
+        display: block;
+        .btn-video {
+          height: 120px;
+          width: 120px;
+          background: rgba(0,0,0,.6);
+          border: 7px solid #fff;
+          border-radius: 50%;
+          box-shadow: 0 2px 8px rgba(0,0,0,.5);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -60px;
+          margin-left: -60px;
+          text-align: center;
+          display: inline-block;
+          .vertical-center-parent();
+          img {
+            .vertical-center();
+            right: -6px;
+          }
+        }
+        &:hover {
+          .btn-video {
+            background: rgba(0,0,0,.7);
+            box-shadow: 0 2px 6px rgba(0,0,0,.8);
+          }
+        }
+      }
+    }
+  }
+  .special-edition {
+    background: #fff;
+    border-top: 1px solid #DEDBD9;
+    border-bottom: 1px solid #DEDBD9;
+    padding: 100px 0 60px;
+    margin-bottom: 60px;
+    hgroup {
+      text-align: center;
+      margin-bottom: 60px;
+      h2 {
+        margin: 0 0 15px;
+        font-family: @font-family-sans-serif;
+        font-size: 60px;
+        font-weight: 700;
+      }
+      h3 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.5em;
+        width: 750px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    .special-edition-product {
+      .product-img {
+        .img-responsive();
+      }
+      .product-title {
+        font-size: 42px;
+        font-family: @font-family-sans-serif;
+        font-weight: 700;
+        display: block;
+        img {
+          height: 30px;
+          margin-right: 8px;
+          vertical-align: middle;
+          position: relative;
+          top: -3px;
+        }
+      }
+      .product-subtitle {
+        color: @brand-peach;
+        font-weight: 700;
+        font-size: 30px;
+        font-family: @font-family-sans-serif;
+        line-height: 1em;
+      }
+      .btn-learn-more {
+        float: right;
+        margin-top: 25px;
+        &:after {
+          content: '';
+          display: inline-block;
+          width: 14px;
+          height: 24px;
+          background-image: url('assets/img/icon-chevron-r-white.svg');
+          background-size: cover;
+          margin-left: 30px;
+          vertical-align: middle;
+          top: -4px;
+          position: relative;
+        }
+      }
+      .quote-from-john {
+        background: #fdf5f1;
+        border-left: 6px solid @brand-peach;
+        padding: 20px 30px;
+        margin-top: 50px;
+        h2 {
+          font-size: 21px;
+          font-family: @font-family-sans-serif;
+          font-weight: 700;
+          margin-top: 0;
+        }
+        p {
+          font-style: italic;
+        }
+        .continue-reading-link {
+          font-family: @font-family-sans-serif;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .other-watercraft {
+    hgroup {
+      text-align: center;
+      margin-bottom: 60px;
+      h2 {
+        margin: 0 0 15px;
+        font-family: @font-family-sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+      }
+      h3 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.5em;
+        width: 750px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    .boat-category {
+      img {
+        margin-bottom: 15px;
+        .img-responsive();
+      }
+      h3 {
+        font-size: 24px;
+        font-weight: 700;
+        font-family: @font-family-sans-serif;
+        margin-top: 0;
+      }
+    }
+    .other-categories {
+      margin-bottom: 80px;
+    }
+    .schedule-consultation {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .btn-schedule {
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 24px;
+        background-image: url('assets/img/icon-chevron-r-white.svg');
+        background-size: cover;
+        margin-left: 30px;
+        vertical-align: middle;
+        top: -4px;
+        position: relative;
       }
     }
   }
