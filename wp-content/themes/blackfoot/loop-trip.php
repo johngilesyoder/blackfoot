@@ -4,7 +4,7 @@
   // Start loop
   while ( $loop->have_posts() ) : $loop->the_post();
   // Set variables
-  $from_price = types_render_field("from-price", array("raw"=>"true"));
+  $price_statement = types_render_field("price-statement", array("raw"=>"true"));
 ?>
 
 <!-- Trip Block -->
@@ -21,7 +21,7 @@
       <h2 class="trip-title"><?php the_title(); ?></h2>
       <p class="trip-summary"><?php the_excerpt(); ?></p>
       <span class="price">
-        From <span class="amount">$<?php echo $from_price; ?></span> per day
+        From <span class="amount">$<?php echo $price_statement; ?></span> per day
       </span>
       <a href="<?php the_permalink(); ?>" class="btn btn-primary">View details &amp; book now</a>
     </div>
