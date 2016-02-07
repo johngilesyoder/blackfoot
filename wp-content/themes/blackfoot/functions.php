@@ -652,6 +652,36 @@ function woo_dequeue_booking_styles() {
 add_action( 'wp_print_styles', 'woo_dequeue_booking_styles', 100 );
 
 
+// Create a Categories Dropdown
+// ---------------------------------------------------
+// Use: [product_categories_dropdown orderby="title" count="0" hierarchical="0"]
+function woo_product_categories_dropdown() {
+  $dropdown_args = array(
+    'hide_empty'         => 0, 
+    'hierarchical'       => 1, 
+    'name'               => 'product_cat',
+    'id'                 => 'productCat',
+    'class'              => 'category-dropdown form-control',
+    'taxonomy'           => 'product_cat',
+    'value_field'        => 'slug',
+    'show_option_none'   => __( 'Shop by category' ),
+  );
+  wp_dropdown_categories( $dropdown_args );
+  ?>
+  <script type='text/javascript'>
+  /* <![CDATA[ */
+    var dropdown = document.getElementById("productCat");
+      function onCatChange() {
+        if ( dropdown.options[dropdown.selectedIndex].value !=='' ) {
+          location.href = "<?php echo esc_url( home_url( '/' ) ); ?>product-category/"+dropdown.options[dropdown.selectedIndex].value;
+        }
+      }
+      dropdown.onchange = onCatChange;
+  /* ]]> */
+  </script>
+  <?php
+}
+
 
 /*------------------------------------*\
 Blackfoot Custom Stuff

@@ -1,5 +1,6 @@
 <aside class="shop-sidebar" role="complementary">
 	<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-shop')) ?>
+  <?php woo_product_categories_dropdown(); ?>
   <a class="sidebar-sale" href="/on-sale/"><span class="glyphicon glyphicon-tag"></span>Shop Sales</a>
   <div class="sidebar-retail">
     <h3><span class="glyphicon glyphicon-map-marker"></span> Come visit us!</h3>

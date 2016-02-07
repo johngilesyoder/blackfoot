@@ -17,8 +17,8 @@
         width: 100%;
         height: auto;
         display: block;
-        padding: 30px;
-        margin: 0;
+        //padding: 30px;
+        margin: 15px 0;
       }
       h3 {
         font-family: @font-family-sans-serif;
@@ -82,4 +82,78 @@
       .make-md-column(6);
     }
   }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .columns-3 {
+    ul.tiles {
+      .product-tile {
+        .make-sm-column(4);
+      }
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .columns-3 {
+    ul.tiles {
+      .product-tile {
+        .make-xs-column(6);
+        width: 50% !important;
+        margin: 0 0 30px !important;
+      }
+    }
+  }
+  .woocommerce {
+    ul.tiles {
+      .product-tile {
+        & > a:not(.btn) {
+          .price del {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .woocommerce.columns-3 {
+    ul.tiles {
+      .product-tile {
+        .make-xs-column(12);
+        width: 100% !important;
+        margin: 0 0 50px !important;
+        float: none !important;
+        & > a:not(.btn) {
+          img {
+            max-width: 320px;
+            margin: 15px auto;
+          }
+          h3 {
+            height: auto !important
+          }
+        }
+      }
+    }
+  }
+
 }

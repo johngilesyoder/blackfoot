@@ -3,6 +3,13 @@
 
 .shop-sidebar {
   margin-bottom: 30px;
+  .category-dropdown {
+    display: none;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+    font-size: 14px;
+    height: 31px
+  }
 }
 // Search
 .widget_product_search {
@@ -99,4 +106,72 @@
     padding: 10px;
     background: @brand-off-white;
   }
+}
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .shop-sidebar {
+    .category-dropdown {
+      display: block;
+    }
+    .widget_product_categories {
+      display: none;
+    }
+  }
+  .sidebar-retail,
+  .sidebar-sale {
+    display: none;
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .shop-sidebar {
+    .category-dropdown {
+      display: block;
+    }
+    .widget_product_categories {
+      display: none;
+    }
+  }
+  .sidebar-sale {
+    display: none;
+    margin-bottom: 30px;
+  }
+  .sidebar-retail {
+    display: none;
+    img {
+      display: none;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .widget_product_search {
+    margin-bottom: 15px;
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .sidebar-retail {
+    img {
+      display: block;
+    }
+  }
+
 }

@@ -20,29 +20,7 @@
 
 <section id="shop-featured" class="shop-section shop-featured">
   <div class="row">
-    <div class="col-md-7">
-      <div class="featured-item-content">
-        <h2 class="featured-title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-featured-peach.svg"> Featured Product</h2>
-        <h3 class="item-title"><?php echo $brand . '&nbsp;'; ?><?php the_title(); ?></h3>
-        <?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>
-        <?php if ( $price_html = $product->get_price_html() ) : ?>
-          <span class="price"><?php echo $price_html; ?></span>
-        <?php endif; ?>
-        <?php echo apply_filters( 'woocommerce_loop_add_to_cart_link',
-          sprintf( '<a href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" data-quantity="%s" class="btn btn-primary btn-add-to-cart %s product_type_%s">%s</a>',
-            esc_url( $product->add_to_cart_url() ),
-            esc_attr( $product->id ),
-            esc_attr( $product->get_sku() ),
-            esc_attr( isset( $quantity ) ? $quantity : 1 ),
-            $product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
-            esc_attr( $product->product_type ),
-            esc_html( $product->add_to_cart_text() )
-          ),
-          $product );
-        ?>
-      </div>
-    </div>
-    <div class="col-md-5">
+    <div class="col-md-5 col-md-push-7">
       <div class="featured-item-img">
         <?php
           if ( has_post_thumbnail() ) {
@@ -72,6 +50,28 @@
           }
         ?>
       </div> 
+    </div>
+    <div class="col-md-7 col-md-pull-5">
+      <div class="featured-item-content">
+        <h2 class="featured-title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-featured-peach.svg"> Featured Product</h2>
+        <h3 class="item-title"><?php echo $brand . '&nbsp;'; ?><?php the_title(); ?></h3>
+        <?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>
+        <?php if ( $price_html = $product->get_price_html() ) : ?>
+          <span class="price"><?php echo $price_html; ?></span>
+        <?php endif; ?>
+        <?php echo apply_filters( 'woocommerce_loop_add_to_cart_link',
+          sprintf( '<a href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" data-quantity="%s" class="btn btn-primary btn-add-to-cart %s product_type_%s">%s</a>',
+            esc_url( $product->add_to_cart_url() ),
+            esc_attr( $product->id ),
+            esc_attr( $product->get_sku() ),
+            esc_attr( isset( $quantity ) ? $quantity : 1 ),
+            $product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
+            esc_attr( $product->product_type ),
+            esc_html( $product->add_to_cart_text() )
+          ),
+          $product );
+        ?>
+      </div>
     </div>
   </div>    
 </section>
