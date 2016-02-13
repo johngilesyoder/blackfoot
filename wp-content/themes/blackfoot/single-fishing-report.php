@@ -111,7 +111,7 @@
 								</div>
 								<div class="report-specification">
 									<?php if ( $report_flow_link !== '' ) : ?>
-									<h4>Water Flow</h4>
+									<h4>Water Flow (learn more)</h4>
 									<a target="_blank" href="<?php echo $report_flow_link; ?>"><?php echo $report_flow_link; ?></a>
 									<? endif; ?>
 								</div>
