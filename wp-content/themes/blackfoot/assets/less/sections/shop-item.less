@@ -17,7 +17,7 @@
     h3 {
       font-size: 21px;
       font-weight: 700;
-      margin: 20px 0 0;
+      margin: 20px 0 0 10px;
       color: @brand-brown;
     }
     img {
@@ -46,7 +46,21 @@
 @media (min-width: 768px) and (max-width: 991px) {}
 
 // Up to tablet
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+  .single-product.woocommerce {
+    .item-bottom {
+      padding-top: 15px;
+    }
+    .product-retail {
+      margin-bottom: 30px;
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+}
 
 // Up to landscape phone
 @media (max-width: 480px) {}

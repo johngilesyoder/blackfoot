@@ -44,3 +44,60 @@
     }
   }
 }
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .single-product.woocommerce {
+    .title-group {
+      .product-share {
+        display: none;
+      }
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .single-product.woocommerce {
+    .title-group {
+      .brand-logo {
+        display: none;
+      }
+      .product_title {
+        font-size: 30px;
+      }
+      .product-share {
+        display: none;
+      }
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .single-product.woocommerce {
+    .title-group {
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      .product_title {
+        font-size: 30px;
+      }
+    }
+  }
+
+}

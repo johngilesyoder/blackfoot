@@ -79,7 +79,7 @@
 .columns-2 {
   ul.tiles {
     .product-tile {
-      .make-md-column(6);
+      .make-sm-column(6);
     }
   }
 }
@@ -136,7 +136,8 @@
 // Up to landscape phone
 @media (max-width: 480px) {
 
-  .woocommerce.columns-3 {
+  .woocommerce.columns-3,
+  .woocommerce .columns-2 {
     ul.tiles {
       .product-tile {
         .make-xs-column(12);

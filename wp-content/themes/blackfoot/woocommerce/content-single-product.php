@@ -38,12 +38,12 @@ if( function_exists('get_product') ){
 
 	<hgroup class="title-group">
 		<div class="row">
-			<div class="col-md-10">
+			<div class="col-md-9 col-lg-10">
 
 				<?php woocommerce_template_single_title(); ?>
 
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-3 col-lg-2">
 				<div class="product-share">
 					<!-- FB -->
 					<div class="share-fb">

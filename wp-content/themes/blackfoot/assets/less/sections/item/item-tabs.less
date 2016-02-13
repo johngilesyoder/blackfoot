@@ -69,3 +69,54 @@
     }
   }
 }
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .single-product.woocommerce {
+    .item-bottom {
+      .woocommerce-tabs {
+        .wc-tabs {
+          li {
+            margin: 0 0 5px;
+            display: block;
+            a {
+              padding: 10px 15px;
+              margin-right: 0;
+              color: @brand-brown;
+              background: @brand-off-white;
+              border-radius: 6px;
+              &:hover {
+                color: @brand-brown;
+              }
+            }
+            &.active {
+              a {
+                border-top: 0;
+                color: @brand-off-white;
+                background: @brand-brown;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {}

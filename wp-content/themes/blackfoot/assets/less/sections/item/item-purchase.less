@@ -126,3 +126,88 @@
     }
   }
 }
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .single-product.woocommerce {
+    .purchase-console {
+      padding: 15px;
+      .price {
+        font-size: 36px;
+        margin-bottom: 15px;
+        del {
+          font-size: 14px;
+        }
+      }
+      form.cart {
+        .button {
+          font-size: 21px;
+          line-height: 35px;
+        }
+      }
+      // Free shipping message
+      .free-shipping-message {
+        p {
+          font-size: 14px;
+          img {
+            width: 24px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .single-product.woocommerce {
+    .purchase-console {
+      padding: 15px;
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .single-product.woocommerce {
+    .purchase-console {
+      .price {
+        font-size: 36px;
+        margin-bottom: 15px;
+        del {
+          font-size: 14px;
+        }
+      }
+      form.cart {
+        .button {
+          font-size: 21px;
+          line-height: 35px;
+        }
+      }
+      // Free shipping message
+      .free-shipping-message {
+        p {
+          font-size: 14px;
+          img {
+            width: 24px;
+          }
+        }
+      }
+    }
+  }
+
+}

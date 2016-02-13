@@ -40,16 +40,18 @@ if ( $products->have_posts() ) : ?>
 	<div class="related products">
 
 		<h2><span>Related items</span></h2>
+		<div class="columns-2">
 
-		<?php woocommerce_product_loop_start(); ?>
+			<?php woocommerce_product_loop_start(); ?>
 
-			<?php while ( $products->have_posts() ) : $products->the_post(); ?>
+				<?php while ( $products->have_posts() ) : $products->the_post(); ?>
 
-				<?php wc_get_template_part( 'content', 'product' ); ?>
+					<?php wc_get_template_part( 'content', 'product' ); ?>
 
-			<?php endwhile; // end of the loop. ?>
+				<?php endwhile; // end of the loop. ?>
 
-		<?php woocommerce_product_loop_end(); ?>
+			<?php woocommerce_product_loop_end(); ?>
+		</div>
 
 	</div>
 

@@ -19,7 +19,7 @@ $attachment_count = count( $product->get_gallery_attachment_ids() );
 
 		<?php if ( $attachment_count > 0 ) : ?>
 
-		<div class="col-md-10 col-md-push-2">
+		<div class="col-sm-10 col-sm-push-2">
 		
 		<?php else : ?>
 
@@ -57,7 +57,7 @@ $attachment_count = count( $product->get_gallery_attachment_ids() );
 
 		<?php if ( $attachment_count > 0 ) : ?>
 
-		<div class="col-md-2 col-md-pull-10">
+		<div class="col-sm-2 col-sm-pull-10">
 
 			<?php do_action( 'woocommerce_product_thumbnails' ); ?>
 
