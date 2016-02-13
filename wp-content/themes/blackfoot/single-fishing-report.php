@@ -24,6 +24,7 @@
 				$report_patterns = types_render_field("fly-patterns", array("raw"=>"true"));
 		    $report_forecast_id = types_render_field("location-id", array("raw"=>"true"));
 		    $report_flow = types_render_field("water-flow", array("raw"=>"true"));
+		    $report_flow_link = types_render_field("link-to-water-flows", array("raw"=>"true"));
 		    $report_visibility = types_render_field("visibility", array("raw"=>"true"));
 		    $report_temperature = types_render_field("water-temperature-at-mid-day", array("raw"=>"true"));
 		    $report_water_condition = types_render_field("water-condition", array("raw"=>"true"));
@@ -106,6 +107,12 @@
 									<?php if ( $report_flow !== '' ) : ?>
 									<h4>Water Flow</h4>
 									<?php echo $report_flow; ?>
+									<? endif; ?>
+								</div>
+								<div class="report-specification">
+									<?php if ( $report_flow_link !== '' ) : ?>
+									<h4>Water Flow</h4>
+									<a target="_blank" href="<?php echo $report_flow_link; ?>"><?php echo $report_flow_link; ?></a>
 									<? endif; ?>
 								</div>
 								<div class="report-specification">
