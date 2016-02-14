@@ -70,8 +70,22 @@
     .woocommerce-message,
     .woocommerce-error,
     .woocommerce-info {
+      padding-left: 15px;
+      font-size: 16px;
       .button {
-        display: none;
+        float: right;
+        border: 0;
+        background: transparent;
+        font-size: 16px;
+        border-left: 1px solid rgba(0,0,0,.2);
+        border-radius: 0;
+        padding: 0 0 0 10px;
+        margin-left: 10px;
+        text-decoration: none;
+        &:after {
+          content: '\2192';
+          margin-left: 8px;
+        }
       }
     }
   }
@@ -79,7 +93,36 @@
 }
 
 // Up to tablet
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+  .woocommerce {
+    .woocommerce-message,
+    .woocommerce-error,
+    .woocommerce-info {
+      padding-left: 15px;
+      font-size: 16px;
+      &:before {
+        display: none;
+      }
+      .button {
+        float: right;
+        border: 0;
+        background: transparent;
+        font-size: 16px;
+        border-left: 1px solid rgba(0,0,0,.2);
+        border-radius: 0;
+        padding: 0 0 0 10px;
+        margin-left: 10px;
+        text-decoration: none;
+        &:after {
+          content: '\2192';
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
+}
 
 // Up to landscape phone
 @media (max-width: 480px) {}
