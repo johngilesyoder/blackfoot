@@ -17,21 +17,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php if ( $order->customer_note ) : ?>
 		<tr>
 			<th><?php _e( 'Note:', 'woocommerce' ); ?></th>
-			<td><?php echo wptexturize( $order->customer_note ); ?></td>
+			<td data-title="Notes"><?php echo wptexturize( $order->customer_note ); ?></td>
 		</tr>
 	<?php endif; ?>
 
 	<?php if ( $order->billing_email ) : ?>
 		<tr>
 			<th><?php _e( 'Email:', 'woocommerce' ); ?></th>
-			<td><?php echo esc_html( $order->billing_email ); ?></td>
+			<td data-title="Email"><?php echo esc_html( $order->billing_email ); ?></td>
 		</tr>
 	<?php endif; ?>
 
 	<?php if ( $order->billing_phone ) : ?>
 		<tr>
 			<th><?php _e( 'Telephone:', 'woocommerce' ); ?></th>
-			<td><?php echo esc_html( $order->billing_phone ); ?></td>
+			<td data-title="Phone"><?php echo esc_html( $order->billing_phone ); ?></td>
 		</tr>
 	<?php endif; ?>
 

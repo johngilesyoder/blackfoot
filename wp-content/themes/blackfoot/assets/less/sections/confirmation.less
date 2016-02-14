@@ -2,7 +2,7 @@
 // -----------------------------------------------------------------
 
 .woocommerce-order-received {
-  .order_details {
+  .woocommerce > ul {
     list-style-type: none;
     margin: 0 0 60px;
     padding: 0;
@@ -70,6 +70,7 @@
           font-family: @font-family-sans-serif;
           display: block;
           min-width: 200px;
+          padding: 16px 15px 17px;
           a {
             font-weight: 700;
           }
@@ -190,7 +191,54 @@
 @media (min-width: 768px) and (max-width: 991px) {}
 
 // Up to tablet
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+  .woocommerce-order-received {
+    .woocommerce > ul {
+      margin: 0 -15px 30px;
+      border-right: 0;
+      border-left: 0;
+      padding: 15px 0;
+      li {
+        float: none;
+        padding: 7.5px 15px;
+        border-right: 0;
+        font-size: 14px;
+        strong {
+          
+        }
+      }
+    }
+    .shop_table.order_details {
+      margin-bottom: 30px;
+      tbody {
+        .order_item {
+          .product-name {
+            min-width: 0;
+            width: 100%;
+          }
+        }
+        td,
+        th {
+          width: 50%;
+          min-width: 0;
+        }
+      }
+    }
+    .customer_details {
+      margin-bottom: 30px;
+      td {
+        font-size: 16px;
+        width: 100%;
+        &:before {
+          font-size:16px;
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+
+}
 
 // Up to landscape phone
 @media (max-width: 480px) {}

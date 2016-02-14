@@ -263,10 +263,6 @@
       margin-top: 0;
       margin-bottom: 30px;
     }
-    .woocommerce > form {
-      margin-left: -15px;
-      margin-right: -15px;
-    }
     // Cart items
     .shop_table {
       width: 100%;
@@ -355,12 +351,9 @@
     }
     // Cart Totals
     .cart-collaterals {
-      margin-left: -15px;
-      margin-right: -15px;
       .cart_totals {
         h2 {
           margin-top: 0;
-          padding: 0 15px;
         }
         table {
           tr {
@@ -391,9 +384,6 @@
             }
           }
         }
-        .wc-proceed-to-checkout {
-          padding: 0 15px;
-        }
       }
     }
     .cart-accepted-payments {
@@ -406,4 +396,26 @@
 }
 
 // Up to landscape phone
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+
+  .woocommerce-cart {
+    .woocommerce > form {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    // Cart Totals
+    .cart-collaterals {
+      margin-left: -15px;
+      margin-right: -15px;
+      .cart_totals {
+        h2 {
+          padding: 0 15px;
+        }
+        .wc-proceed-to-checkout {
+          padding: 0 15px;
+        }
+      }
+    }
+  }
+
+}

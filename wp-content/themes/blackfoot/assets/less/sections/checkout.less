@@ -357,13 +357,108 @@
 @media (min-width: 1200px) {}
 
 // Desktop to large desktop
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .woocommerce-checkout {
+    .order-review {
+      .shipping {
+        ul {
+          width: auto;
+        }
+      }
+    }
+  }
+
+}
 
 // Tablet to desktop
 @media (min-width: 768px) and (max-width: 991px) {}
 
 // Up to tablet
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+  .woocommerce-checkout {
+    .checkout_coupon {
+      margin-bottom: 30px;
+      .input-text {
+        width: 100%;
+      }
+    }
+    .woocommerce-billing-fields {
+      h3 {
+        margin-top: 0;
+      }
+      .form-row {
+        margin-bottom: 15px;
+      }
+      .form-row-first,
+      .form-row-last {
+        float: none;
+        width: 100%;
+      }
+      .form-row-first {
+        margin-right: 0;
+      }
+      .input-text {
+        height: 36px;
+        font-size: 16px;
+      }
+    }
+    .woocommerce-shipping-fields {
+      h3 {
+        label {
+          font-size: 18px;
+        }
+      }
+      .form-row {
+        margin-bottom: 15px;
+      }
+      .form-row-first,
+      .form-row-last {
+        float: none;
+        width: 100%;
+      }
+      .form-row-first {
+        margin-right: 0;
+      }
+      .input-text {
+        height: 36px;
+        font-size: 16px;
+      }
+      #order_comments {
+        height: 60px;
+      }
+    }
+    // Order Review
+    .order-review {
+      border: 0;
+      h3 {
+        padding: 15px 0;
+      }
+      .woocommerce-checkout-review-order {
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+      .table {
+        tbody {
+          .cart_item {
+            .product-name {
+              min-width: 0;
+              width: 50%;
+              display: table-cell;
+            }
+          }
+        }
+      }
+      .shipping {
+        ul {
+          width: auto;
+        }
+      }
+    }
+  }
+
+}
 
 // Up to landscape phone
 @media (max-width: 480px) {}
