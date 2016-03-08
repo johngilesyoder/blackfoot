@@ -1,87 +1,364 @@
 <?php /* Template Name: Test Template */ get_header(); ?>
 
+	<?php get_template_part( 'includes/boats/boats-subnav' ); ?>
 
 	<main role="main">
 		<div class="container">
 
-			<!-- ===================== -->
-			<!-- FEATURED ITEM EXAMPLE -->
-			<!-- ===================== -->
-			<?php 
-				$args = array(  
-					'post_type' => 'product',  
-					'meta_key' => '_featured',  
-					'meta_value' => 'yes',  
-					'posts_per_page' => 1  
-				); 
-				$featured_query = new WP_Query( $args );
+			<!-- THE JAVASCRIPT FORM -->
+			<!-- =================== -->
+			<form id="byob-form" class="byob-form">
+				
+				<!-- STEP ONE -->
+				<section class="step step-boat-size">
+			    <div class="step-title" id="step-one-title">
+			    	<h3>1. Choose Your Boat Size</h3>
+			    	<button type="button" id="step-one-edit" class="btn btn-default btn-edit" style="display:none;"><span class="glyphicon glyphicon-pencil"></span>Change</button>
+			    </div>
+			    <div class="step-body">
+				    <fieldset id="boat-options">
+				    	<div class="row">
+					    	<div class="col-sm-4">
+						      <div class="radio">
+						      	<label>
+						      		<input type="radio" name="boat" data-item="Sotar Strike Raft - 11 foot 6 inch" data-price="4211.00" value="116">
+						      		11' 6"
+						      	</label>
+						      </div>
+						    </div>
+						    <div class="col-sm-4">
+						      <!-- *** MOST POPULAR *** -->
+						      <div class="radio">
+						      	<label>
+						      		<input type="radio" name="boat" data-item="Sotar Strike Raft - 13 foot 6 inch" data-price="4536.00" value="136">
+						      		13' 6"
+						      	</label>
+						      </div>
+						    </div>
+						    <div class="col-sm-4">
+						      <div class="radio">
+						      	<label>
+						      		<input type="radio" name="boat" data-item="Sotar Strike Raft - 14 foot 6 inch" data-price="4752.00" value="146">
+						      		14' 6"
+						      	</label>
+						      </div>
+						    </div>
+						  </div>
+				    </fieldset>
+				    <table id="boat-lineitems" class="table table-striped table-boat-base-price" style="display:none;">
+				      <thead>
+				      	<tr>
+				      		<th>Description</th>
+				      		<th>Qty</th>
+				      		<th>Price</th>
+				      	</tr>
+				      </thead>
+				      <tbody>
+				      	<tr>
+				      		<td>
+				      			<strong><span id="boat-lineitem"></span></strong>
+				      		</td>
+				      		<td>
+				      			<span>1</span>
+				      		</td>
+				      		<td class="boat-base-price">
+				      			<strong>$<span id="boat-price"></span></strong>
+				      		</td>
+				      	</tr>
+				      	<tr>
+				      		<td>
+				      			6 Handle / D-Rings (Standard)
+				      		</td>
+				      		<td>
+				      			1
+				      		</td>
+				      		<td>
+				      			$0.00
+				      		</td>
+				      	</tr>
+				      	<tr>
+				      		<td>
+				      			4 D-Rings (Standard)
+				      		</td>
+				      		<td>
+				      			1
+				      		</td>
+				      		<td>
+				      			$0.00
+				      		</td>
+				      	</tr>
+				      	<tr>
+			      			<td>
+			      				Self-Bailing Floor (Standard)
+			      			</td>
+			      			<td>
+			      				1
+			      			</td>
+			      			<td>
+			      				$0.00
+			      			</td>
+				      	</tr>
+				      	<tr>
+			      			<td>
+			      				2 Outside Chambers (Standard)
+			      			</td>
+			      			<td>
+			      				1
+			      			</td>
+			      			<td>
+			      				$0.00
+			      			</td>
+				      	</tr>
+				      </tbody>
+				    </table>
+				  </div>
+			  </section>
+				
+				<!-- STEP TWO -->
+				<section id="step-two" class="step" style="display:none;">
+			    <div class="step-title">
+			    	<h3>2. Choose Your Options</h3>
+			    </div>
+			    <div class="step-body">
+				    <fieldset id="additional-options" style="display:none;">
+				      <table class="table">
+				      	<thead>
+				      		<tr>
+				      			<th>&nbsp;</th>
+				      			<th>&nbsp;</th>
+				      			<th>Qty</th>
+				      			<th>Price</th>
+				      			<th>Subtotal</th>
+				      		</tr>
+				      	</thead>
+				      	<tbody>
+						      <!-- These will all need to be hard-coded -->
+						      <tr>
+						      	<td>
+						      		<input type="checkbox" name="boat-option" data-item="additional-chamber-option" data-price="150.00" value="150.00">
+						      	</td>
+						      	<td>
+						      		<strong>Additional Chamber</strong><br>
+						      		<em>Marketing spiel for the additional chamber</em>
+						      	</td>
+						      	<td>
+						      		0
+						      	</td>
+						      	<td>
+						      		$150.00
+						      	</td>
+						      	<td>
+						      		<span>$0.00</span>
+						      	</td>
+						      </tr>
+						      <tr>
+						      	<td>
+						      		<input type="checkbox" name="boat-option" data-item="top-chafe-option" data-price="269.00" value="269.00">
+						      	</td>
+						      	<td>
+						      		<strong>Top Chafe</strong><br>
+						      		<em>Marketing spiel for the top chafe</em>
+						      	</td>
+						      	<td>
+						      		0
+						      	</td>
+						      	<td>
+						      		$269.00
+						      	</td>
+						      	<td>
+						      		<span>$0.00</span>
+						      	</td>
+						      </tr>
+						      <tr>
+						      	<td>
+						      		<input type="checkbox" name="boat-option" data-item="bottom-chafe-option" data-price="400.00" value="400.00">
+						      	</td>
+						      	<td>
+						      		<strong>Bottom Chafe</strong><br>
+						      		<em>Marketing spiel for the bottom chafe</em>
+						      	</td>
+						      	<td>
+						      		0
+						      	</td>
+						      	<td>
+						      		$400.00
+						      	</td>
+						      	<td>
+						      		<span>$0.00</span>
+						      	</td>
+						      </tr>
+						    </tbody>
+					    </table>
+				    </fieldset>
+				  </div>
+			  </section>
 
-				if ($featured_query->have_posts()) : while ($featured_query->have_posts()) : $featured_query->the_post();
-				$product = get_product( $featured_query->post->ID );
-				// Return Brand name for product
-				global $product;
-				$brand = array_shift( wc_get_product_terms( $product->id, 'product_brand', array( 'fields' => 'names' ) ) );
-			?>
+		    <!-- STEP THREE -->
+		    <section id="step-three" class="step" style="display:none;">
+			    <div class="step-title">
+			    	<h3>3. Customize Your Colors</h3>
+			    </div>
+			    <div class="step-body">
+				    <div id="color-picker" style="display:none;">
+				      <div class="row">
+				      	<div class="col-sm-4">
+				      		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/boats/primary-boat-color.png" id="color-image" />
+				      	</div>
+				      	<div class="col-sm-8">
+						      <div class="btn-group btn-group-sm" id="color-button-group" role="group">
+						        <button type="button" id="primary-boat-color" class="btn btn-default active">Primary Boat Color</button>
+						        <button type="button" id="handle-patch-color" class="btn btn-default">Handle Patch Color</button>
+						        <button type="button" id="d-ring-patch-color" class="btn btn-default">D-Ring Patch Color</button>
+						        <button type="button" id="floor-color" class="btn btn-default">Floor Color</button>
+						        <button type="button" id="chafe-color" class="btn btn-default">Chafe Color</button>
+						      </div>
+						      <fieldset id="boat-options">
+						      	<div class="row">
+						      		<div class="col-sm-4">
+								        <div class="radio">
+								        	<label>
+								        		<input type="radio" name="color" value="Red">
+								        		Red
+								        	</label>
+								        </div>
+								        <div class="radio">
+								        	<label>
+								        		<input type="radio" name="color" value="Red">
+								        		Red
+								        	</label>
+								        </div>
+								        <div class="radio">
+								        	<label>
+								        		<input type="radio" name="color" value="Red">
+								        		Red
+								        	</label>
+								        </div>
+								      </div>
+								      <div class="col-sm-4">
+								        <div class="radio">
+								        	<label>
+								        		<input type="radio" name="color" value="Blue">
+								        		Blue
+								        	</label>
+								        </div>
+								        <div class="radio">
+								        	<label>
+								        		<input type="radio" name="color" value="Red">
+								        		Red
+								        	</label>
+								        </div>
+								        <div class="radio">
+								        	<label>
+								        		<input type="radio" name="color" value="Red">
+								        		Red
+								        	</label>
+								        </div>
+								      </div>
+								      <div class="col-sm-4">
+								        <div class="radio">
+								        	<label>
+								        		<input type="radio" name="color" value="Green">
+								        		Green
+								        	</label>
+								        </div>
+								        <div class="radio">
+								        	<label>
+								        		<input type="radio" name="color" value="Red">
+								        		Red
+								        	</label>
+								        </div>
+								        <div class="radio">
+								        	<label>
+								        		<input type="radio" name="color" value="Red">
+								        		Red
+								        	</label>
+								        </div>
+								      </div>
+								    </div>
+						      </fieldset>
+						    </div>
+						  </div>
+				    </div>
+				  </div>
+			  </section>
 
-			<article>
-				<h2 class="featured-title">Featured Product</h2>
+		    <!-- STEP FOUR -->
+		    <section id="step-four" class="step" style="display:none;">
+			    <div class="step-title">
+			    	<h3>4. Choose the Perfect Frame</h3>
+			    </div>
+			    <div class="step-body">
+				    <fieldset id="frames" style="display:none;">
+				      <p><em>Marketing spiel for basic</em></p>
+				      <div class="radio">
+				      	<label>
+				      		<input type="radio" name="frame" data-item="Basic" data-price="1000.00" value="Basic">
+				      		Basic
+				      	</label>
+				      </div>
+				      <p><em>Marketing spiel for deluxe</em></p>
+				      <div class="radio">
+				      	<label>
+				      		<input type="radio" name="frame" data-item="Deluxe" data-price="2000.00" value="Deluxe">
+				      		Deluxe
+				      	</label>
+				      </div>
+				      <p><em>** MOST POPULAR** Marketing spiel for premier</em></p>
+				      <div class="radio">
+				      	<label>
+				      		<input type="radio" name="frame" data-item="Premier" data-price="3000.00" value="Premier">
+				      		Premier
+				      	</label>
+				      </div>
+				      <div class="radio">
+				      	<label>
+				      		<input type="radio" name="frame" data-item="" data-price="0.00" value="">
+				      		Reset
+				      	</label>
+				      </div>
+				    </fieldset>
+				  </div>
+			  </section>
 
-				<?php
-					if ( has_post_thumbnail() ) {
+		    <!-- STEP FIVE -->
+		    <section id="step-five" class="step" style="display:none;">
+			    <div class="step-title">
+			    	<h3>5. Accessorize Your Boat</h3>
+			    </div>
+			    <div class="step-body">
+				    <fieldset id="accessories" style="display:none;">
+				      <!-- Note the data-price will get calculated when the quantity is changed -->
+				      <input type="checkbox" name="accessory" data-item="orion-cooler" data-price="0.00" data-price-each="549.00" value="Orion Cooler">Orion Cooler
+		    			<input type="text" name="quantity" value="1"> 549.00 <span>0.00</span><br/>
+				      <!-- *** There are 14 more accessories on the current list (maybe more maybe less ask John) ***
+				      Some or all of these will need to be added to the store inventory
+				      -->
+				    </fieldset>
+				  </div>
+			  </section>
+			</form>
 
-						$image_title    = esc_attr( get_the_title( get_post_thumbnail_id() ) );
-						$image_caption  = get_post( get_post_thumbnail_id() )->post_excerpt;
-						$image_link     = get_the_permalink();
-						$image          = get_the_post_thumbnail( $post->ID, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), array(
-							'title' => $image_title,
-							'alt' => $image_title
-							)
-						);
-						$attachment_count = count( $product->get_gallery_attachment_ids() );
+			<!-- THE GRAVITY FORM -->
+			<!-- ================ -->
+			<form id="gravity-form">
+				
+				<!-- hidden fields -->
+		    <input type="hidden" name="boat" id="boat" value="">
+		    <input type="hidden" name="additional-chamber" id="additional-chamber-option" value="">
+		    <input type="hidden" name="top-chafe" id="top-chafe-option" value="">
+		    <input type="hidden" name="bottom-chafe" id="bottom-chafe-option" value="">
+		    <input type="hidden" name="total" id="purchase-total" value="0.00">
+		    <input type="hidden" name="primary-boat-color" id="primary-boat-color" value="">
+		    <input type="hidden" name="handle-patch-color" id="handle-patch-color" value="">
+		    <input type="hidden" name="d-ring-patch-color" id="d-ring-patch-color" value="">
+		    <input type="hidden" name="floor-color" id="floor-color" value="">
+		    <input type="hidden" name="chafe-color" id="chafe-color" value="">
+		    <input type="hidden" name="frame" id="frame" value="">
+		    <input type="hidden" name="orion-cooler-quantity" id="orion-cooler" value="">
 
-						if ( $attachment_count > 0 ) {
-							$gallery = '[product-gallery]';
-						} else {
-							$gallery = '';
-						}
-						echo '<a href="' . $image_link . '">' . $image . '</a>';
-					} else {
-						echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" />', wc_placeholder_img_src(), __( 'Placeholder', 'woocommerce' ) ), $post->ID );
-					}
-				?>
- 
-				<div class="featured-item-content">
-					<h3 class="item-title"><?php echo $brand . '&nbsp;'; ?><?php the_title(); ?></h3>
+			</form>
 
-					<?php 
-						echo apply_filters( 'woocommerce_short_description', $post->post_excerpt );
-						if ( $price_html = $product->get_price_html() ) :
-					?>
-
-						<span class="price"><?php echo $price_html; ?></span>
-
-					<?php endif; ?>
-
-					<?php
-						echo apply_filters( 'woocommerce_loop_add_to_cart_link',
-						sprintf( '<a href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" data-quantity="%s" class="btn btn-primary btn-add-to-cart %s product_type_%s">%s</a>',
-							esc_url( $product->add_to_cart_url() ),
-							esc_attr( $product->id ),
-							esc_attr( $product->get_sku() ),
-							esc_attr( isset( $quantity ) ? $quantity : 1 ),
-							$product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
-							esc_attr( $product->product_type ),
-							esc_html( $product->add_to_cart_text() )
-						),
-						$product );
-					?>
-
-				</div>    
-			</article>
-
-			<?php endwhile; wp_reset_query(); ?>  
-
-			<?php endif; ?> 
+			<?php gravity_form( 3, false, false, false, '', false ); ?>
 
 		</div>
 	</main>

@@ -1,15 +1,6 @@
 <?php /* Template Name: Boats Template */ get_header(); ?>
 
-	<div class="subnav">
-		<div class="container-fluid">
-			<h1 class="page-title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-byob-black.svg"><?php the_title(); ?></h1>
-			<ul>
-				<li><a href="#">Strike Raft</a></li>
-				<li><a href="#">Rafts, Kayaks, Cats</a></li>
-				<li><a href="#" class="link-consultation">Schedule a Consultation</a></li>
-			</ul>
-		</div>
-	</div>
+	<?php get_template_part( 'includes/boats/boats-subnav' ); ?>
 
 	<main role="main">
 		<!-- Hero -->

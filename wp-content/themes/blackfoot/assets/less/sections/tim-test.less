@@ -1,0 +1,143 @@
+// tim-test.less
+// -----------------------------------------------------------------
+
+@price-color: darken(@brand-green, 20%);
+
+.page-template-template-test {
+  background: #FAF8F7;
+  .subnav {
+    border-top: 1px solid #DBD8D7;
+    border-bottom: 1px solid #DBD8D7;
+    background: #fff;
+    margin-bottom: 30px;
+    .clearfix();
+    .page-title {
+      float: left;
+      margin: 0;
+      font-size: 18px;
+      line-height: 65px;
+      img {
+        margin-right: 8px;
+      }
+    }
+    ul {
+      float: right;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        margin-left: 27px;
+        a {
+          line-height: 65px;
+          display: block;
+          font-family: @font-family-sans-serif;
+          font-size: 16px;
+          color: @text-color;
+          font-weight: 500;
+          &.link-consultation {
+            color: #fff;
+            background: @link-color;
+            border-radius: 18px;
+            height: 35px;
+            line-height: 34px;
+            padding: 0 15px;
+            font-weight: 600;
+            &:hover {
+              background: @link-hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  main {
+    margin-top: 0;
+  }
+}
+.byob-form {
+  font-family: @font-family-sans-serif;
+  .step {
+    background: #fff;
+    box-shadow: 0 1px 30px rgba(0,0,0,.08);
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10;
+  }
+  .step-title {
+    .clearfix();
+    background: @brand-brown;
+    color: #fff;
+    padding: 15px 30px;
+    &.is--completed {
+      h3 {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+    h3 {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 30px;
+      margin: 0;
+      display: inline-block;
+      float: left;
+      &:after {
+        content: '\2714';
+        width: 30px;
+        height: 30px;
+        background: @brand-green;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left: 30px;
+        text-align: center;
+        line-height: 30px;
+        opacity: 0;
+        transition: 150ms opacity;
+      }
+    }
+    .btn-edit {
+      display: inline-block;
+      color: @link-color;
+      padding: 3px 10px;
+      float: right;
+      font-weight: 700;
+      font-size: 16px;
+      border: 0;
+      .glyphicon {
+        margin-right: 5px;
+        font-size: .75em;
+      }
+    }
+  }
+  .step-body {
+    padding: 30px;
+  }
+  .step-boat-size {
+    .table-boat-base-price {
+      margin: 0;
+      .boat-base-price {
+        color: @price-color;
+      }
+    }
+  }
+}
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {}
+
+// Up to landscape phone
+@media (max-width: 480px) {}

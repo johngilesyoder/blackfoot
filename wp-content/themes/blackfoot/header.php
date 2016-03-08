@@ -23,6 +23,9 @@
     <script src="https://use.typekit.net/las1vox.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
+    <!-- Enqueue Gravity Forms Scripts For BYOB Form -->
+    <?php gravity_form_enqueue_scripts( 3, true ); ?>
+
     <!-- Wordpress Generated -->
     <!-- =================================== -->
 		<?php wp_head(); ?>

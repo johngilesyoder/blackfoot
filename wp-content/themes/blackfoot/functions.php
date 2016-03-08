@@ -201,6 +201,13 @@ function html5blank_conditional_scripts() {
     wp_enqueue_script('water'); // Enqueue it!
 
   }
+
+  if (is_page('tim-test')) {
+
+    wp_register_script('water', get_template_directory_uri() . '/assets/js/sections/min/boats-min.js', array(), null, true); // Water scripts
+    wp_enqueue_script('water'); // Enqueue it!
+
+  }
 }
 
 // Load styles
@@ -700,5 +707,15 @@ function get_excerpt($limit, $source = null){
   $excerpt = $excerpt.' ... <a href="'.get_permalink($post->ID).'">more</a>';
   return $excerpt;
 }
+
+// add_filter( 'gform_field_value_boat_total', 'populate_total' );
+// function populate_total( $value ) {
+//     return 'boom!';
+// }
+
+// add_filter( 'gform_product_info_3', 'populate_total', 10, 3 );
+// function populate_total( $product_info, $form, $entry ) {
+//   return $product_info;
+// }
 
 ?>
