@@ -104,7 +104,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="other-watercraft">
+		<section id="other-watercraft" class="other-watercraft">
 			<div class="container">
 				<hgroup>
 					<h2>Looking for more ways to spend time on the water?</h2>
