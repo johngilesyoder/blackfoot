@@ -23,7 +23,10 @@
         $('#submit-button').attr('disabled', true);
       }
 
-      $('.ginput_total').text(total.toString());
+      $('#sticky-total').text('$' + total.toString() + '.00');
+      $('#mobile-total').text('$' + total.toString() + '.00');
+      $('#sticky-subtotal').text('$' + total.toString() + '.00');
+      $('#mobile-subtotal').text('$' + total.toString() + '.00');
       gravityForm.find('#ginput_base_price_3_17').val('$' + total.toString() + '.00').change();
     }
 
@@ -40,6 +43,9 @@
         //$('#boat-subtotal').text($(this).data('price'));
         $('#boat-options').hide();
         $('#boat-lineitems').show();
+        $('#shop-confidence').show();
+        $('#sticky-totals').show();
+        $('#mobile-totals').show();
         $('#step-one-edit').show();
         $('#step-two').show();
         $('#additional-options').show();
@@ -49,6 +55,7 @@
         $('#frames').show();
         $('#step-five').show();
         $('#accessories').show();
+        $('#step-place-order').show();
         $('#step-one-title').addClass('is--completed');
       });
 
@@ -101,17 +108,17 @@
 
       var calculateAccessory = function(element) {
         var accessory = element.data('item');
-        var quantity = element.next('input').val();
+        var quantity = element.closest('tr').find('.accessory-qty-value').val();
 
         var priceEach = Number(element.data('price-each'));
         var totalPrice = quantity * priceEach;
         var gravityFormElement = gravityForm.find('#' + accessory);
 
         if(element.is(':checked')) {
-          element.next('span').text(totalPrice.toString());
+          element.closest('tr').find('.accessory-subtotal-value').text(totalPrice.toString() + '.00');
           element.data('price', totalPrice.toString());
         } else {
-          element.next('span').text('0.00');
+          element.closest('tr').find('.accessory-subtotal-value').text('0.00');
           element.data('price', '0.00');
         }
 
@@ -136,7 +143,7 @@
     $('#input_3_1').attr('id','boat');
     $('#input_3_4').attr('id','additional-chamber-option');
     $('#input_3_5').attr('id','top-chafe-option');
-    $('#input_3_6').attr('id','bottom-chafe-option');
+    $('#input_3_6').attr('id','bottom-wrap-option');
     $('#input_3_7').attr('id','primary-boat-color');
     $('#input_3_8').attr('id','handle-patch-color');
     $('#input_3_9').attr('id','d-ring-patch-color');

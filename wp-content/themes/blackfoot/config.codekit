@@ -168,11 +168,44 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/boats\/11_6_strike.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 40335,
+		"inputAbbreviatedPath": "\/assets\/img\/boats\/11_6_strike.png",
+		"outputAbbreviatedPath": "\/assets\/img\/boats\/11_6_strike.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/boats\/13_6_strike.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 37255,
+		"inputAbbreviatedPath": "\/assets\/img\/boats\/13_6_strike.png",
+		"outputAbbreviatedPath": "\/assets\/img\/boats\/13_6_strike.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/boats\/14_6_strike.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 35591,
+		"inputAbbreviatedPath": "\/assets\/img\/boats\/14_6_strike.png",
+		"outputAbbreviatedPath": "\/assets\/img\/boats\/14_6_strike.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/boats\/chafe-color.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 3151,
+		"initialSize": 122512,
 		"inputAbbreviatedPath": "\/assets\/img\/boats\/chafe-color.png",
 		"outputAbbreviatedPath": "\/assets\/img\/boats\/chafe-color.png",
 		"outputPathIsOutsideProject": 0,
@@ -183,7 +216,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1284,
+		"initialSize": 132450,
 		"inputAbbreviatedPath": "\/assets\/img\/boats\/d-ring-patch-color.png",
 		"outputAbbreviatedPath": "\/assets\/img\/boats\/d-ring-patch-color.png",
 		"outputPathIsOutsideProject": 0,
@@ -194,7 +227,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1284,
+		"initialSize": 125504,
 		"inputAbbreviatedPath": "\/assets\/img\/boats\/floor-color.png",
 		"outputAbbreviatedPath": "\/assets\/img\/boats\/floor-color.png",
 		"outputPathIsOutsideProject": 0,
@@ -207,7 +240,29 @@
 		"ignoreWasSetByUser": 0,
 		"initialSize": 3151,
 		"inputAbbreviatedPath": "\/assets\/img\/boats\/handle-patch-color.png",
-		"outputAbbreviatedPath": "\/assets\/img\/boats\/handle-patch-color.png",
+		"outputAbbreviatedPath": "\/assets\/img\/boats\/Handles.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/boats\/mt-raft-frames-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 352150,
+		"inputAbbreviatedPath": "\/assets\/img\/boats\/mt-raft-frames-logo.png",
+		"outputAbbreviatedPath": "\/assets\/img\/boats\/mt-raft-frames-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/boats\/nrs-logo.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20126,
+		"inputAbbreviatedPath": "\/assets\/img\/boats\/nrs-logo.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/boats\/nrs-logo.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -216,9 +271,20 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 3151,
+		"initialSize": 148133,
 		"inputAbbreviatedPath": "\/assets\/img\/boats\/primary-boat-color.png",
 		"outputAbbreviatedPath": "\/assets\/img\/boats\/primary-boat-color.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/boats\/Sotar_Strike_Fishing_Inflatable_Raft.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 167566,
+		"inputAbbreviatedPath": "\/assets\/img\/boats\/Sotar_Strike_Fishing_Inflatable_Raft.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/boats\/Sotar_Strike_Fishing_Inflatable_Raft.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -988,6 +1054,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/js\/lib\/flickity.pkgd.min.js",
 		"outputAbbreviatedPath": "\/assets\/js\/lib\/min\/flickity.pkgd.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/assets\/js\/lib\/jquery.sticky.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/lib\/jquery.sticky.js",
+		"outputAbbreviatedPath": "\/assets\/js\/lib\/min\/jquery.sticky-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -3054,6 +3131,26 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/assets\/less\/sections\/byob-success.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/less\/sections\/byob-success.less",
+		"outputAbbreviatedPath": "\/assets\/css\/sections\/byob-success.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/assets\/less\/sections\/cart.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -3945,6 +4042,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/includes\/boat-accessories.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/boat-accessories.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/includes\/boats\/boats-subnav.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -4336,6 +4442,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/template-booking-form.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/template-byob-success.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/template-byob-success.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

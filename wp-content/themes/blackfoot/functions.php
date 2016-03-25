@@ -204,8 +204,11 @@ function html5blank_conditional_scripts() {
 
   if (is_page('tim-test')) {
 
-    wp_register_script('water', get_template_directory_uri() . '/assets/js/sections/min/boats-min.js', array(), null, true); // Water scripts
-    wp_enqueue_script('water'); // Enqueue it!
+    wp_register_script('byob', get_template_directory_uri() . '/assets/js/sections/min/boats-min.js', array(), null, true);
+    wp_enqueue_script('byob'); // Enqueue it!
+
+    wp_register_script('sticky', get_template_directory_uri() . '/assets/js/lib/jquery.sticky.js', array(), null, true);
+    wp_enqueue_script('sticky'); // Enqueue it!
 
   }
 }
