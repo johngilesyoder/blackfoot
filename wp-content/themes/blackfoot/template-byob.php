@@ -532,7 +532,7 @@
 						    <input type="hidden" name="frame" id="frame" value="">
 						    <input type="hidden" name="boat-accessory-quantity" id="boat-accessory" value="">
 							</form>
-							<?php gravity_form( 3, false, false, false, '', true ); ?>
+							<?php gravity_form( BYOB, false, false, false, '', true ); ?>
 						</div>
 					</section>
 				</div>
