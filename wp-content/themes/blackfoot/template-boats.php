@@ -38,7 +38,7 @@
 								<img class="logo-sotar" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-sotar-black.png">
 								Strike Raft
 							</h2>
-							<a href="#" class="btn btn-primary btn-byob"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-byob-white.svg">Build Your Own Boat Now</a>
+							<a href="/sotar-strike-build-your-own-boat" class="btn btn-primary btn-byob"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-byob-white.svg">Build Your Own Boat Now</a>
 
 							<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
@@ -136,7 +136,7 @@
 					</div>
 				</div>
 				<div class="schedule-consultation">
-					<a href="#" class="btn btn-primary btn-schedule">Schedule a consultation with our experts</a>
+					<a href="/contact-us" class="btn btn-primary btn-schedule">Schedule a consultation with our experts</a>
 				</div>
 			</div>
 		</section>
