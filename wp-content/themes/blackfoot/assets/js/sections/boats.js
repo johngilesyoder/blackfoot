@@ -5,7 +5,7 @@
     'use strict';
     
     // DOM ready, take it away
-    var gravityForm = $('#gform_wrapper_3');
+    var gravityForm = $('#gform_wrapper_8');
     var imageAssetDir = '/wp-content/themes/blackfoot/assets/img/boats/';
 
     var updateTotal = function() {
@@ -27,7 +27,7 @@
       $('#mobile-total').text('$' + total.toString() + '.00');
       $('#sticky-subtotal').text('$' + total.toString() + '.00');
       $('#mobile-subtotal').text('$' + total.toString() + '.00');
-      gravityForm.find('#ginput_base_price_3_17').val('$' + total.toString() + '.00').change();
+      gravityForm.find('#ginput_base_price_8_17').val('$' + total.toString() + '.00').change();
     }
 
     $(document).ready(function() {
@@ -140,18 +140,6 @@
     });
 
     // Rename hidden input IDs
-    $('#input_3_1').attr('id','boat');
-    $('#input_3_4').attr('id','additional-chamber-option');
-    $('#input_3_5').attr('id','top-chafe-option');
-    $('#input_3_6').attr('id','bottom-wrap-option');
-    $('#input_3_7').attr('id','primary-boat-color');
-    $('#input_3_8').attr('id','handle-patch-color');
-    $('#input_3_9').attr('id','d-ring-patch-color');
-    $('#input_3_10').attr('id','floor-color');
-    $('#input_3_11').attr('id','chafe-color');
-    $('#input_3_12').attr('id','frame');
-    $('#input_3_13').attr('id','orion-cooler');
-
     $('#input_8_1').attr('id','boat');
     $('#input_8_4').attr('id','additional-chamber-option');
     $('#input_8_5').attr('id','top-chafe-option');
