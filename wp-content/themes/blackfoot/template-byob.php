@@ -1,4 +1,4 @@
-<?php /* Template Name: Test Template */ get_header(); ?>
+<?php /* Template Name: BYOB Template */ get_header(); ?>
 
 	<?php get_template_part( 'includes/boats/boats-subnav' ); ?>
 
