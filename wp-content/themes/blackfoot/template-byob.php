@@ -177,7 +177,7 @@
 								      <!-- These will all need to be hard-coded -->
 								      <tr>
 								      	<td>
-								      		<input type="checkbox" name="boat-option" data-item="additional-chamber-option" data-price="150.00" value="150.00">
+								      		<input type="checkbox" name="boat-option" data-title="Additional Camber" data-item="additional-chamber-option" data-price="150.00" value="150.00">
 								      	</td>
 								      	<td class="option-img">
 								      		<img src="http://placehold.it/100x100">
@@ -192,7 +192,7 @@
 								      </tr>
 								      <tr>
 								      	<td>
-								      		<input type="checkbox" name="boat-option" data-item="top-chafe-option" data-price="269.00" value="269.00">
+								      		<input type="checkbox" name="boat-option" data-title="Top Chafe" data-item="top-chafe-option" data-price="269.00" value="269.00">
 								      	</td>
 								      	<td class="option-img">
 								      		<img src="http://placehold.it/100x100">
@@ -207,7 +207,7 @@
 								      </tr>
 								      <tr>
 								      	<td>
-								      		<input type="checkbox" name="boat-option" data-item="bottom-wrap-option" data-price="400.00" value="400.00">
+								      		<input type="checkbox" name="boat-option" data-title="Bottom Wrap" data-item="bottom-wrap-option" data-price="400.00" value="400.00">
 								      	</td>
 								      	<td class="option-img">
 								      		<img src="http://placehold.it/100x100">
@@ -249,47 +249,47 @@
 						      	<div class="col-sm-8">
 								      <fieldset id="color-options" class="color-options">
 								      	<div class="row">
-								      		<div class="col-sm-6 col-md-6 col-lg-4 color-option">
+								      		<div class="col-xs-6 col-lg-4 color-option">
 							      				<input id="color-light-blue" type="radio" name="color" value="Light Blue">
 									        	<label for="color-light-blue"><span class="light-blue"><i></i></span>Light Blue</label>
 										      </div>
-										      <div class="col-sm-6 col-md-6 col-lg-4 color-option">
+										      <div class="col-xs-6 col-lg-4 color-option">
 									        	<input id="color-dark-blue" type="radio" name="color" value="Dark Blue">
 									        	<label for="color-dark-blue"><span class="dark-blue"><i></i></span>Dark Blue</label>
 										      </div>
-										      <div class="col-sm-6 col-md-6 col-lg-4 color-option">
+										      <div class="col-xs-6 col-lg-4 color-option">
 									        	<input id="color-teal" type="radio" name="color" value="Teal">
 									        	<label for="color-teal"><span class="teal"><i></i></span>Teal</label>
 										      </div>
-										      <div class="col-sm-6 col-md-6 col-lg-4 color-option">
+										      <div class="col-xs-6 col-lg-4 color-option">
 									        	<input id="color-yellow" type="radio" name="color" value="Yellow">
 									        	<label for="color-yellow"><span class="yellow"><i></i></span>Yellow</label>
 										      </div>
-										      <div class="col-sm-6 col-md-6 col-lg-4 color-option">
+										      <div class="col-xs-6 col-lg-4 color-option">
 									        	<input id="color-orange" type="radio" name="color" value="Orange">
 									        	<label for="color-orange"><span class="orange"><i></i></span>Orange</label>
 										      </div>
-										      <div class="col-sm-6 col-md-6 col-lg-4 color-option">
+										      <div class="col-xs-6 col-lg-4 color-option">
 									        	<input id="color-magenta" type="radio" name="color" value="Red">
 									        	<label for="color-magenta"><span class="magenta"><i></i></span>Magenta</label>
 											    </div>
-										      <div class="col-sm-6 col-md-6 col-lg-4 color-option">
+										      <div class="col-xs-6 col-lg-4 color-option">
 									        	<input id="color-grey" type="radio" name="color" value="Grey">
 									        	<label for="color-grey"><span class="grey"><i></i></span>Grey</label>
 										      </div>
-										      <div class="col-sm-6 col-md-6 col-lg-4 color-option">
+										      <div class="col-xs-6 col-lg-4 color-option">
 									        	<input id="color-white" type="radio" name="color" value="White">
 									        	<label for="color-white"><span class="white"><i></i></span>White</label>
 										      </div>
-										      <div class="col-sm-6 col-md-6 col-lg-4 color-option">
+										      <div class="col-xs-6 col-lg-4 color-option">
 									        	<input id="color-black" type="radio" name="color" value="Black">
 									        	<label for="color-black"><span class="black"><i></i></span>Black</label>
 										      </div>
-										      <div class="col-sm-6 col-md-6 col-lg-4 color-option">
+										      <div class="col-xs-6 col-lg-4 color-option">
 									        	<input id="color-green" type="radio" name="color" value="Green">
 									        	<label for="color-green"><span class="green"><i></i></span>Green</label>
 										      </div>
-										      <div class="col-sm-6 col-md-6 col-lg-4 color-option">
+										      <div class="col-xs-6 col-lg-4 color-option">
 									        	<input id="color-dark-green" type="radio" name="color" value="Dark Green">
 									        	<label for="color-dark-green"><span class="dark-green"><i></i></span>Dark Green</label>
 										      </div>
@@ -320,7 +320,7 @@
 			    			      <!-- These will all need to be hard-coded -->
 			    			      <tr>
 			    			      	<td>
-			    			      		<input type="radio" name="frame" data-item="MT Raft Basic" data-price="1620.00" value="MT Raft Basic">
+			    			      		<input type="radio" name="frame" data-title="MT Raft Frame Basic" data-item="MT Raft Basic" data-price="1620.00" value="MT Raft Basic">
 			    			      	</td>
 			    			      	<td class="frame-img">
 			    			      		<img src="http://placehold.it/100x100">
@@ -335,7 +335,7 @@
 			    			      </tr>
 			    			      <tr>
 			    			      	<td>
-			    			      		<input type="radio" name="frame" data-item="MT Raft Deluxe" data-price="2220.00" value="MT Raft Deluxe">
+			    			      		<input type="radio" name="frame" data-title="MT Raft Frame Deluxe" data-item="MT Raft Deluxe" data-price="2220.00" value="MT Raft Deluxe">
 			    			      	</td>
 			    			      	<td class="frame-img">
 			    			      		<img src="http://placehold.it/100x100">
@@ -350,7 +350,7 @@
 			    			      </tr>
 			    			      <tr>
 			    			      	<td>
-			    			      		<input type="radio" name="frame" data-item="MT Raft Premier" data-price="2900.00" value="MT Raft Premier">
+			    			      		<input type="radio" name="frame" data-title="MT Raft Frame Premier" data-item="MT Raft Premier" data-price="2900.00" value="MT Raft Premier">
 			    			      	</td>
 			    			      	<td class="frame-img">
 			    			      		<img src="http://placehold.it/100x100">
@@ -377,7 +377,7 @@
 			    			      <!-- These will all need to be hard-coded -->
 			    			      <tr>
 			    			      	<td>
-			    			      		<input type="radio" name="frame" data-item="NRS Custom Basic" data-price="1450.00" value="NRS Custom Basic">
+			    			      		<input type="radio" name="frame" data-title="NRS Custom Basic" data-item="NRS Custom Basic" data-price="1450.00" value="NRS Custom Basic">
 			    			      	</td>
 			    			      	<td class="frame-img">
 			    			      		<img src="http://placehold.it/100x100">
@@ -392,7 +392,7 @@
 			    			      </tr>
 			    			      <tr>
 			    			      	<td>
-			    			      		<input type="radio" name="frame" data-item="Deluxe" data-price="1975.00" value="NRS Custom Dry Box">
+			    			      		<input type="radio" name="frame" data-title="NRS Custom w/ Dry Box" data-item="Deluxe" data-price="1975.00" value="NRS Custom Dry Box">
 			    			      	</td>
 			    			      	<td class="frame-img">
 			    			      		<img src="http://placehold.it/100x100">
@@ -407,7 +407,7 @@
 			    			      </tr>
 			    			      <tr>
 			    			      	<td>
-			    			      		<input type="radio" name="frame" data-item="Premier" data-price="2900.00" value="Premier">
+			    			      		<input type="radio" name="frame" data-title="NRS Raft Frame: Premier" data-item="Premier" data-price="2900.00" value="Premier">
 			    			      	</td>
 			    			      	<td class="frame-img">
 			    			      		<img src="http://placehold.it/100x100">
