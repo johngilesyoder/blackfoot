@@ -152,6 +152,18 @@
     $('#input_3_12').attr('id','frame');
     $('#input_3_13').attr('id','orion-cooler');
 
+    $('#input_8_1').attr('id','boat');
+    $('#input_8_4').attr('id','additional-chamber-option');
+    $('#input_8_5').attr('id','top-chafe-option');
+    $('#input_8_6').attr('id','bottom-wrap-option');
+    $('#input_8_7').attr('id','primary-boat-color');
+    $('#input_8_8').attr('id','handle-patch-color');
+    $('#input_8_9').attr('id','d-ring-patch-color');
+    $('#input_8_10').attr('id','floor-color');
+    $('#input_8_11').attr('id','chafe-color');
+    $('#input_8_12').attr('id','frame');
+    $('#input_8_13').attr('id','orion-cooler');
+
     //$('#input_3_2').attr('id','purchase-total');
 
   });
