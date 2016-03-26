@@ -368,13 +368,280 @@
 @media (min-width: 1200px) {}
 
 // Desktop to large desktop
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .page-template-template-boats {
+    .boats-hero {
+      height: 560px;
+      .boats-hero-content {
+        width: 100%;
+        margin-top: 130px;
+        padding: 30px;
+      }
+    }
+  }
+
+}
 
 // Tablet to desktop
-@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .page-template-template-boats {
+    .site-header {
+      margin: 0;
+    }
+    .subnav {
+      ul {
+        li {
+          display: none;
+          &:last-child {
+            display: inline-block;
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+    .boats-hero {
+      height: 560px;
+      .boats-hero-content {
+        width: 100%;
+        margin-top: 130px;
+        padding: 30px;
+      }
+    }
+    .strike-main {
+      .content-block {
+        background: #fff;
+        box-shadow: 0 1px 30px rgba(0,0,0,.08);
+        padding: 30px;
+        margin-bottom: -40px;
+        position: relative;
+        z-index: 10;
+        h2 {
+          font-size: 50px;
+          img {
+            height: 30px;
+            margin-right: 8px;
+          }
+        }
+      }
+      .strike-video {
+        margin-left: -15px;
+        margin-right: -15px;
+        .video-placeholder {
+          height: 480px;
+        }
+      }
+    }
+    .special-edition {
+      padding: 80px 0 50px;
+      margin-bottom: 0;
+      hgroup {
+        margin-bottom: 50px;
+        h2 {
+          font-size: 40px;
+        }
+        h3 {
+          width: 100%;
+        }
+      }
+      .special-edition-product {
+        .product-img {
+          .img-responsive();
+        }
+        .product-title {
+          font-size: 30px;
+          img {
+            height: 24px;
+          }
+        }
+        .product-subtitle {
+          font-size: 24px;
+        }
+      }
+    }
+    .other-watercraft {
+      padding-top: 50px;
+      hgroup {
+        margin-bottom: 50px;
+        h2 {
+          font-size: 30px;
+        }
+        h3 {
+          font-size: 21px;
+        }
+      }
+      .boat-category {
+        margin-bottom: 30px;
+        h3 {
+          font-size: 21px;
+        }
+      }
+      .other-categories {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+}
 
 // Up to tablet
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+  .page-template-template-boats {
+    .site-header {
+      margin: 0;
+    }
+    .subnav {
+      ul {
+        li {
+          display: none;
+          &:last-child {
+            display: inline-block;
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+    .boats-hero {
+      height: 400px;
+      margin-bottom: 15px;
+      .boats-hero-content {
+        width: 100%;
+        margin-top: 120px;
+        padding: 15px;
+        h2 {
+          font-size: 42px;
+          margin: 0 0 30px;
+        }
+        .logo-blackfoot {
+          height: 30px;
+        }
+        .logo-byob {
+          height: 25px;
+        }
+        .logo-sotar {
+          height: 30px;
+        }
+      }
+    }
+    .strike-main {
+      .strike-sidebar {
+        display: none;
+      }
+      .content-block {
+        padding: 15px;
+        margin-bottom: 15px;
+        h2 {
+          font-size: 42px;
+          img {
+            height: 25px;
+            margin-right: 8px;
+          }
+        }
+        .btn-byob {
+          margin-bottom: 30px;
+        }
+      }
+      .strike-video {
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-bottom: 0;
+        .video-placeholder {
+          height: 320px;
+          .btn-video {
+            height: 80px;
+            width: 80px;
+            border: 5px solid #fff;
+            margin-top: -40px;
+            margin-left: -40px;
+            img {
+              height: 36px;
+              right: -4px;
+            }
+          }
+        }
+      }
+    }
+    .special-edition {
+      padding: 30px 0;
+      margin-bottom: 0;
+      hgroup {
+        margin-bottom: 30px;
+        h2 {
+          font-size: 36px;
+        }
+        h3 {
+          width: 100%;
+          font-size: 21px;
+        }
+      }
+      .special-edition-product {
+        text-align: center;
+        .product-img {
+          width: 50%;
+          margin-right: auto;
+          margin-left: auto;
+          margin-bottom: 30px;
+        }
+        .product-title {
+          font-size: 30px;
+          img {
+            height: 24px;
+          }
+        }
+        .product-subtitle {
+          font-size: 24px;
+          display: block;
+        }
+        .btn-learn-more {
+          width: auto;
+          float: none;
+        }
+        .quote-from-john {
+          text-align: left;
+        }
+      }
+    }
+    .other-watercraft {
+      padding-top: 30px;
+      hgroup {
+        margin-bottom: 30px;
+        h2 {
+          font-size: 30px;
+          width: 100%;
+          padding: 0 15px;
+        }
+        h3 {
+          font-size: 21px;
+          width: 100%;
+          padding: 0 15px;
+        }
+      }
+      .boat-category {
+        margin-bottom: 50px;
+        h3 {
+          font-size: 21px;
+        }
+      }
+      .other-categories {
+        margin-bottom: 30px;
+      }
+      .btn-schedule {
+        display: none;
+      }
+    }
+  }
+
+}
 
 // Up to landscape phone
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+
+  .page-template-template-boats {
+    .subnav {
+      display: none;
+    }
+  }
+
+}

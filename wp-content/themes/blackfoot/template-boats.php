@@ -74,18 +74,18 @@
 				</hgroup>
 				<div class="special-edition-product">
 					<div class="row">
-						<div class="col-md-8">
+						<div class="col-sm-8">
 							<div class="row">
-								<div class="col-md-3">
+								<div class="col-sm-3">
 									<img class="product-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/strike-product-img.png">
 								</div>
-								<div class="col-md-9">
+								<div class="col-sm-9">
 									<span class="product-title"><img class="logo-sotar" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-sotar-black.png"> Strike Raft</span>
 									<span class="product-subtitle">2016 Montana Guide Edition</span>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-sm-4">
 							<a href="#" class="btn btn-primary btn-learn-more">Learn more now</a>
 						</div>
 					</div>
@@ -112,21 +112,21 @@
 				</hgroup>
 				<div class="other-categories">
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-sm-6 col-md-4">
 							<div class="boat-category">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/boats-rafts.jpg">
 								<h3>SOTAR Rafts</h3>
 								<p>All SOTAR Inflatables are designed and manufactured one at a time. No other Inflatables are made with such personal care and attention.</p>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-sm-6 col-md-4">
 							<div class="boat-category">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/boats-kayaks.jpg">
 								<h3>SOTAR Kayaks</h3>
 								<p>SOTAR Inflatable Kayaks are a beautiful fusion of performance and durability.   A look at the sleek lines gives you a glimpse of the performance you will appreciate.</p>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-sm-6 col-md-4">
 							<div class="boat-category">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/boats-cats.jpg">
 								<h3>SOTAR Catarafts</h3>
