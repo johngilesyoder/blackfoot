@@ -6,7 +6,7 @@
 
 <tr>
   <td class="accessory-option">
-    <input type="checkbox" name="accessory" data-title="<?php echo $brand . '&nbsp;'; ?><?php the_title(); ?>" data-item="boat-accessory" data-price="0.00" data-price-each="<?php echo $price ?>" value="Boat Accessory">
+    <input type="checkbox" class="accessory-checkbox" name="accessory" data-title="<?php echo $brand . '&nbsp;'; ?><?php the_title(); ?>" data-item="boat-accessory" data-price="0.00" data-price-each="<?php echo $price ?>" value="Boat Accessory">
   </td>
   <td class="accessory-img">
     <?php

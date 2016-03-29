@@ -85,9 +85,7 @@
 
       $("input[name='quantity']").on('keyup paste', function() {
         // Todo check if quantity is a number
-        console.log($(this).prev('input'));
-        console.log($(this).prev("input[name='accessory']"));
-        calculateAccessory($(this).prev('input'));
+        calculateAccessory($(this).closest('tr').find('.accessory-checkbox'));
       });
 
       $('#color-button-group :button').on('click', function() {
@@ -109,9 +107,9 @@
       var calculateAccessory = function(element) {
         var accessory = element.data('item');
         var quantity = element.closest('tr').find('.accessory-qty-value').val();
-
         var priceEach = Number(element.data('price-each'));
         var totalPrice = quantity * priceEach;
+
         var gravityFormElement = gravityForm.find('#' + accessory);
 
         if(element.is(':checked')) {
