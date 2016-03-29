@@ -517,21 +517,6 @@
 							
 							<!-- THE ORDER FORM -->
 							<!-- ================ -->
-							<form id="gravity-form">
-								<!-- hidden fields -->
-						    <input type="hidden" name="boat" id="boat" value="">
-						    <input type="hidden" name="additional-chamber" id="additional-chamber-option" value="">
-						    <input type="hidden" name="top-chafe" id="top-chafe-option" value="">
-						    <input type="hidden" name="bottom-wrap" id="bottom-wrap-option" value="">
-						    <input type="hidden" name="total" id="purchase-total" value="0.00">
-						    <input type="hidden" name="primary-boat-color" id="primary-boat-color" value="">
-						    <input type="hidden" name="handle-patch-color" id="handle-patch-color" value="">
-						    <input type="hidden" name="d-ring-patch-color" id="d-ring-patch-color" value="">
-						    <input type="hidden" name="floor-color" id="floor-color" value="">
-						    <input type="hidden" name="chafe-color" id="chafe-color" value="">
-						    <input type="hidden" name="frame" id="frame" value="">
-						    <input type="hidden" name="boat-accessory-quantity" id="boat-accessory" value="">
-							</form>
 							<?php gravity_form( BYOB, false, false, false, '', true ); ?>
 						</div>
 					</section>
