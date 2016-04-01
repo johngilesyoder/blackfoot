@@ -113,6 +113,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/boats-hero-bg-2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 314232,
+		"inputAbbreviatedPath": "\/assets\/img\/boats-hero-bg-2.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/boats-hero-bg-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/boats-hero-bg-3.JPG": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 588824,
+		"inputAbbreviatedPath": "\/assets\/img\/boats-hero-bg-3.JPG",
+		"outputAbbreviatedPath": "\/assets\/img\/boats-hero-bg-3.JPG",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/boats-hero-bg-4.JPG": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 790204,
+		"inputAbbreviatedPath": "\/assets\/img\/boats-hero-bg-4.JPG",
+		"outputAbbreviatedPath": "\/assets\/img\/boats-hero-bg-4.JPG",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/boats-hero-bg.jpg": {
 		"fileType": 16384,
 		"ignore": 0,

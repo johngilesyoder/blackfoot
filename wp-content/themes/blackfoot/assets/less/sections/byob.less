@@ -39,6 +39,9 @@ li.gfield+li.gfield.gfield_creditcard_warning {
       margin: 0;
       font-size: 18px;
       line-height: 65px;
+      a {
+        color: @text-color;
+      }
       img {
         margin-right: 8px;
       }
@@ -933,10 +936,14 @@ li.gfield+li.gfield.gfield_creditcard_warning {
               font-size: 21px;
             }
           }
-          &:nth-child(2) {
-            display: none;
+          &:nth-child(1) {
+            padding: 7.5px 0;
+            strong,
+            br {
+              display: none;
+            }
           }
-          &:nth-child(3) {
+          &:nth-child(2) {
             padding: 7.5px 0;
             strong,
             br {
@@ -1013,14 +1020,6 @@ li.gfield+li.gfield.gfield_creditcard_warning {
             }
           }
           &:nth-child(2) {
-            display: inline-block;
-            width: 24%;
-            padding: 15px 0;
-            img {
-              width: 100%;
-            }
-          }
-          &:nth-child(3) {
             display: inline-block;
             width: 74%;
             padding: 7.5px 15px;

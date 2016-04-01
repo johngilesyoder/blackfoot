@@ -169,7 +169,7 @@
 						      	<thead>
 						      		<tr>
 						      			<th>&nbsp;</th>
-						      			<th colspan="2">Option</th>
+						      			<th>Option</th>
 						      			<th>Price</th>
 						      		</tr>
 						      	</thead>
@@ -178,9 +178,6 @@
 								      <tr>
 								      	<td>
 								      		<input type="checkbox" name="boat-option" data-title="Additional Camber" data-item="additional-chamber-option" data-price="150.00" value="150.00">
-								      	</td>
-								      	<td class="option-img">
-								      		<img src="http://placehold.it/100x100">
 								      	</td>
 								      	<td>
 								      		<strong>Additional Chamber</strong><br>
@@ -194,9 +191,6 @@
 								      	<td>
 								      		<input type="checkbox" name="boat-option" data-title="Top Chafe" data-item="top-chafe-option" data-price="269.00" value="269.00">
 								      	</td>
-								      	<td class="option-img">
-								      		<img src="http://placehold.it/100x100">
-								      	</td>
 								      	<td>
 								      		<strong>Top Chafe</strong><br>
 								      		<em>Covering the straight section and around the stern (that portion under frame) not only looks good but is functional. The "liquid lex"chafe  is rolled on providing a bit of sticky texture so your foot remains planted when getting in or out, acts as a barrier to the sand rubbing between the frame and the boat, and when applied in a darker color the chafe highlights the boat and serves to keep the tubes looking  cleaner</em>
@@ -208,9 +202,6 @@
 								      <tr>
 								      	<td>
 								      		<input type="checkbox" name="boat-option" data-title="Bottom Wrap" data-item="bottom-wrap-option" data-price="400.00" value="400.00">
-								      	</td>
-								      	<td class="option-img">
-								      		<img src="http://placehold.it/100x100">
 								      	</td>
 								      	<td>
 								      		<strong>Bottom Wrap</strong><br>
@@ -312,7 +303,7 @@
 			    	      	<thead>
 			    	      		<tr>
 			    	      			<th>&nbsp;</th>
-			    	      			<th colspan="2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/boats/mt-raft-frames-logo.png"/> MT Raft Frames</th>
+			    	      			<th><img src="<?php echo get_template_directory_uri(); ?>/assets/img/boats/mt-raft-frames-logo.png"/> MT Raft Frames</th>
 			    	      			<th>Price</th>
 			    	      		</tr>
 			    	      	</thead>
@@ -321,9 +312,6 @@
 			    			      <tr>
 			    			      	<td>
 			    			      		<input type="radio" name="frame" data-title="MT Raft Frame Basic" data-item="MT Raft Basic" data-price="1620.00" value="MT Raft Basic">
-			    			      	</td>
-			    			      	<td class="frame-img">
-			    			      		<img src="http://placehold.it/100x100">
 			    			      	</td>
 			    			      	<td>
 			    			      		<strong>MT Raft Frame Basic</strong><br>
@@ -337,9 +325,6 @@
 			    			      	<td>
 			    			      		<input type="radio" name="frame" data-title="MT Raft Frame Deluxe" data-item="MT Raft Deluxe" data-price="2220.00" value="MT Raft Deluxe">
 			    			      	</td>
-			    			      	<td class="frame-img">
-			    			      		<img src="http://placehold.it/100x100">
-			    			      	</td>
 			    			      	<td>
 			    			      		<strong>MT Raft Frame Deluxe</strong><br>
 			    			      		<em>Breakdown <u>powder coated</u> aluminum fishing frame, two Tempress high back swivel seats, exclusive internal anchor system fitted with Harken pulleys/cleat, and customized aluminum dry box with guide seat.</em>
@@ -351,9 +336,6 @@
 			    			      <tr>
 			    			      	<td>
 			    			      		<input type="radio" name="frame" data-title="MT Raft Frame Premier" data-item="MT Raft Premier" data-price="2900.00" value="MT Raft Premier">
-			    			      	</td>
-			    			      	<td class="frame-img">
-			    			      		<img src="http://placehold.it/100x100">
 			    			      	</td>
 			    			      	<td>
 			    			      		<strong>MT Raft Frame Premier</strong><br>
@@ -379,9 +361,6 @@
 			    			      	<td>
 			    			      		<input type="radio" name="frame" data-title="NRS Custom Basic" data-item="NRS Custom Basic" data-price="1450.00" value="NRS Custom Basic">
 			    			      	</td>
-			    			      	<td class="frame-img">
-			    			      		<img src="http://placehold.it/100x100">
-			    			      	</td>
 			    			      	<td>
 			    			      		<strong>NRS Custom Basic</strong><br>
 			    			      		<em>Breakdown aluminum fishing frame, two NRS high back swivel seats, oar locks, and anchor system.</em>
@@ -394,9 +373,6 @@
 			    			      	<td>
 			    			      		<input type="radio" name="frame" data-title="NRS Custom w/ Dry Box" data-item="Deluxe" data-price="1975.00" value="NRS Custom Dry Box">
 			    			      	</td>
-			    			      	<td class="frame-img">
-			    			      		<img src="http://placehold.it/100x100">
-			    			      	</td>
 			    			      	<td>
 			    			      		<strong>NRS Custom with Dry Box</strong><br>
 			    			      		<em>Breakdown aluminum fishing frame, two NRS high back swivel seats, oar locks, anchor system, and aluminum dry box with guide seat.</em>
@@ -408,9 +384,6 @@
 			    			      <tr>
 			    			      	<td>
 			    			      		<input type="radio" name="frame" data-title="NRS Raft Frame: Premier" data-item="Premier" data-price="2900.00" value="Premier">
-			    			      	</td>
-			    			      	<td class="frame-img">
-			    			      		<img src="http://placehold.it/100x100">
 			    			      	</td>
 			    			      	<td>
 			    			      		<strong>MT Raft Frame: Premier</strong><br>

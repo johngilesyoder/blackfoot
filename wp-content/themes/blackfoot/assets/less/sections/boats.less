@@ -4,6 +4,18 @@
 
 .page-template-template-boats {
   background: #FAF8F7;
+  iframe {
+    border: 0;
+  }
+  .modal-body {
+    .close {
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: @text-color; 
+      opacity: 1;
+      font-family: @font-family-sans-serif;
+    }
+  }
   .subnav {
     border-top: 1px solid #DBD8D7;
     border-bottom: 1px solid #DBD8D7;
@@ -13,6 +25,9 @@
       margin: 0;
       font-size: 18px;
       line-height: 65px;
+      a {
+        color: @text-color;
+      }
       img {
         margin-right: 8px;
       }
@@ -55,7 +70,7 @@
     border-bottom: 7px solid #999490;
     background-color: @brand-brown;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 20% 50%;
     margin-bottom: 50px;
     .boats-hero-content {
       text-align: center;
@@ -66,7 +81,7 @@
       color: #fff;
       background: rgba(0,0,0,.26);
       box-shadow: 0 0 30px 30px rgba(0,0,0,.26);
-      margin-top: 300px;
+      margin-top: 180px;
       padding: 30px 0;
       h2 {
         font-size: 75px;
@@ -85,6 +100,22 @@
       }
       .logo-sotar {
         height: 50px;
+      }
+      .btn-primary {
+        margin-top: 60px;
+        box-shadow: 0 1px 3px rgba(0,0,0,.5);
+        &:after {
+          content: '';
+          display: inline-block;
+          width: 14px;
+          height: 24px;
+          background-image: url('assets/img/icon-chevron-r-white.svg');
+          background-size: cover;
+          margin-left: 30px;
+          vertical-align: middle;
+          top: -4px;
+          position: relative;
+        }
       }
     }
   }
@@ -157,7 +188,7 @@
         }
       }
       .btn-byob {
-        margin-bottom: 40px;
+        margin-top: 30px;
         img {
           margin-right: 10px;
           height: 25px;
@@ -407,6 +438,9 @@
         width: 100%;
         margin-top: 130px;
         padding: 30px;
+        h2 {
+          font-size: 50px;
+        }
       }
     }
     .strike-main {
@@ -508,7 +542,7 @@
       margin-bottom: 15px;
       .boats-hero-content {
         width: 100%;
-        margin-top: 120px;
+        margin-top: 80px;
         padding: 15px;
         h2 {
           font-size: 42px;
@@ -522,6 +556,11 @@
         }
         .logo-sotar {
           height: 30px;
+        }
+        .btn-primary {
+          span {
+            display: none;
+          }
         }
       }
     }
@@ -540,7 +579,11 @@
           }
         }
         .btn-byob {
-          margin-bottom: 30px;
+          margin-bottom: 0;
+          margin-top: 30px;
+          span {
+            display: none;
+          }
         }
       }
       .strike-video {
@@ -642,23 +685,28 @@
     .subnav {
       display: none;
     }
+    .btn {
+      width: 100%;
+    }
     .boats-hero {
       margin-bottom: 0;
       .boats-hero-content {
         margin-top: 60px;
         .logo-blackfoot {
-          display: block;
-          margin: 0 auto;
-          margin-bottom: 15px;
+          display: none;
         }
         .logo-byob {
-          display: block;
-          margin: 0 auto;
-          margin-bottom: 15px;
+          display: none;
         }
         .logo-sotar {
           display: block;
           margin: 0 auto;
+        }
+        .btn-primary {
+          font-size: 18px;
+          &:after {
+            display: none;
+          }
         }
       }
     }
@@ -679,6 +727,7 @@
         }
         .btn-byob {
           font-size: 18px;
+          width: 100%;
           img {
             display: none;
           }

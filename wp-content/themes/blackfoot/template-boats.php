@@ -4,13 +4,14 @@
 
 	<main role="main">
 		<!-- Hero -->
-		<section class="boats-hero" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/boats-hero-bg.jpg');">
+		<section class="boats-hero" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/boats-hero-bg-4.jpg');">
 			<div class="container">
 				<div class="boats-hero-content">
 					<h2>Find Your <span>Perfect</span> Boat</h2>
 					<img class="logo-blackfoot" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-text-white.svg">
 					<img class="logo-byob" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-byob-white.svg">
 					<img class="logo-sotar" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-sotar-white.png">
+					<a href="/sotar-strike-build-your-own-boat" class="btn btn-primary">Build your own <span>perfect fly fishing </span>boat</a>
 				</div>
 			</div>
 		</section>
@@ -38,7 +39,6 @@
 								<img class="logo-sotar" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-sotar-black.png">
 								Strike Raft
 							</h2>
-							<a href="/sotar-strike-build-your-own-boat" class="btn btn-primary btn-byob"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-byob-white.svg">Build Your Own Boat Now</a>
 
 							<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
@@ -53,11 +53,13 @@
 
 							<?php endif; ?>
 
+							<a href="/sotar-strike-build-your-own-boat" class="btn btn-primary btn-byob"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-byob-white.svg">Get started<span> building the perfect boat now</span></a>
+
 						</div>
 					</div>
 				</div>
 				<div class="strike-video">
-					<a href="#" class="video-placeholder" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/boats-video-placeholder.png');">
+					<a href="#" class="video-placeholder" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/boats-video-placeholder.png');" data-toggle="modal" data-target="#video-modal" data-theVideo="https://www.youtube.com/embed/UiHMN68Jb5s">
 						<span class="btn-video">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-play-white.svg">
 						</span>
@@ -130,17 +132,31 @@
 							<div class="boat-category">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/boats-cats.jpg">
 								<h3>SOTAR Catarafts</h3>
-								<p>SOTAR’s continuous curve Cat design has become an industry standard. By eliminating all cross miter seams we were able to decrease drag and increase performance. </p>
+								<p>SOTAR’s continuous curve Cat design has become an industry standard. By eliminating all cross miter seams we were able to decrease drag and increase performance.</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="schedule-consultation">
-					<a href="/contact-us" class="btn btn-primary btn-schedule">Schedule a consultation with our experts</a>
+					<a href="/contact-us" class="btn btn-primary btn-schedule">Schedule a boat consultation with our experts</a>
 				</div>
 			</div>
 		</section>
 	</main>
+
+	<!-- Modal -->
+	<div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	      	<button type="button" class="close" data-dismiss="modal" aria-label="Close">Close <span aria-hidden="true">&times;</span></button>
+	        <div>
+              <iframe width="100%" height="350" src=""></iframe>
+          </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
 	<script type="text/javascript">
 		jQuery(function() {
@@ -152,6 +168,26 @@
         }
       });
 		});
+
+		  autoPlayYouTubeModal();
+
+	  //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+	  function autoPlayYouTubeModal() {
+      var trigger = jQuery("body").find('[data-toggle="modal"]');
+      trigger.click(function () {
+          var theModal = jQuery(this).data("target"),
+              videoSRC = jQuery(this).attr("data-theVideo"),
+              videoSRCauto = videoSRC + "?autoplay=1";
+          jQuery(theModal + ' iframe').attr('src', videoSRCauto);
+          jQuery(theModal + ' button.close').click(function () {
+              $(theModal + ' iframe').attr('src', videoSRC);
+          });
+          jQuery('.modal').click(function () {
+              jQuery(theModal + ' iframe').attr('src', videoSRC);
+          });
+      });
+	  }
+		
 	</script>
 
 	<?php get_template_part( 'includes/book-now-banner' ); ?> 
