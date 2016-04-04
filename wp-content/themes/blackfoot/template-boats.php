@@ -4,7 +4,7 @@
 
 	<main role="main">
 		<!-- Hero -->
-		<section class="boats-hero" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/boats-hero-bg-4.jpg');">
+		<section class="boats-hero" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/boats-hero-bg.jpg');">
 			<div class="container">
 				<div class="boats-hero-content">
 					<h2>Find Your <span>Perfect</span> Boat</h2>
