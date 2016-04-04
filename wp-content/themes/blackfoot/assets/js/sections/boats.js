@@ -113,7 +113,7 @@
         var gravityFormElement = gravityForm.find('#' + accessory);
 
         if(element.is(':checked')) {
-          element.closest('tr').find('.accessory-subtotal-value').text(totalPrice.toString() + '.00');
+          element.closest('tr').find('.accessory-subtotal-value').text(totalPrice.toString());
           element.data('price', totalPrice.toString());
         } else {
           element.closest('tr').find('.accessory-subtotal-value').text('0.00');
