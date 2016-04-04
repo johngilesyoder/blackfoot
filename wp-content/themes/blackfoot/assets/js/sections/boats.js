@@ -23,11 +23,11 @@
         $('#submit-button').attr('disabled', true);
       }
 
-      $('#sticky-total').text('$' + total.toString() + '.00');
-      $('#mobile-total').text('$' + total.toString() + '.00');
-      $('#sticky-subtotal').text('$' + total.toString() + '.00');
-      $('#mobile-subtotal').text('$' + total.toString() + '.00');
-      gravityForm.find('#ginput_base_price_8_17').val('$' + total.toString() + '.00').change();
+      $('#sticky-total').text('$' + total.toString());
+      $('#mobile-total').text('$' + total.toString());
+      $('#sticky-subtotal').text('$' + total.toString());
+      $('#mobile-subtotal').text('$' + total.toString());
+      gravityForm.find('#ginput_base_price_8_17').val('$' + total.toString()).change();
     }
 
     $(document).ready(function() {
