@@ -202,7 +202,7 @@ function html5blank_conditional_scripts() {
 
   }
 
-  if (is_page('sotar-strike-build-your-own-boat')) {
+  if (is_page('build-the-perfect-fly-fishing-boat')) {
 
     wp_register_script('byob', get_template_directory_uri() . '/assets/js/sections/min/boats-min.js', array(), null, true);
     wp_enqueue_script('byob'); // Enqueue it!
