@@ -11,7 +11,7 @@
 					<img class="logo-blackfoot" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-text-white.svg">
 					<img class="logo-byob" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-byob-white.svg">
 					<img class="logo-sotar" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-sotar-white.png">
-					<a href="/sotar-strike-build-your-own-boat" class="btn btn-primary">Build your own <span>perfect fly fishing </span>boat</a>
+					<a href="/build-the-perfect-fly-fishing-boat" class="btn btn-primary">Build your own <span>perfect fly fishing </span>boat</a>
 				</div>
 			</div>
 		</section>
@@ -53,7 +53,7 @@
 
 							<?php endif; ?>
 
-							<a href="/sotar-strike-build-your-own-boat" class="btn btn-primary btn-byob"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-byob-white.svg">Get started<span> building the perfect boat now</span></a>
+							<a href="/build-the-perfect-fly-fishing-boat" class="btn btn-primary btn-byob"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-byob-white.svg">Get started<span> building the perfect boat now</span></a>
 
 						</div>
 					</div>
