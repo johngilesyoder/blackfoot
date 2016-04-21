@@ -148,13 +148,11 @@
     $('#input_8_10').attr('id','floor-color');
     $('#input_8_11').attr('id','chafe-color');
     $('#input_8_12').attr('id','frame');
-    //$('#input_8_13').attr('id','orion-cooler');
+
     $('#input_8_23').attr('id','2200');
     $('#input_8_24').attr('id','2140');
     $('#input_8_25').attr('id','2135');
     $('#input_8_26').attr('id','2133');
-
-    //$('#input_3_2').attr('id','purchase-total');
 
   });
   

@@ -49,7 +49,7 @@
 								148 West Broadway<br>
 								Philipsburg, Montana 59858
 							</address>
-							<span class="location-email"><strong>Email:</strong> <a href="info@flintcreekoutdoors.com">matthew@blackfootriver.com</a></span>
+							<span class="location-email"><strong>Email:</strong> <a href="mailto:matthew@blackfootriver.com">matthew@blackfootriver.com</a></span>
 							<span class="location-phone"><strong>Phone:</strong> (406) 859-9500</span>
 						</div>
 						<div class="map-wrapper">
