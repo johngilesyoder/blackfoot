@@ -67,7 +67,7 @@
 									      	</label>
 									      </div>
 									      <span class="base-price">Starting at <strong>$4,211</strong></span>
-									      <p class="size-description">Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+									      <p class="size-description">Accommodates less gear and fewer anglers on smaller water.</p>
 									    </div>
 									  </div>
 								    <!-- Size Option -->
@@ -84,7 +84,7 @@
 									      	</label>
 									      </div>
 									      <span class="base-price">Starting at <strong>$4,536</strong></span>
-									      <p class="size-description">Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+									      <p class="size-description">Our best-seller by far. The ideal size for most fishing applications - the go-to boat</p>
 									    </div>
 									  </div>
 								    <!-- Size Option -->
@@ -100,7 +100,7 @@
 									      	</label>
 									      </div>
 									      <span class="base-price">Starting at <strong>$4,752</strong></span>
-									      <p class="size-description">Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+									      <p class="size-description">Holds more cargo on bigger water - great for the multi-day angler/rafter</p>
 									    </div>
 									  </div>
 								  </div>
