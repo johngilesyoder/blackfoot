@@ -108,4 +108,6 @@
 		</div>
 	</main>
 
+	<?php get_template_part( 'includes/book-now-banner' ); ?>
+	
 <?php get_footer(); ?>

@@ -95,3 +95,9 @@
         </div>
       </div>
     </nav>
+
+    <?php 
+      if ( ! is_woocommerce() ) {
+        get_template_part( 'includes/guide-of-year');
+      }
+    ?>

@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "19115",
+"creatorBuild": "19120",
 "files": {
 	"\/404.php": {
 		"fileType": 8192,
@@ -69,6 +69,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/2016-guide-of-year.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20318,
+		"inputAbbreviatedPath": "\/assets\/img\/2016-guide-of-year.png",
+		"outputAbbreviatedPath": "\/assets\/img\/2016-guide-of-year.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/amex.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -98,6 +109,17 @@
 		"initialSize": 329231,
 		"inputAbbreviatedPath": "\/assets\/img\/bg-booking-banner.png",
 		"outputAbbreviatedPath": "\/assets\/img\/bg-booking-banner.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/bg-goty.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 769570,
+		"inputAbbreviatedPath": "\/assets\/img\/bg-goty.png",
+		"outputAbbreviatedPath": "\/assets\/img\/bg-goty.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -670,6 +692,17 @@
 		"initialSize": 349082,
 		"inputAbbreviatedPath": "\/assets\/img\/og-image.png",
 		"outputAbbreviatedPath": "\/assets\/img\/og-image.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/orvis-logo-white.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 26605,
+		"inputAbbreviatedPath": "\/assets\/img\/orvis-logo-white.png",
+		"outputAbbreviatedPath": "\/assets\/img\/orvis-logo-white.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2751,6 +2784,26 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/assets\/less\/components\/guide-of-year.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/less\/components\/guide-of-year.less",
+		"outputAbbreviatedPath": "\/assets\/css\/components\/guide-of-year.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/assets\/less\/components\/product-tiles.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -4074,6 +4127,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/includes\/book-now-block.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/guide-of-year.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/guide-of-year.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
