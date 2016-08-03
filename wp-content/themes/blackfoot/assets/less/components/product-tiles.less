@@ -8,17 +8,17 @@
   .product-tile {
     margin-bottom: 30px;
     .onsale {
-      
+
     }
     & > a:not(.btn) {
       display: block;
       text-decoration: none;
       img {
-        width: 100%;
-        height: auto;
+        max-width: 100%;
+        height: 378px;
         display: block;
         //padding: 30px;
-        margin: 15px 0;
+        margin: 15px auto;
       }
       h3 {
         font-family: @font-family-sans-serif;
@@ -92,10 +92,32 @@
 @media (min-width: 1200px) {}
 
 // Desktop to large desktop
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .woocommerce ul.tiles {
+    .product-tile {
+      & > a:not(.btn) {
+        img {
+          height: 304px;
+        }
+      }
+    }
+  }
+
+}
 
 // Tablet to desktop
 @media (min-width: 768px) and (max-width: 991px) {
+
+  .woocommerce ul.tiles {
+    .product-tile {
+      & > a:not(.btn) {
+        img {
+          height: 315px;
+        }
+      }
+    }
+  }
 
   .columns-3 {
     ul.tiles {
@@ -136,6 +158,16 @@
 // Up to landscape phone
 @media (max-width: 480px) {
 
+  .woocommerce ul.tiles {
+    .product-tile {
+      & > a:not(.btn) {
+        img {
+          max-width: 320px;
+          margin: 15px auto;
+        }
+      }
+    }
+  }
   .woocommerce.columns-3,
   .woocommerce .columns-2 {
     ul.tiles {
