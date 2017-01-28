@@ -71,7 +71,7 @@
 		<section class="special-edition">
 			<div class="container">
 				<hgroup>
-					<h2>Get the Ultimate ‘Strike’ in a Single Click</h2>
+					<h2>Get the Ultimate ‘Strike’</h2>
 					<h3>After 30 years, John has learned exactly what you need. We are proud to offer his recommended SOTAR Strike configuration.</h3>
 				</hgroup>
 				<div class="special-edition-product">
@@ -88,7 +88,7 @@
 							</div>
 						</div>
 						<div class="col-sm-4">
-							<a href="#" class="btn btn-primary btn-learn-more">Learn more now</a>
+							<a href="#" class="btn btn-primary btn-learn-more">Request info now</a>
 						</div>
 					</div>
 					<div class="quote-from-john">
@@ -187,9 +187,9 @@
           });
       });
 	  }
-		
+
 	</script>
 
-	<?php get_template_part( 'includes/book-now-banner' ); ?> 
+	<?php get_template_part( 'includes/book-now-banner' ); ?>
 
 <?php get_footer(); ?>
