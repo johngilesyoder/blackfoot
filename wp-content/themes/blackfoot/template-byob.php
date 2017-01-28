@@ -44,7 +44,7 @@
 					<!-- THE JAVASCRIPT FORM -->
 					<!-- =================== -->
 					<form id="byob-form" class="byob-form">
-						
+
 						<!-- STEP ONE -->
 						<section class="step step-boat-size">
 					    <div class="step-title" id="step-one-title">
@@ -157,7 +157,7 @@
 						    </table>
 						  </div>
 					  </section>
-						
+
 						<!-- STEP TWO -->
 						<section id="step-two" class="step step-additional-options" style="display:none;">
 					    <div class="step-title">
@@ -327,7 +327,7 @@
 			    			      	</td>
 			    			      	<td>
 			    			      		<strong>MT Raft Frame Deluxe</strong><br>
-			    			      		<em>Breakdown <u>powder coated</u> aluminum fishing frame, two Tempress high back swivel seats, exclusive internal anchor system fitted with Harken pulleys/cleat, and customized aluminum dry box with guide seat.</em>
+			    			      		<em>Welded aluminum fishing frame, two Tempress high back swivel seats, exclusive internal anchor system fitted with Harken pulleys/cleat, and customized aluminum dry box with guide seat.</em>
 			    			      	</td>
 			    			      	<td>
 			    			      		$2,220.00
@@ -379,18 +379,6 @@
 			    			      	</td>
 			    			      	<td>
 			    			      		$1,975.00
-			    			      	</td>
-			    			      </tr>
-			    			      <tr>
-			    			      	<td>
-			    			      		<input type="radio" name="frame" data-title="NRS Raft Frame: Premier" data-item="Premier" data-price="2900.00" value="Premier">
-			    			      	</td>
-			    			      	<td>
-			    			      		<strong>MT Raft Frame: Premier</strong><br>
-			    			      		<em>Breakdown <u>powder coated</u> aluminum fishing frame, two Temptress high back swivel seats, exclusive internal anchor system fitted with Harken pulleys/cleat, and customized aluminum dry box with guide seat.</em>
-			    			      	</td>
-			    			      	<td>
-			    			      		$2,900.00
 			    			      	</td>
 			    			      </tr>
 			    			    </tbody>
@@ -487,7 +475,7 @@
 							<h3>Place Your Order</h3>
 						</div>
 						<div class="step-body">
-							
+
 							<!-- THE ORDER FORM -->
 							<!-- ================ -->
 							<?php gravity_form( BYOB, false, false, false, '', true ); ?>

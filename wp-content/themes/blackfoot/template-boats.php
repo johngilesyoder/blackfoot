@@ -88,7 +88,7 @@
 							</div>
 						</div>
 						<div class="col-sm-4">
-							<a href="#" class="btn btn-primary btn-learn-more">Request info now</a>
+							<a href="/contact-us/" class="btn btn-primary btn-learn-more">Request info now</a>
 						</div>
 					</div>
 					<div class="quote-from-john">
