@@ -83,7 +83,7 @@
 								</div>
 								<div class="col-sm-9">
 									<span class="product-title"><img class="logo-sotar" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-sotar-black.png"> Strike Raft</span>
-									<span class="product-subtitle">2016 Montana Guide Edition</span>
+									<span class="product-subtitle"><?php echo date('Y'); ?> Montana Guide Edition</span>
 								</div>
 							</div>
 						</div>
@@ -92,7 +92,7 @@
 						</div>
 					</div>
 					<div class="quote-from-john">
-						<h2>A few words from John Herzer on the 2016 Montana Guide Edition Strike Raft</h2>
+						<h2>A few words from John Herzer on the <?php echo date('Y'); ?> Montana Guide Edition Strike Raft</h2>
 						<p>
 							"Seems like everyday I field the same questions regarding which raft to buy for fishing, what frame to use, and how to properly accessorize it.  Often that long and convoluted conversation ends in the customer asking me to put together a package resembling the rig I row every day.  With that in mind we offer the 'Montana Guide Edition' Sotar Strike.
 							<div class="collapse" id="quoteCollapse">
