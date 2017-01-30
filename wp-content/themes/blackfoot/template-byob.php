@@ -62,11 +62,11 @@
 									      </div>
 									      <div class="radio">
 									      	<label>
-									      		<input type="radio" name="boat" data-item="Sotar Strike Raft - 11 foot 6 inch" data-price="4211.00" value="116">
+									      		<input type="radio" name="boat" data-item="Sotar Strike Raft - 11 foot 6 inch" data-price="4337.00" value="116">
 									      		11' 6"
 									      	</label>
 									      </div>
-									      <span class="base-price">Starting at <strong>$4,211</strong></span>
+									      <span class="base-price">Starting at <strong>$4,337</strong></span>
 									      <p class="size-description">Accommodates less gear and fewer anglers on smaller water.</p>
 									    </div>
 									  </div>
@@ -79,11 +79,11 @@
 									      </div>
 									      <div class="radio">
 									      	<label>
-									      		<input type="radio" name="boat" data-item="Sotar Strike Raft - 13 foot 6 inch" data-price="4536.00" value="136">
+									      		<input type="radio" name="boat" data-item="Sotar Strike Raft - 13 foot 6 inch" data-price="4672.00" value="136">
 									      		13' 6"
 									      	</label>
 									      </div>
-									      <span class="base-price">Starting at <strong>$4,536</strong></span>
+									      <span class="base-price">Starting at <strong>$4,672</strong></span>
 									      <p class="size-description">Our best-seller by far. The ideal size for most fishing applications - the go-to boat</p>
 									    </div>
 									  </div>
@@ -95,11 +95,11 @@
 									      </div>
 									      <div class="radio">
 									      	<label>
-									      		<input type="radio" name="boat" data-item="Sotar Strike Raft - 14 foot 6 inch" data-price="4752.00" value="146">
+									      		<input type="radio" name="boat" data-item="Sotar Strike Raft - 14 foot 6 inch" data-price="4895.00" value="146">
 									      		14' 6"
 									      	</label>
 									      </div>
-									      <span class="base-price">Starting at <strong>$4,752</strong></span>
+									      <span class="base-price">Starting at <strong>$4,895</strong></span>
 									      <p class="size-description">Holds more cargo on bigger water - great for the multi-day angler/rafter</p>
 									    </div>
 									  </div>
