@@ -4241,6 +4241,16 @@
 		"oAP": "\/single.php",
 		"oF": 0
 		},
+	"\/style-blessed1-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/style-blessed1-min-min.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/style-blessed1.css": {
 		"aP": 1,
 		"bl": 0,

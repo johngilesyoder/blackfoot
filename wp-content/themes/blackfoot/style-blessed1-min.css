@@ -9470,6 +9470,13 @@ textarea.single-fishing-report .select-report select {
     background-size: 320px; } }
 
 @media (max-width: 767px) {
+  .post-type-archive-fishing-report .report-video {
+    padding: 15px;
+    margin: 0 0 30px; }
+  .post-type-archive-fishing-report .report-video h3 {
+    font-size: 18px; }
+  .post-type-archive-fishing-report .report-video iframe {
+    width: 100%; }
   .post-type-archive-fishing-report .fishing-report-wrapper .fishing-report {
     padding: 15px; }
   .post-type-archive-fishing-report .fishing-report-wrapper .fishing-report hgroup .report-title {
@@ -9512,19 +9519,3 @@ textarea.single-fishing-report .select-report select {
   font-size: 21px;
   font-style: italic;
   margin: 10px 0; }
-
-.page-template-template-testimonials .testimonial footer {
-  font-size: 24px;
-  color: #94D17B;
-  font-weight: 700;
-  font-family: freight-sans-pro,"Helvetica Neue",Arial,sans-serif; }
-
-.page-template-template-testimonials .testimonial footer span {
-  color: #444;
-  font-weight: 500; }
-
-.page-template-template-testimonials .testimonial footer cite {
-  font-size: 14px;
-  color: #444;
-  font-weight: 500;
-  font-style: normal; }
