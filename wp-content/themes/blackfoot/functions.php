@@ -489,7 +489,7 @@ function b5f_modify_body_classes( $classes, $class )
   if( is_shop() )
   {
     $classes[] = 'shop-home';
-  }    
+  }
   return $classes;
 }
 
@@ -515,7 +515,7 @@ add_filter( 'woocommerce_product_subcategories_hide_empty', '__return_true');
 // ---------------------------------------------------
 add_action('woocommerce_after_shop_loop_item_title','woocommerce_template_single_excerpt', 5);
 
-function woocommerce_template_single_excerpt(){ 
+function woocommerce_template_single_excerpt(){
 echo '<p class="short-description">' . substr(get_the_excerpt(), 0,60) . ' &hellip;</p>';
 }
 
@@ -583,7 +583,7 @@ add_filter( 'wc_product_sku_enabled', '__return_false' );
 // ---------------------------------------------------
 function woo_related_products_limit() {
   global $product;
-  
+
   $args['posts_per_page'] = 6;
   return $args;
 }
@@ -667,8 +667,8 @@ add_action( 'wp_print_styles', 'woo_dequeue_booking_styles', 100 );
 // Use: [product_categories_dropdown orderby="title" count="0" hierarchical="0"]
 function woo_product_categories_dropdown() {
   $dropdown_args = array(
-    'hide_empty'         => 0, 
-    'hierarchical'       => 1, 
+    'hide_empty'         => 0,
+    'hierarchical'       => 1,
     'name'               => 'product_cat',
     'id'                 => 'productCat',
     'class'              => 'category-dropdown form-control',
@@ -720,5 +720,13 @@ function get_excerpt($limit, $source = null){
 // function populate_total( $product_info, $form, $entry ) {
 //   return $product_info;
 // }
+
+
+// Enable ACF Options page
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page();
+
+}
 
 ?>
