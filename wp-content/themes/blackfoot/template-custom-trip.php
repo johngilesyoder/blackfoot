@@ -60,7 +60,7 @@ get_header(); ?>
 								  <p>
 								    If you are interested in booking a trip on the beautiful Smith River, please call us at <a href="tel:+14065427411">(406) 542-7411</a> or <a href="/contact-us/">send us a message</a>.
 								  </p>
-								  <a href="/contact-us/" class="btn btn-book">Inquire or Book now</a>
+								  <a href="/hosted-fly-fishing-trips/" class="btn btn-book">View our hosted trips</a>
 									<?php else : ?>
 								  <h2>Book a trip!</h2>
 								  <p>

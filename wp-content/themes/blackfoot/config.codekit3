@@ -4137,6 +4137,12 @@
 		"oAP": "\/loop-search.php",
 		"oF": 0
 		},
+	"\/loop-trip-hosted.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/loop-trip-hosted.php",
+		"oF": 0
+		},
 	"\/loop-trip.php": {
 		"ft": 8192,
 		"oA": 0,
@@ -4319,10 +4325,22 @@
 		"oAP": "\/template-contact.php",
 		"oF": 0
 		},
+	"\/template-custom-trip.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-custom-trip.php",
+		"oF": 0
+		},
 	"\/template-home.php": {
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/template-home.php",
+		"oF": 0
+		},
+	"\/template-hosted-trips.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-hosted-trips.php",
 		"oF": 0
 		},
 	"\/template-testimonials.php": {
