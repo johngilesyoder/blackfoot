@@ -27,7 +27,7 @@
        <!-- Hosted Trip Block -->
        <div class="trip">
          <div class="trip-left">
-           <div class="trip-photo" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>');"></div>
+           <div class="trip-photo" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/hosted-trips.jpg');"></div>
          </div>
          <div class="trip-right">
            <div class="trip-content">
