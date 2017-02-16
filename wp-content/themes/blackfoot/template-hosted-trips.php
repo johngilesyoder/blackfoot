@@ -22,7 +22,7 @@
     <section class="trips">
       <div class="container">
 
-       <?php get_template_part('loop-trip'); ?>
+       <?php get_template_part('loop-trip-hosted'); ?>
 
       </div>
     </section>
