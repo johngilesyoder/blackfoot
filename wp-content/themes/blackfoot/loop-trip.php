@@ -1,6 +1,6 @@
-<?php 
+<?php
   // Define loop
-  $loop = new WP_Query( array( 'post_type' => 'trip', 'posts_per_page' => 9, 'order' => 'asc' ) );
+  $loop = new WP_Query( array( 'post_type' => 'trip', 'posts_per_page' => 9, 'order' => 'asc', 'cat' => '-441' ) );
   // Start loop
   while ( $loop->have_posts() ) : $loop->the_post();
   // Set variables
