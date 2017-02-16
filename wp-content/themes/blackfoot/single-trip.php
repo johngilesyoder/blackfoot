@@ -2,7 +2,7 @@
 
 	<main role="main">
 
-	<?php 
+	<?php
 		if (have_posts()): while (have_posts()) : the_post();
 		// Get feature img URL
 		$thumb_id = get_post_thumbnail_id();
@@ -19,7 +19,7 @@
 				<div class="trip-hero-gradient">
 					<div class="container">
 						<!-- Breadcrumbs -->
-						<?php if ( function_exists('yoast_breadcrumb') ) 
+						<?php if ( function_exists('yoast_breadcrumb') )
 						{yoast_breadcrumb('<nav id="breadcrumbs" class="breadcrumbs">','</nav>');}?>
 						<div class="trip-hero-content">
 							<!-- Water Title -->
@@ -44,7 +44,7 @@
 									<?php the_content(); // Dynamic Content ?>
 								</div>
 							</section>
-		
+
 						</div>
 						<div class="col-md-4">
 							<!-- Trips Sidebar -->
@@ -56,6 +56,9 @@
 								    If you are interested in booking a trip on the beautiful Smith River, please call us at <a href="tel:+14065427411">(406) 542-7411</a> or <a href="/contact-us/">send us a message</a>.
 								  </p>
 								  <a href="/contact-us/" class="btn btn-book">Inquire or Book now</a>
+									<?php elseif (is_single( 'hosted-fly-fishing-trips' )) : ?>
+									<h2>Check 'em out!</h2>
+								  <a href="/hosted-fly-fishing-trips/" class="btn btn-book">View our hosted trips</a>
 									<?php else : ?>
 								  <h2>Book a trip!</h2>
 								  <p>

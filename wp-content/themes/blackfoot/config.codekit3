@@ -4325,12 +4325,6 @@
 		"oAP": "\/template-contact.php",
 		"oF": 0
 		},
-	"\/template-custom-trip.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/template-custom-trip.php",
-		"oF": 0
-		},
 	"\/template-home.php": {
 		"ft": 8192,
 		"oA": 0,
