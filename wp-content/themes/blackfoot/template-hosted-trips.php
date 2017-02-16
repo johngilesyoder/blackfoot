@@ -5,14 +5,11 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <!-- Page Title -->
-          <h1 class="page-title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-fly.svg"> Guided Fly Fishing Trips</h1>
+          <h1 class="page-title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-fly.svg"> Hosted Fly Fishing Trips</h1>
 
           <div class="page-summary">
 
-            <?php
-              $post_type = get_post_type_object( get_post_type($post) );
-              echo $post_type->description ;
-            ?>
+            <?php the_content(); ?>
 
           </div>
 
