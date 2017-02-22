@@ -56,9 +56,11 @@
 								    If you are interested in booking a trip on the beautiful Smith River, please call us at <a href="tel:+14065427411">(406) 542-7411</a> or <a href="/contact-us/">send us a message</a>.
 								  </p>
 								  <a href="/contact-us/" class="btn btn-book">Inquire or Book now</a>
-									<?php elseif (is_single( 'hosted-fly-fishing-trips' )) : ?>
-									<h2>Check 'em out!</h2>
-								  <a href="/hosted-fly-fishing-trips/" class="btn btn-book">View our hosted trips</a>
+									<?php elseif (in_category( '441' )) : ?>
+										<h2>Book this trip!</h2>
+									  <p>
+									    If you are interested in booking a hosted trip, please call us at <a href="tel:+14065427411">(406) 542-7411</a> or <a href="/contact-us/">send us a message</a>.
+									  </p>
 									<?php else : ?>
 								  <h2>Book a trip!</h2>
 								  <p>
