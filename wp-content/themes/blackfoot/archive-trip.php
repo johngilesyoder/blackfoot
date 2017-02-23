@@ -27,12 +27,12 @@
        <!-- Hosted Trip Block -->
        <div class="trip">
          <div class="trip-left">
-           <div class="trip-photo" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/hosted-trips.jpg');"></div>
+           <div class="trip-photo" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/hosted-trips-block.jpg');"></div>
          </div>
          <div class="trip-right">
            <div class="trip-content">
              <h2 class="trip-title">Hosted Fly Fishing Trips</h2>
-             <p class="trip-summary">While 99% of our business is done booking trips for private parties, on occasion we will host trips to our exclusive lodges as well as new and exciting destinations.</p>
+             <p class="trip-summary">We are now booking a spectacular line up for hosted trips for the fall of 2017 and on through 2018.</p>
              <!-- <span class="price">
 
              </span> -->
