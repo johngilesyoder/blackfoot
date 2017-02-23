@@ -32,7 +32,7 @@
          <div class="trip-right">
            <div class="trip-content">
              <h2 class="trip-title">Hosted Fly Fishing Trips</h2>
-             <p class="trip-summary">We are now booking a spectacular line up for hosted trips for the fall of 2017 and on through 2018.</p>
+             <p class="trip-summary">We are now booking a spectacular line up for hosted trips for the fall of 2017 and on through 2018. We've done the homework and make all the arrangements - you pack up your gear and get on the plane!</p>
              <!-- <span class="price">
 
              </span> -->
