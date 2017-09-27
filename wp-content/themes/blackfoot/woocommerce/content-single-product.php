@@ -115,7 +115,7 @@ if( function_exists('get_product') ){
 			<?php endif; ?>
 
 			<?php woocommerce_template_single_sharing(); ?>
-			<?php WC_Structured_Data::generate_product_data() ?>
+			<?php //WC_Structured_Data::generate_product_data() ?>
 
 				<?php
 					/**
