@@ -3420,7 +3420,7 @@
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/css\/sections\/cart.css",
 		"oF": 0,
 		"oS": 1,
@@ -3437,7 +3437,7 @@
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/css\/sections\/checkout.css",
 		"oF": 0,
 		"oS": 1,
@@ -3454,7 +3454,7 @@
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/css\/sections\/confirmation.css",
 		"oF": 0,
 		"oS": 1,
@@ -3760,7 +3760,7 @@
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/css\/sections\/on-sale.css",
 		"oF": 0,
 		"oS": 1,
@@ -3794,7 +3794,7 @@
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/css\/sections\/shop-category.css",
 		"oF": 0,
 		"oS": 1,
@@ -3811,7 +3811,7 @@
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/css\/sections\/shop-home.css",
 		"oF": 0,
 		"oS": 1,
@@ -3828,7 +3828,7 @@
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/css\/sections\/shop-item.css",
 		"oF": 0,
 		"oS": 1,
@@ -3845,7 +3845,7 @@
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/css\/sections\/shop-search.css",
 		"oF": 0,
 		"oS": 1,
@@ -4609,520 +4609,520 @@
 		"oAP": "\/template-testimonials.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/archive-product.php": {
+	"\/woocommerce-bookings\/booking-form\/date-picker.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/archive-product.php",
+		"oAP": "\/woocommerce-bookings\/booking-form\/date-picker.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/archive-product_sale.php": {
+	"\/woocommerce-bookings\/booking-form\/number.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/archive-product_sale.php",
+		"oAP": "\/woocommerce-bookings\/booking-form\/number.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/auth\/footer.php": {
+	"\/woocommerce-bookings\/emails\/customer-booking-confirmed.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/auth\/footer.php",
+		"oAP": "\/woocommerce-bookings\/emails\/customer-booking-confirmed.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/auth\/form-grant-access.php": {
+	"\/woocommerce-bookings\/single-product\/add-to-cart\/booking.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/auth\/form-grant-access.php",
+		"oAP": "\/woocommerce-bookings\/single-product\/add-to-cart\/booking.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/auth\/form-login.php": {
+	"\/woocommerce-product-addons\/addons\/addon-start.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/auth\/form-login.php",
+		"oAP": "\/woocommerce-product-addons\/addons\/addon-start.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/auth\/header.php": {
+	"\/woocommerce\/archive-product.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/auth\/header.php",
+		"oAP": "\/woocommerce\/archive-product.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/cart\/cart-empty.php": {
+	"\/woocommerce\/archive-product_sale.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/cart\/cart-empty.php",
+		"oAP": "\/woocommerce\/archive-product_sale.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/cart\/cart-item-data.php": {
+	"\/woocommerce\/auth\/footer.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/cart\/cart-item-data.php",
+		"oAP": "\/woocommerce\/auth\/footer.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/cart\/cart-shipping.php": {
+	"\/woocommerce\/auth\/form-grant-access.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/cart\/cart-shipping.php",
+		"oAP": "\/woocommerce\/auth\/form-grant-access.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/cart\/cart-totals.php": {
+	"\/woocommerce\/auth\/form-login.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/cart\/cart-totals.php",
+		"oAP": "\/woocommerce\/auth\/form-login.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/cart\/cart.php": {
+	"\/woocommerce\/auth\/header.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/cart\/cart.php",
+		"oAP": "\/woocommerce\/auth\/header.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/cart\/cross-sells.php": {
+	"\/woocommerce\/cart\/cart-empty.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/cart\/cross-sells.php",
+		"oAP": "\/woocommerce\/cart\/cart-empty.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/cart\/mini-cart.php": {
+	"\/woocommerce\/cart\/cart-item-data.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/cart\/mini-cart.php",
+		"oAP": "\/woocommerce\/cart\/cart-item-data.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/cart\/proceed-to-checkout-button.php": {
+	"\/woocommerce\/cart\/cart-shipping.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/cart\/proceed-to-checkout-button.php",
+		"oAP": "\/woocommerce\/cart\/cart-shipping.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/cart\/shipping-calculator.php": {
+	"\/woocommerce\/cart\/cart-totals.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/cart\/shipping-calculator.php",
+		"oAP": "\/woocommerce\/cart\/cart-totals.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/checkout\/cart-errors.php": {
+	"\/woocommerce\/cart\/cart.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/checkout\/cart-errors.php",
+		"oAP": "\/woocommerce\/cart\/cart.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/checkout\/form-billing.php": {
+	"\/woocommerce\/cart\/cross-sells.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/checkout\/form-billing.php",
+		"oAP": "\/woocommerce\/cart\/cross-sells.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/checkout\/form-checkout.php": {
+	"\/woocommerce\/cart\/mini-cart.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/checkout\/form-checkout.php",
+		"oAP": "\/woocommerce\/cart\/mini-cart.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/checkout\/form-coupon.php": {
+	"\/woocommerce\/cart\/proceed-to-checkout-button.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/checkout\/form-coupon.php",
+		"oAP": "\/woocommerce\/cart\/proceed-to-checkout-button.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/checkout\/form-login.php": {
+	"\/woocommerce\/cart\/shipping-calculator.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/checkout\/form-login.php",
+		"oAP": "\/woocommerce\/cart\/shipping-calculator.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/checkout\/form-pay.php": {
+	"\/woocommerce\/checkout\/cart-errors.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/checkout\/form-pay.php",
+		"oAP": "\/woocommerce\/checkout\/cart-errors.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/checkout\/form-shipping.php": {
+	"\/woocommerce\/checkout\/form-billing.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/checkout\/form-shipping.php",
+		"oAP": "\/woocommerce\/checkout\/form-billing.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/checkout\/payment-method.php": {
+	"\/woocommerce\/checkout\/form-checkout.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/checkout\/payment-method.php",
+		"oAP": "\/woocommerce\/checkout\/form-checkout.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/checkout\/payment.php": {
+	"\/woocommerce\/checkout\/form-coupon.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/checkout\/payment.php",
+		"oAP": "\/woocommerce\/checkout\/form-coupon.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/checkout\/review-order.php": {
+	"\/woocommerce\/checkout\/form-login.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/checkout\/review-order.php",
+		"oAP": "\/woocommerce\/checkout\/form-login.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/checkout\/thankyou.php": {
+	"\/woocommerce\/checkout\/form-pay.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/checkout\/thankyou.php",
+		"oAP": "\/woocommerce\/checkout\/form-pay.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/content-product.php": {
+	"\/woocommerce\/checkout\/form-shipping.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/content-product.php",
+		"oAP": "\/woocommerce\/checkout\/form-shipping.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/content-product_cat.php": {
+	"\/woocommerce\/checkout\/payment-method.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/content-product_cat.php",
+		"oAP": "\/woocommerce\/checkout\/payment-method.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/content-single-product.php": {
+	"\/woocommerce\/checkout\/payment.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/content-single-product.php",
+		"oAP": "\/woocommerce\/checkout\/payment.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/content-widget-product.php": {
+	"\/woocommerce\/checkout\/review-order.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/content-widget-product.php",
+		"oAP": "\/woocommerce\/checkout\/review-order.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/global\/breadcrumb.php": {
+	"\/woocommerce\/checkout\/thankyou.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/global\/breadcrumb.php",
+		"oAP": "\/woocommerce\/checkout\/thankyou.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/global\/form-login.php": {
+	"\/woocommerce\/content-product.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/global\/form-login.php",
+		"oAP": "\/woocommerce\/content-product.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/global\/quantity-input.php": {
+	"\/woocommerce\/content-product_cat.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/global\/quantity-input.php",
+		"oAP": "\/woocommerce\/content-product_cat.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/global\/sidebar.php": {
+	"\/woocommerce\/content-single-product.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/global\/sidebar.php",
+		"oAP": "\/woocommerce\/content-single-product.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/global\/wrapper-end.php": {
+	"\/woocommerce\/content-widget-product.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/global\/wrapper-end.php",
+		"oAP": "\/woocommerce\/content-widget-product.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/global\/wrapper-start.php": {
+	"\/woocommerce\/global\/breadcrumb.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/global\/wrapper-start.php",
+		"oAP": "\/woocommerce\/global\/breadcrumb.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/loop\/add-to-cart.php": {
+	"\/woocommerce\/global\/form-login.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/loop\/add-to-cart.php",
+		"oAP": "\/woocommerce\/global\/form-login.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/loop\/loop-end.php": {
+	"\/woocommerce\/global\/quantity-input.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/loop\/loop-end.php",
+		"oAP": "\/woocommerce\/global\/quantity-input.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/loop\/loop-start.php": {
+	"\/woocommerce\/global\/sidebar.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/loop\/loop-start.php",
+		"oAP": "\/woocommerce\/global\/sidebar.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/loop\/no-products-found.php": {
+	"\/woocommerce\/global\/wrapper-end.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/loop\/no-products-found.php",
+		"oAP": "\/woocommerce\/global\/wrapper-end.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/loop\/orderby.php": {
+	"\/woocommerce\/global\/wrapper-start.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/loop\/orderby.php",
+		"oAP": "\/woocommerce\/global\/wrapper-start.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/loop\/pagination.php": {
+	"\/woocommerce\/loop\/add-to-cart.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/loop\/pagination.php",
+		"oAP": "\/woocommerce\/loop\/add-to-cart.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/loop\/price.php": {
+	"\/woocommerce\/loop\/loop-end.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/loop\/price.php",
+		"oAP": "\/woocommerce\/loop\/loop-end.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/loop\/rating.php": {
+	"\/woocommerce\/loop\/loop-start.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/loop\/rating.php",
+		"oAP": "\/woocommerce\/loop\/loop-start.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/loop\/result-count.php": {
+	"\/woocommerce\/loop\/no-products-found.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/loop\/result-count.php",
+		"oAP": "\/woocommerce\/loop\/no-products-found.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/loop\/sale-flash.php": {
+	"\/woocommerce\/loop\/orderby.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/loop\/sale-flash.php",
+		"oAP": "\/woocommerce\/loop\/orderby.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/loop\/title.php": {
+	"\/woocommerce\/loop\/pagination.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/loop\/title.php",
+		"oAP": "\/woocommerce\/loop\/pagination.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/notices\/error.php": {
+	"\/woocommerce\/loop\/price.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/notices\/error.php",
+		"oAP": "\/woocommerce\/loop\/price.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/notices\/notice.php": {
+	"\/woocommerce\/loop\/rating.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/notices\/notice.php",
+		"oAP": "\/woocommerce\/loop\/rating.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/notices\/success.php": {
+	"\/woocommerce\/loop\/result-count.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/notices\/success.php",
+		"oAP": "\/woocommerce\/loop\/result-count.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/order\/form-tracking.php": {
+	"\/woocommerce\/loop\/sale-flash.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/order\/form-tracking.php",
+		"oAP": "\/woocommerce\/loop\/sale-flash.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/order\/order-again.php": {
+	"\/woocommerce\/loop\/title.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/order\/order-again.php",
+		"oAP": "\/woocommerce\/loop\/title.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/order\/order-details-customer.php": {
+	"\/woocommerce\/notices\/error.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/order\/order-details-customer.php",
+		"oAP": "\/woocommerce\/notices\/error.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/order\/order-details-item.php": {
+	"\/woocommerce\/notices\/notice.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/order\/order-details-item.php",
+		"oAP": "\/woocommerce\/notices\/notice.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/order\/order-details.php": {
+	"\/woocommerce\/notices\/success.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/order\/order-details.php",
+		"oAP": "\/woocommerce\/notices\/success.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/order\/tracking.php": {
+	"\/woocommerce\/order\/form-tracking.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/order\/tracking.php",
+		"oAP": "\/woocommerce\/order\/form-tracking.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/product-searchform.php": {
+	"\/woocommerce\/order\/order-again.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/product-searchform.php",
+		"oAP": "\/woocommerce\/order\/order-again.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product-reviews.php": {
+	"\/woocommerce\/order\/order-details-customer.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product-reviews.php",
+		"oAP": "\/woocommerce\/order\/order-details-customer.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product.php": {
+	"\/woocommerce\/order\/order-details-item.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product.php",
+		"oAP": "\/woocommerce\/order\/order-details-item.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/add-to-cart\/external.php": {
+	"\/woocommerce\/order\/order-details.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/add-to-cart\/external.php",
+		"oAP": "\/woocommerce\/order\/order-details.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/add-to-cart\/grouped.php": {
+	"\/woocommerce\/order\/tracking.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/add-to-cart\/grouped.php",
+		"oAP": "\/woocommerce\/order\/tracking.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/add-to-cart\/simple.php": {
+	"\/woocommerce\/product-searchform.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/add-to-cart\/simple.php",
+		"oAP": "\/woocommerce\/product-searchform.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/add-to-cart\/variable.php": {
+	"\/woocommerce\/single-product-reviews.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/add-to-cart\/variable.php",
+		"oAP": "\/woocommerce\/single-product-reviews.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/meta.php": {
+	"\/woocommerce\/single-product.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/meta.php",
+		"oAP": "\/woocommerce\/single-product.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/price.php": {
+	"\/woocommerce\/single-product\/add-to-cart\/external.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/price.php",
+		"oAP": "\/woocommerce\/single-product\/add-to-cart\/external.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/product-attributes.php": {
+	"\/woocommerce\/single-product\/add-to-cart\/grouped.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/product-attributes.php",
+		"oAP": "\/woocommerce\/single-product\/add-to-cart\/grouped.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/product-image.php": {
+	"\/woocommerce\/single-product\/add-to-cart\/simple.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/product-image.php",
+		"oAP": "\/woocommerce\/single-product\/add-to-cart\/simple.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/product-thumbnails.php": {
+	"\/woocommerce\/single-product\/add-to-cart\/variable.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/product-thumbnails.php",
+		"oAP": "\/woocommerce\/single-product\/add-to-cart\/variable.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/rating.php": {
+	"\/woocommerce\/single-product\/meta.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/rating.php",
+		"oAP": "\/woocommerce\/single-product\/meta.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/related.php": {
+	"\/woocommerce\/single-product\/price.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/related.php",
+		"oAP": "\/woocommerce\/single-product\/price.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/review.php": {
+	"\/woocommerce\/single-product\/product-attributes.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/review.php",
+		"oAP": "\/woocommerce\/single-product\/product-attributes.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/sale-flash.php": {
+	"\/woocommerce\/single-product\/product-image.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/sale-flash.php",
+		"oAP": "\/woocommerce\/single-product\/product-image.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/share.php": {
+	"\/woocommerce\/single-product\/product-thumbnails.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/share.php",
+		"oAP": "\/woocommerce\/single-product\/product-thumbnails.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/short-description.php": {
+	"\/woocommerce\/single-product\/rating.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/short-description.php",
+		"oAP": "\/woocommerce\/single-product\/rating.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/tabs\/additional-information.php": {
+	"\/woocommerce\/single-product\/related.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/tabs\/additional-information.php",
+		"oAP": "\/woocommerce\/single-product\/related.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/tabs\/description.php": {
+	"\/woocommerce\/single-product\/review.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/tabs\/description.php",
+		"oAP": "\/woocommerce\/single-product\/review.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/tabs\/tabs.php": {
+	"\/woocommerce\/single-product\/sale-flash.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/tabs\/tabs.php",
+		"oAP": "\/woocommerce\/single-product\/sale-flash.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/title.php": {
+	"\/woocommerce\/single-product\/share.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/title.php",
+		"oAP": "\/woocommerce\/single-product\/share.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/single-product\/up-sells.php": {
+	"\/woocommerce\/single-product\/short-description.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/single-product\/up-sells.php",
+		"oAP": "\/woocommerce\/single-product\/short-description.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/taxonomy-product_cat.php": {
+	"\/woocommerce\/single-product\/tabs\/additional-information.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/taxonomy-product_cat.php",
+		"oAP": "\/woocommerce\/single-product\/tabs\/additional-information.php",
 		"oF": 0
 		},
-	"\/woocommerce-2\/taxonomy-product_tag.php": {
+	"\/woocommerce\/single-product\/tabs\/description.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-2\/taxonomy-product_tag.php",
+		"oAP": "\/woocommerce\/single-product\/tabs\/description.php",
 		"oF": 0
 		},
-	"\/woocommerce-bookings-2\/booking-form\/date-picker.php": {
+	"\/woocommerce\/single-product\/tabs\/tabs.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-bookings-2\/booking-form\/date-picker.php",
+		"oAP": "\/woocommerce\/single-product\/tabs\/tabs.php",
 		"oF": 0
 		},
-	"\/woocommerce-bookings-2\/booking-form\/number.php": {
+	"\/woocommerce\/single-product\/title.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-bookings-2\/booking-form\/number.php",
+		"oAP": "\/woocommerce\/single-product\/title.php",
 		"oF": 0
 		},
-	"\/woocommerce-bookings-2\/emails\/customer-booking-confirmed.php": {
+	"\/woocommerce\/single-product\/up-sells.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-bookings-2\/emails\/customer-booking-confirmed.php",
+		"oAP": "\/woocommerce\/single-product\/up-sells.php",
 		"oF": 0
 		},
-	"\/woocommerce-bookings-2\/single-product\/add-to-cart\/booking.php": {
+	"\/woocommerce\/taxonomy-product_cat.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-bookings-2\/single-product\/add-to-cart\/booking.php",
+		"oAP": "\/woocommerce\/taxonomy-product_cat.php",
 		"oF": 0
 		},
-	"\/woocommerce-product-addons-2\/addons\/addon-start.php": {
+	"\/woocommerce\/taxonomy-product_tag.php": {
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/woocommerce-product-addons-2\/addons\/addon-start.php",
+		"oAP": "\/woocommerce\/taxonomy-product_tag.php",
 		"oF": 0
 		},
 	"\/wp_bootstrap_navwalker.php": {
