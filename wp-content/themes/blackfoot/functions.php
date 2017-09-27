@@ -729,4 +729,13 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
+// Enable WC 3.0 gallery functionality
+add_action( 'after_setup_theme', 'yourtheme_setup' );
+
+function yourtheme_setup() {
+    add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
+}
+
 ?>
