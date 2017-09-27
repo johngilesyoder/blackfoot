@@ -20,6 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+global $post;
+if( function_exists('get_product') ){
+	$product = get_product( $post->ID );
+}
+
 ?>
 
 <?php
