@@ -1,4 +1,4 @@
-
+<?php
 /**
  * Checkout billing information form
  *
