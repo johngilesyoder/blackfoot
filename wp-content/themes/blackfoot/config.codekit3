@@ -7,7 +7,7 @@
 		"uuidString": "B76C8E04-C356-4E5F-A3B9-968A42391619"
 		}
 	],
-"creatorBuild": "25504",
+"creatorBuild": "25900",
 "files": {
 	"\/404.php": {
 		"ft": 8192,
@@ -79,7 +79,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/icons\/favicon.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/icons\/touch.png": {
 		"ft": 32768,
@@ -87,7 +90,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/icons\/touch.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/2016-guide-of-year.png": {
 		"ft": 32768,
@@ -95,7 +101,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/2016-guide-of-year.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/amex.png": {
 		"ft": 32768,
@@ -103,7 +112,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/amex.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/badge-orvis.gif": {
 		"ft": 4194304,
@@ -119,7 +131,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/badge-trout-unlimited.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/bg-booking-banner.png": {
 		"ft": 32768,
@@ -127,7 +142,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/bg-booking-banner.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/bg-goty.png": {
 		"ft": 32768,
@@ -135,7 +153,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/bg-goty.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/boats-cats.jpg": {
 		"ft": 16384,
@@ -143,7 +164,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/boats-cats.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/boats-hero-bg.jpg": {
 		"ft": 16384,
@@ -151,7 +174,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/boats-hero-bg.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/boats-kayaks.jpg": {
 		"ft": 16384,
@@ -159,7 +184,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/boats-kayaks.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/boats-rafts.jpg": {
 		"ft": 16384,
@@ -167,7 +194,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/boats-rafts.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/boats-sidebar-john.png": {
 		"ft": 32768,
@@ -175,7 +204,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/boats-sidebar-john.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/boats-video-placeholder.png": {
 		"ft": 32768,
@@ -183,7 +215,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/boats-video-placeholder.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/boats\/11_6_strike.png": {
 		"ft": 32768,
@@ -191,7 +226,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/boats\/11_6_strike.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/boats\/13_6_strike.png": {
 		"ft": 32768,
@@ -199,7 +237,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/boats\/13_6_strike.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/boats\/14_6_strike.png": {
 		"ft": 32768,
@@ -207,7 +248,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/boats\/14_6_strike.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/boats\/chafe-color.png": {
 		"ft": 32768,
@@ -215,7 +259,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/boats\/chafe-color.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/boats\/d-ring-patch-color.png": {
 		"ft": 32768,
@@ -223,7 +270,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/boats\/d-ring-patch-color.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/boats\/floor-color.png": {
 		"ft": 32768,
@@ -231,7 +281,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/boats\/floor-color.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/boats\/handle-patch-color.png": {
 		"ft": 32768,
@@ -239,7 +292,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/boats\/Handles.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/boats\/mt-raft-frames-logo.png": {
 		"ft": 32768,
@@ -247,7 +303,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/boats\/mt-raft-frames-logo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/boats\/nrs-logo.jpg": {
 		"ft": 16384,
@@ -255,7 +314,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/boats\/nrs-logo.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/boats\/primary-boat-color.png": {
 		"ft": 32768,
@@ -263,7 +324,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/boats\/primary-boat-color.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/boats\/Sotar_Strike_Fishing_Inflatable_Raft.jpg": {
 		"ft": 16384,
@@ -271,7 +335,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/boats\/Sotar_Strike_Fishing_Inflatable_Raft.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/built-by.svg": {
 		"ft": 2097152,
@@ -349,7 +415,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/diners.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/discover.png": {
 		"ft": 32768,
@@ -357,7 +426,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/discover.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/dotted-line-footer.svg": {
 		"ft": 2097152,
@@ -395,7 +467,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/email-logo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/family.jpg": {
 		"ft": 16384,
@@ -403,7 +478,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/family.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/family.png": {
 		"ft": 32768,
@@ -411,7 +488,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/family.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/featured-brand-gloomis.jpg": {
 		"ft": 16384,
@@ -419,7 +499,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/featured-brand-gloomis.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/featured-brand-orvis.jpg": {
 		"ft": 16384,
@@ -427,7 +509,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/featured-brand-orvis.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/featured-brand-simms.jpg": {
 		"ft": 16384,
@@ -435,7 +519,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/featured-brand-simms.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/featured-brand-sotar.jpg": {
 		"ft": 16384,
@@ -443,7 +529,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/featured-brand-sotar.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/guide-staff.jpg": {
 		"ft": 16384,
@@ -451,7 +539,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/guide-staff.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/home-bg-trips.jpg": {
 		"ft": 16384,
@@ -459,7 +549,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/home-bg-trips.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/home-hero-1.jpg": {
 		"ft": 16384,
@@ -467,7 +559,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/home-hero-1.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/home-hero-2.jpg": {
 		"ft": 16384,
@@ -475,7 +569,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/home-hero-2.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/home-hero-3.jpg": {
 		"ft": 16384,
@@ -483,7 +579,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/home-hero-3.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/home-hero-4.jpg": {
 		"ft": 16384,
@@ -491,7 +589,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/home-hero-4.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/home-hero-5.jpg": {
 		"ft": 16384,
@@ -499,7 +599,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/home-hero-5.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/home-hero-6.jpg": {
 		"ft": 16384,
@@ -507,7 +609,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/home-hero-6.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/home-hero-7.jpg": {
 		"ft": 16384,
@@ -515,7 +619,19 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/home-hero-7.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/assets\/img\/hosted-trips-block.jpg": {
+		"ft": 16384,
+		"iS": 152843,
+		"oA": 0,
+		"oAP": "\/assets\/img\/hosted-trips-block.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/hosted-trips.jpg": {
 		"ft": 16384,
@@ -523,7 +639,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/hosted-trips.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/icon-byob-black.svg": {
 		"ft": 2097152,
@@ -741,7 +859,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/icon-sotar-black.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/icon-sotar-white.png": {
 		"ft": 32768,
@@ -749,7 +870,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/icon-sotar-white.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/icon-star-white.svg": {
 		"ft": 2097152,
@@ -867,7 +991,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/illustration-beaverhead.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/illustration-bighole.png": {
 		"ft": 32768,
@@ -875,7 +1002,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/illustration-bighole.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/illustration-bitterroot.png": {
 		"ft": 32768,
@@ -883,7 +1013,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/illustration-bitterroot.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/illustration-blackfoot.png": {
 		"ft": 32768,
@@ -891,7 +1024,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/illustration-blackfoot.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/illustration-clarkfork.png": {
 		"ft": 32768,
@@ -899,7 +1035,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/illustration-clarkfork.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/illustration-georgetown.png": {
 		"ft": 32768,
@@ -907,7 +1046,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/illustration-georgetown.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/illustration-missouri.png": {
 		"ft": 32768,
@@ -915,7 +1057,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/illustration-missouri.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/illustration-rockcreek.png": {
 		"ft": 32768,
@@ -923,7 +1068,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/illustration-rockcreek.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/illustration-smith.png": {
 		"ft": 32768,
@@ -931,7 +1079,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/illustration-smith.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/jcb.png": {
 		"ft": 32768,
@@ -939,7 +1090,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/jcb.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/logo-bg-dark.svg": {
 		"ft": 2097152,
@@ -967,7 +1121,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/logo-flintcreek.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/logo-footer.svg": {
 		"ft": 2097152,
@@ -1005,7 +1162,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/mastercard.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/og-default.png": {
 		"ft": 32768,
@@ -1013,7 +1173,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/og-default.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/og-home.png": {
 		"ft": 32768,
@@ -1021,7 +1184,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/og-home.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/og-image.png": {
 		"ft": 32768,
@@ -1029,7 +1195,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/og-image.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/ollie-11424-2.gif": {
 		"ft": 4194304,
@@ -1045,7 +1214,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/orvis-logo-white.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/photo-boats-sidebar.png": {
 		"ft": 32768,
@@ -1053,7 +1225,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/photo-boats-sidebar.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/placeholder.png": {
 		"ft": 32768,
@@ -1061,7 +1236,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/placeholder.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/powered-by-stripe.svg": {
 		"ft": 2097152,
@@ -1087,7 +1265,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/relax-block-1.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/relax-block-2.jpg": {
 		"ft": 16384,
@@ -1095,7 +1275,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/relax-block-2.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/relax-block-3.jpg": {
 		"ft": 16384,
@@ -1103,7 +1285,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/relax-block-3.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/section-testimonial-1.png": {
 		"ft": 32768,
@@ -1111,7 +1295,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/section-testimonial-1.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/strike-product-img.png": {
 		"ft": 32768,
@@ -1119,7 +1306,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/strike-product-img.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/testimonial-1.jpg": {
 		"ft": 16384,
@@ -1127,7 +1317,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/testimonial-1.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/testimonial-2.jpg": {
 		"ft": 16384,
@@ -1135,7 +1327,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/testimonial-2.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/testimonial-3.jpg": {
 		"ft": 16384,
@@ -1143,7 +1337,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/testimonial-3.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/testimonial-4.jpg": {
 		"ft": 16384,
@@ -1151,7 +1347,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/testimonial-4.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/testimonial-5.jpg": {
 		"ft": 16384,
@@ -1159,7 +1357,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/testimonial-5.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/testimonial-6.jpg": {
 		"ft": 16384,
@@ -1167,7 +1367,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/testimonial-6.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/trip-alberton.jpg": {
 		"ft": 16384,
@@ -1175,7 +1377,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/trip-alberton.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/trip-float.jpg": {
 		"ft": 16384,
@@ -1183,7 +1387,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/trip-float.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/trip-lodging.jpg": {
 		"ft": 16384,
@@ -1191,7 +1397,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/trip-lodging.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/trip-overnight.jpg": {
 		"ft": 16384,
@@ -1199,7 +1407,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/trip-overnight.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/trip-smith.jpg": {
 		"ft": 16384,
@@ -1207,7 +1417,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/trip-smith.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/trip-stillwater.jpg": {
 		"ft": 16384,
@@ -1215,7 +1427,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/trip-stillwater.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/trip-testimonial.jpg": {
 		"ft": 16384,
@@ -1223,7 +1437,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/trip-testimonial.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/trip-wade.jpg": {
 		"ft": 16384,
@@ -1231,7 +1447,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/trip-wade.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/visa.png": {
 		"ft": 32768,
@@ -1239,7 +1457,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/visa.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/water-beaverhead.jpg": {
 		"ft": 16384,
@@ -1247,7 +1468,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/water-beaverhead.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/water-bighole.jpg": {
 		"ft": 16384,
@@ -1255,7 +1478,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/water-bighole.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/water-bitterroot.jpg": {
 		"ft": 16384,
@@ -1263,7 +1488,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/water-bitterroot.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/water-blackfoot.jpg": {
 		"ft": 16384,
@@ -1271,7 +1498,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/water-blackfoot.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/water-clarkfork.jpg": {
 		"ft": 16384,
@@ -1279,7 +1508,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/water-clarkfork.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/water-missouri.jpg": {
 		"ft": 16384,
@@ -1287,7 +1518,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/water-missouri.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/water-rockcreek.jpg": {
 		"ft": 16384,
@@ -1295,7 +1528,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/water-rockcreek.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/water-smith.jpg": {
 		"ft": 16384,
@@ -1303,7 +1538,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/water-smith.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/water-stillwater.jpg": {
 		"ft": 16384,
@@ -1311,10 +1548,13 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/water-stillwater.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/js\/lib\/animation.gsap.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/lib\/min\/animation.gsap-min.js",
@@ -1324,6 +1564,7 @@
 		},
 	"\/assets\/js\/lib\/bootstrap.min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/lib\/min\/bootstrap.min-min.js",
@@ -1333,6 +1574,7 @@
 		},
 	"\/assets\/js\/lib\/conditionizr-4.3.0.min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/lib\/min\/conditionizr-4.3.0.min-min.js",
@@ -1342,6 +1584,7 @@
 		},
 	"\/assets\/js\/lib\/flickity.pkgd.min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/lib\/min\/flickity.pkgd.min-min.js",
@@ -1351,6 +1594,7 @@
 		},
 	"\/assets\/js\/lib\/jquery.sticky.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/lib\/min\/jquery.sticky-min.js",
@@ -1360,6 +1604,7 @@
 		},
 	"\/assets\/js\/lib\/modernizr-2.7.1.min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/lib\/min\/modernizr-2.7.1.min-min.js",
@@ -1369,6 +1614,7 @@
 		},
 	"\/assets\/js\/lib\/ScrollMagic.min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/lib\/min\/ScrollMagic.min-min.js",
@@ -1378,6 +1624,7 @@
 		},
 	"\/assets\/js\/lib\/TweenMax.min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/lib\/min\/TweenMax.min-min.js",
@@ -1387,6 +1634,7 @@
 		},
 	"\/assets\/js\/min\/scripts-min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/assets\/js\/min\/min\/scripts-min-min.js",
@@ -1396,6 +1644,7 @@
 		},
 	"\/assets\/js\/scripts.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/min\/scripts-min.js",
@@ -1405,6 +1654,7 @@
 		},
 	"\/assets\/js\/sections\/boats.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/sections\/min\/boats-min.js",
@@ -1414,6 +1664,7 @@
 		},
 	"\/assets\/js\/sections\/home.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/sections\/min\/home-min.js",
@@ -1423,6 +1674,7 @@
 		},
 	"\/assets\/js\/sections\/min\/boats-min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/assets\/js\/sections\/min\/min\/boats-min-min.js",
@@ -1432,6 +1684,7 @@
 		},
 	"\/assets\/js\/sections\/min\/home-min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/assets\/js\/sections\/min\/min\/home-min-min.js",
@@ -1441,6 +1694,7 @@
 		},
 	"\/assets\/js\/sections\/min\/water-min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/assets\/js\/sections\/min\/min\/water-min-min.js",
@@ -1450,6 +1704,7 @@
 		},
 	"\/assets\/js\/sections\/water.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/sections\/min\/water-min.js",
@@ -4205,7 +4460,10 @@
 		"oA": 0,
 		"oAP": "\/screenshot.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/search.php": {
 		"ft": 8192,
@@ -5286,6 +5544,10 @@
 			"active": 0,
 			"optionString": "{'setWithoutGet': true, 'getWithoutSet': false}"
 			},
+		"array-bracket-newline": {
+			"active": 0,
+			"optionString": "{'multiline': true, 'minItems': null}"
+			},
 		"array-bracket-spacing": {
 			"active": 0,
 			"optionString": "'never', {'singleValue': false, 'objectsInArrays': false, 'arraysInArrays': false}"
@@ -5293,6 +5555,10 @@
 		"array-callback-return": {
 			"active": 0,
 			"optionString": ""
+			},
+		"array-element-newline": {
+			"active": 0,
+			"optionString": "'always'"
 			},
 		"arrow-body-style": {
 			"active": 0,
@@ -5390,6 +5656,10 @@
 			"active": 0,
 			"optionString": "'always', {'null': 'always'}"
 			},
+		"for-direction": {
+			"active": 0,
+			"optionString": ""
+			},
 		"func-call-spacing": {
 			"active": 0,
 			"optionString": "'never'"
@@ -5409,6 +5679,10 @@
 		"generator-star-spacing": {
 			"active": 0,
 			"optionString": "{'before': true, 'after': false}"
+			},
+		"getter-return": {
+			"active": 0,
+			"optionString": "{'allowImplicit': false}"
 			},
 		"global-require": {
 			"active": 0,
@@ -5538,6 +5812,10 @@
 			"active": 0,
 			"optionString": "{'allow': ['~'], 'int32Hint': true}"
 			},
+		"no-buffer-constructor": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-caller": {
 			"active": 0,
 			"optionString": ""
@@ -5552,6 +5830,10 @@
 			},
 		"no-class-assign": {
 			"active": 1,
+			"optionString": ""
+			},
+		"no-compare-neg-zero": {
+			"active": 0,
 			"optionString": ""
 			},
 		"no-cond-assign": {
@@ -5754,6 +6036,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-multi-assign": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-multi-spaces": {
 			"active": 0,
 			"optionString": "{'exceptions': {'Property': true, 'BinaryExpression': false, 'VariableDeclarator': false, 'ImportDeclaration': false}}"
@@ -5831,6 +6117,10 @@
 			"optionString": ""
 			},
 		"no-proto": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-prototype-builtins": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -6030,6 +6320,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"nonblock-statement-body-position": {
+			"active": 0,
+			"optionString": "'beside'"
+			},
 		"object-curly-newline": {
 			"active": 0,
 			"optionString": "{'ObjectExpression': {'multiline': true}, 'ObjectPattern': {'multiline': true}}"
@@ -6066,6 +6360,10 @@
 			"active": 0,
 			"optionString": "{'blocks': 'always', 'switches': 'always', 'classes': 'always'}"
 			},
+		"padding-line-between-statements": {
+			"active": 0,
+			"optionString": "{blankLine: 'always', prev:'*', next:'return'}"
+			},
 		"prefer-arrow-callback": {
 			"active": 0,
 			"optionString": ""
@@ -6081,6 +6379,10 @@
 		"prefer-numeric-literals": {
 			"active": 0,
 			"optionString": ""
+			},
+		"prefer-promise-reject-errors": {
+			"active": 0,
+			"optionString": "{'allowEmptyReject': false}"
 			},
 		"prefer-rest-params": {
 			"active": 0,
@@ -6130,6 +6432,10 @@
 			"active": 0,
 			"optionString": "{'before': false, 'after': true}"
 			},
+		"semi-style": {
+			"active": 0,
+			"optionString": "'last'"
+			},
 		"sort-imports": {
 			"active": 0,
 			"optionString": "{'ignoreCase': false, 'ignoreMemberSort': true, 'memberSyntaxSortOrder': ['none', 'all', 'multiple', 'single']}"
@@ -6170,11 +6476,19 @@
 			"active": 0,
 			"optionString": "'safe'"
 			},
+		"switch-colon-spacing": {
+			"active": 0,
+			"optionString": "{'after': true, 'before': false}"
+			},
 		"symbol-description": {
 			"active": 0,
 			"optionString": ""
 			},
 		"template-curly-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"template-tag-spacing": {
 			"active": 0,
 			"optionString": "'never'"
 			},
@@ -6621,7 +6935,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"quality": 100
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
@@ -6644,14 +6959,6 @@
 		"autoOutputPathStyle": 0,
 		"orderOutput": 0,
 		"outputStyle": 1
-		},
-	"languageDefaultsJSX": {
-		"autoOutputAction": 0,
-		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "",
-		"autoOutputPathReplace1": "jsx",
-		"autoOutputPathReplace2": "js",
-		"autoOutputPathStyle": 0
 		},
 	"languageDefaultsKIT": {
 		"autoOutputAction": 0,
@@ -6714,7 +7021,9 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"optimizerType": 1,
+		"quality": 100
 		},
 	"languageDefaultsPUG": {
 		"autoOutputAction": 0,
@@ -6799,9 +7108,11 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
+	"susyVersion": 3,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
 		"ascii-only": {
