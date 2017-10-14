@@ -6482,7 +6482,7 @@ a img.aligncenter {
 textarea.widget_product_search .woocommerce-product-search .search-field {
   height: auto; }
 
-.widget_product_search .woocommerce-product-search .search-submit {
+.widget_product_search .woocommerce-product-search input[type=submit] {
   background-image: url(assets/img/icon-search-submit.svg);
   background-color: transparent;
   background-repeat: no-repeat;
@@ -6723,7 +6723,14 @@ textarea.widget_product_search .woocommerce-product-search .search-field {
   margin-left: -15px;
   margin-right: -15px;
   list-style-type: none;
-  padding: 0; }
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap; }
 
 .woocommerce ul.tiles .product-tile {
   margin-bottom: 30px; }
@@ -7361,6 +7368,9 @@ a.woocommerce ul.tiles .product-tile .button.disabled, fieldset[disabled] a.wooc
 
 .alert a {
   text-decoration: underline; }
+
+.screen-reader-text {
+  display: none; }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .container-fluid {
@@ -9569,8 +9579,3 @@ textarea.single-fishing-report .select-report select {
   height: 93px;
   background-size: cover;
   background-position: 50% 50%; }
-
-.page-template-template-testimonials .testimonial p {
-  font-size: 21px;
-  font-style: italic;
-  margin: 10px 0; }
