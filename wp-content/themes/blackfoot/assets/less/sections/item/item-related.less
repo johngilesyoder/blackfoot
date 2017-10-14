@@ -22,12 +22,12 @@
     }
     .tiles {
       .product-tile {
-        h2 {
-          height: auto;
-        }
         & > a:not(.btn) {
           img {
-            height: 165px;
+            height: auto;
+          }
+          h2 {
+            height: auto;
           }
         }
         .short-description {
@@ -62,6 +62,14 @@
       ul.tiles {
         .product-tile {
           .make-md-column(12);
+          & > a:not(.btn) {
+            img {
+              height: 165px;
+            }
+            h2 {
+              height: auto;
+            }
+          }
         }
       }
     }
