@@ -6746,6 +6746,10 @@ textarea.widget_product_search .woocommerce-product-search .search-field {
 .woocommerce ul.tiles .product-tile > a:not(.btn) img {
   max-width: 100%;
   height: 378px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
   display: block;
   margin: 15px auto; }
 
@@ -6948,7 +6952,11 @@ a.woocommerce ul.tiles .product-tile .button.disabled, fieldset[disabled] a.wooc
     width: 50% !important;
     margin: 0 0 30px !important; }
   .woocommerce ul.tiles .product-tile > a:not(.btn) .price del {
-    display: none; } }
+    display: none; }
+  .woocommerce ul.tiles .product-tile > a:not(.btn) img {
+    max-width: 40vw;
+    width: 40vw;
+    height: 40vw; } }
 
 @media (max-width: 480px) {
   .woocommerce ul.tiles .product-tile > a:not(.btn) img {
@@ -9576,10 +9584,3 @@ textarea.single-fishing-report .select-report select {
   background: #F7F5F4;
   padding: 20px 15px;
   margin: 0 0 5px; }
-
-.page-template-template-testimonials .testimonial .testimonial-photo {
-  border-radius: 50%;
-  width: 93px;
-  height: 93px;
-  background-size: cover;
-  background-position: 50% 50%; }

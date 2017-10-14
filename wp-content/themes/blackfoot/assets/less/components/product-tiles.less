@@ -18,6 +18,8 @@
       img {
         max-width: 100%;
         height: 378px;
+        object-fit: cover;
+        object-position: center;
         display: block;
         //padding: 30px;
         margin: 15px auto;
@@ -149,6 +151,11 @@
         & > a:not(.btn) {
           .price del {
             display: none;
+          }
+          img {
+            max-width: 40vw;
+            width: 40vw;
+            height: 40vw;
           }
         }
       }
