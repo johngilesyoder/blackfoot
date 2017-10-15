@@ -3,6 +3,12 @@
 
 
 .single-product.woocommerce {
+  .woocommerce-product-gallery__trigger {
+    position: absolute;
+    z-index: 100;
+    top: 15px;
+    left: 30px
+  }
   .images {
     margin-bottom: 30px;
     .flex-control-thumbs {
@@ -23,12 +29,8 @@
         }
       }
     }
-    .woocommerce-main-image {
-      display: block;
-      img {
-        .img-responsive();
-        margin: 0 auto;
-      }
+    .wp-post-image {
+      height: 400px;
     }
   }
 }
