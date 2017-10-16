@@ -6912,6 +6912,9 @@ a.woocommerce ul.tiles .product-tile .button.disabled, fieldset[disabled] a.wooc
     float: left;
     width: 33.33333333%; } }
 
+.columns-3 ul.tiles .product-tile > a:not(.btn) img {
+  height: 250px; }
+
 .columns-2 ul.tiles .product-tile {
   position: relative;
   min-height: 1px;
@@ -6925,7 +6928,19 @@ a.woocommerce ul.tiles .product-tile .button.disabled, fieldset[disabled] a.wooc
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .woocommerce ul.tiles .product-tile > a:not(.btn) img {
-    height: 304px; } }
+    height: 304px; }
+  .columns-3 ul.tiles .product-tile {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+  .columns-3 ul.tiles .product-tile > a:not(.btn) img {
+    height: 200px; } }
+
+@media (min-width: 992px) and (max-width: 1199px) and (min-width: 992px) {
+  .columns-3 ul.tiles .product-tile {
+    float: left;
+    width: 33.33333333%; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .woocommerce ul.tiles .product-tile > a:not(.btn) img {
@@ -9563,24 +9578,3 @@ textarea.single-fishing-report .select-report select {
     background-size: 320px; }
   .post-type-archive-fishing-report .fishing-report-wrapper .fishing-report .condition-rating .rating-active {
     background-size: 320px; } }
-
-@media (max-width: 480px) {
-  .post-type-archive-fishing-report .fishing-report-wrapper .fishing-report hgroup .report-illustration {
-    display: none; }
-  .post-type-archive-fishing-report .fishing-report-wrapper .fishing-report .condition-rating {
-    width: 200px;
-    background-size: 200px; }
-  .post-type-archive-fishing-report .fishing-report-wrapper .fishing-report .condition-rating .rating-active {
-    background-size: 200px; } }
-
-.page-template-template-testimonials article {
-  margin-bottom: 30px; }
-
-.page-template-template-testimonials .orvis-reviews {
-  margin-bottom: 30px; }
-
-.page-template-template-testimonials .testimonial {
-  border: 0;
-  background: #F7F5F4;
-  padding: 20px 15px;
-  margin: 0 0 5px; }
