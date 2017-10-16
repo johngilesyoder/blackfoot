@@ -6949,7 +6949,9 @@ a.woocommerce ul.tiles .product-tile .button.disabled, fieldset[disabled] a.wooc
     position: relative;
     min-height: 1px;
     padding-left: 15px;
-    padding-right: 15px; } }
+    padding-right: 15px; }
+  .columns-3 ul.tiles .product-tile > a:not(.btn) img {
+    height: 200px; } }
 
 @media (min-width: 768px) and (max-width: 991px) and (min-width: 768px) {
   .columns-3 ul.tiles .product-tile {
