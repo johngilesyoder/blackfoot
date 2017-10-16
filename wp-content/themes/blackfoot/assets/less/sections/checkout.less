@@ -5,6 +5,9 @@
   .order-again {
     display: none;
   }
+  .required {
+    color: @brand-danger;
+  }
   .checkout_coupon {
     .input-text {
       .form-control();
@@ -300,6 +303,12 @@
     }
     .place-order {
       padding: 15px;
+      .terms {
+        padding-left: 25px;
+        .input-checkbox {
+          margin-left: -25px;
+        }
+      }
     }
     .button {
       .btn();
