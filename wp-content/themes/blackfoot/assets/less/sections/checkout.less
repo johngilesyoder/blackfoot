@@ -59,17 +59,18 @@
     .woocommerce-invalid {
       .has-error();
     }
-    #billing_state_field {
+    #billing_state_field,
+    #shipping_state_field {
       display: block;
       .state_select {
         border: 0;
         padding: 0;
         border-radius: 0;
-        .select2-selection {
-          height: 36px !important;
-          .select2-selection__rendered {
-            line-height: 36px !important;
-          }
+      }
+      .select2-selection--single {
+        height: 36px !important;
+        .select2-selection__rendered {
+          line-height: 36px !important;
         }
       }
     }
